@@ -35,5 +35,10 @@ namespace ZombieTDEngine
         {
 
         }
+
+        public virtual void Draw()
+        {
+
+        }
     }
 }

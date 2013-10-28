@@ -67,6 +67,11 @@ namespace ZombieTDEngine
             return null;
         }
 
+        public void Draw()
+    {
+
+    }
+
 
     
 
