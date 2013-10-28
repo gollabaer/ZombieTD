@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using ZombieTDEngine;
 
 namespace ZombieTD
 {
@@ -19,6 +20,8 @@ namespace ZombieTD
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        TestGame game;
+       
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -35,7 +38,9 @@ namespace ZombieTD
         {
             // TODO: Add your initialization logic here
 
+            game = new TestGame();
             base.Initialize();
+            
         }
 
         /// <summary>
@@ -48,6 +53,8 @@ namespace ZombieTD
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
+            game.LoadContent();
         }
 
         /// <summary>
@@ -71,8 +78,9 @@ namespace ZombieTD
                 this.Exit();
 
             // TODO: Add your update logic here
-
+            game.Tick();
             base.Update(gameTime);
+           
         }
 
         /// <summary>
@@ -84,8 +92,9 @@ namespace ZombieTD
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            game.Draw();
             base.Draw(gameTime);
+            
         }
     }
 }

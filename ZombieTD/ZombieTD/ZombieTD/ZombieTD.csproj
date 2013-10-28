@@ -116,6 +116,10 @@
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ZombieTDEngine\ZombieTDEngine.csproj">
+      <Project>{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}</Project>
+      <Name>ZombieTDEngine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ZombieTDContent\ZombieTDContent.contentproj">
       <Name>ZombieTDContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
