@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameClasses\BadGuys\EnemySpawnPool.cs" />
     <Compile Include="GameClasses\Character.cs" />
+    <Compile Include="GameClasses\GameElementFactory.cs" />
+    <Compile Include="GameClasses\GoodGuys\PlayerSpawnPool.cs" />
+    <Compile Include="GameClasses\Texture.cs" />
     <Compile Include="GameInterfaces\BadGuyInterfaces\IZombie.cs" />
     <Compile Include="GameInterfaces\BadGuyInterfaces\IZombieDog.cs" />
     <Compile Include="GameClasses\BadGuys\FlyingZombie.cs" />
@@ -52,6 +56,7 @@
     <Compile Include="GameClasses\GoodGuys\Priest.cs" />
     <Compile Include="GameClasses\GoodGuys\Sheriff.cs" />
     <Compile Include="GameClasses\GoodGuys\Redneck.cs" />
+    <Compile Include="GameInterfaces\ITexture.cs" />
     <Compile Include="TestGame.cs" />
     <Compile Include="GameClasses\GameMediator.cs" />
     <Compile Include="GameInterfaces\ICharacter.cs" />
