@@ -19,7 +19,7 @@ namespace ZombieTDEngine
             this.RaiseSoul(mediator, this, mediator.GetCharacter(0, 0));
 
         }
-
+       
         public void ThrowArm(IMediator mediator, ICharacter character, ICharacter target)
         {
             mediator.ThrowArm(mediator, this, target);
