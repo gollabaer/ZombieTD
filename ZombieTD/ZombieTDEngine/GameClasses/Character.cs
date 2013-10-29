@@ -8,6 +8,7 @@ namespace ZombieTDEngine
     public abstract class Character : ICharacter
     {
         protected IMediator _mediator;
+        protected ITexture _texture;
         protected Map _lineOfSiteMap;
 
         public int _health;
