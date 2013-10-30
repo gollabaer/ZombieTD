@@ -8,21 +8,21 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using ZombieTDEngine;
+
 
 namespace ZombieTD
 {
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class ZombieTDGame : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
-        TestGame game;
+        IMediator mediator;
        
-        public Game1()
+       
+        public ZombieTDGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -38,7 +38,8 @@ namespace ZombieTD
         {
             // TODO: Add your initialization logic here
 
-            game = new TestGame();
+            //Create an instance of our mediator class
+            mediator = new GameMediator();
             base.Initialize();
             
         }
@@ -53,8 +54,7 @@ namespace ZombieTD
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-
-            game.LoadContent();
+            mediator.LoadContent(spriteBatch);
         }
 
         /// <summary>
@@ -76,9 +76,10 @@ namespace ZombieTD
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+            
             // TODO: Add your update logic here
-            game.Tick();
+            mediator.Tick();
+            Draw(null);
             base.Update(gameTime);
            
         }
@@ -92,7 +93,7 @@ namespace ZombieTD
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            game.Draw();
+            mediator.Draw();
             base.Draw(gameTime);
             
         }
