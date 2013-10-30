@@ -108,10 +108,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ITexture.cs" />
-    <Compile Include="Assets\SoundAssetManager.cs" />
-    <Compile Include="Assets\TextureAssetManager.cs" />
-    <Compile Include="Assets\TextureCustom.cs" />
+    <Compile Include="GameInterfaces\ITexture.cs" />
+    <Compile Include="GameClasses\AssetManagers\SoundAssetManager.cs" />
+    <Compile Include="GameClasses\AssetManagers\TextureAssetManager.cs" />
+    <Compile Include="GameClasses\Objects\TextureNormal.cs" />
     <Compile Include="GameClasses\Structures\Base.cs" />
     <Compile Include="GameClasses\BadGuys\EnemySpawnPool.cs" />
     <Compile Include="GameClasses\BadGuys\FlyingZombie.cs" />
@@ -139,9 +139,7 @@
     <Compile Include="GameClasses\Projectiles\Projectile.cs" />
     <Compile Include="GameClasses\Objects\Score.cs" />
     <Compile Include="GameClasses\Sound\Sound.cs" />
-    <Compile Include="GameClasses\AssetManagers\SoundAssetManager.cs" />
-    <Compile Include="GameClasses\Objects\Texture.cs" />
-    <Compile Include="GameClasses\AssetManagers\TextureAssetManager.cs" />
+    <Compile Include="GameClasses\Objects\Abstract\BaseTexture.cs" />
     <Compile Include="GameInterfaces\BadGuyInterfaces\IFlyingZombie.cs" />
     <Compile Include="GameInterfaces\BadGuyInterfaces\IZombie.cs" />
     <Compile Include="GameInterfaces\BadGuyInterfaces\IZombieDog.cs" />
@@ -152,7 +150,6 @@
     <Compile Include="GameInterfaces\IGameElement.cs" />
     <Compile Include="GameInterfaces\IMediator.cs" />
     <Compile Include="GameInterfaces\ISpawnPool.cs" />
-    <Compile Include="GameInterfaces\ITexture.cs" />
     <Compile Include="GameInterfaces\IAssetManager.cs" />
     <Compile Include="GameInterfaces\ISound.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

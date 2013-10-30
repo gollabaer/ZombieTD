@@ -15,25 +15,21 @@ namespace ZombieTD
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
-    public class SoundAssetManager
+    public class TextureCustom : BaseTexture, ITexture
     {
-        static AudioEngine _audioEngine;
-        static WaveBank _waveBank;
-        static SoundBank _soundBank;
-        static Cue cue1;
-        static Cue cue2;
-        
-        public static void load(ContentManager content) {
-        
+        Texture2D _texture;
+
+        float _rotation;
+        float _alpha;
+
+        //optional for drawings
+        Rectangle _rec;
+
+
+        public TextureCustom() { }
+
+        public TextureCustom(Texture2D texture) {
+            _texture = texture;
         }
-
-        public static void play(String track) {
-        
-        }
-
-        public static void playBackground(String bgtrack){}
-
-
-
     }
 }

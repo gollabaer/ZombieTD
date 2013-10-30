@@ -8,11 +8,13 @@ using Microsoft.Xna.Framework;
 
 namespace ZombieTD
 {
-    class Texture : ITexture
+    public abstract class BaseTexture : ITexture
     {
         public Rectangle _rec;
         public Texture2D _texture2d;
         public int _height;
         public int _width;
+        float _rotation;
+        float _alpha;
     }
 }
