@@ -112,19 +112,59 @@
     <Compile Include="Assets\SoundAssetManager.cs" />
     <Compile Include="Assets\TextureAssetManager.cs" />
     <Compile Include="Assets\TextureCustom.cs" />
+    <Compile Include="GameClasses\Structures\Base.cs" />
+    <Compile Include="GameClasses\BadGuys\EnemySpawnPool.cs" />
+    <Compile Include="GameClasses\BadGuys\FlyingZombie.cs" />
+    <Compile Include="GameClasses\BadGuys\Zombie.cs" />
+    <Compile Include="GameClasses\BadGuys\ZombieDog.cs" />
+    <Compile Include="GameClasses\Structures\Car.cs" />
+    <Compile Include="GameClasses\Objects\Abstract\Character.cs" />
+    <Compile Include="GameClasses\Objects\GameElementFactory.cs" />
+    <Compile Include="GameClasses\Objects\GameMediator.cs" />
+    <Compile Include="GameClasses\GoodGuys\PlayerSpawnPool.cs" />
+    <Compile Include="GameClasses\GoodGuys\Priest.cs" />
+    <Compile Include="GameClasses\GoodGuys\Redneck.cs" />
+    <Compile Include="GameClasses\GoodGuys\Sheriff.cs" />
+    <Compile Include="GameClasses\Structures\Hay.cs" />
+    <Compile Include="GameInterfaces\StructureInterfaces\IBase.cs" />
+    <Compile Include="GameInterfaces\StructureInterfaces\ICar.cs" />
+    <Compile Include="GameInterfaces\StructureInterfaces\IHay.cs" />
+    <Compile Include="GameInterfaces\StructureInterfaces\IPit.cs" />
+    <Compile Include="GameInterfaces\ProjectilesInterfaces\IProjectile.cs" />
+    <Compile Include="GameClasses\Objects\Map.cs" />
+    <Compile Include="GameClasses\Objects\Menu.cs" />
+    <Compile Include="GameClasses\Objects\MouseInputActionDirector.cs" />
+    <Compile Include="GameClasses\Sound\Music.cs" />
+    <Compile Include="GameClasses\Structures\Pit.cs" />
+    <Compile Include="GameClasses\Projectiles\Projectile.cs" />
+    <Compile Include="GameClasses\Objects\Score.cs" />
+    <Compile Include="GameClasses\Sound\Sound.cs" />
+    <Compile Include="GameClasses\AssetManagers\SoundAssetManager.cs" />
+    <Compile Include="GameClasses\Objects\Texture.cs" />
+    <Compile Include="GameClasses\AssetManagers\TextureAssetManager.cs" />
+    <Compile Include="GameInterfaces\BadGuyInterfaces\IFlyingZombie.cs" />
+    <Compile Include="GameInterfaces\BadGuyInterfaces\IZombie.cs" />
+    <Compile Include="GameInterfaces\BadGuyInterfaces\IZombieDog.cs" />
+    <Compile Include="GameInterfaces\GoodGuyInterfaces\IPriest.cs" />
+    <Compile Include="GameInterfaces\GoodGuyInterfaces\IRedneck.cs" />
+    <Compile Include="GameInterfaces\GoodGuyInterfaces\ISheriff.cs" />
+    <Compile Include="GameInterfaces\ICharacter.cs" />
+    <Compile Include="GameInterfaces\IGameElement.cs" />
+    <Compile Include="GameInterfaces\IMediator.cs" />
+    <Compile Include="GameInterfaces\ISpawnPool.cs" />
+    <Compile Include="GameInterfaces\ITexture.cs" />
+    <Compile Include="GameInterfaces\IAssetManager.cs" />
+    <Compile Include="GameInterfaces\ISound.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="ZombieTDGame.cs" />
+    <Compile Include="GameClasses\Objects\Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ZombieTDEngine\ZombieTDEngine.csproj">
-      <Project>{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}</Project>
-      <Name>ZombieTDEngine</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ZombieTDContent\ZombieTDContent.contentproj">
       <Name>ZombieTDContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
