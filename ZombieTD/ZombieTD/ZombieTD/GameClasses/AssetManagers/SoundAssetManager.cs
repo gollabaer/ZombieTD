@@ -35,5 +35,10 @@ namespace ZombieTD
 
 
 
+
+        public void LoadAssets()
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

@@ -20,18 +20,27 @@ namespace ZombieTD
         private List<IGameElement> _gameElements = new List<IGameElement>();
         private ISpawnPool _goodGuySpawnPool;
         private ISpawnPool _badGuySpawnPool;
+        private IAssetManager _textureAssetManager;
+        private IAssetManager _soundAssetManager;
+        private Menu _menu;
+        private Score _score;
+        
+
 
 
 
 
         #endregion
 
-
         public GameMediator()
         {
             #region Init Logic
             _goodGuySpawnPool = new PlayerSpawnPool();
             _badGuySpawnPool = new EnemySpawnPool();
+            _textureAssetManager = new TextureAssetManager();
+            _soundAssetManager = new SoundAssetManager();
+            _menu = new Menu();
+            _score = new Score();
 
 
             #endregion
@@ -57,18 +66,16 @@ namespace ZombieTD
 
         }
 
-
         #region Engine Methods
         public bool LoadContent(SpriteBatch spritebatch)
         {
             try
             {
                 this._spriteBatch = spritebatch;
-
-
-
-
-
+                _textureAssetManager.LoadAssets();
+                _soundAssetManager.LoadAssets();
+                _menu.LoadContent();
+                _score.LoadContent();
                 return true;
             }
             catch (Exception ex)
@@ -80,11 +87,15 @@ namespace ZombieTD
 
         public void Draw()
         {
+            _map.Draw();
             //Draw The Elements
             Parallel.ForEach(_gameElements, element =>
             {
                 element.Draw();
             });
+
+            _menu.Draw();
+            _score.Draw();
         }
 
         public void Tick()
@@ -169,6 +180,9 @@ namespace ZombieTD
         {
 
         }
+
+
+
         #endregion
 
 

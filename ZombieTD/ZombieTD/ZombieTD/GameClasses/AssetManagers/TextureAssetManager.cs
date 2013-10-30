@@ -35,5 +35,10 @@ namespace ZombieTD
 
             return new TextureCustom();
         }
+
+        public void LoadAssets()
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

@@ -7,5 +7,15 @@ namespace ZombieTD
 {
     public class Menu
     {
+        public void Draw()
+        {
+
+        }
+
+        public void LoadContent()
+        {
+
+
+        }
     }
 }

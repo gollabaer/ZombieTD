@@ -7,5 +7,6 @@ namespace ZombieTD
 {
     public interface IAssetManager
     {
+        void LoadAssets();
     }
 }

@@ -7,5 +7,15 @@ namespace ZombieTD
 {
     public class Score
     {
+        public void Draw()
+        {
+
+        }
+
+        public void LoadContent()
+        {
+
+
+        }
     }
 }

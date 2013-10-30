@@ -9,6 +9,11 @@ namespace ZombieTD
     {
         List<Tile> _tiles;
 
+        public void Draw()
+        {
+            
+        }
+
         public Map GetMapByLineOfSight(int lineOfSight, int x, int y)
         {
             return new Map();
