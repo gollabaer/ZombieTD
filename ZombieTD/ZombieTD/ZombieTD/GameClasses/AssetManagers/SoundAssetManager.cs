@@ -17,28 +17,29 @@ namespace ZombieTD
     /// </summary>
     public class SoundAssetManager : IAssetManager
     {
-        static AudioEngine _audioEngine;
-        static WaveBank _waveBank;
-        static SoundBank _soundBank;
-        static Cue cue1;
-        static Cue cue2;
-        
-        public static void load(ContentManager content) {
-        
-        }
+        Dictionary<SoundType, ISound> soundPool = new Dictionary<SoundType, ISound>();
 
-        public static void play(String track) {
-        
-        }
-
-        public static void playBackground(String bgtrack){}
-
-
-
-
-        public void LoadAssets()
+        public void LoadAssets(ContentManager content)
         {
-            //throw new NotImplementedException();
+            Array values = Enum.GetValues(typeof(SoundType));
+
+            foreach (SoundType soundType in values)
+            {
+                ISound sound = new Sound(content, soundType.ToWaveFilename());
+                soundPool.Add(soundType, sound);
+                
+            }
+        }
+
+        public I GetAsset<T, I>(T enumItem)
+        {
+            var found = from KeyValuePair<T,I> entry in soundPool
+                        where entry.Key.ToString() == enumItem.ToString()
+                        select entry;
+
+            KeyValuePair<T, I> foundItem = found.FirstOrDefault();
+
+            return foundItem.Value;   
         }
     }
 }

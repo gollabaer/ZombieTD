@@ -19,11 +19,13 @@ namespace ZombieTD
     {
         const uint NUMOFTEXTURES = 51;
 
-        public enum TextureTypes{
-            Grass,
-            Dirt,
-            ETC
-        }
+        #region Obsolete Moved To Constants Class
+        //public enum TextureTypes{
+        //    Grass,
+        //    Dirt,
+        //    ETC
+        //}
+        #endregion
 
         Texture2D[] textures = new Texture2D[NUMOFTEXTURES];
 
@@ -31,14 +33,36 @@ namespace ZombieTD
             
         }
 
-        public ITexture getTexture(int texture) {
-
-            return new TextureCustom();
-        }
-
-        public void LoadAssets()
+        public void LoadAssets(ContentManager content)
         {
             //throw new NotImplementedException();
+        }
+
+
+        public I GetAsset<T, I>(T enumItem)
+        {
+
+            //if It is a map texture
+            if (enumItem.GetType() == typeof(MapTileType))
+            {
+                //Logic to get texture.
+            }
+
+            if (enumItem.GetType() == typeof(CharacterTextureType))
+            {
+
+            }
+
+            if (enumItem.GetType() == typeof(StructureTextureType))
+            {
+
+            }
+
+
+
+
+            throw new NotImplementedException();
+            
         }
     }
 }

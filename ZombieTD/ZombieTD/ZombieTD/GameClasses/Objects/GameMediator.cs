@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Content;
 
 namespace ZombieTD
 {
@@ -67,19 +68,31 @@ namespace ZombieTD
         }
 
         #region Engine Methods
-        public bool LoadContent(SpriteBatch spritebatch)
+        public void LoadAssets(ContentManager content)
         {
+                _textureAssetManager.LoadAssets(content);
+                _soundAssetManager.LoadAssets(content);
+        }
+
+
+
+        public bool LoadContent(ContentManager content, SpriteBatch spritebatch)
+        {
+
+
             try
             {
+
                 this._spriteBatch = spritebatch;
-                _textureAssetManager.LoadAssets();
-                _soundAssetManager.LoadAssets();
+                LoadAssets(content);
                 _menu.LoadContent();
                 _score.LoadContent();
+                _map = Map.LoadMap(this);
                 return true;
             }
             catch (Exception ex)
             {
+                Logger.Log(Logger.Log_Type.ERROR, "Error Loading Assets");
                 return false;
             }
 
@@ -87,10 +100,11 @@ namespace ZombieTD
 
         public void Draw()
         {
-            _map.Draw();
+            //_map.Draw();
             //Draw The Elements
             Parallel.ForEach(_gameElements, element =>
             {
+                //To Do Add Lock
                 element.Draw();
             });
 
@@ -178,7 +192,7 @@ namespace ZombieTD
         #region Character Methods
         public void Attack(IMediator mediator, ICharacter charater, ICharacter target)
         {
-
+  
         }
 
 
@@ -186,21 +200,22 @@ namespace ZombieTD
         #endregion
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         public void TakeTurn(IMediator mediator)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+        }
+
+
+        public I GetAsset<T, I>(T enumItem)
+        {
+
+            if(typeof(I) == typeof(ISound)) //if T is a sound.
+                return _soundAssetManager.GetAsset<T, I>(enumItem);
+            if (typeof(I) == typeof(ITexture))//if T is a texture
+                return _textureAssetManager.GetAsset<T, I>(enumItem);
+
+
+            throw new Exception("Cannot get Asset of Type" + Type.GetType(typeof(I).Name).Name);
         }
     }
 }

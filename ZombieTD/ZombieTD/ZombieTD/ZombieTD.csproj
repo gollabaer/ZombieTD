@@ -108,6 +108,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="EngineConstants.cs" />
     <Compile Include="GameInterfaces\ITexture.cs" />
     <Compile Include="GameClasses\AssetManagers\SoundAssetManager.cs" />
     <Compile Include="GameClasses\AssetManagers\TextureAssetManager.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="GameInterfaces\ISpawnPool.cs" />
     <Compile Include="GameInterfaces\IAssetManager.cs" />
     <Compile Include="GameInterfaces\ISound.cs" />
+    <Compile Include="XnaLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ZombieTDGame.cs" />

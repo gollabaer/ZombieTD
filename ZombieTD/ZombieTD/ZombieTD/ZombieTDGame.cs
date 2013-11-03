@@ -26,6 +26,9 @@ namespace ZombieTD
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            if(EngineConstants.IsLogging)
+                Logger.StartLogger();
         }
 
         /// <summary>
@@ -54,7 +57,7 @@ namespace ZombieTD
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            mediator.LoadContent(spriteBatch);
+            mediator.LoadContent(Content, spriteBatch);
         }
 
         /// <summary>
