@@ -13,8 +13,14 @@ namespace ZombieTD
         //Loggin Switch
         public const bool IsLogging = true;
 
+        public const string CharacterImageLocation = "Images/Character/";
+        public const string StructureImageLocation = "Images/Structure/";
+        public const string MapTilesImageLocation = "Images/MapTile/";
+        public const string SoundFileLocation = "SoundFX/";
 
 
+        public const int SmallTextureHeight = 32;
+        public const int SmallTextureWidth = 32;
 
     }
 
@@ -63,6 +69,7 @@ namespace ZombieTD
         Zombie2,
         Zombie3,
         Zombie4,
-        Zombie5
+        Zombie5,
+        Chainsaw
     }
 }

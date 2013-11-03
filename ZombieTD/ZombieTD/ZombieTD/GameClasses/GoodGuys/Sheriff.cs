@@ -7,12 +7,18 @@ namespace ZombieTD
 {
     public class Sheriff : Character, ISheriff
     {
+        bool madeSound = true;
+
         public override void TakeTurn(IMediator mediator)
         {
             base.TakeTurn(mediator);
             //Game logic for what a zombie does
-            
 
+            if (madeSound)
+            {
+                mediator.GetAsset<SoundType, ISound>(SoundType.Gunshot).Play();
+                madeSound = false;
+            }
 
         }
 

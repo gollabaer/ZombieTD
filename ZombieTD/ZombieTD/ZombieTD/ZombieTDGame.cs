@@ -96,6 +96,7 @@ namespace ZombieTD
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+
             mediator.Draw();
             base.Draw(gameTime);
             

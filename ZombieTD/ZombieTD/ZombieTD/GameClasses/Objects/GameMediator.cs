@@ -12,6 +12,7 @@ namespace ZombieTD
     {
         #region XnaSpecific
         private SpriteBatch _spriteBatch;
+        private ContentManager _content;
 
         #endregion
 
@@ -78,11 +79,11 @@ namespace ZombieTD
 
         public bool LoadContent(ContentManager content, SpriteBatch spritebatch)
         {
-
-
+            _spriteBatch = spritebatch;
+            _content = content;
+            
             try
             {
-
                 this._spriteBatch = spritebatch;
                 LoadAssets(content);
                 _menu.LoadContent();
@@ -215,7 +216,7 @@ namespace ZombieTD
                 return _textureAssetManager.GetAsset<T, I>(enumItem);
 
 
-            throw new Exception("Cannot get Asset of Type" + Type.GetType(typeof(I).Name).Name);
+            throw new NotImplementedException("Cannot get Asset of Type" + Type.GetType(typeof(I).Name).Name);
         }
     }
 }

@@ -59,7 +59,7 @@ namespace ZombieTD
 
         public void SetTexture(IMediator mediator)
         {
-           // this._texture = mediator.GetAsset<MapTileType, ITexture> (this._textureType);
+           this._texture = mediator.GetAsset<MapTileType, ITexture> (this._textureType);
         }
     }
 }

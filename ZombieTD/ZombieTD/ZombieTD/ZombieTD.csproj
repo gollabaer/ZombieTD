@@ -110,6 +110,7 @@
   <ItemGroup>
     <Compile Include="Extensions.cs" />
     <Compile Include="EngineConstants.cs" />
+    <Compile Include="GameClasses\Objects\TextureMap.cs" />
     <Compile Include="GameInterfaces\ITexture.cs" />
     <Compile Include="GameClasses\AssetManagers\SoundAssetManager.cs" />
     <Compile Include="GameClasses\AssetManagers\TextureAssetManager.cs" />

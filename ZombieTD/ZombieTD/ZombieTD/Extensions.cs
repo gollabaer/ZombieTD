@@ -38,13 +38,13 @@ namespace ZombieTD
             return output;           
         }
 
-        public static bool SaveToFilename(this string fileName)
+        public static bool SaveToFilename(this string fileContents, string fileName)
         {
             bool IsOKay;
 
             try
             {
-                System.IO.File.WriteAllText(@"Map.txt", fileName);
+                System.IO.File.WriteAllText(fileContents, fileName);
                 IsOKay = true;
             }
             catch (Exception ex)
@@ -56,10 +56,25 @@ namespace ZombieTD
             return IsOKay;
         }
 
-        public static string ToWaveFilename<T>(this T item)
+        public static string ToCharacterTextureFilename<T>(this T item)
         {
 
-            return "SoundFX/" + item.ToString();//+(".wav");
+            return EngineConstants.CharacterImageLocation + item.ToString();
+        }
+
+        public static string ToSoundFileFilename<T>(this T item)
+        {
+            return EngineConstants.SoundFileLocation + item.ToString();
+        }
+
+        public static string ToStructureTextureFileFilename<T>(this T item)
+        {
+            return EngineConstants.StructureImageLocation + item.ToString();
+        }
+
+        public static string ToMapTileTextureFileFilename<T>(this T item)
+        {
+            return EngineConstants.MapTilesImageLocation + item.ToString();
         }
     }
 }

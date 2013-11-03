@@ -31,6 +31,7 @@ namespace ZombieTD
             Parallel.ForEach(map.Tiles, tile =>
             {
                 tile.SetTexture(mediator);
+         
             });
 
             return map;

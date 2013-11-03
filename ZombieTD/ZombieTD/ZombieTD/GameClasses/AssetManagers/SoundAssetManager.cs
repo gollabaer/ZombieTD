@@ -25,7 +25,7 @@ namespace ZombieTD
 
             foreach (SoundType soundType in values)
             {
-                ISound sound = new Sound(content, soundType.ToWaveFilename());
+                ISound sound = new Sound(content, soundType.ToSoundFileFilename());
                 soundPool.Add(soundType, sound);
                 
             }

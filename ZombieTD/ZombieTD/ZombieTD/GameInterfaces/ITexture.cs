@@ -12,12 +12,9 @@ using Microsoft.Xna.Framework.Media;
 
 namespace ZombieTD
 {
-    /// <summary>
-    /// This is a game component that implements IUpdateable.
-    /// </summary>
     public interface ITexture 
     {
-         
+        ITexture GetTexture();
 
 
     }

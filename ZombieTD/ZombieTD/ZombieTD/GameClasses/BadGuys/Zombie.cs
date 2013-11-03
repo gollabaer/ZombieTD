@@ -15,10 +15,10 @@ namespace ZombieTD
             //Game logic for what a zombie does
 
 
-
+           
             if (madeSound)
             {
-                mediator.GetAsset<SoundType, ISound>(SoundType.Zombie3).Play();
+                mediator.GetAsset<SoundType, ISound>(SoundType.Zombie1).Play();
                 madeSound = false;
             }
            

@@ -15,21 +15,11 @@ namespace ZombieTD
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
-    public class TextureCustom : BaseTexture, ITexture
+    public class TextureNormal : BaseTexture
     {
-        Texture2D _texture;
-
-        float _rotation;
-        float _alpha;
-
-        //optional for drawings
-        Rectangle _rec;
-
-
-        public TextureCustom() { }
-
-        public TextureCustom(Texture2D texture) {
-            _texture = texture;
+        public TextureNormal(ContentManager content, string fileName) : base(content, fileName)
+        {
+           
         }
     }
 }
