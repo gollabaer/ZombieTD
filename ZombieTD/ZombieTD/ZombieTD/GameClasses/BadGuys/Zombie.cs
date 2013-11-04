@@ -18,7 +18,7 @@ namespace ZombieTD
            
             if (madeSound)
             {
-                mediator.GetAsset<SoundType, ISound>(SoundType.Zombie1).Play();
+               // mediator.GetAsset<SoundType, ISound>(SoundType.Zombie1).Play();
                 madeSound = false;
             }
            

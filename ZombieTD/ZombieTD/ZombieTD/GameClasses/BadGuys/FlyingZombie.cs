@@ -16,7 +16,7 @@ namespace ZombieTD
             //FlyingZombie Logic for turn
             if (madeSound)
             {
-                mediator.GetAsset<SoundType, ISound>(SoundType.Zombie4).Play();
+               // mediator.GetAsset<SoundType, ISound>(SoundType.Zombie4).Play();
                 madeSound = false;
             }
         }

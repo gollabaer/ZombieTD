@@ -17,7 +17,6 @@ namespace ZombieTD
     /// </summary>
     public class TextureAssetManager : IAssetManager
     {
-
         Dictionary<MapTileType, ITexture> mapTexturePool = new Dictionary<MapTileType, ITexture>();
         Dictionary<CharacterTextureType, ITexture> characterTexturePool = new Dictionary<CharacterTextureType, ITexture>();
         Dictionary<StructureTextureType, ITexture> structureTexturePool = new Dictionary<StructureTextureType, ITexture>();
@@ -32,7 +31,6 @@ namespace ZombieTD
                 {
                     ITexture texture = new TextureNormal(content, characterType.ToCharacterTextureFilename());
                     characterTexturePool.Add(characterType, texture);
-
                 }
             }
             catch (Exception ex)
@@ -71,7 +69,6 @@ namespace ZombieTD
                 Logger.Log(Logger.Log_Type.ERROR, "Faild to load structure textures " + ex.ToString());
             }
         }
-
 
         public I GetAsset<T, I>(T enumItem)
         {
