@@ -7,6 +7,7 @@ Content\SoundFX\Zombie2.xnb
 Content\SoundFX\Zombie3.xnb
 Content\SoundFX\Zombie4.xnb
 Content\SoundFX\Zombie5.xnb
+Content\SoundFX\Chainsaw.xnb
 Content\Images\MapTile\Building_roof_center.xnb
 Content\Images\MapTile\Building_roof_corner.xnb
 Content\Images\MapTile\Building_Roof_Side.xnb
@@ -20,7 +21,6 @@ Content\Images\MapTile\RoofTownHall_corner.xnb
 Content\Images\MapTile\TownHallRoof_Middle.xnb
 Content\Images\MapTile\TownhallRoof_Side.xnb
 Content\Images\MapTile\Tree.xnb
-Content\SoundFX\Chainsaw.xnb
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav
 Content\SoundFX\HolyWater.wav

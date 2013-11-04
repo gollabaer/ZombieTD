@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ZombieTD
 {
     public class Score
     {
-        public void Draw()
+        public void Draw(SpriteBatch spritebatch)
         {
 
         }

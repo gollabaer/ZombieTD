@@ -14,8 +14,13 @@ namespace ZombieTD
 {
     public interface ITexture 
     {
-        ITexture GetTexture();
+        Texture2D GetTexture();
 
+        Rectangle getViewRec();
+
+        float getRotation();
+
+        void update();
 
     }
 }

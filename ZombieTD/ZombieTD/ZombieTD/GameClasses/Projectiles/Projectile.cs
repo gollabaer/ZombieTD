@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ZombieTD
 {
@@ -18,7 +19,7 @@ namespace ZombieTD
  	        throw new NotImplementedException();
         }
 
-        public void  Draw()
+        public void  Draw(SpriteBatch spritebatch)
         {
  	        throw new NotImplementedException();
         }
