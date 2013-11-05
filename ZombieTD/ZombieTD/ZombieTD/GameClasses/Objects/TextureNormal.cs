@@ -17,9 +17,11 @@ namespace ZombieTD
     /// </summary>
     public class TextureNormal : BaseTexture
     {
-        private int numberOfSprites;
-        private int currentSprite;
 
+        public TextureNormal() : base()
+        {
+
+        }
         public TextureNormal(ContentManager content, string fileName) : base(content, fileName)
         {
             _rec = new Rectangle(0, 0, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight);
@@ -36,5 +38,22 @@ namespace ZombieTD
             _rec.X = currentSprite * EngineConstants.SmallTextureWidth;
         }
 
+
+        public override object Clone()
+        {
+            TextureNormal clone = new TextureNormal();
+
+            clone._rec = this._rec;
+            clone._texture = this._texture;
+            clone._height = this._height;
+            clone._width = this._width;
+            clone._rotation = this._rotation;
+            clone._alpha = this._alpha;
+            clone.flips = this.flips;
+            clone.numberOfSprites = this.numberOfSprites;
+            clone.currentSprite = this.currentSprite;
+
+            return clone as Object;
+        }
     }
 }

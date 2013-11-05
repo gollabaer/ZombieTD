@@ -98,7 +98,7 @@ namespace ZombieTD
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            mediator.Draw(spriteBatch);
+            //mediator.Draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
             

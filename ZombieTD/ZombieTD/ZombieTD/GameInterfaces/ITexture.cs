@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace ZombieTD
 {
-    public interface ITexture 
+    public interface ITexture : ICloneable
     {
         Texture2D GetTexture();
 

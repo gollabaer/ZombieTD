@@ -31,7 +31,7 @@ namespace ZombieTD
             }
         }
 
-        public I GetAsset<T, I>(T enumItem)
+        public I GetAsset<T, I>(T enumItem) where I : ICloneable
         {
             var found = from KeyValuePair<T,I> entry in soundPool
                         where entry.Key.ToString() == enumItem.ToString()
