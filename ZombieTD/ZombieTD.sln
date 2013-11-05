@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZombieTD", "ZombieTD\Zombie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZombieTDContent", "ZombieTD\ZombieTDContent\ZombieTDContent.contentproj", "{D567C689-1E1A-4C17-A2C3-8A7DFA51FC40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZombieTDEngine", "ZombieTDEngine\ZombieTDEngine.csproj", "{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,16 +31,6 @@ Global
 		{D567C689-1E1A-4C17-A2C3-8A7DFA51FC40}.Release|Any CPU.ActiveCfg = Release|x86
 		{D567C689-1E1A-4C17-A2C3-8A7DFA51FC40}.Release|Mixed Platforms.ActiveCfg = Release|x86
 		{D567C689-1E1A-4C17-A2C3-8A7DFA51FC40}.Release|x86.ActiveCfg = Release|x86
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{E9C8426C-B7C0-4D79-8AC1-6047A0E4DC4B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

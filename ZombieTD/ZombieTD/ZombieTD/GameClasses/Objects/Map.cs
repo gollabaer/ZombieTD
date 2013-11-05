@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ZombieTD
 {
@@ -10,11 +11,11 @@ namespace ZombieTD
     {
         public List<Tile> Tiles {get; set;}
 
-        public void Draw()
+        public void Draw(SpriteBatch spritebatch)
         {
             Parallel.ForEach(Tiles, tile =>
                 {
-                    tile.Draw();
+                    tile.Draw(spritebatch);
                 });
         }
 
@@ -28,11 +29,11 @@ namespace ZombieTD
             Map map = new Map();
             map = (EngineConstants.MapFileLocation.LoadFromFilename()).LoadFromXMLString();
 
-            Parallel.ForEach(map.Tiles, tile =>
+            foreach(Tile tile in map.Tiles)
             {
                 tile.SetTexture(mediator);
          
-            });
+            }
 
             return map;
         }

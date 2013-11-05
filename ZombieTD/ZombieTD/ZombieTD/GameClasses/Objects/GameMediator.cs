@@ -101,20 +101,21 @@ namespace ZombieTD
 
         public void Draw(SpriteBatch spritebatch)
         {
-            //_map.Draw();
-            //Draw The Elements
-            _spriteBatch.Begin();
             
+
+            _map.Draw(spritebatch);
+            //Draw The Elements
+           
             Parallel.ForEach(_gameElements, element =>
             {
                 //To Do Add Lock
-                element.Draw(_spriteBatch);
+               // element.Draw(_spriteBatch);
             });
 
             _menu.Draw(spritebatch);
             _score.Draw(spritebatch);
 
-            _spriteBatch.End();
+           
         }
 
         public void Tick()

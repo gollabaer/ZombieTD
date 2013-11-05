@@ -58,6 +58,7 @@ namespace ZombieTD
 
             // TODO: use this.Content to load your game content here
             mediator.LoadContent(Content, spriteBatch);
+    
         }
 
         /// <summary>
@@ -82,7 +83,7 @@ namespace ZombieTD
             
             // TODO: Add your update logic here
             mediator.Tick();
-            Draw(null);
+           
             base.Update(gameTime);
            
         }
@@ -96,8 +97,9 @@ namespace ZombieTD
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            spriteBatch.Begin();
             mediator.Draw(spriteBatch);
+            spriteBatch.End();
             base.Draw(gameTime);
             
         }

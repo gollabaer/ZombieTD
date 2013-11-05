@@ -41,6 +41,7 @@ namespace ZombieTD
 
         public virtual void Draw(SpriteBatch spritebatch)
         {
+            if(_texture != null)
             spritebatch.Draw(_texture.GetTexture(), new Rectangle(_xPos, _yPos, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight),
                 _texture.getViewRec(), Color.White,_texture.getRotation(), Vector2.Zero, SpriteEffects.None, 0);
         }

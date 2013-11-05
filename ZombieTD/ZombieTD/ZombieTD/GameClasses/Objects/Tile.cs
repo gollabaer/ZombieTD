@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace ZombieTD
 {
@@ -52,9 +54,11 @@ namespace ZombieTD
             set { _number_of_90_degree_flips = value; }
         }
 
-        public void Draw()
+        public virtual void Draw(SpriteBatch spritebatch)
         {
-
+            if (_texture != null)
+                spritebatch.Draw(_texture.GetTexture(), new Rectangle(_xPos, _yPos, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight),
+                    _texture.getViewRec(), Color.White, _texture.getRotation(), Vector2.Zero, SpriteEffects.None, 0);
         }
 
         public void SetTexture(IMediator mediator)
