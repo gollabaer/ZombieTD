@@ -20,6 +20,9 @@ namespace ZombieTD
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         IMediator mediator;
+
+        //Mouse Input 
+        MouseState mouseStateCurrent, mouseStatePrevious;
        
        
         public ZombieTDGame()
@@ -31,6 +34,9 @@ namespace ZombieTD
 
             if(EngineConstants.IsLogging)
                 Logger.StartLogger();
+
+            //Settings
+            IsMouseVisible = true;
         }
 
         /// <summary>
@@ -82,12 +88,40 @@ namespace ZombieTD
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-            
+
+            //Mouse Input Method
+            CheckInputs();
             // TODO: Add your update logic here
             mediator.Tick();
            
             base.Update(gameTime);
            
+        }
+
+        private void CheckInputs()
+        {
+            // Allows the game to exit
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            {
+                this.Exit();
+            }
+
+            // Get current mouseState
+            mouseStateCurrent = Mouse.GetState();
+
+            // Left MouseClick
+            if (mouseStatePrevious.LeftButton == ButtonState.Pressed && mouseStateCurrent.LeftButton == ButtonState.Released)
+            {
+                ((GameMediator)mediator).MakeTestSound();
+            }
+
+            // Right MouseClick
+            if (mouseStateCurrent.RightButton == ButtonState.Pressed && mouseStatePrevious.RightButton == ButtonState.Released)
+            {
+                //TODO when right mousebutton clicked
+            }
+
+            mouseStatePrevious = mouseStateCurrent;
         }
 
         /// <summary>

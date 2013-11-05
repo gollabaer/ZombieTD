@@ -10,7 +10,7 @@ namespace ZombieTD
     public abstract class Character : ICharacter
     {
         protected IMediator _mediator;
-        protected ITexture _texture;
+        public ITexture _texture; //Change tto protected
         protected Map _lineOfSiteMap;
 
         public int _health;

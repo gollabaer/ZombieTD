@@ -55,7 +55,8 @@ namespace ZombieTD
     public enum StructureTextureType
     {
         Hay,
-        Car,
+        CarBack,
+        CarFront,
         Pit
     }
 

@@ -7,18 +7,11 @@ namespace ZombieTD
 {
     public class Redneck : Character, IRedneck
     {
-        bool madeSound = true;
 
         public override void TakeTurn(IMediator mediator)
         {
             base.TakeTurn(mediator);
             //Game logic for what a zombie does
-
-            if (madeSound)
-            {
-                mediator.GetAsset<SoundType, ISound>(SoundType.Chainsaw).Play();
-                madeSound = false;
-            }
 
         }
 

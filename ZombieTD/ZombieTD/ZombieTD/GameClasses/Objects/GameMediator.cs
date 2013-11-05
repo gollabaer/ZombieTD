@@ -10,12 +10,18 @@ namespace ZombieTD
 {
     public class GameMediator : IMediator
     {
+        #region Test Vars
+        int currentSound = 0;
+        string[] sounds = Enum.GetNames(typeof(SoundType));
+
+        #endregion
+
+
         #region XnaSpecific
         private SpriteBatch _spriteBatch;
         private ContentManager _content;
 
         #endregion
-
 
         #region LogicSpecific
         private Map _map;
@@ -43,29 +49,7 @@ namespace ZombieTD
             _soundAssetManager = new SoundAssetManager();
             _menu = new Menu();
             _score = new Score();
-
-
             #endregion
-
-            //Test Code
-            IGameElement zombie = new Zombie();
-            IGameElement flyingZombie = new FlyingZombie();
-            IGameElement zombieDog = new ZombieDog();
-
-            IGameElement redneck = new Redneck();
-            IGameElement sheriff = new Sheriff();
-            IGameElement priest = new Priest();
-            //Test code
-            zombie.RegisterWithMediator(this, zombie);
-            flyingZombie.RegisterWithMediator(this, flyingZombie);
-            zombieDog.RegisterWithMediator(this, zombieDog);
-
-            redneck.RegisterWithMediator(this, redneck);
-            sheriff.RegisterWithMediator(this, sheriff);
-            priest.RegisterWithMediator(this, priest);
-
-            //_enemies.Add(zombie);
-
         }
 
         #region Engine Methods
@@ -74,8 +58,6 @@ namespace ZombieTD
                 _textureAssetManager.LoadAssets(content);
                 _soundAssetManager.LoadAssets(content);
         }
-
-
 
         public bool LoadContent(ContentManager content, SpriteBatch spritebatch)
         {
@@ -89,13 +71,51 @@ namespace ZombieTD
                 _menu.LoadContent();
                 _score.LoadContent();
                 _map = Map.LoadMap(this);
-                return true;
+                //return true;
             }
             catch (Exception ex)
             {
                 Logger.Log(Logger.Log_Type.ERROR, "Error Loading Assets");
-                return false;
+                //return false;
             }
+
+            #region code that will go into the spawn pools and factories
+            //Test Code
+            IGameElement zombie = new Zombie();
+            IGameElement flyingZombie = new FlyingZombie();
+            IGameElement zombieDog = new ZombieDog();
+            IGameElement redneck = new Redneck();
+            IGameElement sheriff = new Sheriff();
+            IGameElement priest = new Priest();
+
+            ((Character)zombie)._xPos = 100;
+            ((Character)zombie)._yPos = 100;
+            ((Character)zombie)._texture = this.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Zombie);
+
+
+            ((Character)flyingZombie)._xPos = 200;
+            ((Character)flyingZombie)._yPos = 200;
+            ((Character)flyingZombie)._texture = this.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.FlyingZombie);
+
+
+            ((Character)zombieDog)._xPos = 300;
+            ((Character)zombieDog)._yPos = 300;
+            ((Character)zombieDog)._texture = this.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.ZombieDog);
+
+
+
+
+
+            //Test code
+            zombie.RegisterWithMediator(this, zombie);
+            flyingZombie.RegisterWithMediator(this, flyingZombie);
+            zombieDog.RegisterWithMediator(this, zombieDog);
+
+            redneck.RegisterWithMediator(this, redneck);
+            sheriff.RegisterWithMediator(this, sheriff);
+            priest.RegisterWithMediator(this, priest);
+            #endregion
+            return true;
 
         }
 
@@ -109,7 +129,7 @@ namespace ZombieTD
             Parallel.ForEach(_gameElements, element =>
             {
                 //To Do Add Lock
-               // element.Draw(_spriteBatch);
+                lock (_spriteBatch) element.Draw(_spriteBatch);
             });
 
             _menu.Draw(spritebatch);
@@ -208,20 +228,37 @@ namespace ZombieTD
 
         public void TakeTurn(IMediator mediator)
         {
+            //Not Needed Though we could replace the tick method with this method
             //throw new NotImplementedException();
         }
 
 
         public I GetAsset<T, I>(T enumItem) where I : ICloneable
         {
-
-            if(typeof(I) == typeof(ISound)) //if T is a sound.
+            if(typeof(I) == typeof(ISound)) //if I is a sound.
                 return _soundAssetManager.GetAsset<T, I>(enumItem);
-            if (typeof(I) == typeof(ITexture))//if T is a texture
+            if (typeof(I) == typeof(ITexture))//if I is a texture
                 return _textureAssetManager.GetAsset<T, I>(enumItem);
 
-
+            Logger.Log(Logger.Log_Type.ERROR, ("Cannot get Asset of Type" + Type.GetType(typeof(I).Name).Name));
             throw new NotImplementedException("Cannot get Asset of Type" + Type.GetType(typeof(I).Name).Name);
         }
+
+
+
+        #region TestDemoMethods
+
+        public void MakeTestSound()
+        {
+            this.GetAsset<SoundType, ISound>((SoundType) Enum.Parse(typeof(SoundType), sounds[currentSound])).Play();
+
+            if (currentSound == sounds.Length - 1)
+                currentSound = 0;
+            else
+                currentSound++;
+        }
+
+
+        #endregion
     }
 }

@@ -8,19 +8,10 @@ namespace ZombieTD
     class Zombie : Character, IZombie
     {
         public int _numberOfArms;
-        public bool madeSound = true;
         public override void TakeTurn(IMediator mediator)
         {
             base.TakeTurn(mediator);
             //Game logic for what a zombie does
-
-
-           
-            if (madeSound)
-            {
-               // mediator.GetAsset<SoundType, ISound>(SoundType.Zombie1).Play();
-                madeSound = false;
-            }
            
             this.ThrowArm(mediator, this, mediator.GetCharacter(0,0));
             this.RaiseSoul(mediator, this, mediator.GetCharacter(0, 0));
