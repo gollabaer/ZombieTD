@@ -15,9 +15,11 @@ namespace ZombieTD
         public Texture2D _texture;
         public int _height;
         public int _width;
-        float _rotation;
-        float _alpha;
-        int flips;
+        public float _rotation;
+        public float _alpha;
+        public int flips;
+        public int numberOfSprites;
+        public int currentSprite;
 
         /// <summary>
         /// Creates basic texture w/o animation.
@@ -32,6 +34,11 @@ namespace ZombieTD
             _rec = new Rectangle(0, 0, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight);
         }
 
+        public BaseTexture()
+        {
+
+        }
+
         public virtual void update() { }
 
         public virtual Texture2D GetTexture()
@@ -39,14 +46,16 @@ namespace ZombieTD
             return _texture;
         }
 
-        public virtual float getRotation() 
+        public virtual float getRotation()
         {
             return _rotation;
         }
 
-        public virtual Rectangle getViewRec() 
+        public virtual Rectangle getViewRec()
         {
             return _rec;
         }
+
+        public abstract Object Clone();
     }
 }

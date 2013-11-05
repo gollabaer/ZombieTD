@@ -40,5 +40,10 @@ namespace ZombieTD
             SoundEffectInstance.Pitch = Pitch;
             SoundEffectInstance.Play();
         }
+
+        public object Clone()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

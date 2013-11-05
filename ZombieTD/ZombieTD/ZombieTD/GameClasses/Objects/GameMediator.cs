@@ -212,7 +212,7 @@ namespace ZombieTD
         }
 
 
-        public I GetAsset<T, I>(T enumItem)
+        public I GetAsset<T, I>(T enumItem) where I : ICloneable
         {
 
             if(typeof(I) == typeof(ISound)) //if T is a sound.

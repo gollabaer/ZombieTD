@@ -70,7 +70,7 @@ namespace ZombieTD
             }
         }
 
-        public I GetAsset<T, I>(T enumItem)
+        public I GetAsset<T, I>(T enumItem) where I : ICloneable
         {
 
             //if It is a map texture
@@ -82,7 +82,7 @@ namespace ZombieTD
 
                 KeyValuePair<T, I> foundItem = found.FirstOrDefault();
 
-                return foundItem.Value;   
+                return (I)foundItem.Value.Clone();   
             }
 
             if (enumItem.GetType() == typeof(CharacterTextureType))

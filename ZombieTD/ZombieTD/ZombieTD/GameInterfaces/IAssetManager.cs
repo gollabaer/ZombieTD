@@ -9,6 +9,6 @@ namespace ZombieTD
     public interface IAssetManager
     {
         void LoadAssets(ContentManager content);
-        I GetAsset<T, I>(T enumItem);
+        I GetAsset<T, I>(T enumItem) where I : ICloneable;
     }
 }
