@@ -56,6 +56,10 @@ namespace ZombieTD
             return _rec;
         }
 
+        public void setRotation(float angle) {
+            this._rotation = angle;
+        }
+
         public abstract Object Clone();
     }
 }

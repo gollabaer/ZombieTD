@@ -56,15 +56,18 @@ namespace ZombieTD
 
         public virtual void Draw(SpriteBatch spritebatch)
         {
+            int dy = EngineConstants.SmallTextureHeight / 2;
+            int dx = EngineConstants.SmallTextureWidth / 2;
+
             if (_texture != null)
-                spritebatch.Draw(_texture.GetTexture(), new Rectangle(_xPos, _yPos, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight),
-                    _texture.getViewRec(), Color.White, _texture.getRotation(), Vector2.Zero, SpriteEffects.None, 0);
+                spritebatch.Draw(_texture.GetTexture(), new Rectangle(_xPos+ dx, _yPos +dy, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight),
+                    _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx,dy), SpriteEffects.None, 0);
         }
 
         public void SetTexture(IMediator mediator)
         {
            this._texture = mediator.GetAsset<MapTileType, ITexture> (this._textureType);
-           _texture.setRotation((float)(Math.PI / 2) * this._number_of_90_degree_flips);
+          _texture.setRotation((float)(Math.PI / 2) * this._number_of_90_degree_flips);
         }
     }
 }
