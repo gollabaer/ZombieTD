@@ -26,6 +26,8 @@ namespace ZombieTD
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = EngineConstants.SmallTextureWidth * 40;
+            graphics.PreferredBackBufferHeight = EngineConstants.SmallTextureHeight * 22;
 
             if(EngineConstants.IsLogging)
                 Logger.StartLogger();

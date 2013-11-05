@@ -64,6 +64,7 @@ namespace ZombieTD
         public void SetTexture(IMediator mediator)
         {
            this._texture = mediator.GetAsset<MapTileType, ITexture> (this._textureType);
+           _texture.setRotation((float)(Math.PI / 2) * this._number_of_90_degree_flips);
         }
     }
 }

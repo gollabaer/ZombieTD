@@ -18,6 +18,8 @@ namespace ZombieTD
 
         Rectangle getViewRec();
 
+        void setRotation(float angle);
+
         float getRotation();
 
         void update();

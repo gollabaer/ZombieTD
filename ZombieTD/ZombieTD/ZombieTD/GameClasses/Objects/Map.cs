@@ -13,10 +13,10 @@ namespace ZombieTD
 
         public void Draw(SpriteBatch spritebatch)
         {
-            Parallel.ForEach(Tiles, tile =>
+            foreach(Tile tile in Tiles)
                 {
                     tile.Draw(spritebatch);
-                });
+                }
         }
 
         public Map GetMapByLineOfSight(int lineOfSight, int x, int y)
