@@ -8,49 +8,104 @@ namespace ZombieTD
 {
     class GameElementFactory
     {
-        public IGameElement MakeZombie()
+        private IMediator _mediator;
+
+        public GameElementFactory(IMediator mediator)
         {
-            return null;
+            _mediator = mediator;
         }
 
-        public IGameElement MakeZombieDog()
+        public IGameElement MakeZombie(int x, int y)
         {
-            return null;
+            Zombie zombie = new Zombie();
+            zombie._xPos = x;
+            zombie._yPos = y;
+            zombie._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Zombie);
+
+            return zombie as IGameElement;
         }
 
-        public IGameElement MakeFlyingZombie()
+        public IGameElement MakeZombieDog(int x, int y)
         {
-            return null;
+            ZombieDog zombieDog = new ZombieDog();
+            zombieDog._xPos = x;
+            zombieDog._yPos = y;
+            zombieDog._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.ZombieDog);
+
+            return zombieDog as IGameElement;
         }
 
-        public IGameElement MakeRedneck()
+        public IGameElement MakeFlyingZombie(int x, int y)
         {
-            return null;
+            FlyingZombie flyingZombie = new FlyingZombie();
+            flyingZombie._xPos = x;
+            flyingZombie._yPos = y;
+            flyingZombie._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.FlyingZombie);
+
+            return flyingZombie as IGameElement;
         }
 
-        public IGameElement MakeSheriff()
+        public IGameElement MakeRedneck(int x, int y)
         {
-            return null;
+            Redneck redneck = new Redneck();
+            redneck._xPos = x;
+            redneck._yPos = y;
+            redneck._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.RedNeck);
+
+            return redneck as IGameElement;
         }
 
-        public IGameElement MakePriest()
+        public IGameElement MakeSheriff(int x, int y)
         {
-            return null;
+            Sheriff sheriff = new Sheriff();
+            sheriff._xPos = x;
+            sheriff._yPos = y;
+            sheriff._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Sheriff);
+
+            return sheriff as IGameElement;
         }
 
-        public IGameElement MakeHay()
+        public IGameElement MakePriest(int x, int y)
         {
-            return null;
+            Priest priest = new Priest();
+            priest._xPos = x;
+            priest._yPos = y;
+            priest._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Priest);
+
+            return priest as IGameElement;
         }
 
-        public IGameElement MakeCar()
+        public IGameElement MakeHay(int x, int y)
         {
-            return null;
+            Hay hay = new Hay();
+            hay._xPos = x;
+            hay._yPos = y;
+            hay._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.Hay);
+
+            return hay as IGameElement;
         }
 
-        public IGameElement MakePit()
+        public IGameElement MakeCar(int x, int y)
         {
-            return null;
+            Car car = new Car();
+            car._xPos = x;
+            car._yPos = y;
+            //This needs to be revisited to add both tiles
+            car._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.CarFront);
+            //car._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.CarBack);
+
+            return car as IGameElement;
+        }
+
+        public IGameElement MakePit(int x, int y)
+        {
+            Pit pit = new Pit();
+            pit._xPos = x;
+            pit._yPos = y;
+           
+            pit._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.Pit);
+            
+            return pit as IGameElement;
         }
     }
 }

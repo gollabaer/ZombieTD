@@ -9,7 +9,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-
 namespace ZombieTD
 {
     /// <summary>
@@ -53,7 +52,6 @@ namespace ZombieTD
             clone.flips = this.flips;
             clone.numberOfSprites = this.numberOfSprites;
             clone.currentSprite = this.currentSprite;
-
             return clone as Object;
         }
     }
