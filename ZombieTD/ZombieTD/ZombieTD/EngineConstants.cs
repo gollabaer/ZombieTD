@@ -91,4 +91,17 @@ namespace ZombieTD
         Zombie5,
         Chainsaw
     }
+
+    public enum SpawnType
+    {
+        Zombie,
+        ZombieDog,
+        FlyingZombie,
+        Priest,
+        RedNeck,
+        Sheriff,
+        Hay,
+        Car,
+        Pit
+    }
 }

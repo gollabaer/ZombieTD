@@ -5,8 +5,11 @@ using System.Text;
 
 namespace ZombieTD
 {
-    interface ISpawnPool
+    public interface ISpawnPool
     {
+        void AcceptOrder(IOrder order);
         void SpawnElements(IMediator mediator);
+        void ProcessOrder();
+        void ClearQueues();
     }
 }

@@ -43,8 +43,8 @@ namespace ZombieTD
         public GameMediator()
         {
             #region Init Logic
-            _goodGuySpawnPool = new PlayerSpawnPool();
-            _badGuySpawnPool = new EnemySpawnPool();
+            _goodGuySpawnPool = new PlayerSpawnPool(this);
+            _badGuySpawnPool = new EnemySpawnPool(this);
             _textureAssetManager = new TextureAssetManager();
             _soundAssetManager = new SoundAssetManager();
             _menu = new Menu();
@@ -79,42 +79,6 @@ namespace ZombieTD
                 //return false;
             }
 
-            #region code that will go into the spawn pools and factories
-            //Test Code
-            IGameElement zombie = new Zombie();
-            IGameElement flyingZombie = new FlyingZombie();
-            IGameElement zombieDog = new ZombieDog();
-            IGameElement redneck = new Redneck();
-            IGameElement sheriff = new Sheriff();
-            IGameElement priest = new Priest();
-
-            ((Character)zombie)._xPos = 100;
-            ((Character)zombie)._yPos = 100;
-            ((Character)zombie)._texture = this.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Zombie);
-
-
-            ((Character)flyingZombie)._xPos = 200;
-            ((Character)flyingZombie)._yPos = 200;
-            ((Character)flyingZombie)._texture = this.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.FlyingZombie);
-
-
-            ((Character)zombieDog)._xPos = 300;
-            ((Character)zombieDog)._yPos = 300;
-            ((Character)zombieDog)._texture = this.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.ZombieDog);
-
-
-
-
-
-            //Test code
-            zombie.RegisterWithMediator(this, zombie);
-            flyingZombie.RegisterWithMediator(this, flyingZombie);
-            zombieDog.RegisterWithMediator(this, zombieDog);
-
-            redneck.RegisterWithMediator(this, redneck);
-            sheriff.RegisterWithMediator(this, sheriff);
-            priest.RegisterWithMediator(this, priest);
-            #endregion
             return true;
 
         }
@@ -141,6 +105,7 @@ namespace ZombieTD
         public void Tick()
         {
             //Take Turn
+            _goodGuySpawnPool.ProcessOrder();
             _goodGuySpawnPool.SpawnElements((IMediator)this);
             _badGuySpawnPool.SpawnElements((IMediator)this);
 
@@ -260,5 +225,10 @@ namespace ZombieTD
 
 
         #endregion
+
+        public void AcceptOrder(IOrder order)
+        {
+            _goodGuySpawnPool.AcceptOrder(order);
+        }
     }
 }

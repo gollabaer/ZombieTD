@@ -20,6 +20,7 @@ namespace ZombieTD
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         IMediator mediator;
+        Random rnd = new Random();
 
         //Mouse Input 
         MouseState mouseStateCurrent, mouseStatePrevious;
@@ -112,6 +113,13 @@ namespace ZombieTD
             // Left MouseClick
             if (mouseStatePrevious.LeftButton == ButtonState.Pressed && mouseStateCurrent.LeftButton == ButtonState.Released)
             {
+
+
+                BaseOrder order = new BaseOrder();
+                order.Type = SpawnType.Sheriff;
+                order.X = mouseStatePrevious.X;
+                order.Y = mouseStatePrevious.Y;
+                ((GameMediator)mediator).AcceptOrder((IOrder)order);
                 ((GameMediator)mediator).MakeTestSound();
             }
 

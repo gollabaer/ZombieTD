@@ -5,11 +5,11 @@ using System.Text;
 
 namespace ZombieTD
 {
-    class EnemySpawnPool : ISpawnPool
+    class EnemySpawnPool : SpawnPoolBase
     {
-        public void SpawnElements(IMediator mediator)
+        public EnemySpawnPool(IMediator mediator) : base(mediator)
         {
-            //throw new NotImplementedException();
+
         }
     }
 }
