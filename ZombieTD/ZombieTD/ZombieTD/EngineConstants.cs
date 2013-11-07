@@ -52,6 +52,24 @@ namespace ZombieTD
         Sheriff
     }
 
+    public enum CharacterType
+    {
+        Zombie,
+        ZombieDog,
+        FlyingZombie,
+        Priest,
+        RedNeck,
+        Sheriff
+    }
+
+    public enum StructureType
+    {
+        Hay,
+        CarBack,
+        CarFront,
+        Pit
+    }
+
     public enum StructureTextureType
     {
         Hay,

@@ -35,7 +35,7 @@ namespace ZombieTD
             }
             catch (Exception ex)
             {
-                Logger.Log(Logger.Log_Type.ERROR, "Faild to load character textures " + ex.ToString());
+                Logger.Log(Logger.Log_Type.ERROR, "Failed to load character textures " + ex.ToString());
             }
 
             try
@@ -51,7 +51,7 @@ namespace ZombieTD
             }
             catch (Exception ex)
             {
-                Logger.Log(Logger.Log_Type.ERROR, "Faild to load map textures " + ex.ToString());
+                Logger.Log(Logger.Log_Type.ERROR, "Failed to load map textures " + ex.ToString());
             }
 
             try
@@ -66,7 +66,7 @@ namespace ZombieTD
             }
             catch (Exception ex)
             {
-                Logger.Log(Logger.Log_Type.ERROR, "Faild to load structure textures " + ex.ToString());
+                Logger.Log(Logger.Log_Type.ERROR, "Failed to load structure textures " + ex.ToString());
             }
         }
 
@@ -111,20 +111,3 @@ namespace ZombieTD
         }
     }
 }
-
-
-//const uint NUMOFTEXTURES = 51;
-
-//     #region Obsolete Moved To Constants Class
-//     //public enum TextureTypes{
-//     //    Grass,
-//     //    Dirt,
-//     //    ETC
-//     //}
-//     #endregion
-
-//     Texture2D[] textures = new Texture2D[NUMOFTEXTURES];
-
-//     public static void load(ContentManager content){
-
-//     }

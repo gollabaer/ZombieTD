@@ -185,16 +185,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Images\Character\Redneck.png">
-      <Name>Redneck</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Images\Character\Sheriff.png">
-      <Name>Sheriff</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Images\Character\Zombie.png">
       <Name>Zombie</Name>
       <Importer>TextureImporter</Importer>
