@@ -39,7 +39,7 @@ namespace ZombieTD
 
         }
 
-        public virtual void update() { }
+        public abstract void update();
 
         public virtual Texture2D GetTexture()
         {

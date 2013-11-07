@@ -19,6 +19,11 @@ namespace ZombieTD
            //Flip Texture Based once based on flips
         }
 
+        public override void update()
+        {
+
+        }
+
         public override object Clone()
         {
             TextureMap clone = new TextureMap();

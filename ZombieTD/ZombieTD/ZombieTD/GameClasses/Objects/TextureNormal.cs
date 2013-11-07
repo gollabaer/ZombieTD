@@ -31,7 +31,8 @@ namespace ZombieTD
             currentSprite = 0;
         }
 
-        public virtual void update() {
+        public override void update()
+        {
             currentSprite++;
             if (currentSprite == numberOfSprites)
                 currentSprite = 0;

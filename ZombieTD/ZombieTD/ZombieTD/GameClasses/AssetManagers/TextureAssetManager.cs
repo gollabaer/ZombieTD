@@ -93,7 +93,7 @@ namespace ZombieTD
 
                 KeyValuePair<T, I> foundItem = found.FirstOrDefault();
 
-                return foundItem.Value;   
+                return (I)foundItem.Value.Clone();   
             }
 
             if (enumItem.GetType() == typeof(StructureTextureType))
@@ -104,7 +104,7 @@ namespace ZombieTD
 
                 KeyValuePair<T, I> foundItem = found.FirstOrDefault();
 
-                return foundItem.Value;   
+                return (I)foundItem.Value.Clone();   
             }
 
             throw new NotImplementedException("Cannot get Texture of Type" + Type.GetType(typeof(I).Name).Name);
