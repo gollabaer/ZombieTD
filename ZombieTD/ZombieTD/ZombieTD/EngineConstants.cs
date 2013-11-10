@@ -17,6 +17,7 @@ namespace ZombieTD
         public const string StructureImageLocation = "Images/Structure/";
         public const string MapTilesImageLocation = "Images/MapTile/";
         public const string SoundFileLocation = "SoundFX/";
+        public const string EffectImageLocation = "Images/Effects/";
 
 
         public const int SmallTextureHeight = 32;
@@ -103,5 +104,10 @@ namespace ZombieTD
         Hay,
         Car,
         Pit
+    }
+
+    public enum EffectTextureType
+    {
+        Fog
     }
 }

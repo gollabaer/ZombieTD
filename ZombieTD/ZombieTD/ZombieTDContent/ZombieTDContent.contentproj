@@ -42,6 +42,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\Effects\" />
     <Folder Include="Music\" />
   </ItemGroup>
   <ItemGroup>

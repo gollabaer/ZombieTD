@@ -120,7 +120,7 @@ namespace ZombieTD
                 order.X = mouseStatePrevious.X;
                 order.Y = mouseStatePrevious.Y;
                 ((GameMediator)mediator).AcceptOrder((IOrder)order);
-                ((GameMediator)mediator).MakeTestSound();
+                //((GameMediator)mediator).MakeTestSound();
             }
 
             // Right MouseClick

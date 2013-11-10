@@ -1,0 +1,9 @@
+﻿ //Draw The Elements
+
+            //Obsolete,  turns out drawing in a parallel order causes a flicker 
+            //as draw order is never the same.
+            //Parallel.ForEach(_gameElements, element =>
+            //{
+            //    //To Do Add Lock
+            //    lock (_spriteBatch) element.Draw(_spriteBatch);
+            //});

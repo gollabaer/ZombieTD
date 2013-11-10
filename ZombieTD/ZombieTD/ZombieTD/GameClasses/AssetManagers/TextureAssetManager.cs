@@ -20,6 +20,7 @@ namespace ZombieTD
         Dictionary<MapTileType, ITexture> mapTexturePool = new Dictionary<MapTileType, ITexture>();
         Dictionary<CharacterTextureType, ITexture> characterTexturePool = new Dictionary<CharacterTextureType, ITexture>();
         Dictionary<StructureTextureType, ITexture> structureTexturePool = new Dictionary<StructureTextureType, ITexture>();
+        Dictionary<EffectTextureType, ITexture> effectTexturePool = new Dictionary<EffectTextureType, ITexture>();
 
         public void LoadAssets(ContentManager content)
         {
@@ -67,6 +68,21 @@ namespace ZombieTD
             catch (Exception ex)
             {
                 Logger.Log(Logger.Log_Type.ERROR, "Failed to load structure textures " + ex.ToString());
+            }
+
+            try
+            {
+                Array effectValues = Enum.GetValues(typeof(EffectTextureType));
+
+                foreach (EffectTextureType effectType in effectValues)
+                {
+                    ITexture texture = new TextureNormal(content, effectType.ToEffectTextureFileFilename());
+                    effectTexturePool.Add(effectType, texture);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(Logger.Log_Type.ERROR, "Failed to load effect textures " + ex.ToString());
             }
         }
 

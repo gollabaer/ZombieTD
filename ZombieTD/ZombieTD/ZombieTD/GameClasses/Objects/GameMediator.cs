@@ -53,12 +53,7 @@ namespace ZombieTD
         }
 
         #region Engine Methods
-        public void LoadAssets(ContentManager content)
-        {
-                _textureAssetManager.LoadAssets(content);
-                _soundAssetManager.LoadAssets(content);
-        }
-
+       
         public bool LoadContent(ContentManager content, SpriteBatch spritebatch)
         {
             _spriteBatch = spritebatch;
@@ -71,31 +66,40 @@ namespace ZombieTD
                 _menu.LoadContent();
                 _score.LoadContent();
                 _map = Map.LoadMap(this);
-                //return true;
+
+                return true;
             }
             catch (Exception ex)
             {
-                Logger.Log(Logger.Log_Type.ERROR, "Error Loading Assets");
-                //return false;
+                Logger.Log(Logger.Log_Type.ERROR, "Error Loading Assets " + ex.ToString());
+                return false;
             }
-
-            return true;
-
         }
 
+        public void LoadAssets(ContentManager content)
+        {
+            _textureAssetManager.LoadAssets(content);
+            _soundAssetManager.LoadAssets(content);
+        }
+
+        /// <summary>
+        /// The mediators draw method is used to draw
+        /// the map, characters, menu, and score. Draw order
+        /// within the method affects how the elements
+        /// are layered.
+        /// </summary>
+        /// <param name="spritebatch">Use a sprite to draw a 2D bitmap directly to the screen.</param>
         public void Draw(SpriteBatch spritebatch)
         {
-            
-
+           //Draw the Game Map
             _map.Draw(spritebatch);
-            //Draw The Elements
-           
-            Parallel.ForEach(_gameElements, element =>
-            {
-                //To Do Add Lock
-                lock (_spriteBatch) element.Draw(_spriteBatch);
-            });
+           //Draw each of the IGameElement in the game
+            foreach (IGameElement element in _gameElements)
+                element.Draw(_spriteBatch);
+            //Draw any Effects
 
+
+            //Draw The Menu
             _menu.Draw(spritebatch);
             _score.Draw(spritebatch);
 

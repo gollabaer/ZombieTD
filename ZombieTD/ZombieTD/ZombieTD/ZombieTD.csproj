@@ -112,6 +112,9 @@
     <Compile Include="EngineConstants.cs" />
     <Compile Include="GameClasses\BaseOrder.cs" />
     <Compile Include="GameClasses\IOrder.cs" />
+    <Compile Include="GameClasses\Objects\Abstract\EffectBase.cs" />
+    <Compile Include="GameClasses\Objects\FogEffect.cs" />
+    <Compile Include="GameClasses\Objects\IEffect.cs" />
     <Compile Include="GameClasses\Objects\TextureMap.cs" />
     <Compile Include="GameClasses\SpawnPoolBase.cs" />
     <Compile Include="GameInterfaces\ITexture.cs" />
@@ -167,6 +170,7 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
+    <Content Include="Obsolete.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZombieTDContent\ZombieTDContent.contentproj">

@@ -72,6 +72,11 @@ namespace ZombieTD
             return EngineConstants.StructureImageLocation + item.ToString();
         }
 
+        public static string ToEffectTextureFileFilename<T>(this T item)
+        {
+            return EngineConstants.EffectImageLocation + item.ToString();
+        }
+
         public static string ToMapTileTextureFileFilename<T>(this T item)
         {
             return EngineConstants.MapTilesImageLocation + item.ToString();
