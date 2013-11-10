@@ -63,8 +63,8 @@ namespace ZombieTD
             {
                 this._spriteBatch = spritebatch;
                 LoadAssets(content);
-                _menu.LoadContent();
-                _score.LoadContent();
+                _menu.LoadContent(this, content);
+                _score.LoadContent(this, content);
                 _map = Map.LoadMap(this);
 
                 return true;
@@ -138,6 +138,7 @@ namespace ZombieTD
         public void RegisterWithMediator(IMediator mediator, IGameElement element)
         {
             this._gameElements.Add(element);
+            _map.GetTileByXY(element.GetX(), element.GetY()).AddElementToTile(element);
         }
 
 
@@ -230,9 +231,30 @@ namespace ZombieTD
 
         #endregion
 
-        public void AcceptOrder(IOrder order)
+        public void AcceptOrder(IOrder order, OrderFor orderFor)
         {
-            _goodGuySpawnPool.AcceptOrder(order);
+            switch (orderFor)
+            {
+                case OrderFor.Player: _goodGuySpawnPool.AcceptOrder(order); break;
+                case OrderFor.Enemy: _badGuySpawnPool.AcceptOrder(order); break;
+            }   
+        }
+
+
+        public Tile GetTileByXY(int x, int y)
+        {
+            return _map.GetTileByXY(x, y);
+        }
+
+
+        public int GetX()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetY()
+        {
+            throw new NotImplementedException();
         }
     }
 }

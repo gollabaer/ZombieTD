@@ -43,5 +43,21 @@ namespace ZombieTD
 
             return map;
         }
+
+        public Tile GetTileByXY(int x, int y)
+        {
+            Tile foundTile = null;
+
+            Parallel.ForEach(Tiles, tile =>
+            {
+                if ((x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
+                (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
+                {
+                    foundTile = tile;        
+                }
+            });
+
+            return foundTile;
+        }
     }
 }

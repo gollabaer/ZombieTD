@@ -81,5 +81,10 @@ namespace ZombieTD
         {
             return EngineConstants.MapTilesImageLocation + item.ToString();
         }
+
+        public static string ToMenuTextureFileFilename<T>(this T item)
+        {
+            return EngineConstants.MenuImageLocation + item.ToString();
+        }
     }
 }

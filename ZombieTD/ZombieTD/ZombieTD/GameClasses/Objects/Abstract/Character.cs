@@ -33,11 +33,22 @@ namespace ZombieTD
             //this._yPos += (int)Math.Round(Math.Cos(DateTime.Now.Second)*2,0);
             //this._xPos += (int)Math.Round(Math.Sin(DateTime.Now.Second) * 2, 0);
             // if (_texture != null)
-            //_texture.setRotation(_texture.getRotation()+0.02f);
+            _texture.setRotation(_texture.getRotation() + 0.02f);
             #endregion
 
         }
-        
+
+        public int GetX()
+        {
+            return this._xPos;
+        }
+
+        public int GetY()
+        {
+            return this._yPos;
+        }
+
+
         public void RegisterWithMediator(IMediator mediator, IGameElement element)
         {
             _mediator = mediator;

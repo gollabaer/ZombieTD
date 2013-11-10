@@ -6,13 +6,15 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace ZombieTD
 {
-    public class Projectile : IProjectile
+    public class Projectile : Character, IProjectile
     {
         public void TakeTurn(IMediator mediator)
         {
             //Projectile Logic
         }
     
+
+        
 
         public void  RegisterWithMediator(IMediator mediator, IGameElement element)
         {

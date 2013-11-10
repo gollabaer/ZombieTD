@@ -15,6 +15,9 @@ namespace ZombieTD
         void Tick();
         Map GetMap(ICharacter element);
         ICharacter GetCharacter(int x, int y);
+        void AcceptOrder(IOrder order, OrderFor orderFor);
         bool LoadContent(ContentManager content, SpriteBatch spriteBatch);
+        Tile GetTileByXY(int x, int y);
+       
     }
 }

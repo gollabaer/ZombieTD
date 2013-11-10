@@ -7,5 +7,6 @@ namespace ZombieTD
 {
     public class Base : Character, IBase
     {
+     
     }
 }

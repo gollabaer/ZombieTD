@@ -13,7 +13,7 @@ namespace ZombieTD
         
         ITexture _texture;
         MapTileType _textureType;
-        List<ICharacter> _charactersOnTile;
+        List<IGameElement> _charactersOnTile = new List<IGameElement>();
 
         int _number_of_90_degree_flips;
         int _xPos;
@@ -64,11 +64,27 @@ namespace ZombieTD
                     _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx,dy), SpriteEffects.None, 0);
         }
 
+        public bool HasCharacters()
+        {
+            return (_charactersOnTile.Count > 0);
+
+        }
         public void SetTexture(IMediator mediator)
         {
            this._texture = mediator.GetAsset<MapTileType, ITexture> (this._textureType);
           _texture.setRotation((float)(Math.PI / 2) * this._number_of_90_degree_flips);
         }
+
+        public void AddElementToTile(IGameElement element)
+        {
+            this._charactersOnTile.Add(element);
+        }
+
+        public void RemoveElementFromTile(IGameElement element)
+        {
+            this._charactersOnTile.Remove(element);
+        }
+
     }
 }
 

@@ -35,6 +35,11 @@ Content\Images\Character\CarFront.xnb
 Content\Images\Character\Hay.xnb
 Content\Images\Character\Pit.xnb
 Content\Images\Character\Sheriff.xnb
+Content\Images\Menus\SelectMenu.xnb
+Content\Images\Menus\Score.xnb
+Content\GameEngine.xnb
+Content\SoundFX\Error.xnb
+Content\Score.xnb
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav
 Content\SoundFX\HolyWater.wav

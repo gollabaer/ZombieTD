@@ -21,10 +21,16 @@ namespace ZombieTD
         SpriteBatch spriteBatch;
         IMediator mediator;
         Random rnd = new Random();
+       
+
+        //FPS
+        SpriteFont _spr_font;
+        int _total_frames = 0;
+        float _elapsed_time = 0.0f;
+        int _fps = 0;
 
         //Mouse Input 
-        MouseState mouseStateCurrent, mouseStatePrevious;
-       
+        MouseInputActionDirector inputDirector;
        
         public ZombieTDGame()
         {
@@ -52,6 +58,7 @@ namespace ZombieTD
 
             //Create an instance of our mediator class
             mediator = new GameMediator();
+            inputDirector = new MouseInputActionDirector(mediator);
             base.Initialize();
             
         }
@@ -62,6 +69,9 @@ namespace ZombieTD
         /// </summary>
         protected override void LoadContent()
         {
+            _spr_font = Content.Load<SpriteFont>("GameEngine"); 
+
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -86,12 +96,25 @@ namespace ZombieTD
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            _elapsed_time += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+ 
+            // 1 Second has passed
+            if (_elapsed_time >= 1000.0f)
+            {
+                _fps = _total_frames;
+                _total_frames = 0;
+                _elapsed_time = 0;
+            }
+
+
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             //Mouse Input Method
-            CheckInputs();
+            //CheckInputs();
+            inputDirector.ProcessInput(Mouse.GetState());
+
             // TODO: Add your update logic here
             mediator.Tick();
            
@@ -106,30 +129,6 @@ namespace ZombieTD
             {
                 this.Exit();
             }
-
-            // Get current mouseState
-            mouseStateCurrent = Mouse.GetState();
-
-            // Left MouseClick
-            if (mouseStatePrevious.LeftButton == ButtonState.Pressed && mouseStateCurrent.LeftButton == ButtonState.Released)
-            {
-
-
-                BaseOrder order = new BaseOrder();
-                order.Type = SpawnType.Sheriff;
-                order.X = mouseStatePrevious.X;
-                order.Y = mouseStatePrevious.Y;
-                ((GameMediator)mediator).AcceptOrder((IOrder)order);
-                //((GameMediator)mediator).MakeTestSound();
-            }
-
-            // Right MouseClick
-            if (mouseStateCurrent.RightButton == ButtonState.Pressed && mouseStatePrevious.RightButton == ButtonState.Released)
-            {
-                //TODO when right mousebutton clicked
-            }
-
-            mouseStatePrevious = mouseStateCurrent;
         }
 
         /// <summary>
@@ -138,11 +137,16 @@ namespace ZombieTD
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            _total_frames++;
+
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             mediator.Draw(spriteBatch);
+            if(EngineConstants.showFPS)
+                spriteBatch.DrawString(_spr_font, string.Format("FPS={0}", _fps),
+                    new Vector2(EngineConstants.FPSX, EngineConstants.FPSY), Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
             

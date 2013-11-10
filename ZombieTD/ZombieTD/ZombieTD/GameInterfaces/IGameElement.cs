@@ -12,5 +12,7 @@ namespace ZombieTD
         void TakeTurn(IMediator mediator);
         void RegisterWithMediator(IMediator mediator, IGameElement element);
         void Draw(SpriteBatch spritebatch);
+        int GetX();
+        int GetY();
     }
 }

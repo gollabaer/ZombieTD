@@ -21,6 +21,7 @@ namespace ZombieTD
         Dictionary<CharacterTextureType, ITexture> characterTexturePool = new Dictionary<CharacterTextureType, ITexture>();
         Dictionary<StructureTextureType, ITexture> structureTexturePool = new Dictionary<StructureTextureType, ITexture>();
         Dictionary<EffectTextureType, ITexture> effectTexturePool = new Dictionary<EffectTextureType, ITexture>();
+        Dictionary<MenuTextureType, ITexture> menuTexturePool = new Dictionary<MenuTextureType, ITexture>();
 
         public void LoadAssets(ContentManager content)
         {
@@ -84,6 +85,27 @@ namespace ZombieTD
             {
                 Logger.Log(Logger.Log_Type.ERROR, "Failed to load effect textures " + ex.ToString());
             }
+
+            try
+            {
+                Array menuValues = Enum.GetValues(typeof(MenuTextureType));
+
+                foreach (MenuTextureType menuType in menuValues)
+                {
+                    ITexture texture = new TextureNormal(content, menuType.ToMenuTextureFileFilename());
+                    menuTexturePool.Add(menuType, texture);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(Logger.Log_Type.ERROR, "Failed to load menu textures " + ex.ToString());
+            }
+
+
+
+
+
+
         }
 
         public I GetAsset<T, I>(T enumItem) where I : ICloneable
@@ -122,6 +144,29 @@ namespace ZombieTD
 
                 return (I)foundItem.Value.Clone();   
             }
+
+            if (enumItem.GetType() == typeof(MenuTextureType))
+            {
+                var found = from KeyValuePair<T, I> entry in menuTexturePool
+                            where entry.Key.ToString() == enumItem.ToString()
+                            select entry;
+
+                KeyValuePair<T, I> foundItem = found.FirstOrDefault();
+
+                return (I)foundItem.Value.Clone();
+            }
+
+            if (enumItem.GetType() == typeof(EffectTextureType))
+            {
+                var found = from KeyValuePair<T, I> entry in effectTexturePool
+                            where entry.Key.ToString() == enumItem.ToString()
+                            select entry;
+
+                KeyValuePair<T, I> foundItem = found.FirstOrDefault();
+
+                return (I)foundItem.Value.Clone();
+            }
+
 
             throw new NotImplementedException("Cannot get Texture of Type" + Type.GetType(typeof(I).Name).Name);
         }
