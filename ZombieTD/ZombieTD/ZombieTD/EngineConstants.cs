@@ -23,6 +23,8 @@ namespace ZombieTD
 
         public const int SmallTextureHeight = 32;
         public const int SmallTextureWidth = 32;
+        public const int ScreenWidth = EngineConstants.SmallTextureWidth * 40;
+        public const int ScreenHeight = EngineConstants.SmallTextureWidth * 22;
 
 
         //Menu

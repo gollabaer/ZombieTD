@@ -22,6 +22,10 @@ namespace ZombieTD
 
         float getRotation();
 
+        float getAlpha();
+
+        void setAlpha(float alpha);
+
         void update();
 
     }

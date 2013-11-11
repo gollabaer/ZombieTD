@@ -10,5 +10,6 @@ namespace ZombieTD
     {
         void Draw(SpriteBatch spriteBatch);
 
+        void update();
     }
 }

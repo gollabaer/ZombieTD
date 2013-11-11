@@ -36,8 +36,8 @@ namespace ZombieTD
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferWidth = EngineConstants.SmallTextureWidth * 40;
-            graphics.PreferredBackBufferHeight = EngineConstants.SmallTextureHeight * 22;
+            graphics.PreferredBackBufferWidth = EngineConstants.ScreenWidth;
+            graphics.PreferredBackBufferHeight = EngineConstants.ScreenHeight;
 
             if(EngineConstants.IsLogging)
                 Logger.StartLogger();
@@ -142,14 +142,13 @@ namespace ZombieTD
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
             mediator.Draw(spriteBatch);
             if(EngineConstants.showFPS)
                 spriteBatch.DrawString(_spr_font, string.Format("FPS={0}", _fps),
                     new Vector2(EngineConstants.FPSX, EngineConstants.FPSY), Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
-            
         }
     }
 }

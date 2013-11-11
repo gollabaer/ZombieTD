@@ -30,13 +30,22 @@ namespace ZombieTD
         {
             _texture = content.Load<Texture2D>(fileName);
             _rotation = 0;
-            _alpha = 0;
+            _alpha = 1;
             _rec = new Rectangle(0, 0, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight);
         }
 
         public BaseTexture()
         {
 
+        }
+
+        public  float getAlpha() {
+            return _alpha;
+        }
+
+        public void setAlpha(float alpha)
+        {
+            _alpha = alpha;
         }
 
         public abstract void update();
