@@ -32,6 +32,7 @@ namespace ZombieTD
         private IAssetManager _soundAssetManager;
         private Menu _menu;
         private Score _score;
+        private EnemyWaveGenerator _waveGenerator;
         
 
 
@@ -66,7 +67,7 @@ namespace ZombieTD
                 _menu.LoadContent(this, content);
                 _score.LoadContent(this, content);
                 _map = Map.LoadMap(this);
-
+                _waveGenerator = new EnemyWaveGenerator(this, _map.EntryPoints);
                 return true;
             }
             catch (Exception ex)
@@ -109,9 +110,11 @@ namespace ZombieTD
         public void Tick()
         {
             //Take Turn
+            _waveGenerator.IssueOrders();
+            _badGuySpawnPool.ProcessOrder();
             _goodGuySpawnPool.ProcessOrder();
-            _goodGuySpawnPool.SpawnElements((IMediator)this);
-            _badGuySpawnPool.SpawnElements((IMediator)this);
+            _goodGuySpawnPool.SpawnElements(this);
+            _badGuySpawnPool.SpawnElements(this);
 
             //Game Elements take turn
             Parallel.ForEach(_gameElements, element =>

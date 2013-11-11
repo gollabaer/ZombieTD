@@ -71,7 +71,7 @@ namespace ZombieTD
         //FPS Display
         public const bool showFPS = true;
         public const float FPSX = 10.0f;
-        public const float FPSY = 672.0f;
+        public const float FPSY = 650.0f;
 
 
 

@@ -10,6 +10,7 @@ namespace ZombieTD
     public class Map
     {
         public List<Tile> Tiles {get; set;}
+        public List<Tile> EntryPoints { get; set;}
 
         public void Draw(SpriteBatch spritebatch)
         {
@@ -38,10 +39,28 @@ namespace ZombieTD
             foreach(Tile tile in map.Tiles)
             {
                 tile.SetTexture(mediator);
+                
          
             }
 
+            SetEntryPoints(map);
+
             return map;
+        }
+
+        private static void SetEntryPoints(Map map)
+        {
+            foreach (Tile tile in map.Tiles)
+            {
+                if ((tile.Xpos == 0 || tile.Ypos == 0 || tile.Xpos == 1248 || tile.Ypos == 672) &&
+                    (tile.TextureType == MapTileType.Path_withRock ||
+                     tile.TextureType == MapTileType.Path_noRock ||
+                     tile.TextureType == MapTileType.RoadMiddle ||
+                     tile.TextureType == MapTileType.RoadOutside))
+                {
+                    map.EntryPoints.Add(tile);
+                }
+            }
         }
 
         public Tile GetTileByXY(int x, int y)

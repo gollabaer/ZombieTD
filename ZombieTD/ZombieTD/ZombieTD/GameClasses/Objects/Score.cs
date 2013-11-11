@@ -54,7 +54,7 @@ namespace ZombieTD
 
         public void AddEnemy()
         {
-
+            _numberOfZombies++;
         }
 
         public void SubtractEnemy()

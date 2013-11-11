@@ -108,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnemyWaveGenerator.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="EngineConstants.cs" />
     <Compile Include="GameClasses\BaseOrder.cs" />
