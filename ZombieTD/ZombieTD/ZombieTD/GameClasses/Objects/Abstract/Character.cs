@@ -28,11 +28,11 @@ namespace ZombieTD
             _lineOfSiteMap = mediator.GetMap(this);
 
             #region animationtests
-            //if (_texture != null && (DateTime.Now.Millisecond % 10 == 0))
-            //    _texture.update();
-            //this._yPos += (int)Math.Round(Math.Cos(DateTime.Now.Second)*2,0);
+            if (_texture != null && (DateTime.Now.Millisecond % 10 == 0))
+                _texture.update();
+            //this._yPos += (int)Math.Round(Math.Cos(DateTime.Now.Second) * 2, 0);
             //this._xPos += (int)Math.Round(Math.Sin(DateTime.Now.Second) * 2, 0);
-            // if (_texture != null)
+            if (_texture != null)
             _texture.setRotation(_texture.getRotation() + 0.02f);
             #endregion
 

@@ -10,7 +10,7 @@ namespace ZombieTD
         IMediator _mediator;
         GameElementFactory _elementFactory;
         Queue<IOrder> _orderQueue;
-        Queue<IGameElement> _spawnQueue;
+        protected Queue<IGameElement> _spawnQueue;
 
         public SpawnPoolBase(IMediator mediator)
         {

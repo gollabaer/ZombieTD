@@ -63,8 +63,8 @@ namespace ZombieTD
         public const int SurvivalTime_X = 5;
         public const int SurvivalTime_Y = 96;
 
-        public const int GameX = 1280;
-        public const int GameY = 704;
+        public const int GameX = 1279;
+        public const int GameY = 703;
 
         //FPS Display
         public const bool showFPS = true;

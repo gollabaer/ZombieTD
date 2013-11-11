@@ -9,7 +9,15 @@ namespace ZombieTD
     {
         public PlayerSpawnPool(IMediator mediator) : base(mediator)
         {
+            
+        }
 
+        public override void SpawnElements(IMediator mediator)
+        {
+            if(this._spawnQueue.Count > 0)
+                mediator.GetScore().AddTownsfolk();
+            base.SpawnElements(mediator);
+           
         }
     }
 }

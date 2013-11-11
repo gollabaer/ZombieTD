@@ -256,5 +256,11 @@ namespace ZombieTD
         {
             throw new NotImplementedException();
         }
+
+
+        public Score GetScore()
+        {
+            return this._score;
+        }
     }
 }
