@@ -37,6 +37,11 @@ namespace ZombieTD
             timer++;
         }
 
+        public int getLineOfSight()
+        {
+            return _lineOfSite;
+        }
+
         public int GetX()
         {
             return this._xPos;

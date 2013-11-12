@@ -9,9 +9,6 @@ namespace ZombieTD
     {
         void TakeDamage(int damageAmount);
 
-
-
-
-
+        int getLineOfSight();
     }
 }
