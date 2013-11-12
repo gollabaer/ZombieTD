@@ -15,7 +15,7 @@ namespace ZombieTD
         string[] sounds = Enum.GetNames(typeof(SoundType));
 
         #endregion
-
+        FogEffect effect;
 
         #region XnaSpecific
         private SpriteBatch _spriteBatch;
@@ -50,6 +50,10 @@ namespace ZombieTD
             _menu = new Menu();
             _score = new Score();
             #endregion
+
+            //FOG TEST
+            effect = new FogEffect();
+
         }
 
         #region Engine Methods
@@ -80,6 +84,7 @@ namespace ZombieTD
         {
             _textureAssetManager.LoadAssets(content);
             _soundAssetManager.LoadAssets(content);
+            effect._fogtexture = _textureAssetManager.GetAsset<EffectTextureType, ITexture>(EffectTextureType.Fog);
         }
 
         /// <summary>
@@ -98,6 +103,7 @@ namespace ZombieTD
                 element.Draw(_spriteBatch);
             //Draw any Effects
 
+            effect.Draw(spritebatch);
 
             //Draw The Menu
             _menu.Draw(spritebatch);
@@ -112,7 +118,7 @@ namespace ZombieTD
             _goodGuySpawnPool.ProcessOrder();
             _goodGuySpawnPool.SpawnElements((IMediator)this);
             _badGuySpawnPool.SpawnElements((IMediator)this);
-
+            effect.update();
             //Game Elements take turn
             Parallel.ForEach(_gameElements, element =>
             {
