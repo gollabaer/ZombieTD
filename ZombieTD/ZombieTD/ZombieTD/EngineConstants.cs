@@ -73,7 +73,9 @@ namespace ZombieTD
         public const float FPSX = 10.0f;
         public const float FPSY = 650.0f;
 
-
+        //Wave Generator
+        public const int NumberOfFramesBeforeOrder = 60;
+        public const int MaxNumberOfSpawns = 200;
 
 
 
