@@ -194,4 +194,12 @@ namespace ZombieTD
         Player,
         Enemy
     }
+
+    public enum MoveDirection { 
+        Up,
+        Down,
+        Left,
+        Right
+    
+    }
 }

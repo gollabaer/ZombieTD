@@ -33,7 +33,7 @@ namespace ZombieTD
         private Menu _menu;
         private Score _score;
         private EnemyWaveGenerator _waveGenerator;
-        
+        public static  ulong numberofTicks = 0;
 
 
 
@@ -127,7 +127,7 @@ namespace ZombieTD
             {
                 lock(_gameElements) element.TakeTurn((IMediator)this);
             });
-
+            numberofTicks++;
         }
 
         #endregion

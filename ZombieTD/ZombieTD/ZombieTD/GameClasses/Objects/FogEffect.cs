@@ -11,11 +11,11 @@ namespace ZombieTD
         public ITexture _fogtexture;
         Vector2 _centerVec;
         Vector2 _velocity;
-        ulong timetracker = 0;
+       
 
         public FogEffect() {
             _centerVec = new Vector2(0, 0);
-            _velocity = new Vector2(0, 1);
+            _velocity = new Vector2(1, 0);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -42,7 +42,7 @@ namespace ZombieTD
         public override void update() {
 
             //TODO CHANGEVELOCITY
-            if (timetracker % 3 == 0) 
+            if (GameMediator.numberofTicks % 3 == 0) 
             _centerVec += _velocity;
 
             if (_velocity.X < 0 && _centerVec.X + _fogtexture.GetTexture().Width <=0)
@@ -60,10 +60,9 @@ namespace ZombieTD
                 _centerVec.Y = 0;
             }
             //TODO CHANGEALPHA
-            float al = (float)Math.Cos(timetracker / 30.0);
+            float al = (float)Math.Cos(GameMediator.numberofTicks / 30.0);
             al = al * 0.1f + 0.4f;
             _fogtexture.setAlpha(al);
-            timetracker++;
 
         }
     }

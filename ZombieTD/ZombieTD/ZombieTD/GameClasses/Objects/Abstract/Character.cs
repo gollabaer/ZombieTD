@@ -18,24 +18,23 @@ namespace ZombieTD
         public int _attackDamageRanged;
         public int _attackRange;
         public int _defense;
-        public int _speed;
+        public int _speed = 4;
         public int _lineOfSite;
         public int _xPos, _yPos;
         public int directionFacing; //0 - 360
+        protected int timer = 0;
         
         public virtual void TakeTurn(IMediator mediator)
         {
             _lineOfSiteMap = mediator.GetMap(this);
 
             #region animationtests
-            if (_texture != null && (DateTime.Now.Millisecond % 10 == 0))
+            if (_texture != null && (GameMediator.numberofTicks % 10 == 0))
                 _texture.update();
-            //this._yPos += (int)Math.Round(Math.Cos(DateTime.Now.Second) * 2, 0);
-            //this._xPos += (int)Math.Round(Math.Sin(DateTime.Now.Second) * 2, 0);
-            if (_texture != null)
-            _texture.setRotation(_texture.getRotation() + 0.02f);
+
             #endregion
 
+            timer++;
         }
 
         public int GetX()
@@ -46,6 +45,28 @@ namespace ZombieTD
         public int GetY()
         {
             return this._yPos;
+        }
+
+        public void move(MoveDirection direction) {
+            if (timer > _speed)
+            {
+                switch (direction)
+                {
+                    case MoveDirection.Down:
+                        _yPos++;
+                        break;
+                    case MoveDirection.Up:
+                        _yPos--;
+                        break;
+                    case MoveDirection.Left:
+                        _xPos--;
+                        break;
+                    case MoveDirection.Right:
+                        _xPos++;
+                        break;
+                }
+                timer = 0;
+            }
         }
 
 
