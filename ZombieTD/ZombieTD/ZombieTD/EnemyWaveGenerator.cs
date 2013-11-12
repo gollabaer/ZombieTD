@@ -22,7 +22,7 @@ namespace ZombieTD
 
         public void IssueOrders()
         {
-            if (count == 60)
+            if (count == 200)
             {
                 BaseOrder order = new BaseOrder();
                 int r = _rnd.Next(_entryPoints.Count);

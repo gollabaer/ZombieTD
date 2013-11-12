@@ -7,8 +7,6 @@ Content\SoundFX\Zombie2.xnb
 Content\SoundFX\Zombie3.xnb
 Content\SoundFX\Zombie4.xnb
 Content\SoundFX\Zombie5.xnb
-Content\SoundFX\Chainsaw.xnb
-Content\SoundFX\Error.xnb
 Content\Images\MapTile\Building_roof_center.xnb
 Content\Images\MapTile\Building_roof_corner.xnb
 Content\Images\MapTile\Building_Roof_Side.xnb
@@ -22,6 +20,7 @@ Content\Images\MapTile\RoofTownHall_corner.xnb
 Content\Images\MapTile\TownHallRoof_Middle.xnb
 Content\Images\MapTile\TownhallRoof_Side.xnb
 Content\Images\MapTile\Tree.xnb
+Content\SoundFX\Chainsaw.xnb
 Content\Images\Character\FlyingZombie.xnb
 Content\Images\Character\Priest.xnb
 Content\Images\Character\Zombie.xnb
@@ -39,6 +38,7 @@ Content\Images\Character\Sheriff.xnb
 Content\Images\Menus\SelectMenu.xnb
 Content\Images\Menus\Score.xnb
 Content\GameEngine.xnb
+Content\SoundFX\Error.xnb
 Content\Score.xnb
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav
