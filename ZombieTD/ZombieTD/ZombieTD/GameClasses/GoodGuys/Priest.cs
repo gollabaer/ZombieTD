@@ -7,7 +7,6 @@ namespace ZombieTD
 {
     public class Priest : Character, IPriest
     {
-
         public override void TakeTurn(IMediator mediator)
         {
             base.TakeTurn(mediator);
