@@ -15,7 +15,7 @@ namespace ZombieTD
 
         public FogEffect() {
             _centerVec = new Vector2(0, 0);
-            _velocity = new Vector2(1, 1);
+            _velocity = new Vector2(0, 1);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
