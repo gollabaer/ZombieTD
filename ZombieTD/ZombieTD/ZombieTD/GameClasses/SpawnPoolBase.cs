@@ -57,8 +57,13 @@ namespace ZombieTD
         {
             if (_spawnQueue.Count != 0)
             {
-                IGameElement spawn = _spawnQueue.Dequeue();
-                spawn.RegisterWithMediator(mediator, spawn);
+                Tile tile = mediator.GetTileByXY(_spawnQueue.Peek().GetX(), _spawnQueue.Peek().GetY());
+
+                if (!tile.HasCharacters())
+                {
+                    IGameElement spawn = _spawnQueue.Dequeue();
+                    spawn.RegisterWithMediator(mediator, spawn);
+                }
             }
         }
 

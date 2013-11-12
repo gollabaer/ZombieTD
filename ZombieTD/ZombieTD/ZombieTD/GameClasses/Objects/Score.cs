@@ -66,5 +66,11 @@ namespace ZombieTD
         {
             _numberOfTownsFolk++;
         }
+
+        public int GetNumberOfZombies()
+        {
+
+            return _numberOfZombies;
+        }
     }
 }

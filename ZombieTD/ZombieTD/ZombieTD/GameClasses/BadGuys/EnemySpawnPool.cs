@@ -14,10 +14,17 @@ namespace ZombieTD
 
         public override void SpawnElements(IMediator mediator)
         {
-            if (this._spawnQueue.Count > 0)
-                mediator.GetScore().AddEnemy();
-            base.SpawnElements(mediator);
-            
+            if (_spawnQueue.Count != 0)
+            {
+                Tile tile = mediator.GetTileByXY(_spawnQueue.Peek().GetX(), _spawnQueue.Peek().GetY());
+
+                if (!tile.HasCharacters())
+                {
+                    IGameElement spawn = _spawnQueue.Dequeue();
+                    mediator.GetScore().AddEnemy();
+                    spawn.RegisterWithMediator(mediator, spawn);
+                }
+            }            
         }
     }
 }

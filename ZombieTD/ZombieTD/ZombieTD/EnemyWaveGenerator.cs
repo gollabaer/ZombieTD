@@ -8,6 +8,7 @@ namespace ZombieTD
     public class EnemyWaveGenerator
     {
         List<Tile> _entryPoints;
+        List<Tile> _usedPoints;
         IMediator _mediator;
         Random _rnd;
         int count = 0;
@@ -15,6 +16,7 @@ namespace ZombieTD
         public EnemyWaveGenerator(IMediator mediator, List<Tile> entryPoints)
         {
             _entryPoints = entryPoints;
+            _usedPoints = new List<Tile>();
             _mediator = mediator;
             _rnd = new Random();
 
@@ -22,23 +24,38 @@ namespace ZombieTD
 
         public void IssueOrders()
         {
-            if (count == 60)
+            if (_mediator.GetScore().GetNumberOfZombies() < EngineConstants.MaxNumberOfSpawns)
             {
-                BaseOrder order = new BaseOrder();
-                int r = _rnd.Next(_entryPoints.Count);
-                Tile tile = (Tile)_entryPoints[r];
+                if (count == EngineConstants.NumberOfFramesBeforeOrder)
+                {
+                    if (_entryPoints.Count == 0)
+                    {
+                        foreach (Tile usedTile in _usedPoints)
+                        {
+                            _entryPoints.Add(usedTile);
+                        }
 
+                        _usedPoints.Clear();
+                    }
 
-                order.Type = SpawnType.Zombie;
-                order.X = tile.Xpos;
-                order.Y = tile.Ypos;
-                _mediator.AcceptOrder(order as IOrder, OrderFor.Enemy);
+                    BaseOrder order = new BaseOrder();
+                    int r = _rnd.Next(_entryPoints.Count);
+                    Tile tile = (Tile)_entryPoints[r];
 
-                count = 0;
-            }
-            else
-            {
-                count++;
+                    _usedPoints.Add(tile);
+                    _entryPoints.Remove(tile);
+
+                    order.Type = SpawnType.ZombieDog;
+                    order.X = tile.Xpos;
+                    order.Y = tile.Ypos;
+                    _mediator.AcceptOrder(order as IOrder, OrderFor.Enemy);
+
+                    count = 0;
+                }
+                else
+                {
+                    count++;
+                }
             }
         }
     }
