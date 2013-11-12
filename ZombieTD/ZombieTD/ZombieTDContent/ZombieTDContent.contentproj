@@ -288,8 +288,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\Effects\fog.png">
-      <Name>fog</Name>
+    <Compile Include="Images\Effects\Fog.png">
+      <Name>Fog</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
