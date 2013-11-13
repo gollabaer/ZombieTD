@@ -37,7 +37,7 @@ namespace ZombieTD
         private EnemyWaveGenerator _waveGenerator;
         private IEffect _fogEffect;
         private ISound _bgMusic;
-        public static  ulong numberofTicks = 0;
+        public static ulong numberofTicks = 0;
         #endregion
 
         public GameMediator()
@@ -153,7 +153,7 @@ namespace ZombieTD
 
 
                 #region Kill Test
-                if (numberofTicks % 60 == 0 && _gameElements.Count > 5)
+                if (numberofTicks % 100 == 0 && _gameElements.Count > 5)
                 {
                     int r = _rnd.Next(_gameElements.Count);
 
@@ -341,7 +341,5 @@ namespace ZombieTD
             _map.RemoveElementFromTile(element);
             _gameElements.Remove(element);
         }
-
-        
     }
 }

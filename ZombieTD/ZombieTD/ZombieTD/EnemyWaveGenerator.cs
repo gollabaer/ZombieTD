@@ -29,7 +29,7 @@ namespace ZombieTD
         {
             if (_mediator.GetScore().GetNumberOfZombies() < EngineConstants.MaxNumberOfSpawns)
             {
-                if (count == EngineConstants.NumberOfFramesBeforeOrder)
+                if (GameMediator.numberofTicks % EngineConstants.NumberOfFramesBeforeOrder == 0)
                 {
                     if (_entryPoints.Count == 0)
                     {

@@ -19,7 +19,6 @@ namespace ZombieTD
         bool LoadContent(ContentManager content, SpriteBatch spriteBatch);
         Tile GetTileByXY(int x, int y);
         Score GetScore();
-        int GetTownhallHealth();
-       
+        int GetTownhallHealth(); 
     }
 }
