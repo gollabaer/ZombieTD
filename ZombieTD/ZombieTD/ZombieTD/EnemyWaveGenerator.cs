@@ -13,13 +13,16 @@ namespace ZombieTD
         Random _rnd;
         int count = 0;
      
-        public EnemyWaveGenerator(IMediator mediator, List<Tile> entryPoints)
+        public EnemyWaveGenerator(IMediator mediator)
         {
-            _entryPoints = entryPoints;
             _usedPoints = new List<Tile>();
             _mediator = mediator;
             _rnd = new Random();
+        }
 
+        public void SetEnrtyPoints(List<Tile> entryPoints)
+        {
+            _entryPoints = entryPoints;
         }
 
         public void IssueOrders()
@@ -45,7 +48,7 @@ namespace ZombieTD
                     _usedPoints.Add(tile);
                     _entryPoints.Remove(tile);
 
-                    order.Type = SpawnType.ZombieDog;
+                    order.Type = SpawnType.Zombie;
                     order.X = tile.Xpos;
                     order.Y = tile.Ypos;
                     _mediator.AcceptOrder(order as IOrder, OrderFor.Enemy);

@@ -26,7 +26,7 @@ namespace ZombieTD
             int y =(int) _centerVec.Y;
 
             spriteBatch.Draw(_fogtexture.GetTexture(), new Rectangle(x - textureWidth, y - textureHeight, textureWidth, textureHeight), Color.White *_fogtexture.getAlpha());
-            spriteBatch.Draw(_fogtexture.GetTexture(), new Rectangle(x               , y - textureHeight, textureWidth, textureHeight), Color.White* _fogtexture.getAlpha());
+            spriteBatch.Draw(_fogtexture.GetTexture(), new Rectangle(x, y - textureHeight, textureWidth, textureHeight), Color.White * _fogtexture.getAlpha());
             spriteBatch.Draw(_fogtexture.GetTexture(), new Rectangle(x + textureWidth, y - textureHeight, textureWidth, textureHeight), Color.White * _fogtexture.getAlpha());
 
             spriteBatch.Draw(_fogtexture.GetTexture(), new Rectangle(x - textureWidth, y, textureWidth, textureHeight), Color.White * _fogtexture.getAlpha());
@@ -42,7 +42,7 @@ namespace ZombieTD
         public override void update() {
 
             //TODO CHANGEVELOCITY
-            if (GameMediator.numberofTicks % 3 == 0) 
+            if (GameMediator.numberofTicks % 10 == 0) 
             _centerVec += _velocity;
 
             if (_velocity.X < 0 && _centerVec.X + _fogtexture.GetTexture().Width <=0)
@@ -61,9 +61,14 @@ namespace ZombieTD
             }
             //TODO CHANGEALPHA
             float al = (float)Math.Cos(GameMediator.numberofTicks / 30.0);
-            al = al * 0.1f + 0.4f;
+            al = al * 0.1f + 0.8f;
             _fogtexture.setAlpha(al);
 
+        }
+
+        public override void LoadContent(IMediator mediator)
+        {
+            //throw new NotImplementedException();
         }
     }
 }

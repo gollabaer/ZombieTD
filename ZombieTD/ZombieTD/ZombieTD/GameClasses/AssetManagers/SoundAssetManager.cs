@@ -18,6 +18,7 @@ namespace ZombieTD
     public class SoundAssetManager : IAssetManager
     {
         Dictionary<SoundType, ISound> soundPool = new Dictionary<SoundType, ISound>();
+        Dictionary<MusicType, ISound> musicPool = new Dictionary<MusicType, ISound>();
 
         public void LoadAssets(ContentManager content)
         {
@@ -29,17 +30,41 @@ namespace ZombieTD
                 soundPool.Add(soundType, sound);
                 
             }
+
+            values = Enum.GetValues(typeof(MusicType));
+
+            foreach (MusicType musicType in values)
+            {
+                ISound music = new Music(content, musicType.ToMusicFileFilename());
+                musicPool.Add(musicType, music);
+            }
         }
 
         public I GetAsset<T, I>(T enumItem) where I : ICloneable
         {
-            var found = from KeyValuePair<T,I> entry in soundPool
-                        where entry.Key.ToString() == enumItem.ToString()
-                        select entry;
+            if (enumItem.GetType() == typeof(SoundType))
+            {
+                var found = from KeyValuePair<T, I> entry in soundPool
+                            where entry.Key.ToString() == enumItem.ToString()
+                            select entry;
 
-            KeyValuePair<T, I> foundItem = found.FirstOrDefault();
+                KeyValuePair<T, I> foundItem = found.FirstOrDefault();
 
-            return foundItem.Value;   
+                return foundItem.Value;
+            }
+
+            if (enumItem.GetType() == typeof(MusicType))
+            {
+                var found = from KeyValuePair<T, I> entry in musicPool
+                            where entry.Key.ToString() == enumItem.ToString()
+                            select entry;
+
+                KeyValuePair<T, I> foundItem = found.FirstOrDefault();
+
+                return foundItem.Value;
+            }
+
+            throw new NotImplementedException("Cannot get Audio of Type" + Type.GetType(typeof(I).Name).Name);
         }
     }
 }

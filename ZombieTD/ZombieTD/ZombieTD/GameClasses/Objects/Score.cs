@@ -16,14 +16,17 @@ namespace ZombieTD
         int _totalKilled = 0;
         int _numberOfTownsFolk = 0;
         int _numberOfZombies = 0;
-        float _townHallHealth = 0.0f;
-        string _aliveTime = "";
         SpriteFont _spr_font;
+
+        public Score(IMediator mediator)
+            : base(mediator)
+        {
+            _stopWatch.Start();
+        }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture.GetTexture(), new Rectangle(this._xPos, this._yPos, EngineConstants.ScoreTextureWidth, EngineConstants.ScoreTextureHeight), Color.White);
-
 
              spriteBatch.DrawString(_spr_font, string.Format("Total Kills = {0}", _totalKills),
              new Vector2(EngineConstants.TotalKills_X, EngineConstants.TotalKills_Y), Color.Black);
@@ -37,16 +40,16 @@ namespace ZombieTD
             spriteBatch.DrawString(_spr_font, string.Format("Total Zombies = {0}", _numberOfZombies),
             new Vector2(EngineConstants.TotalZombies_X, EngineConstants.TotalZombies_Y), Color.Black);
 
-            spriteBatch.DrawString(_spr_font, string.Format("Townhall Health = {0}%", _townHallHealth),
+            spriteBatch.DrawString(_spr_font, string.Format("Townhall Health = {0}", _mediator.GetTownhallHealth()),
             new Vector2(EngineConstants.TownhallHealth_X, EngineConstants.TownHallHealth_Y), Color.Black);
 
-            spriteBatch.DrawString(_spr_font, string.Format("Survival Time = {0}", _aliveTime),
+            spriteBatch.DrawString(_spr_font, string.Format("Survival Time = {0}", _stopWatch.Elapsed.ToString("mm\\:ss")),
             new Vector2(EngineConstants.SurvivalTime_X, EngineConstants.SurvivalTime_Y), Color.Black);
         }
 
-        public override void LoadContent(IMediator mediator, ContentManager content)
+        public override void LoadContent(ContentManager content)
         {
-            this._texture =  mediator.GetAsset<MenuTextureType, ITexture>(MenuTextureType.Score);
+            this._texture =  _mediator.GetAsset<MenuTextureType, ITexture>(MenuTextureType.Score);
              this._xPos = EngineConstants.ScoreStartX;
             this._yPos = EngineConstants.ScoreStartY;
             _spr_font = content.Load<SpriteFont>("Score");  
@@ -59,7 +62,7 @@ namespace ZombieTD
 
         public void SubtractEnemy()
         {
-
+            _numberOfZombies--;
         }
 
         public void AddTownsfolk()
@@ -71,6 +74,21 @@ namespace ZombieTD
         {
 
             return _numberOfZombies;
+        }
+
+        internal void AddKill()
+        {
+            _totalKills++;
+        }
+
+        internal void SubtractPlayer()
+        {
+            _numberOfTownsFolk--;
+        }
+
+        internal void AddKilled()
+        {
+            _totalKilled++;
         }
     }
 }

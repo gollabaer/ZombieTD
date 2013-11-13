@@ -18,12 +18,18 @@ namespace ZombieTD
         public int _attackDamageRanged;
         public int _attackRange;
         public int _defense;
-        public int _speed = 4;
+        public int _speed;
         public int _lineOfSite;
+
         public int _xPos, _yPos;
         public int directionFacing; //0 - 360
         protected int timer = 0;
-        
+
+        protected Character()
+        {
+
+        }
+
         public virtual void TakeTurn(IMediator mediator)
         {
             _lineOfSiteMap = mediator.GetMap(this);

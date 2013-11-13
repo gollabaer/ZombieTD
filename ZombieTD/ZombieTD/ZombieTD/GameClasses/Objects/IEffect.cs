@@ -9,7 +9,7 @@ namespace ZombieTD
     public interface IEffect
     {
         void Draw(SpriteBatch spriteBatch);
-
+        void LoadContent(IMediator mediator);
         void update();
     }
 }

@@ -144,9 +144,14 @@ namespace ZombieTD
             // TODO: Add your drawing code here
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
             mediator.Draw(spriteBatch);
+
             if(EngineConstants.showFPS)
                 spriteBatch.DrawString(_spr_font, string.Format("FPS={0}", _fps),
                     new Vector2(EngineConstants.FPSX, EngineConstants.FPSY), Color.White);
+            if(EngineConstants.ShowTicks)
+                spriteBatch.DrawString(_spr_font, string.Format("Ticks={0}", GameMediator.numberofTicks),
+                    new Vector2(EngineConstants.TicksX, EngineConstants.TicksY), Color.White);
+
             spriteBatch.End();
             base.Draw(gameTime);
         }

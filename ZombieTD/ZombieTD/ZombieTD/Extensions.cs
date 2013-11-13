@@ -86,5 +86,10 @@ namespace ZombieTD
         {
             return EngineConstants.MenuImageLocation + item.ToString();
         }
+
+        public static string ToMusicFileFilename<T>(this T item)
+        {
+            return EngineConstants.MusicFileLocation + item.ToString();
+        }
     }
 }

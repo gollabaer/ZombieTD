@@ -11,6 +11,6 @@ namespace ZombieTD
     public interface IMenu
     {
         void Draw(SpriteBatch spriteBatch);
-        void LoadContent(IMediator mediator, ContentManager content);
+        void LoadContent(ContentManager content);
     }
 }

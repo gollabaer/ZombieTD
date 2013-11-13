@@ -69,6 +69,12 @@ namespace ZombieTD
             return (_charactersOnTile.Count > 0);
 
         }
+
+        public void RemoveElement(IGameElement element)
+        {
+            _charactersOnTile.Remove(element);
+        }
+
         public void SetTexture(IMediator mediator)
         {
            this._texture = mediator.GetAsset<MapTileType, ITexture> (this._textureType);

@@ -11,6 +11,7 @@ namespace ZombieTD
     {
         public List<Tile> Tiles {get; set;}
         public List<Tile> EntryPoints { get; set;}
+        public List<Tile> Base { get; set; }
 
         public void Draw(SpriteBatch spritebatch)
         {
@@ -28,6 +29,7 @@ namespace ZombieTD
 
         public Map GetMapByLineOfSight(int lineOfSight, int x, int y)
         {
+            //TODO return map by line of sight
             return new Map();
         }
 
@@ -36,31 +38,72 @@ namespace ZombieTD
             Map map = new Map();
             map = (EngineConstants.MapFileLocation.LoadFromFilename()).LoadFromXMLString();
 
-            foreach(Tile tile in map.Tiles)
+            //foreach(Tile tile in map.Tiles)
+            //{
+            //    tile.SetTexture(mediator);
+            //}
+
+            Parallel.ForEach(map.Tiles, tile =>
             {
                 tile.SetTexture(mediator);
-                
-         
-            }
+            });
 
             SetEntryPoints(map);
+            SetBase(map);
 
             return map;
         }
 
         private static void SetEntryPoints(Map map)
         {
-            foreach (Tile tile in map.Tiles)
+            //foreach (Tile tile in map.Tiles)
+            //{
+            //    if ((tile.Xpos == 0 || tile.Ypos == 0 || tile.Xpos == 1248 || tile.Ypos == 672) &&
+            //        (tile.TextureType == MapTileType.Path_withRock ||
+            //         tile.TextureType == MapTileType.Path_noRock ||
+            //         tile.TextureType == MapTileType.RoadMiddle ||
+            //         tile.TextureType == MapTileType.RoadOutside))
+            //    {
+            //        map.EntryPoints.Add(tile);
+            //    }
+            //}
+
+            Parallel.ForEach(map.Tiles, tile =>
             {
-                if ((tile.Xpos == 0 || tile.Ypos == 0 || tile.Xpos == 1248 || tile.Ypos == 672) &&
+                if ((tile.Xpos == 0 || tile.Ypos == 0 || tile.Xpos == EngineConstants.MapEdgeX || tile.Ypos == EngineConstants.MapEdgeY) &&
                     (tile.TextureType == MapTileType.Path_withRock ||
                      tile.TextureType == MapTileType.Path_noRock ||
                      tile.TextureType == MapTileType.RoadMiddle ||
                      tile.TextureType == MapTileType.RoadOutside))
                 {
-                    map.EntryPoints.Add(tile);
+                    lock(map) map.EntryPoints.Add(tile);
                 }
-            }
+            });
+        }
+
+        private static void SetBase(Map map)
+        {
+            //foreach (Tile tile in map.Tiles)
+            //{
+            //    if (tile.TextureType == MapTileType.RoofTownHall_corner ||
+            //         tile.TextureType == MapTileType.TownHallRoof_Middle ||
+            //         tile.TextureType == MapTileType.TownhallRoof_Side)
+            //    {
+            //        map.EntryPoints.Add(tile);
+            //    }
+            //}
+
+
+            Parallel.ForEach(map.Tiles, tile =>
+            {
+                if (tile.TextureType == MapTileType.RoofTownHall_corner ||
+                    tile.TextureType == MapTileType.TownHallRoof_Middle ||
+                    tile.TextureType == MapTileType.TownhallRoof_Side)
+                {
+                    lock(map) map.Base.Add(tile);
+                }
+            });
+
         }
 
         public Tile GetTileByXY(int x, int y)
@@ -77,6 +120,15 @@ namespace ZombieTD
             });
 
             return foundTile;
+        }
+
+        public void RemoveElementFromTile(IGameElement element)
+        {
+            Parallel.ForEach(Tiles, tile =>
+            {
+                tile.RemoveElement(element);
+            });
+
         }
     }
 }

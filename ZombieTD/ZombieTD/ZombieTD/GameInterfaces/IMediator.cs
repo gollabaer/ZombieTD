@@ -10,7 +10,7 @@ namespace ZombieTD
 
 
 
-    public interface IMediator: IZombie , IZombieDog, IFlyingZombie, IRedneck, IPriest, ISheriff, IBase, ICar, IHay, IPit, IProjectile, IAssetManager
+    public interface IMediator: IZombie , IZombieDog, IFlyingZombie, IRedneck, IPriest, ISheriff,  ICar, IHay, IPit, IProjectile, IAssetManager
     {
         void Tick();
         Map GetMap(ICharacter element);
@@ -19,6 +19,7 @@ namespace ZombieTD
         bool LoadContent(ContentManager content, SpriteBatch spriteBatch);
         Tile GetTileByXY(int x, int y);
         Score GetScore();
+        int GetTownhallHealth();
        
     }
 }

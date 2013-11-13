@@ -38,9 +38,11 @@ Content\Images\Character\Pit.xnb
 Content\Images\Character\Sheriff.xnb
 Content\Images\Menus\SelectMenu.xnb
 Content\Images\Menus\Score.xnb
+Content\Images\Effects\fog.xnb
 Content\GameEngine.xnb
 Content\Score.xnb
-Content\Images\Effects\Fog.xnb
+Content\Music\TBG.xnb
+Content\Music\TBG.wma
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav
 Content\SoundFX\HolyWater.wav

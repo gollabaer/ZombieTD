@@ -12,7 +12,7 @@ namespace ZombieTD
     {
         //List<Tuple<string, ITexture>> selectionItems = new List<Tuple<string,ITexture>>();
        
-        public Menu()
+        public Menu(IMediator mediator) :base(mediator)
         {
             
         }
@@ -41,9 +41,9 @@ namespace ZombieTD
            //         _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx, dy), SpriteEffects.None, 0);
         }
 
-        public override void LoadContent(IMediator mediator, ContentManager content)
+        public override void LoadContent(ContentManager content)
         {
-            this._texture = mediator.GetAsset<MenuTextureType, ITexture>(MenuTextureType.SelectMenu);
+            this._texture = _mediator.GetAsset<MenuTextureType, ITexture>(MenuTextureType.SelectMenu);
             this._xPos = EngineConstants.MenuStartX;
             this._yPos = EngineConstants.MenuStartY;
 

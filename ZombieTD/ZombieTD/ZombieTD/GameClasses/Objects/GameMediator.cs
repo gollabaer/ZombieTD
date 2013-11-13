@@ -13,9 +13,10 @@ namespace ZombieTD
         #region Test Vars
         int currentSound = 0;
         string[] sounds = Enum.GetNames(typeof(SoundType));
+        Random _rnd = new Random();
 
         #endregion
-        FogEffect effect;
+       
 
         #region XnaSpecific
         private SpriteBatch _spriteBatch;
@@ -30,31 +31,29 @@ namespace ZombieTD
         private ISpawnPool _badGuySpawnPool;
         private IAssetManager _textureAssetManager;
         private IAssetManager _soundAssetManager;
+        private IBase _base;
         private Menu _menu;
         private Score _score;
         private EnemyWaveGenerator _waveGenerator;
+        private IEffect _fogEffect;
+        private ISound _bgMusic;
         public static  ulong numberofTicks = 0;
-
-
-
-
-
         #endregion
 
         public GameMediator()
         {
             #region Init Logic
+         
             _goodGuySpawnPool = new PlayerSpawnPool(this);
             _badGuySpawnPool = new EnemySpawnPool(this);
             _textureAssetManager = new TextureAssetManager();
             _soundAssetManager = new SoundAssetManager();
-            _menu = new Menu();
-            _score = new Score();
+            _waveGenerator = new EnemyWaveGenerator(this);
+            _base = new Base();
+            _menu = new Menu(this);
+            _score = new Score(this);
+            _fogEffect = new FogEffect2();
             #endregion
-
-            //FOG TEST
-            effect = new FogEffect();
-
         }
 
         #region Engine Methods
@@ -66,12 +65,26 @@ namespace ZombieTD
             
             try
             {
-                this._spriteBatch = spritebatch;
+                //Load the asset managers
                 LoadAssets(content);
-                _menu.LoadContent(this, content);
-                _score.LoadContent(this, content);
+
+                //Load The content for other game elements from the asset managers
+                _fogEffect.LoadContent(this);
+                _menu.LoadContent(content);
+                _score.LoadContent(content);
+
+                //Map has to load before the objects that require it 
                 _map = Map.LoadMap(this);
-                _waveGenerator = new EnemyWaveGenerator(this, _map.EntryPoints);
+               
+                //Require Map Parts
+                _waveGenerator.SetEnrtyPoints(_map.EntryPoints);
+                _base.SetBaseTiles(_map.Base);
+
+                _bgMusic = GetAsset<MusicType, ISound>(MusicType.TBG);
+                _bgMusic.Play(.25f, 0f, 0f, true);
+                Logger.Log(Logger.Log_Type.INFO, "The Game Has Started");
+               
+
                 return true;
             }
             catch (Exception ex)
@@ -85,7 +98,7 @@ namespace ZombieTD
         {
             _textureAssetManager.LoadAssets(content);
             _soundAssetManager.LoadAssets(content);
-            effect._fogtexture = _textureAssetManager.GetAsset<EffectTextureType, ITexture>(EffectTextureType.Fog);
+            //effect._fogtexture = _textureAssetManager.GetAsset<EffectTextureType, ITexture>(EffectTextureType.Fog);
         }
 
         /// <summary>
@@ -104,30 +117,55 @@ namespace ZombieTD
                 element.Draw(_spriteBatch);
             //Draw any Effects
 
-            effect.Draw(spritebatch);
+            _fogEffect.Draw(spritebatch);
 
             //Draw The Menu
             _menu.Draw(spritebatch);
             _score.Draw(spritebatch);
-
-           
         }
 
         public void Tick()
         {
-            //Take Turn
-            _waveGenerator.IssueOrders();
-            _badGuySpawnPool.ProcessOrder();
-            _goodGuySpawnPool.ProcessOrder();
-            _goodGuySpawnPool.SpawnElements(this);
-            _badGuySpawnPool.SpawnElements(this);
-            effect.update();
-            //Game Elements take turn
-            Parallel.ForEach(_gameElements, element =>
+            //The Game Continues
+            if (GetTownhallHealth() > 0)
             {
-                lock(_gameElements) element.TakeTurn((IMediator)this);
-            });
-            numberofTicks++;
+                //Take Turn
+                _waveGenerator.IssueOrders();
+                _badGuySpawnPool.ProcessOrder();
+                _goodGuySpawnPool.ProcessOrder();
+                _goodGuySpawnPool.SpawnElements(this);
+                _badGuySpawnPool.SpawnElements(this);
+                _fogEffect.update();
+
+
+                //Game Elements take turn
+                Parallel.ForEach(_gameElements, element =>
+                {
+                    lock (_gameElements) element.TakeTurn((IMediator)this);
+                });
+
+                //Prevent Exception
+                if (numberofTicks == ulong.MaxValue)
+                    numberofTicks = 0;
+                else
+                    numberofTicks++;
+
+
+
+                #region Kill Test
+                if (numberofTicks % 60 == 0 && _gameElements.Count > 5)
+                {
+                    int r = _rnd.Next(_gameElements.Count);
+
+                    KillElement(_gameElements[r]);
+                }
+                #endregion
+            }
+            else
+            {
+                //The Game Is Over
+                Logger.Log(Logger.Log_Type.INFO, "The Game Has Ended");
+            }
         }
 
         #endregion
@@ -209,6 +247,14 @@ namespace ZombieTD
 
         #endregion
 
+        #region Townhall Methods
+        public int GetTownhallHealth()
+        {
+            return _base.GetTownhallHealth();
+        }
+        #endregion
+
+
 
         public void TakeTurn(IMediator mediator)
         {
@@ -276,5 +322,30 @@ namespace ZombieTD
         {
             return this._score;
         }
+
+        public void KillElement(IGameElement element)
+        {
+            if(element is IZombie ||
+               element is IZombieDog ||
+               element is IFlyingZombie)
+            {
+                _score.SubtractEnemy();
+                _score.AddKill();
+            }
+             
+            else if (element is ISheriff ||
+                     element is IRedneck ||
+                     element is IPriest ||
+                     element is IBase)
+            {
+                _score.SubtractPlayer();
+                _score.AddKilled();
+            }
+
+            _map.RemoveElementFromTile(element);
+            _gameElements.Remove(element);
+        }
+
+        
     }
 }

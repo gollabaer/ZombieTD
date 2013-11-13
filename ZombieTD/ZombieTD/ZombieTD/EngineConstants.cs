@@ -19,7 +19,7 @@ namespace ZombieTD
         public const string SoundFileLocation = "SoundFX/";
         public const string EffectImageLocation = "Images/Effects/";
         public const string MenuImageLocation = "Images/Menus/";
-
+        public const string MusicFileLocation = "Music/";
 
         public const int SmallTextureHeight = 32;
         public const int SmallTextureWidth = 32;
@@ -71,18 +71,129 @@ namespace ZombieTD
         //FPS Display
         public const bool showFPS = true;
         public const float FPSX = 10.0f;
-        public const float FPSY = 650.0f;
+        public const float FPSY = 630.0f;
+
+        //Ticks Display
+        public static bool ShowTicks = true;
+        public const float TicksX = 10.0f;
+        public const float TicksY = 650.0f;
+
 
         //Wave Generator
-        public const int NumberOfFramesBeforeOrder = 60;
+        public const int NumberOfFramesBeforeOrder = 55;
         public const int MaxNumberOfSpawns = 200;
 
 
+        //Character Attributes
+
+        //Zombie
+        public const int Zombie_Health = 10;
+        public const int Zombie_AttackDamageMelee = 2;
+        public const int Zombie_AttackDamageRanged = 4;
+        public const int Zombie_AttackRange = 6;
+        public const int Zombie_Defense = 2;
+        public const int Zombie_Speed = 5;
+        public const int Zombie_LineOfSite = 6;
+
+        //ZombieDog
+        public const int ZombieDog_Health = 10;
+        public const int ZombieDog_AttackDamageMelee = 2;
+        public const int ZombieDog_AttackDamageRanged = 4;
+        public const int ZombieDog_AttackRange = 6;
+        public const int ZombieDog_Defense = 2;
+        public const int ZombieDog_Speed = 5;
+        public const int ZombieDog_LineOfSite = 6;
+
+        //FlyingZombie
+        public const int FlyingZombie_Health = 10;
+        public const int FlyingZombie_AttackDamageMelee = 2;
+        public const int FlyingZombie_AttackDamageRanged = 4;
+        public const int FlyingZombie_AttackRange = 6;
+        public const int FlyingZombie_Defense = 2;
+        public const int FlyingZombie_Speed = 5;
+        public const int FlyingZombie_LineOfSite = 6;
+
+        //Redneck
+        public const int Redneck_Health = 10;
+        public const int Redneck_AttackDamageMelee = 2;
+        public const int Redneck_AttackDamageRanged = 4;
+        public const int Redneck_AttackRange = 6;
+        public const int Redneck_Defense = 2;
+        public const int Redneck_Speed = 5;
+        public const int Redneck_LineOfSite = 6;
+
+        //Priest
+        public const int Priest_Health = 10;
+        public const int Priest_AttackDamageMelee = 2;
+        public const int Priest_AttackDamageRanged = 4;
+        public const int Priest_AttackRange = 6;
+        public const int Priest_Defense = 2;
+        public const int Priest_Speed = 5;
+        public const int Priest_LineOfSite = 6;
+
+        //Sheriff
+        public const int Sheriff_Health = 10;
+        public const int Sheriff_AttackDamageMelee = 2;
+        public const int Sheriff_AttackDamageRanged = 4;
+        public const int Sheriff_AttackRange = 6;
+        public const int Sheriff_Defense = 2;
+        public const int Sheriff_Speed = 5;
+        public const int Sheriff_LineOfSite = 6;
+
+        //Hay
+        public const int Hay_Health = 10;
+        public const int Hay_AttackDamageMelee = 0;
+        public const int Hay_AttackDamageRanged = 0;
+        public const int Hay_AttackRange = 0;
+        public const int Hay_Defense = 2;
+        public const int Hay_Speed = 0;
+        public const int Hay_LineOfSite = 0;
+
+        //Car
+        public const int Car_Health = 100; //burn time
+        public const int Car_AttackDamageMelee = 0;
+        public const int Car_AttackDamageRanged = 4;
+        public const int Car_AttackRange = 1;
+        public const int Car_Defense = 5;
+        public const int Car_Speed = 0;
+        public const int Car_LineOfSite = 1;
+
+        //Pit
+        public const int Pit_Health = 3; //Number of Enemies that can fit into the pit
+        public const int Pit_AttackDamageMelee = 1; //Damage to unit per timespan
+        public const int Pit_AttackDamageRanged = 0;
+        public const int Pit_AttackRange = 0;
+        public const int Pit_Defense = 0;
+        public const int Pit_Speed = 0;
+        public const int Pit_LineOfSite = 0;
+
+        //Base
+        public const int Base_Health = 100;
+        public const int Base_AttackDamageMelee = 0;
+        public const int Base_AttackDamageRanged = 0;
+        public const int Base_AttackRange = 0;
+        public const int Base_Defense = 2;
+        public const int Base_Speed = 0;
+        public const int Base_LineOfSite = 0;
+
+        //Fog Effect
+        public const int FogSpeed = 1;
+        public const int Fog_UpdateRate = 2;
+        public static float Fog_StartAlpha = .01f;
+        public static float Fog_AlphaThreshold = 1.0f;
+        public static float Fog_AlphaIncrement = .005f;
+        public static float Fog_ResetValue = .7f;
 
 
 
 
+        //Map
+        public static int MapEdgeX = 1248;
+        public static int MapEdgeY = 672;
 
+
+
+       
     }
 
     public enum MapTileType
@@ -152,6 +263,12 @@ namespace ZombieTD
         Zombie5,
         Chainsaw,
         Error
+      
+    }
+
+    public enum MusicType
+    {
+        TBG
     }
 
     public enum SpawnType

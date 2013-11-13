@@ -7,6 +7,8 @@ namespace ZombieTD
 {
     public interface IBase : IGameElement
     {
+        int GetTownhallHealth();
 
+        void SetBaseTiles(List<Tile> list);
     }
 }

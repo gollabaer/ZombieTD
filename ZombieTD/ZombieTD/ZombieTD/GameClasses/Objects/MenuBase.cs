@@ -10,11 +10,15 @@ namespace ZombieTD
 {
     public abstract class MenuBase : IMenu
     {
+        protected IMediator _mediator;
         public ITexture _texture; //Change tto protected
         public int _xPos;
         public int _yPos;
 
-
+        protected MenuBase(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
         public int Xpos
         {
             get { return _xPos; }
@@ -31,6 +35,6 @@ namespace ZombieTD
 
         public abstract void Draw(SpriteBatch spriteBatch);
 
-        public abstract void LoadContent(IMediator mediator, ContentManager content);
+        public abstract void LoadContent(ContentManager content);
     }
 }

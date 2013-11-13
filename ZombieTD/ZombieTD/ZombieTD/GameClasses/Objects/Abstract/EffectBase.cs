@@ -8,7 +8,11 @@ namespace ZombieTD
 {
     public abstract class EffectBase: IEffect
     {
+        protected ITexture _texture;
+
         public abstract void Draw(SpriteBatch spriteBatch);
+
+        public abstract void LoadContent(IMediator mediator);
 
         public abstract void update();
     }

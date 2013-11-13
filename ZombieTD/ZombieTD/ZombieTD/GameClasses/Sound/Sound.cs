@@ -16,14 +16,12 @@ namespace ZombieTD
         public SoundEffect sound;
         public List<SoundEffectInstance> pool;
 
-
-
         public Sound(ContentManager Content, String Filename)
         {
             sound = Content.Load<SoundEffect>(Filename);
             pool = new List<SoundEffectInstance>() { sound.CreateInstance() };
         }
-        public void Play(float Volume = 1f, float Pan = 0f, float Pitch = 0f)
+        public void Play(float Volume = 1f, float Pan = 0f, float Pitch = 0f, bool isLoop = false)
         {
             for (int p = 0; p < pool.Count; p++)
             {
