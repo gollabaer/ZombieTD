@@ -173,13 +173,9 @@ namespace ZombieTD
         #region Mediator Methods
         public Map GetMap(ICharacter character)
         {
-            //NOT COMPLETE
-
-            //int lineofsight = character.getLineOfSight();
-            //Tile getLocation = new Tile(character.GetX(), character.GetY());
-            //Map returnMap = new Map();
-            //return returnMap;
-            return null;
+            return _map.GetMapByLineOfSight(character.getLineOfSight(),
+                                            character.GetX(),
+                                            character.GetY());
         }
 
         public ICharacter GetCharacter(int x, int y)

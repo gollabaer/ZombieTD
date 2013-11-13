@@ -58,6 +58,7 @@ namespace ZombieTD
             return this._yPos;
         }
 
+    
         public void move(MoveDirection direction) {
             if (timer > _speed)
             {
@@ -75,11 +76,14 @@ namespace ZombieTD
                     case MoveDirection.Right:
                         _xPos++;
                         break;
+                    default: break;
                 }
                 timer = 0;
             }
         }
 
+
+     
 
         public void RegisterWithMediator(IMediator mediator, IGameElement element)
         {

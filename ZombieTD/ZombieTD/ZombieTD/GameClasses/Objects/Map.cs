@@ -29,8 +29,19 @@ namespace ZombieTD
 
         public Map GetMapByLineOfSight(int lineOfSight, int x, int y)
         {
+            Map returnMap = new Map();
+
+            Parallel.ForEach(Tiles, tile =>
+            {
+                int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
+                if (dist <= lineOfSight)
+                {
+                    returnMap.Tiles.Add(tile);
+                }
+            });
+
             //TODO return map by line of sight
-            return new Map();
+            return returnMap;
         }
 
         public static Map LoadMap(IMediator mediator)
