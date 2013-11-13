@@ -13,6 +13,13 @@ namespace ZombieTD
         public List<Tile> EntryPoints { get; set;}
         public List<Tile> Base { get; set; }
 
+
+
+        public Map()
+        {
+            Tiles = new List<Tile>();
+
+        }
         public void Draw(SpriteBatch spritebatch)
         {
             //For Debug
@@ -36,7 +43,7 @@ namespace ZombieTD
                 int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
                 if (dist <= lineOfSight)
                 {
-                    returnMap.Tiles.Add(tile);
+                    lock (returnMap) returnMap.Tiles.Add(tile);
                 }
             });
 
