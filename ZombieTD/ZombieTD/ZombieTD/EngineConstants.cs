@@ -87,13 +87,16 @@ namespace ZombieTD
         //Character Attributes
 
         //Zombie
-        public const int Zombie_Health = 10;
+        public const int Zombie_Health = 9;
         public const int Zombie_AttackDamageMelee = 2;
         public const int Zombie_AttackDamageRanged = 4;
         public const int Zombie_AttackRange = 6;
         public const int Zombie_Defense = 2;
         public const int Zombie_Speed = 5;
+        public const int Zombie_NumberOfFramesBeforeMove = 5;
         public const int Zombie_LineOfSite = 6;
+        
+
 
         //ZombieDog
         public const int ZombieDog_Health = 10;
@@ -102,6 +105,7 @@ namespace ZombieTD
         public const int ZombieDog_AttackRange = 6;
         public const int ZombieDog_Defense = 2;
         public const int ZombieDog_Speed = 5;
+        public const int ZombieDog_NumberOfFramesBeforeMove = 5;
         public const int ZombieDog_LineOfSite = 6;
 
         //FlyingZombie
@@ -111,6 +115,7 @@ namespace ZombieTD
         public const int FlyingZombie_AttackRange = 6;
         public const int FlyingZombie_Defense = 2;
         public const int FlyingZombie_Speed = 5;
+        public const int FlyingZombie_NumberOfFramesBeforeMove = 5;
         public const int FlyingZombie_LineOfSite = 6;
 
         //Redneck
@@ -120,6 +125,7 @@ namespace ZombieTD
         public const int Redneck_AttackRange = 6;
         public const int Redneck_Defense = 2;
         public const int Redneck_Speed = 5;
+        public const int Redneck_NumberOfFramesBeforeMove = 5;
         public const int Redneck_LineOfSite = 6;
 
         //Priest
@@ -129,6 +135,7 @@ namespace ZombieTD
         public const int Priest_AttackRange = 6;
         public const int Priest_Defense = 2;
         public const int Priest_Speed = 5;
+        public const int Priest_NumberOfFramesBeforeMove = 5;
         public const int Priest_LineOfSite = 6;
 
         //Sheriff
@@ -138,6 +145,7 @@ namespace ZombieTD
         public const int Sheriff_AttackRange = 6;
         public const int Sheriff_Defense = 2;
         public const int Sheriff_Speed = 5;
+        public const int Sheriff_NumberOfFramesBeforeMove = 5;
         public const int Sheriff_LineOfSite = 6;
 
         //Hay
@@ -148,6 +156,7 @@ namespace ZombieTD
         public const int Hay_Defense = 2;
         public const int Hay_Speed = 0;
         public const int Hay_LineOfSite = 0;
+        public const int Hay_NumberOfFramesBeforeMove = 0;
 
         //Car
         public const int Car_Health = 100; //burn time
@@ -156,6 +165,7 @@ namespace ZombieTD
         public const int Car_AttackRange = 1;
         public const int Car_Defense = 5;
         public const int Car_Speed = 0;
+        public const int Car_NumberOfFramesBeforeMove = 0;
         public const int Car_LineOfSite = 1;
 
         //Pit
@@ -166,6 +176,7 @@ namespace ZombieTD
         public const int Pit_Defense = 0;
         public const int Pit_Speed = 0;
         public const int Pit_LineOfSite = 0;
+        public const int Pit_NumberOfFramesBeforeMove = 0;
 
         //Base
         public const int Base_Health = 100;
@@ -175,6 +186,7 @@ namespace ZombieTD
         public const int Base_Defense = 2;
         public const int Base_Speed = 0;
         public const int Base_LineOfSite = 0;
+        public const int Base_NumberOfFramesBeforeMove = 0;
 
         //Fog Effect
         public const int FogSpeed = 1;
@@ -184,16 +196,9 @@ namespace ZombieTD
         public static float Fog_AlphaIncrement = .005f;
         public static float Fog_ResetValue = .7f;
 
-
-
-
         //Map
         public static int MapEdgeX = 1248;
         public static int MapEdgeY = 672;
-
-
-
-       
     }
 
     public enum MapTileType
