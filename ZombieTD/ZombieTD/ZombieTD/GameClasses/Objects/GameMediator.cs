@@ -341,5 +341,11 @@ namespace ZombieTD
             _map.RemoveElementFromTile(element);
             _gameElements.Remove(element);
         }
+
+
+        public ITexture GetTexture()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

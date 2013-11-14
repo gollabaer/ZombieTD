@@ -14,5 +14,6 @@ namespace ZombieTD
         void Draw(SpriteBatch spritebatch);
         int GetX();
         int GetY();
+        ITexture GetTexture();
     }
 }

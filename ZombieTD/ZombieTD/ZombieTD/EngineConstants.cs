@@ -197,6 +197,13 @@ namespace ZombieTD
         //Map
         public static int MapEdgeX = 1248;
         public static int MapEdgeY = 672;
+
+
+        public static float Right = (float)Math.PI / 2.0f;
+        public static float Left = (float)(3.0f * (float)(Math.PI / 2));
+        public static float Down = (float)Math.PI;
+        public static float Up = 0.0f;
+        
     }
 
     public enum MapTileType
@@ -323,11 +330,5 @@ namespace ZombieTD
         Right
     }
 
-    public enum FaceDirection
-    {
-        Left = (float)Math.PI / 2,
-        Right = (float) (3.0f * (Math.PI / 2)),
-        Down = (float) Math.PI,
-        Up = 0.0f
-    }
+
 }
