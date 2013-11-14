@@ -20,6 +20,7 @@ namespace ZombieTD
         public int _defense;
         public int _speed;
         public int _lineOfSite;
+        public FaceDirection directionFacing;
 
         public int _xPos, _yPos;
         public int directionFacing; //0 - 360
@@ -82,8 +83,10 @@ namespace ZombieTD
             }
         }
 
-
-     
+        public static float DirectionEnumToPiValue(FaceDirection direction)
+        {
+            
+        }
 
         public void RegisterWithMediator(IMediator mediator, IGameElement element)
         {

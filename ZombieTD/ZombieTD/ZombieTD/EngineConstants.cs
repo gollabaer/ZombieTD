@@ -96,8 +96,6 @@ namespace ZombieTD
         public const int Zombie_NumberOfFramesBeforeMove = 5;
         public const int Zombie_LineOfSite = 6;
         
-
-
         //ZombieDog
         public const int ZombieDog_Health = 10;
         public const int ZombieDog_AttackDamageMelee = 2;
@@ -317,11 +315,19 @@ namespace ZombieTD
         Enemy
     }
 
-    public enum MoveDirection { 
+    public enum MoveDirection
+    {
         Up,
         Down,
         Left,
         Right
-    
+    }
+
+    public enum FaceDirection
+    {
+        Left = (float)Math.PI / 2,
+        Right = (float) (3.0f * (Math.PI / 2)),
+        Down = (float) Math.PI,
+        Up = 0.0f
     }
 }
