@@ -127,26 +127,64 @@ namespace ZombieTD
         
     
         public void move(MoveDirection direction) {
-            if (timer > _speed)
+            int time;
+            int speed;
+
+            if( this.GetType() == typeof(Zombie) ){
+                    time = EngineConstants.Zombie_NumberOfFramesBeforeMove;
+                    speed = EngineConstants.Zombie_Speed;
+            }
+            else if(this.GetType() == typeof(FlyingZombie) {
+                time = EngineConstants.FlyingZombie_NumberOfFramesBeforeMove;
+                speed = EngineConstants.FlyingZombie_Speed;
+            }
+                    
+            else if(this.GetType() ==typeof(ZombieDog) ){
+                time = EngineConstants.ZombieDog_NumberOfFramesBeforeMove;
+                speed = EngineConstants.ZombieDog_Speed;
+            }
+            
+            else if(this.GetType() ==typeof(Redneck) ){
+                time = EngineConstants.Redneck_NumberOfFramesBeforeMove;
+                speed = EngineConstants.Redneck_Speed;
+            }
+            
+            else if(this.GetType() ==typeof(Priest) ){
+                time = EngineConstants.Priest_NumberOfFramesBeforeMove;
+                speed = EngineConstants.Priest_Speed;
+            }
+            
+            else if(this.GetType() ==typeof(Sheriff) ){
+                time = EngineConstants.Sheriff_NumberOfFramesBeforeMove;
+                speed = EngineConstants.Sheriff_Speed;
+            }
+            else{
+              time = 1;
+              speed = 0;
+            }
+           
+            /*
+            if (timer > time )
             {
                 switch (direction)
                 {
                     case MoveDirection.Down:
-                        _yPos++;
+                        _yPos+=speed;
                         break;
                     case MoveDirection.Up:
-                        _yPos--;
+                        _yPos-= speed;
                         break;
                     case MoveDirection.Left:
-                        _xPos--;
+                        _xPos-= speed;
                         break;
                     case MoveDirection.Right:
-                        _xPos++;
+                        _xPos+= speed;
                         break;
                     default: break;
                 }
                 timer = 0;
             }
+             */
         }
 
 
