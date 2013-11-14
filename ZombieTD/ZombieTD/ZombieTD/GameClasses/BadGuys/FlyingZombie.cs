@@ -7,6 +7,17 @@ namespace ZombieTD
 {
     class FlyingZombie : Character, IFlyingZombie
     {
+        public FlyingZombie()
+            : base()
+        {
+            _health = EngineConstants.FlyingZombie_Health;
+            _attackDamageMelee = EngineConstants.FlyingZombie_AttackDamageMelee;
+            _attackDamageRanged = EngineConstants.FlyingZombie_AttackDamageRanged;
+            _attackRange = EngineConstants.FlyingZombie_AttackRange;
+            _defense = EngineConstants.FlyingZombie_Defense;
+            _speed = EngineConstants.FlyingZombie_Speed;
+            _lineOfSite = EngineConstants.FlyingZombie_LineOfSite;
+        }
 
         public override void TakeTurn(IMediator mediator)
         {

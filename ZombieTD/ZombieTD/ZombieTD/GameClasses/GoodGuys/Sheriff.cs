@@ -7,6 +7,17 @@ namespace ZombieTD
 {
     public class Sheriff : Character, ISheriff
     {
+        public Sheriff()
+            : base()
+        {
+            _health = EngineConstants.Sheriff_Health;
+            _attackDamageMelee = EngineConstants.Sheriff_AttackDamageMelee;
+            _attackDamageRanged = EngineConstants.Sheriff_AttackDamageRanged;
+            _attackRange = EngineConstants.Sheriff_AttackRange;
+            _defense = EngineConstants.Sheriff_Defense;
+            _speed = EngineConstants.Sheriff_Speed;
+            _lineOfSite = EngineConstants.Sheriff_LineOfSite;
+        }
 
         public override void TakeTurn(IMediator mediator)
         {

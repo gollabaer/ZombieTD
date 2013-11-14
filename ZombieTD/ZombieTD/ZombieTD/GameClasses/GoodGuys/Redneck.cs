@@ -7,6 +7,17 @@ namespace ZombieTD
 {
     public class Redneck : Character, IRedneck
     {
+        public Redneck()
+            : base()
+        {
+            _health = EngineConstants.Redneck_Health;
+            _attackDamageMelee = EngineConstants.Redneck_AttackDamageMelee;
+            _attackDamageRanged = EngineConstants.Redneck_AttackDamageRanged;
+            _attackRange = EngineConstants.Redneck_AttackRange;
+            _defense = EngineConstants.Redneck_Defense;
+            _speed = EngineConstants.Redneck_Speed;
+            _lineOfSite = EngineConstants.Redneck_LineOfSite;
+        }
 
         public override void TakeTurn(IMediator mediator)
         {
