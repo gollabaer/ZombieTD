@@ -20,9 +20,9 @@ namespace ZombieTD
         public int _defense;
         public int _speed;
         public int _lineOfSite;
+        public float directionFacing;
 
         public int _xPos, _yPos;
-        public int directionFacing; //0 - 360
         protected int timer = 0;
 
         protected Character()
@@ -150,7 +150,6 @@ namespace ZombieTD
         }
 
 
-     
 
         public void RegisterWithMediator(IMediator mediator, IGameElement element)
         {
@@ -163,14 +162,23 @@ namespace ZombieTD
 
         }
 
+        public ITexture GetTexture()
+        {
+            return _texture;
+        }
+
         public virtual void Draw(SpriteBatch spritebatch)
         {
             int dy = EngineConstants.SmallTextureHeight / 2;
             int dx = EngineConstants.SmallTextureWidth / 2;
 
             if (_texture != null)
+            {
+                //_texture.setRotation(this.GetTexture().getRotation());
+
                 spritebatch.Draw(_texture.GetTexture(), new Rectangle(_xPos + dx, _yPos + dy, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight),
                     _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx, dy), SpriteEffects.None, 0);
+            }
         }
     }
 }

@@ -7,6 +7,18 @@ namespace ZombieTD
 {
     public class Priest : Character, IPriest
     {
+        public Priest()
+            : base()
+        {
+            _health = EngineConstants.Priest_Health;
+            _attackDamageMelee = EngineConstants.Priest_AttackDamageMelee;
+            _attackDamageRanged = EngineConstants.Priest_AttackDamageRanged;
+            _attackRange = EngineConstants.Priest_AttackRange;
+            _defense = EngineConstants.Priest_Defense;
+            _speed = EngineConstants.Priest_Speed;
+            _lineOfSite = EngineConstants.Priest_LineOfSite;
+        }
+
         public override void TakeTurn(IMediator mediator)
         {
             base.TakeTurn(mediator);

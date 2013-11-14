@@ -7,6 +7,18 @@ namespace ZombieTD
 {
     public class ZombieDog : Character, IZombieDog
     {
+        public ZombieDog()
+            : base()
+        {
+            _health = EngineConstants.ZombieDog_Health;
+            _attackDamageMelee = EngineConstants.ZombieDog_AttackDamageMelee;
+            _attackDamageRanged = EngineConstants.ZombieDog_AttackDamageRanged;
+            _attackRange = EngineConstants.ZombieDog_AttackRange;
+            _defense = EngineConstants.ZombieDog_Defense;
+            _speed = EngineConstants.ZombieDog_Speed;
+            _lineOfSite = EngineConstants.ZombieDog_LineOfSite;
+        }
+
 
         public override void TakeTurn(IMediator mediator)
         {

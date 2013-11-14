@@ -48,6 +48,16 @@ namespace ZombieTD
                              Logger.Log(Logger.Log_Type.ERROR, "Invalid spawn type in orderQueue"); break;
                 }
 
+                //Set Direction
+                if (spawn.GetX() == 0)
+                    spawn.GetTexture().setRotation(EngineConstants.Right);
+                else if (spawn.GetX() == 1248)
+                    spawn.GetTexture().setRotation(EngineConstants.Left);
+                else if (spawn.GetY() == 0)
+                    spawn.GetTexture().setRotation(EngineConstants.Down);
+                else if (spawn.GetY() == 672)
+                    spawn.GetTexture().setRotation(EngineConstants.Up);
+
                 _spawnQueue.Enqueue(spawn);
             }
         }
