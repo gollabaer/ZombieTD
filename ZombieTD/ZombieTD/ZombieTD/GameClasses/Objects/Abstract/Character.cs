@@ -58,6 +58,73 @@ namespace ZombieTD
             return this._yPos;
         }
 
+        protected bool isWalkable(MoveDirection direction) {
+            
+            MapTileType tempType;
+            MapTileType currentType = _lineOfSiteMap.GetTileByXY(_xPos, _yPos).TextureType;
+
+            switch (direction)
+                {
+                    case MoveDirection.Down:
+                        tempType =  _lineOfSiteMap.GetTileByXY(_xPos, _yPos + 32).TextureType;
+                        break;
+                    case MoveDirection.Up:
+                        tempType =  _lineOfSiteMap.GetTileByXY(_xPos, _yPos - 32).TextureType;
+                        break;
+                    case MoveDirection.Left:
+                        tempType =  _lineOfSiteMap.GetTileByXY(_xPos - 32, _yPos).TextureType;
+                        break;
+                    case MoveDirection.Right:
+                        tempType =  _lineOfSiteMap.GetTileByXY(_xPos + 32, _yPos).TextureType;
+                        break;
+                    default: tempType = MapTileType.Error;
+                        break;
+                }
+            
+            if( (this.GetType() == typeof(Zombie)
+                ||this.GetType() == typeof(ZombieDog))
+                && (tempType == MapTileType.Path_noRock
+                || tempType == MapTileType.Path_withRock
+                || tempType == MapTileType.RoadMiddle
+                || tempType == MapTileType.RoadOutside))
+                return true;
+            
+            if( this.GetType() == typeof(FlyingZombie)) return true;
+             
+            if( (this.GetType() == typeof(Priest)
+                || this.GetType() == typeof(Sheriff))
+                && ((tempType == MapTileType.Building_roof_center
+                    || tempType == MapTileType.Building_roof_corner
+                    || tempType == MapTileType.Building_Roof_Side
+                    || tempType == MapTileType.Path_noRock
+                    || tempType == MapTileType.Path_withRock)
+                    && (currentType != MapTileType.Grass
+                    || currentType != MapTileType.RoadMiddle
+                    || currentType != MapTileType.RoadOutside)))
+                    return true;
+
+            if( (this.GetType() == typeof(Priest)
+                || this.GetType() == typeof(Sheriff))
+                && ((currentType == MapTileType.Building_roof_center
+                    || currentType == MapTileType.Building_roof_corner
+                    || currentType == MapTileType.Building_Roof_Side)
+                    && (tempType != MapTileType.Grass
+                    || tempType != MapTileType.RoadMiddle
+                    || tempType != MapTileType.RoadOutside
+                    || tempType != MapTileType.Path_noRock
+                    || tempType != MapTileType.Path_withRock)))
+                    return true;
+
+            if(this.GetType() == typeof(Redneck)
+                && ( tempType == MapTileType.Grass
+                    || tempType == MapTileType.RoadMiddle
+                    || tempType == MapTileType.RoadOutside))
+                return true;
+            
+            return false;
+            
+           }
+        
     
         public void move(MoveDirection direction) {
             if (timer > _speed)
