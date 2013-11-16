@@ -21,7 +21,7 @@ namespace ZombieTD
         SpriteBatch spriteBatch;
         IMediator mediator;
         Random rnd = new Random();
-       
+        Tuple<int, int> _mouseXY;
 
         //FPS
         SpriteFont _spr_font;
@@ -38,6 +38,13 @@ namespace ZombieTD
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferWidth = EngineConstants.ScreenWidth;
             graphics.PreferredBackBufferHeight = EngineConstants.ScreenHeight;
+
+
+            //Disable Frame Rate
+            graphics.SynchronizeWithVerticalRetrace = false;
+            this.IsFixedTimeStep = false;
+            graphics.ApplyChanges();
+
 
             if(EngineConstants.IsLogging)
                 Logger.StartLogger();
@@ -112,8 +119,7 @@ namespace ZombieTD
                 this.Exit();
 
             //Mouse Input Method
-            //CheckInputs();
-            inputDirector.ProcessInput(Mouse.GetState());
+            _mouseXY = inputDirector.ProcessInput(Mouse.GetState());
 
             // TODO: Add your update logic here
             mediator.Tick();
@@ -122,14 +128,7 @@ namespace ZombieTD
            
         }
 
-        private void CheckInputs()
-        {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-            {
-                this.Exit();
-            }
-        }
+     
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -151,6 +150,10 @@ namespace ZombieTD
             if(EngineConstants.ShowTicks)
                 spriteBatch.DrawString(_spr_font, string.Format("Ticks={0}", GameMediator.numberofTicks),
                     new Vector2(EngineConstants.TicksX, EngineConstants.TicksY), Color.White);
+            if (EngineConstants.ShowMouseXY)
+                spriteBatch.DrawString(_spr_font, string.Format("(X:{0}, Y:{1})", _mouseXY.Item1, _mouseXY.Item2),
+                    new Vector2(EngineConstants.MouseX, EngineConstants.MouseY), Color.White);
+
 
             spriteBatch.End();
             base.Draw(gameTime);

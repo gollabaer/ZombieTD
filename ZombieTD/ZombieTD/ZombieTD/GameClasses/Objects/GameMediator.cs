@@ -49,7 +49,7 @@ namespace ZombieTD
             _textureAssetManager = new TextureAssetManager();
             _soundAssetManager = new SoundAssetManager();
             _waveGenerator = new EnemyWaveGenerator(this);
-            _base = new Base();
+            _base = new Base(0,0);
             _menu = new Menu(this);
             _score = new Score(this);
             _fogEffect = new FogEffect2();
@@ -138,11 +138,17 @@ namespace ZombieTD
                 _fogEffect.update();
 
 
-                //Game Elements take turn
-                Parallel.ForEach(_gameElements, element =>
+                ////Game Elements take turn
+                //Parallel.ForEach(_gameElements, element =>
+                //{
+                //    lock (_gameElements) element.TakeTurn((IMediator)this);
+                //});
+
+                foreach (IGameElement element in _gameElements)
                 {
-                    lock (_gameElements) element.TakeTurn((IMediator)this);
-                });
+                    element.TakeTurn(this);
+                }
+
 
                 //Prevent Exception
                 if (numberofTicks == ulong.MaxValue)
@@ -153,12 +159,12 @@ namespace ZombieTD
 
 
                 #region Kill Test
-                if (numberofTicks % 100 == 0 && _gameElements.Count > 5)
-                {
-                    int r = _rnd.Next(_gameElements.Count);
+                //if (numberofTicks % 1000 == 0 && _gameElements.Count > 5)
+                //{
+                //    int r = _rnd.Next(_gameElements.Count);
 
-                    KillElement(_gameElements[r]);
-                }
+                //    KillElement(_gameElements[r]);
+                //}
                 #endregion
             }
             else
@@ -171,7 +177,7 @@ namespace ZombieTD
         #endregion
 
         #region Mediator Methods
-        public Map GetMap(ICharacter character)
+        public Map GetMapByLineOfSight(ICharacter character)
         {
             return _map.GetMapByLineOfSight(character.getLineOfSight(),
                                             character.GetX(),

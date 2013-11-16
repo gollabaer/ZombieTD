@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ZombieTD
 {
-    public interface ICar : IGameElement
+    public interface ICar
     {
     }
 }

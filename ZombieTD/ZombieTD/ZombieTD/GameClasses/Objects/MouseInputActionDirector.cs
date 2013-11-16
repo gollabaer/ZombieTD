@@ -11,15 +11,17 @@ namespace ZombieTD
         private IMediator mediator;
         private MouseState mouseStateCurrent, mouseStatePrevious;
         private IOrder order = null;
+        private Tuple<int, int> returnXY;
         private bool _waitingToPlace = false;
 
         public MouseInputActionDirector(IMediator mediator)
         {
             // TODO: Complete member initialization
             this.mediator = mediator;
+
         }
 
-        public void ProcessInput(MouseState state)
+        public Tuple<int,int> ProcessInput(MouseState state)
         {
             // Get current mouseState
             mouseStateCurrent = state;
@@ -49,8 +51,13 @@ namespace ZombieTD
                     order = null;
                 }
             }
+
+            
+            returnXY = new Tuple<int, int>(mouseStateCurrent.X,mouseStateCurrent.Y);
+
             mouseStatePrevious = mouseStateCurrent;
 
+            return returnXY;
         }
 
 

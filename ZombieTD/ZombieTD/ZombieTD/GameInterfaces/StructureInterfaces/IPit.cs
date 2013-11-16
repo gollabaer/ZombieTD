@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ZombieTD
 {
-    public interface IPit : IGameElement
+    public interface IPit
     {
     }
 }

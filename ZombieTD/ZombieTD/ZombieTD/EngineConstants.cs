@@ -78,10 +78,14 @@ namespace ZombieTD
         public const float TicksX = 10.0f;
         public const float TicksY = 650.0f;
 
+        //Mouse XY Display
+        public static bool ShowMouseXY = true;
+        public static float MouseX = 10.0f;
+        public static float MouseY = 610.0f;
 
         //Wave Generator
-        public const int NumberOfFramesBeforeOrder = 55;
-        public const int MaxNumberOfSpawns = 200;
+        public const int NumberOfFramesBeforeOrder = 1;
+        public const int MaxNumberOfSpawns = 1000;
 
 
         //Character Attributes
@@ -92,9 +96,9 @@ namespace ZombieTD
         public const int Zombie_AttackDamageRanged = 4;
         public const int Zombie_AttackRange = 6;
         public const int Zombie_Defense = 2;
-        public const int Zombie_Speed = 5;
-        public const int Zombie_NumberOfFramesBeforeMove = 5;
-        public const int Zombie_LineOfSite = 6;
+        public const int Zombie_Speed = 2;
+        public const int Zombie_NumberOfFramesBeforeMove = 3;
+        public const int Zombie_LineOfSite = 2;
         
         //ZombieDog
         public const int ZombieDog_Health = 10;
@@ -104,7 +108,7 @@ namespace ZombieTD
         public const int ZombieDog_Defense = 2;
         public const int ZombieDog_Speed = 5;
         public const int ZombieDog_NumberOfFramesBeforeMove = 5;
-        public const int ZombieDog_LineOfSite = 6;
+        public const int ZombieDog_LineOfSite = 2;
 
         //FlyingZombie
         public const int FlyingZombie_Health = 10;
@@ -124,7 +128,7 @@ namespace ZombieTD
         public const int Redneck_Defense = 2;
         public const int Redneck_Speed = 5;
         public const int Redneck_NumberOfFramesBeforeMove = 5;
-        public const int Redneck_LineOfSite = 6;
+        public const int Redneck_LineOfSite = 2;
 
         //Priest
         public const int Priest_Health = 10;
@@ -134,7 +138,7 @@ namespace ZombieTD
         public const int Priest_Defense = 2;
         public const int Priest_Speed = 5;
         public const int Priest_NumberOfFramesBeforeMove = 5;
-        public const int Priest_LineOfSite = 6;
+        public const int Priest_LineOfSite = 2;
 
         //Sheriff
         public const int Sheriff_Health = 10;
@@ -144,7 +148,7 @@ namespace ZombieTD
         public const int Sheriff_Defense = 2;
         public const int Sheriff_Speed = 5;
         public const int Sheriff_NumberOfFramesBeforeMove = 5;
-        public const int Sheriff_LineOfSite = 6;
+        public const int Sheriff_LineOfSite = 3;
 
         //Hay
         public const int Hay_Health = 10;
@@ -198,27 +202,66 @@ namespace ZombieTD
         public static int MapEdgeX = 1248;
         public static int MapEdgeY = 672;
 
-
+        //Directions
         public static float Right = (float)Math.PI / 2.0f;
         public static float Left = (float)(3.0f * (float)(Math.PI / 2));
-        public static float Down = (float)Math.PI;
+        public static float Down = (float)(2.0f * (float)(Math.PI / 2));
         public static float Up = 0.0f;
+
         
+    }
+
+    public enum CurrentAction
+    {
+        Attack,
+        Range,
+        Move,
+        Special1,
+        Special2,
+        Special3,
+        None
     }
 
     public enum MapTileType
     {
+        [Zombie]
+        [Sheriff]
+        [FlyingZombie]
         RoadOutside,
+        [Sheriff]
+        [FlyingZombie]
         Building_roof_center,
+        [Sheriff]
+        [FlyingZombie]
         Building_roof_corner,
+        [Sheriff]
+        [FlyingZombie]
         Building_Roof_Side,
+        [Sheriff]
+        [FlyingZombie]
         Grass,
+        [Zombie]
+        [Sheriff]
+        [FlyingZombie]
         Path_noRock,
+        [Zombie]
+        [Sheriff]
+        [FlyingZombie]
         Path_withRock,
+        [Zombie]
+        [FlyingZombie]
+        [Sheriff]
         RoadMiddle,
+        [Sheriff]
+        [FlyingZombie]
         RoofTownHall_corner,
+        [Sheriff]
+        [FlyingZombie]
         TownHallRoof_Middle,
+        [Sheriff]
+        [FlyingZombie]
         TownhallRoof_Side,
+        [FlyingZombie]
         Tree,
         Error
 
@@ -327,7 +370,8 @@ namespace ZombieTD
         Up,
         Down,
         Left,
-        Right
+        Right,
+        None
     }
 
 

@@ -13,7 +13,7 @@ namespace ZombieTD
         public List<Tile> EntryPoints { get; set;}
         public List<Tile> Base { get; set; }
 
-
+        int upperXPosition, upperYPosition, lowerXPosition, lowerYPosition;
 
         public Map()
         {
@@ -23,32 +23,79 @@ namespace ZombieTD
         public void Draw(SpriteBatch spritebatch)
         {
             //For Debug
-            //foreach(Tile tile in Tiles)
-            //    {
-            //        tile.Draw(spritebatch);
-            //    }
+            foreach (Tile tile in Tiles)
+            {
+                tile.Draw(spritebatch);
+            }
 
-            Parallel.ForEach(Tiles, tile =>
-                {
-                    lock (spritebatch) tile.Draw(spritebatch);
-                });
+            //Parallel.ForEach(Tiles, tile =>
+            //    {
+            //        lock (spritebatch) tile.Draw(spritebatch);
+            //    });
         }
 
         public Map GetMapByLineOfSight(int lineOfSight, int x, int y)
         {
             Map returnMap = new Map();
 
-            Parallel.ForEach(Tiles, tile =>
-            {
-                int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
-                if (dist <= lineOfSight)
-                {
-                    lock (returnMap) returnMap.Tiles.Add(tile);
-                }
-            });
+            upperXPosition = x + -32 * lineOfSight;
+            upperYPosition = y + -32 * lineOfSight;
+            lowerXPosition = x + (32 * lineOfSight);
+            lowerYPosition = y + (32 * lineOfSight);
+
+
+            var found = from tile in Tiles
+                        where tile.Xpos >= upperXPosition && tile.Xpos <= lowerXPosition &&
+                                tile.Ypos >= upperYPosition && tile.Ypos <= lowerYPosition
+                        select tile;
+
+            returnMap.Tiles = (List<Tile>)found.ToList();
+            returnMap.Base = this.Base;
+            returnMap.EntryPoints = this.EntryPoints;
+
+            return returnMap;
+
+            #region Obsolete
+            //foreach (Tile tile in Tiles)
+            //{
+            //    int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
+            //    if (dist <= lineOfSight)
+            //    {
+            //        returnMap.Tiles.Add(tile);
+            //    }
+            //}
+            // int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
+
+
+            //foreach (Tile tile in Tiles)
+            //{
+
+
+
+            //    = XPosition + (-32 * lineOfSight)
+            //int upperYPosition = 
+
+
+            //    if (dist <= lineOfSight)
+            //    {
+            //        returnMap.Tiles.Add(tile);
+            //    }
+            //}
+
+
+
+
+            //Parallel.ForEach(Tiles, tile =>
+            //{
+            //    int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
+            //    if (dist <= lineOfSight)
+            //    {
+            //        returnMap.Tiles.Add(tile);
+            //    }
+            //});
 
             //TODO return map by line of sight
-            return returnMap;
+            #endregion
         }
 
         public static Map LoadMap(IMediator mediator)
@@ -128,14 +175,26 @@ namespace ZombieTD
         {
             Tile foundTile = null;
 
-            Parallel.ForEach(Tiles, tile =>
+            //Parallel.ForEach(Tiles, tile =>
+            //{
+            //    if ((x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
+            //    (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
+            //    {
+            //        foundTile = tile;        
+            //    }
+            //});
+
+
+            foreach (Tile tile in Tiles)
             {
                 if ((x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
-                (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
+                    (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
                 {
-                    foundTile = tile;        
+
+                    foundTile = tile;
+                    break;
                 }
-            });
+            }
 
             return foundTile;
         }
@@ -148,5 +207,12 @@ namespace ZombieTD
             });
 
         }
+
+
+
+
+
+
+
     }
 }

@@ -17,7 +17,7 @@ namespace ZombieTD
 
         public IGameElement MakeZombie(int x, int y)
         {
-            Zombie zombie = new Zombie();
+            Zombie zombie = new Zombie(x, y);
             zombie._xPos = x;
             zombie._yPos = y;
             zombie._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Zombie);
@@ -27,7 +27,7 @@ namespace ZombieTD
 
         public IGameElement MakeZombieDog(int x, int y)
         {
-            ZombieDog zombieDog = new ZombieDog();
+            ZombieDog zombieDog = new ZombieDog(x, y);
             zombieDog._xPos = x;
             zombieDog._yPos = y;
             zombieDog._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.ZombieDog);
@@ -37,7 +37,7 @@ namespace ZombieTD
 
         public IGameElement MakeFlyingZombie(int x, int y)
         {
-            FlyingZombie flyingZombie = new FlyingZombie();
+            FlyingZombie flyingZombie = new FlyingZombie(x, y);
             flyingZombie._xPos = x;
             flyingZombie._yPos = y;
             flyingZombie._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.FlyingZombie);
@@ -47,7 +47,7 @@ namespace ZombieTD
 
         public IGameElement MakeRedneck(int x, int y)
         {
-            Redneck redneck = new Redneck();
+            Redneck redneck = new Redneck(x, y);
             redneck._xPos = x;
             redneck._yPos = y;
             redneck._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.RedNeck);
@@ -57,7 +57,7 @@ namespace ZombieTD
 
         public IGameElement MakeSheriff(int x, int y)
         {
-            Sheriff sheriff = new Sheriff();
+            Sheriff sheriff = new Sheriff(x, y);
             sheriff._xPos = x;
             sheriff._yPos = y;
             sheriff._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Sheriff);
@@ -67,7 +67,7 @@ namespace ZombieTD
 
         public IGameElement MakePriest(int x, int y)
         {
-            Priest priest = new Priest();
+            Priest priest = new Priest(x, y);
             priest._xPos = x;
             priest._yPos = y;
             priest._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Priest);
@@ -77,7 +77,7 @@ namespace ZombieTD
 
         public IGameElement MakeHay(int x, int y)
         {
-            Hay hay = new Hay();
+            Hay hay = new Hay(x,y);
             hay._xPos = x;
             hay._yPos = y;
             hay._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.Hay);
@@ -87,7 +87,7 @@ namespace ZombieTD
 
         public IGameElement MakeCar(int x, int y)
         {
-            Car car = new Car();
+            Car car = new Car(x, y);
             car._xPos = x;
             car._yPos = y;
             //This needs to be revisited to add both tiles
@@ -99,7 +99,7 @@ namespace ZombieTD
 
         public IGameElement MakePit(int x, int y)
         {
-            Pit pit = new Pit();
+            Pit pit = new Pit(x,y);
             pit._xPos = x;
             pit._yPos = y;
            

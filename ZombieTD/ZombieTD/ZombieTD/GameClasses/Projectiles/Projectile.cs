@@ -12,8 +12,11 @@ namespace ZombieTD
         {
             //Projectile Logic
         }
-    
 
+        protected Projectile(int x, int y):base(x,y)
+        {
+        
+        }
         
 
         public void  RegisterWithMediator(IMediator mediator, IGameElement element)
@@ -24,6 +27,41 @@ namespace ZombieTD
         public void  Draw(SpriteBatch spritebatch)
         {
  	        throw new NotImplementedException();
+        }
+
+        protected override void Special3()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Special2()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Special1()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void RangeAttack()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Move()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Attack()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void ChooseAction()
+        {
+            base.ChooseAction();
         }
     }
 }

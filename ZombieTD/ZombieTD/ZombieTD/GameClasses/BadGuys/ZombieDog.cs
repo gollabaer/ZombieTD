@@ -7,8 +7,8 @@ namespace ZombieTD
 {
     public class ZombieDog : Character, IZombieDog
     {
-        public ZombieDog()
-            : base()
+        public ZombieDog(int x, int y)
+            : base(x,y)
         {
             _health = EngineConstants.ZombieDog_Health;
             _attackDamageMelee = EngineConstants.ZombieDog_AttackDamageMelee;
@@ -24,7 +24,7 @@ namespace ZombieTD
         {
             base.TakeTurn(mediator);
             //Game logic for what a zombie does
-            mediator.GetMap(this);
+            //mediator.GetMap(this);
 
             /*
             if enemy has a character on its vision map
@@ -44,6 +44,41 @@ namespace ZombieTD
         public void SpitAcid(IMediator mediator, ICharacter character, ICharacter target)
         {
             mediator.SpitAcid(mediator, this, target);
+        }
+
+        protected override void Special3()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Special2()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Special1()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void RangeAttack()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Move()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Attack()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void ChooseAction()
+        {
+            base.ChooseAction();
         }
     }
 }

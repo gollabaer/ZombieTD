@@ -7,8 +7,8 @@ namespace ZombieTD
 {
     public class Sheriff : Character, ISheriff
     {
-        public Sheriff()
-            : base()
+        public Sheriff(int x, int y)
+            : base(x, y)
         {
             _health = EngineConstants.Sheriff_Health;
             _attackDamageMelee = EngineConstants.Sheriff_AttackDamageMelee;
@@ -17,13 +17,20 @@ namespace ZombieTD
             _defense = EngineConstants.Sheriff_Defense;
             _speed = EngineConstants.Sheriff_Speed;
             _lineOfSite = EngineConstants.Sheriff_LineOfSite;
+            _walkableTiles = FilterEnumWithAttributeOf<MapTileType, Sheriff>();
+        }
+
+        public Sheriff()
+        {
+
         }
 
         public override void TakeTurn(IMediator mediator)
         {
+
             base.TakeTurn(mediator);
             //Game logic for what a zombie does
-            mediator.GetMap(this);
+           // mediator.GetMap(this);
 
             /*
             if character has an enemy on its vision map
@@ -36,10 +43,55 @@ namespace ZombieTD
             else
                Hold
              */
+            
+
+
+            int i = 0;
+
+
         }
 
         public void FireGun(IMediator mediator, ICharacter character, ICharacter target)
         {
+
+        }
+
+        protected override void Special3()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Special2()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Special1()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void RangeAttack()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Move()
+        {
+            
+        }
+
+        protected override void Attack()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void ChooseAction()
+        {
+            base.ChooseAction();
+
+            _currentAction = CurrentAction.Move;
+
 
         }
     }

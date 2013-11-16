@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ZombieTD
 {
-    public interface IProjectile : IGameElement
+    public interface IProjectile
     {
     }
 }

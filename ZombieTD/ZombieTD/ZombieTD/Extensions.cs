@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using System.Reflection;
 
 namespace ZombieTD
 {
@@ -105,5 +106,32 @@ namespace ZombieTD
                 list[n] = value;
             }
         }
+
+        public static T GetEnumFromSpawnType<T>(this Type spawnType)
+        {
+            var type = typeof(T);
+            if (!type.IsEnum) throw new InvalidOperationException();
+            foreach (var field in type.GetFields())
+            {
+                var attribute = Attribute.GetCustomAttribute(field,
+                    spawnType);
+                if (attribute != null)
+                {
+                    if (attribute.ToString() == spawnType.ToString())
+                        return (T)field.GetValue(null);
+                }
+                else
+                {
+                    if (field.Name == spawnType.ToString())
+                        return (T)field.GetValue(null);
+                }
+            }
+            throw new ArgumentException("Not found.", "description");
+            // or return default(T);
+        }
+
+
+
+       
     }
 }

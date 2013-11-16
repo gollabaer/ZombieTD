@@ -50,13 +50,26 @@ namespace ZombieTD
 
                 //Set Direction
                 if (spawn.GetX() == 0)
-                    spawn.GetTexture().setRotation(EngineConstants.Right);
+                {
+                    //spawn.GetTexture().setRotation(EngineConstants.Right);
+                    spawn.SetRotation(EngineConstants.Right);
+                }
                 else if (spawn.GetX() == 1248)
-                    spawn.GetTexture().setRotation(EngineConstants.Left);
+                {
+                   // spawn.GetTexture().setRotation(EngineConstants.Left);
+                    spawn.SetRotation(EngineConstants.Left);
+                }
                 else if (spawn.GetY() == 0)
-                    spawn.GetTexture().setRotation(EngineConstants.Down);
+                {
+                    //spawn.GetTexture().setRotation(EngineConstants.Down);
+                    spawn.SetRotation(EngineConstants.Down);
+
+                }
                 else if (spawn.GetY() == 672)
-                    spawn.GetTexture().setRotation(EngineConstants.Up);
+                {
+                    //spawn.GetTexture().setRotation(EngineConstants.Up);
+                    spawn.SetRotation(EngineConstants.Up);
+                }
 
                 _spawnQueue.Enqueue(spawn);
             }
