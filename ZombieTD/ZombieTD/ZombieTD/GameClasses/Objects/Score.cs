@@ -90,5 +90,10 @@ namespace ZombieTD
         {
             _totalKilled++;
         }
+
+        public void StopTime()
+        {
+            this._stopWatch.Stop();
+        }
     }
 }

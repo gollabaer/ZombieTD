@@ -85,7 +85,7 @@ namespace ZombieTD
 
         //Wave Generator
         public const int NumberOfFramesBeforeOrder = 1;
-        public const int MaxNumberOfSpawns = 1000;
+        public const int MaxNumberOfSpawns = 12000;
 
 
         //Character Attributes
@@ -99,6 +99,8 @@ namespace ZombieTD
         public const int Zombie_Speed = 2;
         public const int Zombie_NumberOfFramesBeforeMove = 3;
         public const int Zombie_LineOfSite = 2;
+        public const int Zombie_NumberOfFramesBeforeAttack = 100;
+
         
         //ZombieDog
         public const int ZombieDog_Health = 10;
@@ -181,7 +183,7 @@ namespace ZombieTD
         public const int Pit_NumberOfFramesBeforeMove = 0;
 
         //Base
-        public const int Base_Health = 100;
+        public const int Base_Health = 100000;
         public const int Base_AttackDamageMelee = 0;
         public const int Base_AttackDamageRanged = 0;
         public const int Base_AttackRange = 0;
@@ -203,10 +205,17 @@ namespace ZombieTD
         public static int MapEdgeY = 672;
 
         //Directions
-        public static float Right = (float)Math.PI / 2.0f;
-        public static float Left = (float)(3.0f * (float)(Math.PI / 2));
-        public static float Down = (float)(2.0f * (float)(Math.PI / 2));
         public static float Up = 0.0f;
+        public static float UpRight = .78539815f;
+        public static float Right = (float)Math.PI / 2.0f;
+        public static float DownRight = 2.35619452f;
+        public static float Down = (float)(2.0f * (float)(Math.PI / 2));
+        public static float DownLeft = 3.92699089f;
+        public static float Left = (float)(3.0f * (float)(Math.PI / 2));
+        public static float UpLeft = 5.49778715f;
+
+        
+        
 
         
     }
@@ -329,10 +338,15 @@ namespace ZombieTD
         Zombie,
         ZombieDog,
         FlyingZombie,
+        [Zombie]
         Priest,
+        [Zombie]
         RedNeck,
+        [Zombie]
         Sheriff,
+        [Zombie]
         Hay,
+        [Zombie]
         Car,
         Pit
     }

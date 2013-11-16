@@ -10,5 +10,6 @@ namespace ZombieTD
         int GetTownhallHealth();
 
         void SetBaseTiles(List<Tile> list);
+        bool TakeDamage(int damage);
     }
 }

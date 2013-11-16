@@ -21,31 +21,36 @@ namespace ZombieTD
         public int _defense;
         public int _speed;
         public int _lineOfSite;
-        public float directionFacing;
+        public float _directionFacing;
         public CurrentAction _currentAction;
         public Tile _currentTile;
         public Tile _previousTile;
-        public IEnumerable<MapTileType> _walkableTiles;
-        public MoveDirection movingDirection;
+        public IEnumerable<MapTileType> _legalMovmentTiles;
+        public IEnumerable<SpawnType> _legalAttackTiles;
+        public MoveDirection _movingDirection;
         public int _moveCounter = 0;
-
-       
-
-
         public int _xPos, _yPos;
         protected int timer = 0;
+        public SpawnType _spawnType;
+        public ICharacter _targetCharacter;
+        public Tile _targetTile;
+        private List<Tile> _nextToTiles;
+        private int upperXPosition, upperYPosition, lowerXPosition, lowerYPosition;
+        protected bool _isDoingAction;
+        private bool _amIDead = false;
+        protected float _preAttackFace;
 
         protected Character(int x, int y)
         {
             this._xPos = x;
             this._yPos = y;
             this._currentAction = CurrentAction.None;
-            this.movingDirection = MoveDirection.None;
+            this._movingDirection = MoveDirection.None;
         }
 
         protected Character()
         {
-
+            
         }
 
         public void SetRotation(float rotation)
@@ -79,26 +84,104 @@ namespace ZombieTD
         #region ActionMethods
         protected abstract void Special3();
         
-
         protected abstract void Special2();
        
-
         protected abstract void Special1();
        
-
         protected abstract void RangeAttack();
       
-
         protected abstract void Move();
 
+        protected virtual void Attack()
+        {
+            SetAttackDirection();
 
-        protected abstract void Attack();
+
+
+
+
+
+        }
+
+        private void SetAttackDirection()
+        {
+            int x = 0, y = 0;
+
+            if (_targetTile != null)
+            {
+                x = _targetTile.Xpos;
+                y = _targetTile.Ypos;
+            }
+            else if (_targetCharacter != null)
+            {
+                x = _targetCharacter.GetX();
+                y = _targetCharacter.GetY();
+            }
+
+
+
+            if (x > this._xPos && y < this._yPos)
+            {
+                //upright
+                this._directionFacing = EngineConstants.UpRight;
+            }
+            else if (x > this._xPos && y > this._yPos)
+            {
+                //lower right
+                this._directionFacing = EngineConstants.DownRight;
+            }
+            else if (x < this._xPos && y > this._yPos)
+            {
+                //lower left
+                this._directionFacing = EngineConstants.DownLeft;
+            }
+            else if (x < this._xPos && y < this._yPos)
+            {
+                //upper left
+                this._directionFacing = EngineConstants.UpLeft;
+            }
+            else if (y == this._yPos && x > this._xPos)
+            {
+                //right
+                this._directionFacing = EngineConstants.Right;
+            }
+            else if (y > this._yPos && x == this._yPos)
+            {
+                //Down
+                this._directionFacing = EngineConstants.Down;
+            }
+            else if (x < this._xPos && y == this._yPos)
+            {
+                //left
+                this._directionFacing = EngineConstants.Left;
+            }
+            else if (x == this._xPos && y < this._yPos)
+            {
+                //up
+                this._directionFacing = EngineConstants.Up;
+            }
+        }
       
-
         protected virtual void ChooseAction()
         {
             //If there is no current Action then the character needs to refresh the map
             this._lineOfSiteMap = _mediator.GetMapByLineOfSight(this);
+            SetNextToTiles();
+        }
+
+        private void SetNextToTiles()
+        {
+            upperXPosition = this._xPos + -32; 
+            upperYPosition = this._yPos + -32;
+            lowerXPosition = this._xPos +  32;
+            lowerYPosition = this._yPos +  32;
+
+            var found = from tile in _lineOfSiteMap.Tiles
+                        where tile.Xpos >= upperXPosition && tile.Xpos <= lowerXPosition &&
+                                tile.Ypos >= upperYPosition && tile.Ypos <= lowerYPosition
+                        select tile;
+
+            this._nextToTiles = (List<Tile>)found.ToList();
         }
 
         #endregion
@@ -119,141 +202,6 @@ namespace ZombieTD
             return this._yPos;
         }
 
-
-
-        protected bool isWalkable(MoveDirection direction) {
-
-            MapTileType tempType;
-            MapTileType currentType = _lineOfSiteMap.GetTileByXY(_xPos, _yPos).TextureType;
-
-
-            switch (direction)
-                {
-                    case MoveDirection.Down:
-                        tempType =  _lineOfSiteMap.GetTileByXY(_xPos, _yPos + 32).TextureType;
-                        break;
-                    case MoveDirection.Up:
-                        tempType =  _lineOfSiteMap.GetTileByXY(_xPos, _yPos - 32).TextureType;
-                        break;
-                    case MoveDirection.Left:
-                        tempType =  _lineOfSiteMap.GetTileByXY(_xPos - 32, _yPos).TextureType;
-                        break;
-                    case MoveDirection.Right:
-                        tempType =  _lineOfSiteMap.GetTileByXY(_xPos + 32, _yPos).TextureType;
-                        break;
-                    default: tempType = MapTileType.Error;
-                        break;
-                }
-            
-            if( (this.GetType() == typeof(Zombie)
-                ||this.GetType() == typeof(ZombieDog))
-                && (tempType == MapTileType.Path_noRock
-                || tempType == MapTileType.Path_withRock
-                || tempType == MapTileType.RoadMiddle
-                || tempType == MapTileType.RoadOutside))
-                return true;
-            
-            if( this.GetType() == typeof(FlyingZombie)) return true;
-             
-            if( (this.GetType() == typeof(Priest)
-                || this.GetType() == typeof(Sheriff))
-                && ((tempType == MapTileType.Building_roof_center
-                    || tempType == MapTileType.Building_roof_corner
-                    || tempType == MapTileType.Building_Roof_Side
-                    || tempType == MapTileType.Path_noRock
-                    || tempType == MapTileType.Path_withRock)
-                    && (currentType != MapTileType.Grass
-                    || currentType != MapTileType.RoadMiddle
-                    || currentType != MapTileType.RoadOutside)))
-                    return true;
-
-            if( (this.GetType() == typeof(Priest)
-                || this.GetType() == typeof(Sheriff))
-                && ((currentType == MapTileType.Building_roof_center
-                    || currentType == MapTileType.Building_roof_corner
-                    || currentType == MapTileType.Building_Roof_Side)
-                    && (tempType != MapTileType.Grass
-                    || tempType != MapTileType.RoadMiddle
-                    || tempType != MapTileType.RoadOutside
-                    || tempType != MapTileType.Path_noRock
-                    || tempType != MapTileType.Path_withRock)))
-                    return true;
-
-            if(this.GetType() == typeof(Redneck)
-                && ( tempType == MapTileType.Grass
-                    || tempType == MapTileType.RoadMiddle
-                    || tempType == MapTileType.RoadOutside))
-                return true;
-            
-            return false;
-            
-           }
-        
-    
-        public void move(MoveDirection direction) 
-        {
-            int time;
-            int speed;
-
-            if( this.GetType() == typeof(Zombie) )
-            {
-                    time = EngineConstants.Zombie_NumberOfFramesBeforeMove;
-                    speed = EngineConstants.Zombie_Speed;
-            }
-            else if(this.GetType() == typeof(FlyingZombie) )
-            {
-                time = EngineConstants.FlyingZombie_NumberOfFramesBeforeMove;
-                speed = EngineConstants.FlyingZombie_Speed;
-            }
-                    
-            else if(this.GetType() ==typeof(ZombieDog) ){
-                time = EngineConstants.ZombieDog_NumberOfFramesBeforeMove;
-                speed = EngineConstants.ZombieDog_Speed;
-            }
-            
-            else if(this.GetType() ==typeof(Redneck) ){
-                time = EngineConstants.Redneck_NumberOfFramesBeforeMove;
-                speed = EngineConstants.Redneck_Speed;
-            }
-            
-            else if(this.GetType() ==typeof(Priest) ){
-                time = EngineConstants.Priest_NumberOfFramesBeforeMove;
-                speed = EngineConstants.Priest_Speed;
-            }
-            
-            else if(this.GetType() ==typeof(Sheriff) ){
-                time = EngineConstants.Sheriff_NumberOfFramesBeforeMove;
-                speed = EngineConstants.Sheriff_Speed;
-            }
-            else{
-              time = 1;
-              speed = 0;
-            }
-           
-            
-            if (timer > time )
-            {
-                switch (direction)
-                {
-                    case MoveDirection.Down:
-                        _yPos+=speed;
-                        break;
-                    case MoveDirection.Up:
-                        _yPos-= speed;
-                        break;
-                    case MoveDirection.Left:
-                        _xPos-= speed;
-                        break;
-                    case MoveDirection.Right:
-                        _xPos+= speed;
-                        break;
-                    default: break;
-                }
-                timer = 0;
-            }
-             
-        }
-
         public void SetTile(Tile tile)
         {
             this._currentTile = tile;
@@ -265,11 +213,6 @@ namespace ZombieTD
             mediator.RegisterWithMediator(mediator, this);    
         }
 
-        public virtual void TakeDamage(int damage)
-        {
-
-        }
-
         public ITexture GetTexture()
         {
             return _texture;
@@ -277,29 +220,50 @@ namespace ZombieTD
 
         protected bool IsBaseNextToMe()
         {
-            Tile[] tiles = new Tile[4];
+            if (_targetTile == null)
+            {
+                var found = from tile in _nextToTiles
+                            where tile != null && (tile.TextureType == MapTileType.TownhallRoof_Side ||
+                                  tile.TextureType == MapTileType.RoofTownHall_corner)
+                            select tile;
 
-             tiles[0] = _lineOfSiteMap.GetTileByXY(this._xPos - 32, this._yPos);
-             tiles[1] = _lineOfSiteMap.GetTileByXY(this._xPos + 32, this._yPos);
-             tiles[2] = _lineOfSiteMap.GetTileByXY(this._xPos, this._yPos -32);
-             tiles[3] = _lineOfSiteMap.GetTileByXY(this._xPos, this._yPos + 32);
+                _targetTile = found.FirstOrDefault();
+                _preAttackFace = _directionFacing;
 
-             foreach (Tile tile in tiles)
-             {
-                 if (tile != null && (tile.TextureType == MapTileType.TownhallRoof_Side ||
-                    tile.TextureType == MapTileType.RoofTownHall_corner))
-                 {
-                     return true;
-                 }
-             }
+                //TO-DO
+                //Set facingdirection to tile
+            }
 
-             return false;
+            return (_targetTile != null);
         }
 
         protected bool IsPlayerNextToMe()
         {
+            if (_targetCharacter == null)
+            {
+                foreach (Tile tile in _nextToTiles)
+                {
+                    if (tile.HasCharacters())
+                    {
+                        foreach (ICharacter character in tile.GetCharactersOnTile())
+                        {
+                            if (_legalAttackTiles.Contains(character.getSpawnType()))
+                            {
+                                this._targetCharacter = character;
+                                _preAttackFace = _directionFacing;
+                                //TO-DO
+                                //Set facingdirection to character
+                                return true;
+                            }
 
-            return false;
+                        }
+                    }
+
+                }
+
+            }
+           
+            return (_targetTile != null);
         }
 
 
@@ -313,7 +277,7 @@ namespace ZombieTD
 
             if (_texture != null)
             {
-                _texture.setRotation(this.directionFacing);
+                _texture.setRotation(this._directionFacing);
 
                 spritebatch.Draw(_texture.GetTexture(), new Rectangle(_xPos + dx, _yPos + dy, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight),
                     _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx, dy), SpriteEffects.None, 0);
@@ -334,6 +298,38 @@ namespace ZombieTD
                 if (field.GetCustomAttributes(typeof(TAttribute), false).Length > 0)
                     yield return (TEnum)field.GetValue(null);
             }
+        }
+
+        public virtual bool TakeDamage(int damage)
+        {
+            this._health -= damage;
+
+            if (this._health < 0)
+            {
+                _mediator.ReportDeath(this);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public SpawnType getSpawnType()
+        {
+            return this._spawnType;
+        }
+
+
+        public void SetDeadFlag()
+        {
+            _amIDead = true;
+        }
+
+
+        public bool GetDeadFlag()
+        {
+            return this._amIDead;
         }
     }
 }

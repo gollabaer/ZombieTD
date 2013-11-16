@@ -61,6 +61,13 @@ namespace ZombieTD
         {
             throw new NotImplementedException();
         }
+
+        public override bool TakeDamage(int damage)
+        {
+            this._health -= damage;
+            return true;
+        }
+       
     }
 }
         

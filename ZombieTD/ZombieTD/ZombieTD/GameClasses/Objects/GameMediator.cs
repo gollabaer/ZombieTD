@@ -38,6 +38,7 @@ namespace ZombieTD
         private IEffect _fogEffect;
         private ISound _bgMusic;
         public static ulong numberofTicks = 0;
+        public static bool isRunning;
         #endregion
 
         public GameMediator()
@@ -53,6 +54,7 @@ namespace ZombieTD
             _menu = new Menu(this);
             _score = new Score(this);
             _fogEffect = new FogEffect2();
+            GameMediator.isRunning = true;
             #endregion
         }
 
@@ -144,11 +146,13 @@ namespace ZombieTD
                 //    lock (_gameElements) element.TakeTurn((IMediator)this);
                 //});
 
+                //Remove all dead characters
+                _gameElements.RemoveAll(x => x.GetDeadFlag()); 
+
                 foreach (IGameElement element in _gameElements)
                 {
                     element.TakeTurn(this);
                 }
-
 
                 //Prevent Exception
                 if (numberofTicks == ulong.MaxValue)
@@ -170,7 +174,11 @@ namespace ZombieTD
             else
             {
                 //The Game Is Over
-                Logger.Log(Logger.Log_Type.INFO, "The Game Has Ended");
+                if(GameMediator.isRunning)
+                    Logger.Log(Logger.Log_Type.INFO, "The Game Has Ended");
+
+                GameMediator.isRunning = false;
+                _score.StopTime();
             }
         }
 
@@ -240,9 +248,9 @@ namespace ZombieTD
         #endregion
 
         #region Character Methods
-        public void Attack(IMediator mediator, ICharacter charater, ICharacter target)
+        public bool AttackCharacter(ICharacter charater, ICharacter target)
         {
-  
+            return target.TakeDamage(((Character)charater)._attackDamageMelee);
         }
 
 
@@ -325,7 +333,7 @@ namespace ZombieTD
             return this._score;
         }
 
-        public void KillElement(IGameElement element)
+        public void ReportDeath(IGameElement element)
         {
             if(element is IZombie ||
                element is IZombieDog ||
@@ -345,7 +353,8 @@ namespace ZombieTD
             }
 
             _map.RemoveElementFromTile(element);
-            _gameElements.Remove(element);
+            //_gameElements.Remove(element);
+            element.SetDeadFlag();
         }
 
 
@@ -353,5 +362,13 @@ namespace ZombieTD
         {
             throw new NotImplementedException();
         }
+
+
+        public bool AttackTownHall(ICharacter character)
+        {
+            _base.TakeDamage(((Character)character)._attackDamageMelee);
+            return true;
+        }
+
     }
 }

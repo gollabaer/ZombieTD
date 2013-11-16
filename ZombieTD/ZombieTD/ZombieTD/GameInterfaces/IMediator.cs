@@ -21,6 +21,9 @@ namespace ZombieTD
         Tile GetTileByXY(int x, int y);
         Score GetScore();
         int GetTownhallHealth(); 
-        void RegisterWithMediator(IMediator mediator, IGameElement element); 
+        void RegisterWithMediator(IMediator mediator, IGameElement element);
+        bool AttackTownHall(ICharacter character);
+        bool AttackCharacter(ICharacter character, ICharacter target);
+        void ReportDeath(IGameElement element);
     }
 }

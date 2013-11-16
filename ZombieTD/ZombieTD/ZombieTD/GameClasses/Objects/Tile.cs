@@ -26,6 +26,10 @@ namespace ZombieTD
 
         }
 
+        public List<IGameElement> GetCharactersOnTile()
+        {
+            return this._charactersOnTile;
+        }
 
         [XmlIgnore()] 
         public ITexture Texture

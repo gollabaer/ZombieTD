@@ -17,7 +17,7 @@ namespace ZombieTD
             _defense = EngineConstants.Sheriff_Defense;
             _speed = EngineConstants.Sheriff_Speed;
             _lineOfSite = EngineConstants.Sheriff_LineOfSite;
-            _walkableTiles = FilterEnumWithAttributeOf<MapTileType, Sheriff>();
+            _legalMovmentTiles = FilterEnumWithAttributeOf<MapTileType, Sheriff>();
         }
 
         public Sheriff()

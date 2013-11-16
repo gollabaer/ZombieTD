@@ -17,7 +17,7 @@ namespace ZombieTD
             _defense = EngineConstants.Redneck_Defense;
             _speed = EngineConstants.Redneck_Speed;
             _lineOfSite = EngineConstants.Redneck_LineOfSite;
-            _walkableTiles = FilterEnumWithAttributeOf<MapTileType, Redneck>();
+            _legalMovmentTiles = FilterEnumWithAttributeOf<MapTileType, Redneck>();
            // var g = SpawnType.RedNeck.GetEnumFromSpawnType<MapTileType>();
 
             int i = 0;

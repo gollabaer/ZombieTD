@@ -185,18 +185,26 @@ namespace ZombieTD
             //});
 
 
-            foreach (Tile tile in Tiles)
-            {
-                if ((x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
-                    (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
-                {
+            //foreach (Tile tile in Tiles)
+            //{
+            //    if ((x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
+            //        (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
+            //    {
 
-                    foundTile = tile;
-                    break;
-                }
-            }
+            //        foundTile = tile;
+            //        break;
+            //    }
+            //}
 
-            return foundTile;
+
+            var found = from tile in Tiles
+                        where (x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
+                              (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth)
+                        select tile;
+
+
+
+            return found.FirstOrDefault();
         }
 
         public void RemoveElementFromTile(IGameElement element)
@@ -207,12 +215,5 @@ namespace ZombieTD
             });
 
         }
-
-
-
-
-
-
-
     }
 }

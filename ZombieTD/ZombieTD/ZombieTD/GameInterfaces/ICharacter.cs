@@ -7,8 +7,9 @@ namespace ZombieTD
 {
     public interface ICharacter : IGameElement
     {
-        void TakeDamage(int damageAmount);
+        bool TakeDamage(int damageAmount);
 
         int getLineOfSight();
+        SpawnType getSpawnType();
     }
 }

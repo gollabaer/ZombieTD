@@ -19,7 +19,11 @@ namespace ZombieTD
             _defense = EngineConstants.Zombie_Defense;
             _speed = EngineConstants.Zombie_Speed;
             _lineOfSite = EngineConstants.Zombie_LineOfSite;
-            _walkableTiles = FilterEnumWithAttributeOf<MapTileType, Zombie>();
+
+            //Set up a enum of tile types this character can walk on
+            _legalMovmentTiles = FilterEnumWithAttributeOf<MapTileType, Zombie>();
+            //Set up an enum of characters this character can attack
+            _legalAttackTiles = FilterEnumWithAttributeOf<SpawnType, Zombie>();
 
         }
 
@@ -89,73 +93,72 @@ namespace ZombieTD
 
         protected override void Move()
         {
-            if (movingDirection == MoveDirection.None)
+            if (_movingDirection == MoveDirection.None)
             {
                 Tile workingTile;
                 
-
-                if (directionFacing == EngineConstants.Up)
+                if (_directionFacing == EngineConstants.Up)
                 {
                     workingTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos, _currentTile.Ypos -32);
 
-                    if (workingTile != null && this._previousTile != workingTile && _walkableTiles.Contains(workingTile.TextureType))
+                    if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
                     {
-                        movingDirection = MoveDirection.Up;
-                        this.directionFacing = EngineConstants.Up;
+                        _movingDirection = MoveDirection.Up;
+                        this._directionFacing = EngineConstants.Up;
                         this._previousTile = _currentTile;
                         this._currentTile.RemoveElement(this);
                         workingTile.AddElementToTile(this);
                     }
                     else
                     {
-                        directionFacing = EngineConstants.Right;
+                        _directionFacing = EngineConstants.Right;
                     }
                 }
 
-                if (directionFacing == EngineConstants.Right)
+                if (_directionFacing == EngineConstants.Right)
                 {
                     workingTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos + 32, _currentTile.Ypos);
 
-                    if (workingTile != null && this._previousTile != workingTile && _walkableTiles.Contains(workingTile.TextureType))
+                    if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
                     {
-                        movingDirection = MoveDirection.Right;
-                        this.directionFacing = EngineConstants.Right;
+                        _movingDirection = MoveDirection.Right;
+                        this._directionFacing = EngineConstants.Right;
                         this._previousTile = _currentTile;
                         this._currentTile.RemoveElement(this);
                         workingTile.AddElementToTile(this);
                     }
                     else
                     {
-                        directionFacing = EngineConstants.Down;
+                        _directionFacing = EngineConstants.Down;
                     }
                 }
 
-                if (directionFacing == EngineConstants.Down)
+                if (_directionFacing == EngineConstants.Down)
                 {
                     workingTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos, _currentTile.Ypos + 32);
 
-                    if (workingTile != null && this._previousTile != workingTile && _walkableTiles.Contains(workingTile.TextureType))
+                    if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
                     {
-                        movingDirection = MoveDirection.Down;
-                        this.directionFacing = EngineConstants.Down;
+                        _movingDirection = MoveDirection.Down;
+                        this._directionFacing = EngineConstants.Down;
                         this._previousTile = _currentTile;
                         this._currentTile.RemoveElement(this);
                         workingTile.AddElementToTile(this);
                     }
                     else
                     {
-                        directionFacing = EngineConstants.Left;
+                        _directionFacing = EngineConstants.Left;
                     }
                 }
 
-                if (directionFacing == EngineConstants.Left)
+                if (_directionFacing == EngineConstants.Left)
                 {
                     workingTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos - 32, _currentTile.Ypos);
 
-                    if (workingTile != null && this._previousTile != workingTile && _walkableTiles.Contains(workingTile.TextureType))
+                    if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
                     {
-                        movingDirection = MoveDirection.Left;
-                        this.directionFacing = EngineConstants.Left;
+                        _movingDirection = MoveDirection.Left;
+                        this._directionFacing = EngineConstants.Left;
                         this._previousTile = _currentTile;
                         this._currentTile.RemoveElement(this);
                         workingTile.AddElementToTile(this);
@@ -164,7 +167,7 @@ namespace ZombieTD
                     {
                         this._currentAction = CurrentAction.None;
                         //this._previousTile = _currentTile;
-                        directionFacing = EngineConstants.Up;
+                        _directionFacing = EngineConstants.Up;
                     }
                 }
 
@@ -175,7 +178,7 @@ namespace ZombieTD
                 {
                     if (_moveCounter != 32)
                     {
-                        switch (movingDirection)
+                        switch (_movingDirection)
                         {
                             case MoveDirection.Up: this._yPos -= EngineConstants.Zombie_Speed; break;
                             case MoveDirection.Right: this._xPos += EngineConstants.Zombie_Speed; break;
@@ -188,7 +191,7 @@ namespace ZombieTD
                     else
                     {
                         this._currentAction = CurrentAction.None;
-                        this.movingDirection = MoveDirection.None;
+                        this._movingDirection = MoveDirection.None;
                         _moveCounter = 0;
                     }
 
@@ -199,11 +202,34 @@ namespace ZombieTD
 
         protected override void Attack()
         {
-           // throw new NotImplementedException();
+            base.Attack();
+
+            if (GameMediator.numberofTicks % EngineConstants.Zombie_NumberOfFramesBeforeAttack == 0)
+            {
+                bool targetDestroyed = false;
+
+                if (_targetTile != null)
+                {
+                    targetDestroyed = _mediator.AttackTownHall(this);
+                }
+                else if (_targetCharacter != null)
+                {
+                    targetDestroyed = _mediator.AttackCharacter(this, _targetCharacter);
+                }
+
+                if (targetDestroyed)
+                {
+                    _currentAction = CurrentAction.None;
+                    _targetCharacter = null;
+                    _targetTile = null;
+                    _directionFacing = _preAttackFace;
+                }
+            }
         }
 
         protected override void ChooseAction()
         {
+          
            base.ChooseAction();
 
            if (IsBaseNextToMe())
