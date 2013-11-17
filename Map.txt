@@ -2,16 +2,16 @@
 <Map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Tiles>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>0</Xpos>
       <Ypos>0</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>32</Xpos>
       <Ypos>0</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -23,145 +23,145 @@
       <TextureType>Grass</TextureType>
       <Xpos>96</Xpos>
       <Ypos>0</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>128</Xpos>
       <Ypos>0</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>160</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>192</Xpos>
       <Ypos>0</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>224</Xpos>
       <Ypos>0</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
       <Ypos>0</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>288</Xpos>
       <Ypos>0</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>320</Xpos>
       <Ypos>0</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>352</Xpos>
       <Ypos>0</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
       <Ypos>0</Ypos>
-      <Flips>2</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
       <Ypos>0</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>0</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>480</Xpos>
       <Ypos>0</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>512</Xpos>
       <Ypos>0</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>544</Xpos>
       <Ypos>0</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>576</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>608</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>640</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>672</Xpos>
       <Ypos>0</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>704</Xpos>
       <Ypos>0</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>736</Xpos>
       <Ypos>0</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>768</Xpos>
       <Ypos>0</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>800</Xpos>
       <Ypos>0</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>832</Xpos>
       <Ypos>0</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -173,91 +173,91 @@
       <TextureType>Grass</TextureType>
       <Xpos>896</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>0</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>992</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>0</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>0</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>0</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>0</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>0</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>0</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>0</Xpos>
       <Ypos>32</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>32</Xpos>
       <Ypos>32</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>64</Xpos>
       <Ypos>32</Ypos>
-      <Flips>1</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -266,7 +266,7 @@
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>128</Xpos>
       <Ypos>32</Ypos>
       <Flips>3</Flips>
@@ -281,7 +281,7 @@
       <TextureType>Grass</TextureType>
       <Xpos>192</Xpos>
       <Ypos>32</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -293,7 +293,7 @@
       <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
       <Ypos>32</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -305,31 +305,31 @@
       <TextureType>Grass</TextureType>
       <Xpos>320</Xpos>
       <Ypos>32</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>352</Xpos>
+      <Ypos>32</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
-      <Xpos>352</Xpos>
-      <Ypos>32</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_withRock</TextureType>
       <Xpos>384</Xpos>
       <Ypos>32</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
       <Ypos>32</Ypos>
-      <Flips>2</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>32</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -338,58 +338,58 @@
       <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>512</Xpos>
+      <Ypos>32</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>544</Xpos>
+      <Ypos>32</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>576</Xpos>
+      <Ypos>32</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>608</Xpos>
+      <Ypos>32</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>640</Xpos>
+      <Ypos>32</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>672</Xpos>
+      <Ypos>32</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>704</Xpos>
       <Ypos>32</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
-      <Xpos>544</Xpos>
-      <Ypos>32</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_roof_center</TextureType>
-      <Xpos>576</Xpos>
-      <Ypos>32</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_roof_center</TextureType>
-      <Xpos>608</Xpos>
-      <Ypos>32</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
-      <Xpos>640</Xpos>
-      <Ypos>32</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>672</Xpos>
-      <Ypos>32</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>704</Xpos>
-      <Ypos>32</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>736</Xpos>
       <Ypos>32</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>768</Xpos>
       <Ypos>32</Ypos>
-      <Flips>3</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -404,7 +404,7 @@
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>864</Xpos>
       <Ypos>32</Ypos>
       <Flips>2</Flips>
@@ -413,136 +413,136 @@
       <TextureType>Grass</TextureType>
       <Xpos>896</Xpos>
       <Ypos>32</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>32</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>32</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>992</Xpos>
       <Ypos>32</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>32</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>32</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>32</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>32</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>32</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>32</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>32</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>32</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>0</Xpos>
       <Ypos>64</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>32</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>64</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>96</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>128</Xpos>
       <Ypos>64</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>160</Xpos>
       <Ypos>64</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>192</Xpos>
       <Ypos>64</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>224</Xpos>
       <Ypos>64</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>288</Xpos>
       <Ypos>64</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>320</Xpos>
       <Ypos>64</Ypos>
       <Flips>3</Flips>
@@ -554,19 +554,19 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
-      <Ypos>64</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>416</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
+      <Xpos>416</Xpos>
+      <Ypos>64</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
@@ -575,7 +575,7 @@
       <TextureType>Grass</TextureType>
       <Xpos>480</Xpos>
       <Ypos>64</Ypos>
-      <Flips>1</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -584,109 +584,109 @@
       <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>544</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>576</Xpos>
       <Ypos>64</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>608</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>640</Xpos>
+      <Ypos>64</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>672</Xpos>
+      <Ypos>64</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>704</Xpos>
       <Ypos>64</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>672</Xpos>
-      <Ypos>64</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>704</Xpos>
-      <Ypos>64</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>736</Xpos>
       <Ypos>64</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>768</Xpos>
       <Ypos>64</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>800</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>832</Xpos>
       <Ypos>64</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>864</Xpos>
-      <Ypos>64</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>896</Xpos>
-      <Ypos>64</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
-      <Xpos>928</Xpos>
+      <Xpos>864</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
+      <Xpos>896</Xpos>
+      <Ypos>64</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>928</Xpos>
+      <Ypos>64</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>64</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>992</Xpos>
       <Ypos>64</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>64</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>64</Ypos>
-      <Flips>3</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
@@ -698,40 +698,40 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>64</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>64</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>64</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>0</Xpos>
       <Ypos>96</Ypos>
-      <Flips>2</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>32</Xpos>
       <Ypos>96</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -746,163 +746,163 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>128</Xpos>
       <Ypos>96</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>160</Xpos>
       <Ypos>96</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>192</Xpos>
       <Ypos>96</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>224</Xpos>
       <Ypos>96</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
       <Ypos>96</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>288</Xpos>
+      <Ypos>96</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>320</Xpos>
+      <Ypos>96</Ypos>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
-      <Xpos>288</Xpos>
-      <Ypos>96</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>320</Xpos>
-      <Ypos>96</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
       <Xpos>352</Xpos>
       <Ypos>96</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
       <Ypos>96</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
       <Ypos>96</Ypos>
-      <Flips>1</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>96</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>480</Xpos>
       <Ypos>96</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>512</Xpos>
       <Ypos>96</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>544</Xpos>
       <Ypos>96</Ypos>
       <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>576</Xpos>
       <Ypos>96</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>608</Xpos>
       <Ypos>96</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>640</Xpos>
       <Ypos>96</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>672</Xpos>
       <Ypos>96</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>704</Xpos>
       <Ypos>96</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>736</Xpos>
       <Ypos>96</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>768</Xpos>
       <Ypos>96</Ypos>
-      <Flips>3</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>800</Xpos>
       <Ypos>96</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>832</Xpos>
       <Ypos>96</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>864</Xpos>
+      <Ypos>96</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>896</Xpos>
+      <Ypos>96</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
-      <Xpos>864</Xpos>
-      <Ypos>96</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>896</Xpos>
-      <Ypos>96</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
       <Xpos>928</Xpos>
       <Ypos>96</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>96</Ypos>
       <Flips>0</Flips>
@@ -914,16 +914,16 @@
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>96</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>96</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -932,40 +932,40 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>96</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>96</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>96</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>96</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>96</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>0</Xpos>
       <Ypos>128</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -980,160 +980,160 @@
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>96</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>128</Xpos>
       <Ypos>128</Ypos>
       <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>128</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>160</Xpos>
       <Ypos>128</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>192</Xpos>
       <Ypos>128</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>224</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>256</Xpos>
       <Ypos>128</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>256</Xpos>
+      <TextureType>Grass</TextureType>
+      <Xpos>288</Xpos>
       <Ypos>128</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>288</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>320</Xpos>
       <Ypos>128</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
       <Xpos>352</Xpos>
       <Ypos>128</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>384</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>416</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>448</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>480</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
-      <Xpos>512</Xpos>
+      <Xpos>384</Xpos>
       <Ypos>128</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
+      <Xpos>416</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>448</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>480</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>512</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
       <Xpos>544</Xpos>
       <Ypos>128</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>576</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>608</Xpos>
       <Ypos>128</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
+      <Xpos>608</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
       <Xpos>640</Xpos>
       <Ypos>128</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>672</Xpos>
       <Ypos>128</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>704</Xpos>
       <Ypos>128</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>736</Xpos>
       <Ypos>128</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>768</Xpos>
       <Ypos>128</Ypos>
-      <Flips>3</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>800</Xpos>
       <Ypos>128</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>832</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>864</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
-      <Xpos>896</Xpos>
+      <Xpos>832</Xpos>
       <Ypos>128</Ypos>
       <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>864</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>896</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -1145,67 +1145,67 @@
       <TextureType>Grass</TextureType>
       <Xpos>960</Xpos>
       <Ypos>128</Ypos>
-      <Flips>1</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>992</Xpos>
       <Ypos>128</Ypos>
-      <Flips>3</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>1024</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>1056</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>1088</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>1120</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>1152</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>1184</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>1216</Xpos>
-      <Ypos>128</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_withRock</TextureType>
-      <Xpos>1248</Xpos>
       <Ypos>128</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
+      <Xpos>1056</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>1088</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1120</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1152</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1184</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1216</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1248</Xpos>
+      <Ypos>128</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
       <Xpos>0</Xpos>
       <Ypos>160</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -1220,73 +1220,73 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>96</Xpos>
-      <Ypos>160</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>128</Xpos>
       <Ypos>160</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>160</Xpos>
+      <TextureType>Grass</TextureType>
+      <Xpos>128</Xpos>
       <Ypos>160</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
+      <Xpos>160</Xpos>
+      <Ypos>160</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
       <Xpos>192</Xpos>
       <Ypos>160</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>224</Xpos>
       <Ypos>160</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
       <Ypos>160</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>288</Xpos>
       <Ypos>160</Ypos>
-      <Flips>2</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>320</Xpos>
       <Ypos>160</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>352</Xpos>
       <Ypos>160</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
-      <Ypos>160</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_withRock</TextureType>
-      <Xpos>416</Xpos>
       <Ypos>160</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
+      <Xpos>416</Xpos>
+      <Ypos>160</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>160</Ypos>
       <Flips>0</Flips>
@@ -1304,49 +1304,49 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>544</Xpos>
       <Ypos>160</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>576</Xpos>
       <Ypos>160</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>608</Xpos>
       <Ypos>160</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>640</Xpos>
       <Ypos>160</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>672</Xpos>
       <Ypos>160</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>704</Xpos>
       <Ypos>160</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>736</Xpos>
       <Ypos>160</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>768</Xpos>
       <Ypos>160</Ypos>
       <Flips>0</Flips>
@@ -1364,28 +1364,28 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>864</Xpos>
       <Ypos>160</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>896</Xpos>
       <Ypos>160</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>928</Xpos>
       <Ypos>160</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>960</Xpos>
       <Ypos>160</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -1400,46 +1400,46 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>160</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>160</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>160</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>160</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>160</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>160</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>160</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -1454,61 +1454,61 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>64</Xpos>
       <Ypos>192</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>96</Xpos>
       <Ypos>192</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>128</Xpos>
       <Ypos>192</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>160</Xpos>
       <Ypos>192</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>192</Xpos>
-      <Ypos>192</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_withRock</TextureType>
-      <Xpos>224</Xpos>
       <Ypos>192</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
+      <Xpos>224</Xpos>
+      <Ypos>192</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
       <Ypos>192</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>288</Xpos>
       <Ypos>192</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>320</Xpos>
       <Ypos>192</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>352</Xpos>
       <Ypos>192</Ypos>
       <Flips>0</Flips>
@@ -1517,19 +1517,19 @@
       <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
       <Ypos>192</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
       <Ypos>192</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>192</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -1541,16 +1541,16 @@
       <TextureType>Grass</TextureType>
       <Xpos>512</Xpos>
       <Ypos>192</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>544</Xpos>
       <Ypos>192</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>576</Xpos>
       <Ypos>192</Ypos>
       <Flips>0</Flips>
@@ -1559,55 +1559,55 @@
       <TextureType>Grass</TextureType>
       <Xpos>608</Xpos>
       <Ypos>192</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>640</Xpos>
       <Ypos>192</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>672</Xpos>
       <Ypos>192</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>704</Xpos>
       <Ypos>192</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>736</Xpos>
       <Ypos>192</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>768</Xpos>
       <Ypos>192</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>800</Xpos>
       <Ypos>192</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>832</Xpos>
       <Ypos>192</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>864</Xpos>
       <Ypos>192</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -1616,16 +1616,16 @@
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>928</Xpos>
       <Ypos>192</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>960</Xpos>
       <Ypos>192</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -1634,142 +1634,142 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>192</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>192</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>192</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>192</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>192</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>192</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>192</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>192</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>0</Xpos>
-      <Ypos>224</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>32</Xpos>
       <Ypos>224</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>64</Xpos>
+      <TextureType>Grass</TextureType>
+      <Xpos>32</Xpos>
       <Ypos>224</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>96</Xpos>
+      <TextureType>Grass</TextureType>
+      <Xpos>64</Xpos>
       <Ypos>224</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Grass</TextureType>
+      <Xpos>96</Xpos>
+      <Ypos>224</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
       <Xpos>128</Xpos>
       <Ypos>224</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>160</Xpos>
       <Ypos>224</Ypos>
-      <Flips>1</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>192</Xpos>
       <Ypos>224</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>224</Xpos>
       <Ypos>224</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>256</Xpos>
       <Ypos>224</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>288</Xpos>
       <Ypos>224</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>320</Xpos>
       <Ypos>224</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>352</Xpos>
       <Ypos>224</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>384</Xpos>
       <Ypos>224</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>416</Xpos>
       <Ypos>224</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>448</Xpos>
       <Ypos>224</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -1781,7 +1781,7 @@
       <TextureType>Grass</TextureType>
       <Xpos>512</Xpos>
       <Ypos>224</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -1790,16 +1790,16 @@
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>576</Xpos>
       <Ypos>224</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>608</Xpos>
       <Ypos>224</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -1808,64 +1808,64 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>672</Xpos>
       <Ypos>224</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>704</Xpos>
+      <Ypos>224</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>736</Xpos>
       <Ypos>224</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>736</Xpos>
-      <Ypos>224</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>768</Xpos>
       <Ypos>224</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>800</Xpos>
       <Ypos>224</Ypos>
-      <Flips>2</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>832</Xpos>
       <Ypos>224</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>864</Xpos>
       <Ypos>224</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>896</Xpos>
       <Ypos>224</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>928</Xpos>
       <Ypos>224</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>960</Xpos>
       <Ypos>224</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -1874,67 +1874,67 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>224</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>224</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>224</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>224</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>224</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>224</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>224</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>224</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>256</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>256</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>64</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
@@ -1943,43 +1943,43 @@
       <TextureType>Grass</TextureType>
       <Xpos>96</Xpos>
       <Ypos>256</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>128</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>160</Xpos>
       <Ypos>256</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>192</Xpos>
       <Ypos>256</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>224</Xpos>
       <Ypos>256</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
       <Ypos>256</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>288</Xpos>
       <Ypos>256</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -1991,49 +1991,49 @@
       <TextureType>Grass</TextureType>
       <Xpos>352</Xpos>
       <Ypos>256</Ypos>
-      <Flips>0</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
       <Ypos>256</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
       <Ypos>256</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>448</Xpos>
+      <Ypos>256</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Tree</TextureType>
-      <Xpos>448</Xpos>
-      <Ypos>256</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
       <Xpos>480</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Tree</TextureType>
       <Xpos>512</Xpos>
       <Ypos>256</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>544</Xpos>
       <Ypos>256</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
       <Xpos>576</Xpos>
       <Ypos>256</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -2042,70 +2042,70 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>640</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>672</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>704</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>736</Xpos>
       <Ypos>256</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>768</Xpos>
       <Ypos>256</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>800</Xpos>
       <Ypos>256</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>832</Xpos>
       <Ypos>256</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>864</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>896</Xpos>
       <Ypos>256</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>928</Xpos>
       <Ypos>256</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>960</Xpos>
       <Ypos>256</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -2114,106 +2114,106 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>256</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>256</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>256</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>256</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>256</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>256</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>288</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>288</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>64</Xpos>
       <Ypos>288</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>96</Xpos>
       <Ypos>288</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>128</Xpos>
       <Ypos>288</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>160</Xpos>
       <Ypos>288</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>192</Xpos>
       <Ypos>288</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>224</Xpos>
       <Ypos>288</Ypos>
-      <Flips>2</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
       <Ypos>288</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -2228,16 +2228,16 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>352</Xpos>
       <Ypos>288</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
       <Ypos>288</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
@@ -2246,970 +2246,970 @@
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>448</Xpos>
       <Ypos>288</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>480</Xpos>
       <Ypos>288</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>512</Xpos>
       <Ypos>288</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
       <Xpos>544</Xpos>
       <Ypos>288</Ypos>
       <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>576</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>608</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>640</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>672</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>704</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>736</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>768</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>800</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>832</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>864</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>896</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>928</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>960</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>992</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>1024</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>1056</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>1088</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>1120</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>1152</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>1184</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>1216</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>1248</Xpos>
-      <Ypos>288</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>0</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>32</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>64</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>96</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>128</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>160</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>192</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>224</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>256</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>288</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>320</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>352</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>384</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>416</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>448</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>480</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>512</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_withRock</TextureType>
-      <Xpos>544</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>576</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>608</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>640</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>RoofTownHall_corner</TextureType>
+      <Xpos>576</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>TownhallRoof_Side</TextureType>
+      <Xpos>608</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>RoofTownHall_corner</TextureType>
+      <Xpos>640</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>672</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>704</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>736</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>768</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>800</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>832</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>864</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>896</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>928</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>960</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>992</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1024</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1056</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1088</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1120</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1152</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1184</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1216</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1248</Xpos>
+      <Ypos>288</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>0</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>32</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>64</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>96</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>128</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>160</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>192</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>224</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>256</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>288</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>320</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>352</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>384</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>416</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>448</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>480</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>512</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>544</Xpos>
       <Ypos>320</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>TownhallRoof_Side</TextureType>
-      <Xpos>704</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoofTownHall_corner</TextureType>
-      <Xpos>736</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>768</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>800</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>832</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>864</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>896</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>928</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>960</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>992</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1024</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1056</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1088</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1120</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1152</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1184</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1216</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1248</Xpos>
-      <Ypos>320</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>0</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>32</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>64</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>96</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>128</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>160</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>192</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>224</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>256</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>288</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>320</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>352</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>384</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>416</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>448</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>480</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>512</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>544</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
       <Xpos>576</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>608</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>640</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>TownhallRoof_Side</TextureType>
-      <Xpos>672</Xpos>
-      <Ypos>352</Ypos>
+      <Ypos>320</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>TownHallRoof_Middle</TextureType>
-      <Xpos>704</Xpos>
-      <Ypos>352</Ypos>
+      <Xpos>608</Xpos>
+      <Ypos>320</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>TownhallRoof_Side</TextureType>
-      <Xpos>736</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>768</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>800</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>832</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>864</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>896</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>928</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>960</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>992</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>1024</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>1056</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>1088</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>1120</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>1152</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>1184</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>1216</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>1248</Xpos>
-      <Ypos>352</Ypos>
-      <Flips>1</Flips>
+      <Xpos>640</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
-      <Xpos>0</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>1</Flips>
+      <Xpos>672</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
+      <Xpos>704</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>736</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>768</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>800</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>832</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>864</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>896</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>928</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>960</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>992</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1024</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1056</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1088</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1120</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1152</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1184</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1216</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1248</Xpos>
+      <Ypos>320</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>0</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
-      <Ypos>384</Ypos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>64</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>96</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>128</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>160</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>192</Xpos>
+      <Ypos>352</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
-      <Xpos>64</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>96</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>128</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>160</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>192</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
       <Xpos>224</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>2</Flips>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>288</Xpos>
-      <Ypos>384</Ypos>
+      <Ypos>352</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>320</Xpos>
-      <Ypos>384</Ypos>
+      <Ypos>352</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>352</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>384</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>416</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>448</Xpos>
-      <Ypos>384</Ypos>
+      <Ypos>352</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
+      <Xpos>384</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>416</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>448</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>480</Xpos>
-      <Ypos>384</Ypos>
+      <Ypos>352</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
       <Xpos>512</Xpos>
-      <Ypos>384</Ypos>
+      <Ypos>352</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
       <Xpos>544</Xpos>
-      <Ypos>384</Ypos>
+      <Ypos>352</Ypos>
       <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>576</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>608</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>640</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>RoofTownHall_corner</TextureType>
-      <Xpos>672</Xpos>
-      <Ypos>384</Ypos>
+      <Xpos>576</Xpos>
+      <Ypos>352</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>TownhallRoof_Side</TextureType>
-      <Xpos>704</Xpos>
-      <Ypos>384</Ypos>
+      <Xpos>608</Xpos>
+      <Ypos>352</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoofTownHall_corner</TextureType>
+      <Xpos>640</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>672</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>704</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>736</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>768</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>800</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>832</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>864</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>896</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>928</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>960</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>992</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1024</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1056</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1088</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1120</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1152</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1184</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1216</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1248</Xpos>
+      <Ypos>352</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>0</Xpos>
       <Ypos>384</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>768</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>800</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>832</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>864</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>896</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>928</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>960</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>992</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1024</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1056</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1088</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1120</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1152</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1184</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1216</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>1248</Xpos>
-      <Ypos>384</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>0</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>1</Flips>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>64</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>3</Flips>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>96</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>1</Flips>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>128</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>2</Flips>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>160</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>2</Flips>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>192</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>2</Flips>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>224</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>2</Flips>
+      <Ypos>384</Ypos>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>256</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>0</Flips>
+      <Ypos>384</Ypos>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>288</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>1</Flips>
+      <Ypos>384</Ypos>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>320</Xpos>
-      <Ypos>416</Ypos>
+      <Ypos>384</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>352</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>1</Flips>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>2</Flips>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>448</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>480</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>512</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>544</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>RoadOutside</TextureType>
+      <Xpos>576</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>RoadMiddle</TextureType>
+      <Xpos>608</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>RoadOutside</TextureType>
+      <Xpos>640</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>672</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>704</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>736</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>768</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>800</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>832</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>864</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>896</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>928</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>960</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>992</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1024</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1056</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1088</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1120</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1152</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1184</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1216</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>1248</Xpos>
+      <Ypos>384</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>0</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>32</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>64</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>96</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>128</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>160</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>192</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>224</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>256</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>288</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>320</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>352</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Grass</TextureType>
+      <Xpos>384</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>416</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>416</Ypos>
-      <Flips>2</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -3218,7 +3218,7 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>512</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
@@ -3227,205 +3227,205 @@
       <TextureType>Grass</TextureType>
       <Xpos>544</Xpos>
       <Ypos>416</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>RoadOutside</TextureType>
       <Xpos>576</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>RoadMiddle</TextureType>
       <Xpos>608</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>RoadOutside</TextureType>
       <Xpos>640</Xpos>
+      <Ypos>416</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Grass</TextureType>
+      <Xpos>672</Xpos>
       <Ypos>416</Ypos>
       <Flips>1</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>672</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>704</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>736</Xpos>
       <Ypos>416</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>768</Xpos>
       <Ypos>416</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>800</Xpos>
       <Ypos>416</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>832</Xpos>
+      <Ypos>416</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>832</Xpos>
-      <Ypos>416</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>864</Xpos>
       <Ypos>416</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>896</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>992</Xpos>
       <Ypos>416</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>416</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>416</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>416</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>416</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>416</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>416</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>416</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>448</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>448</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>64</Xpos>
       <Ypos>448</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>96</Xpos>
       <Ypos>448</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>128</Xpos>
       <Ypos>448</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>160</Xpos>
       <Ypos>448</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>192</Xpos>
       <Ypos>448</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>224</Xpos>
-      <Ypos>448</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>256</Xpos>
-      <Ypos>448</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
+      <Xpos>224</Xpos>
+      <Ypos>448</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>256</Xpos>
+      <Ypos>448</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
       <Xpos>288</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>320</Xpos>
       <Ypos>448</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -3434,22 +3434,22 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
       <Ypos>448</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>448</Ypos>
-      <Flips>0</Flips>
+      <Flips>3</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -3458,91 +3458,91 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Building_roof_corner</TextureType>
       <Xpos>512</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Building_roof_corner</TextureType>
       <Xpos>544</Xpos>
       <Ypos>448</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>576</Xpos>
-      <Ypos>448</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>608</Xpos>
-      <Ypos>448</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>640</Xpos>
-      <Ypos>448</Ypos>
-      <Flips>2</Flips>
+      <Flips>1</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadOutside</TextureType>
-      <Xpos>672</Xpos>
+      <Xpos>576</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadMiddle</TextureType>
-      <Xpos>704</Xpos>
+      <Xpos>608</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadOutside</TextureType>
-      <Xpos>736</Xpos>
-      <Ypos>448</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>768</Xpos>
+      <Xpos>640</Xpos>
       <Ypos>448</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Tree</TextureType>
+      <Xpos>672</Xpos>
+      <Ypos>448</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>704</Xpos>
+      <Ypos>448</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>736</Xpos>
+      <Ypos>448</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>768</Xpos>
+      <Ypos>448</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>800</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>832</Xpos>
       <Ypos>448</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>864</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>896</Xpos>
       <Ypos>448</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
@@ -3566,7 +3566,7 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
@@ -3584,289 +3584,289 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>448</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>448</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>480</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>480</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>64</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>96</Xpos>
       <Ypos>480</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>128</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>160</Xpos>
       <Ypos>480</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>192</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>224</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>256</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>288</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>320</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>352</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
-      <Ypos>480</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_roof_corner</TextureType>
-      <Xpos>480</Xpos>
-      <Ypos>480</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>512</Xpos>
-      <Ypos>480</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>544</Xpos>
       <Ypos>480</Ypos>
       <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>480</Xpos>
+      <Ypos>480</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Building_Roof_Side</TextureType>
+      <Xpos>512</Xpos>
+      <Ypos>480</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Building_Roof_Side</TextureType>
+      <Xpos>544</Xpos>
+      <Ypos>480</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>RoadOutside</TextureType>
       <Xpos>576</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>RoadMiddle</TextureType>
       <Xpos>608</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>RoadOutside</TextureType>
       <Xpos>640</Xpos>
       <Ypos>480</Ypos>
-      <Flips>0</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>672</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>704</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>736</Xpos>
       <Ypos>480</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>768</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>800</Xpos>
       <Ypos>480</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>832</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>864</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>896</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>992</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>480</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>480</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>512</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>512</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>64</Xpos>
       <Ypos>512</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>96</Xpos>
       <Ypos>512</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>128</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
@@ -3875,487 +3875,487 @@
       <TextureType>Path_noRock</TextureType>
       <Xpos>160</Xpos>
       <Ypos>512</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>192</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>224</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>256</Xpos>
       <Ypos>512</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>288</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>320</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>352</Xpos>
       <Ypos>512</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
       <Ypos>512</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
       <Ypos>512</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>512</Ypos>
       <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>480</Xpos>
-      <Ypos>512</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>512</Xpos>
-      <Ypos>512</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>544</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
-      <Xpos>576</Xpos>
+      <TextureType>Building_roof_corner</TextureType>
+      <Xpos>512</Xpos>
       <Ypos>512</Ypos>
       <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>608</Xpos>
+      <TextureType>Building_roof_corner</TextureType>
+      <Xpos>544</Xpos>
       <Ypos>512</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Grass</TextureType>
-      <Xpos>640</Xpos>
-      <Ypos>512</Ypos>
-      <Flips>1</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadOutside</TextureType>
-      <Xpos>672</Xpos>
+      <Xpos>576</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadMiddle</TextureType>
-      <Xpos>704</Xpos>
+      <Xpos>608</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadOutside</TextureType>
-      <Xpos>736</Xpos>
+      <Xpos>640</Xpos>
       <Ypos>512</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Building_roof_corner</TextureType>
+      <Xpos>672</Xpos>
+      <Ypos>512</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Building_roof_corner</TextureType>
+      <Xpos>704</Xpos>
+      <Ypos>512</Ypos>
+      <Flips>1</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>736</Xpos>
+      <Ypos>512</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
       <Xpos>768</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>800</Xpos>
       <Ypos>512</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>832</Xpos>
       <Ypos>512</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
       <Xpos>864</Xpos>
       <Ypos>512</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>896</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>512</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>512</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>992</Xpos>
       <Ypos>512</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>512</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>512</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>512</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>512</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>512</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>544</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>64</Xpos>
       <Ypos>544</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>96</Xpos>
       <Ypos>544</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>128</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>160</Xpos>
       <Ypos>544</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>192</Xpos>
       <Ypos>544</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>224</Xpos>
       <Ypos>544</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>256</Xpos>
       <Ypos>544</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>288</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>320</Xpos>
       <Ypos>544</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>352</Xpos>
       <Ypos>544</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>384</Xpos>
       <Ypos>544</Ypos>
       <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>416</Xpos>
       <Ypos>544</Ypos>
       <Flips>3</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Grass</TextureType>
       <Xpos>448</Xpos>
       <Ypos>544</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>480</Xpos>
       <Ypos>544</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>512</Xpos>
       <Ypos>544</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>544</Xpos>
       <Ypos>544</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>RoadOutside</TextureType>
       <Xpos>576</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>RoadMiddle</TextureType>
       <Xpos>608</Xpos>
       <Ypos>544</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>RoadOutside</TextureType>
       <Xpos>640</Xpos>
-      <Ypos>544</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>672</Xpos>
-      <Ypos>544</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadMiddle</TextureType>
-      <Xpos>704</Xpos>
-      <Ypos>544</Ypos>
-      <Flips>0</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>RoadOutside</TextureType>
-      <Xpos>736</Xpos>
       <Ypos>544</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
       <TextureType>Building_roof_corner</TextureType>
+      <Xpos>672</Xpos>
+      <Ypos>544</Ypos>
+      <Flips>3</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Building_roof_corner</TextureType>
+      <Xpos>704</Xpos>
+      <Ypos>544</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>736</Xpos>
+      <Ypos>544</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
       <Xpos>768</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>800</Xpos>
       <Ypos>544</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
-      <Xpos>832</Xpos>
-      <Ypos>544</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_roof_corner</TextureType>
-      <Xpos>864</Xpos>
-      <Ypos>544</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
+      <Xpos>832</Xpos>
+      <Ypos>544</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>864</Xpos>
+      <Ypos>544</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
       <Xpos>896</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>992</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>544</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>544</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>544</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>544</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>544</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>576</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>576</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>64</Xpos>
       <Ypos>576</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>96</Xpos>
       <Ypos>576</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
       <Xpos>128</Xpos>
       <Ypos>576</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>160</Xpos>
       <Ypos>576</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -4376,16 +4376,16 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>288</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>320</Xpos>
       <Ypos>576</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -4403,382 +4403,382 @@
       <TextureType>Path_noRock</TextureType>
       <Xpos>416</Xpos>
       <Ypos>576</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
       <Xpos>448</Xpos>
       <Ypos>576</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
       <Xpos>480</Xpos>
       <Ypos>576</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>512</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>544</Xpos>
       <Ypos>576</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_roof_corner</TextureType>
-      <Xpos>576</Xpos>
-      <Ypos>576</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
-      <Xpos>608</Xpos>
-      <Ypos>576</Ypos>
-      <Flips>3</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Building_roof_corner</TextureType>
-      <Xpos>640</Xpos>
-      <Ypos>576</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadOutside</TextureType>
-      <Xpos>672</Xpos>
+      <Xpos>576</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadMiddle</TextureType>
-      <Xpos>704</Xpos>
+      <Xpos>608</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadOutside</TextureType>
-      <Xpos>736</Xpos>
+      <Xpos>640</Xpos>
       <Ypos>576</Ypos>
       <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
+      <Xpos>672</Xpos>
+      <Ypos>576</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>704</Xpos>
+      <Ypos>576</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>736</Xpos>
+      <Ypos>576</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>768</Xpos>
       <Ypos>576</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>800</Xpos>
       <Ypos>576</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>832</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>864</Xpos>
       <Ypos>576</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>896</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>992</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>576</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>576</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>576</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>576</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>608</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>608</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>64</Xpos>
       <Ypos>608</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>96</Xpos>
       <Ypos>608</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>128</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>160</Xpos>
       <Ypos>608</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>192</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>224</Xpos>
       <Ypos>608</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>256</Xpos>
       <Ypos>608</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>288</Xpos>
       <Ypos>608</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>320</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>352</Xpos>
       <Ypos>608</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>384</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>416</Xpos>
       <Ypos>608</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>448</Xpos>
       <Ypos>608</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>480</Xpos>
       <Ypos>608</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>512</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>544</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>576</Xpos>
-      <Ypos>608</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>608</Xpos>
-      <Ypos>608</Ypos>
-      <Flips>1</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>640</Xpos>
-      <Ypos>608</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
       <TextureType>RoadOutside</TextureType>
-      <Xpos>672</Xpos>
+      <Xpos>576</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadMiddle</TextureType>
-      <Xpos>704</Xpos>
+      <Xpos>608</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadOutside</TextureType>
+      <Xpos>640</Xpos>
+      <Ypos>608</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
+      <Xpos>672</Xpos>
+      <Ypos>608</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Path_noRock</TextureType>
+      <Xpos>704</Xpos>
+      <Ypos>608</Ypos>
+      <Flips>0</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
       <Xpos>736</Xpos>
       <Ypos>608</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>768</Xpos>
       <Ypos>608</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>800</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>832</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>864</Xpos>
       <Ypos>608</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>896</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>608</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>992</Xpos>
       <Ypos>608</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>608</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>608</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
@@ -4790,190 +4790,190 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>608</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>608</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>640</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>64</Xpos>
       <Ypos>640</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>96</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>128</Xpos>
       <Ypos>640</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>160</Xpos>
       <Ypos>640</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>192</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>224</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>256</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>288</Xpos>
       <Ypos>640</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>320</Xpos>
       <Ypos>640</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>352</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>384</Xpos>
       <Ypos>640</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>416</Xpos>
       <Ypos>640</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>448</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>480</Xpos>
       <Ypos>640</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>512</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>544</Xpos>
       <Ypos>640</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>RoadOutside</TextureType>
       <Xpos>576</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>RoadMiddle</TextureType>
       <Xpos>608</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>RoadOutside</TextureType>
       <Xpos>640</Xpos>
       <Ypos>640</Ypos>
-      <Flips>3</Flips>
+      <Flips>2</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>672</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>704</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>736</Xpos>
       <Ypos>640</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>768</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>800</Xpos>
       <Ypos>640</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_center</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>832</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>864</Xpos>
       <Ypos>640</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>896</Xpos>
       <Ypos>640</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>Path_noRock</TextureType>
@@ -4982,49 +4982,49 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>960</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>992</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>640</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>640</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
@@ -5036,250 +5036,250 @@
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_withRock</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>640</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>0</Xpos>
       <Ypos>672</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>32</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>64</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>96</Xpos>
       <Ypos>672</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>128</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>160</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>192</Xpos>
       <Ypos>672</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>224</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>256</Xpos>
       <Ypos>672</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>288</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>320</Xpos>
       <Ypos>672</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>352</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>384</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>416</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>448</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>480</Xpos>
       <Ypos>672</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>512</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>544</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>RoadOutside</TextureType>
       <Xpos>576</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>RoadMiddle</TextureType>
       <Xpos>608</Xpos>
-      <Ypos>672</Ypos>
-      <Flips>2</Flips>
-    </Tile>
-    <Tile>
-      <TextureType>Path_noRock</TextureType>
-      <Xpos>640</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
       <TextureType>RoadOutside</TextureType>
+      <Xpos>640</Xpos>
+      <Ypos>672</Ypos>
+      <Flips>2</Flips>
+    </Tile>
+    <Tile>
+      <TextureType>Error</TextureType>
       <Xpos>672</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadMiddle</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>704</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>RoadOutside</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>736</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>768</Xpos>
       <Ypos>672</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>800</Xpos>
       <Ypos>672</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_Roof_Side</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>832</Xpos>
       <Ypos>672</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Building_roof_corner</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>864</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>896</Xpos>
       <Ypos>672</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>928</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>960</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Path_noRock</TextureType>
       <Xpos>992</Xpos>
       <Ypos>672</Ypos>
-      <Flips>1</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1024</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1056</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1088</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1120</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Tree</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1152</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1184</Xpos>
       <Ypos>672</Ypos>
-      <Flips>2</Flips>
+      <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Path_noRock</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1216</Xpos>
       <Ypos>672</Ypos>
       <Flips>0</Flips>
     </Tile>
     <Tile>
-      <TextureType>Grass</TextureType>
+      <TextureType>Error</TextureType>
       <Xpos>1248</Xpos>
       <Ypos>672</Ypos>
-      <Flips>3</Flips>
+      <Flips>0</Flips>
     </Tile>
   </Tiles>
 </Map>

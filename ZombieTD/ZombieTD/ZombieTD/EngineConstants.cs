@@ -84,8 +84,8 @@ namespace ZombieTD
         public static float MouseY = 610.0f;
 
         //Wave Generator
-        public const int NumberOfFramesBeforeOrder = 1;
-        public const int MaxNumberOfSpawns = 12000;
+        public const int NumberOfFramesBeforeOrder = 150;
+        public const int MaxNumberOfSpawns = 20;
 
 
         //Character Attributes
