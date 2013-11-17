@@ -65,7 +65,11 @@ namespace ZombieTD
         public override bool TakeDamage(int damage)
         {
             this._health -= damage;
-            return true;
+
+            if (this._health <= 0)
+                return true;
+            else
+                return false;
         }
        
     }

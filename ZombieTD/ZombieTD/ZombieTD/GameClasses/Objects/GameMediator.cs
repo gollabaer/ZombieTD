@@ -366,8 +366,7 @@ namespace ZombieTD
 
         public bool AttackTownHall(ICharacter character)
         {
-            _base.TakeDamage(((Character)character)._attackDamageMelee);
-            return true;
+            return _base.TakeDamage(((Character)character)._attackDamageMelee);
         }
 
     }

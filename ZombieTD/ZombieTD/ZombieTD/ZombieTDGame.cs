@@ -41,10 +41,12 @@ namespace ZombieTD
 
 
             //Disable Frame Rate
-            graphics.SynchronizeWithVerticalRetrace = false;
-            this.IsFixedTimeStep = false;
-            graphics.ApplyChanges();
-
+            if (EngineConstants.DisableFrameRate)
+            {
+                graphics.SynchronizeWithVerticalRetrace = false;
+                this.IsFixedTimeStep = false;
+                graphics.ApplyChanges();
+            }
 
             if(EngineConstants.IsLogging)
                 Logger.StartLogger();

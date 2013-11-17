@@ -2,22 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 
 namespace ZombieTD
 {
-    public class EnemyWaveGenerator
+    public class EnemyWaveGenerator : Attribute
     {
         List<Tile> _entryPoints;
         List<Tile> _usedPoints;
         IMediator _mediator;
         Random _rnd;
         int count = 0;
+        public IEnumerable<SpawnType> _legalSpawnTypes;
      
         public EnemyWaveGenerator(IMediator mediator)
         {
             _usedPoints = new List<Tile>();
             _mediator = mediator;
             _rnd = new Random();
+            _legalSpawnTypes = FilterEnumWithAttributeOf<SpawnType, EnemyWaveGenerator>();
+
+        }
+
+        public EnemyWaveGenerator()
+        {
+
         }
 
         public void SetEnrtyPoints(List<Tile> entryPoints)
@@ -48,7 +57,10 @@ namespace ZombieTD
                     _usedPoints.Add(tile);
                     _entryPoints.Remove(tile);
 
-                    order.Type = SpawnType.Zombie;
+                    int r2 = _rnd.Next( _legalSpawnTypes.Count<SpawnType>());
+                    order.Type = _legalSpawnTypes.ElementAt(r2);
+
+
                     order.X = tile.Xpos;
                     order.Y = tile.Ypos;
                     _mediator.AcceptOrder(order as IOrder, OrderFor.Enemy);
@@ -59,6 +71,22 @@ namespace ZombieTD
                 {
                     count++;
                 }
+            }
+        }
+
+        //http://tiredblogger.wordpress.com/2009/07/09/filtering-an-enum-by-attribute/
+        public static IEnumerable<TEnum> FilterEnumWithAttributeOf<TEnum, TAttribute>()
+            where TEnum : struct
+            where TAttribute : class
+        {
+            foreach (var field in
+                typeof(TEnum).GetFields(BindingFlags.GetField |
+                                        BindingFlags.Public |
+                                        BindingFlags.Static))
+            {
+
+                if (field.GetCustomAttributes(typeof(TAttribute), false).Length > 0)
+                    yield return (TEnum)field.GetValue(null);
             }
         }
     }

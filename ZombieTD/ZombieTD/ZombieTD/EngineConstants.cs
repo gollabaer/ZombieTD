@@ -84,8 +84,8 @@ namespace ZombieTD
         public static float MouseY = 610.0f;
 
         //Wave Generator
-        public const int NumberOfFramesBeforeOrder = 150;
-        public const int MaxNumberOfSpawns = 20;
+        public const int NumberOfFramesBeforeOrder = 100;
+        public const int MaxNumberOfSpawns = 200;
 
 
         //Character Attributes
@@ -108,9 +108,10 @@ namespace ZombieTD
         public const int ZombieDog_AttackDamageRanged = 4;
         public const int ZombieDog_AttackRange = 6;
         public const int ZombieDog_Defense = 2;
-        public const int ZombieDog_Speed = 5;
-        public const int ZombieDog_NumberOfFramesBeforeMove = 5;
+        public const int ZombieDog_Speed = 4;
+        public const int ZombieDog_NumberOfFramesBeforeMove = 2;
         public const int ZombieDog_LineOfSite = 2;
+        public const int ZombieDog_NumberOfFramesBeforeAttack = 100;
 
         //FlyingZombie
         public const int FlyingZombie_Health = 10;
@@ -214,6 +215,11 @@ namespace ZombieTD
         public static float Left = (float)(3.0f * (float)(Math.PI / 2));
         public static float UpLeft = 5.49778715f;
 
+
+
+
+        public static bool DisableFrameRate = false;
+
         
         
 
@@ -233,6 +239,7 @@ namespace ZombieTD
 
     public enum MapTileType
     {
+        [ZombieDog]
         [Zombie]
         [Sheriff]
         [FlyingZombie]
@@ -249,14 +256,17 @@ namespace ZombieTD
         [Sheriff]
         [FlyingZombie]
         Grass,
+        [ZombieDog]
         [Zombie]
         [Sheriff]
         [FlyingZombie]
         Path_noRock,
+        [ZombieDog]
         [Zombie]
         [Sheriff]
         [FlyingZombie]
         Path_withRock,
+        [ZombieDog]
         [Zombie]
         [FlyingZombie]
         [Sheriff]
@@ -335,17 +345,25 @@ namespace ZombieTD
 
     public enum SpawnType
     {
+        [EnemyWaveGenerator]
         Zombie,
+        [EnemyWaveGenerator]
         ZombieDog,
+        //[EnemyWaveGenerator]
         FlyingZombie,
+        [ZombieDog]
         [Zombie]
         Priest,
+        [ZombieDog]
         [Zombie]
         RedNeck,
+        [ZombieDog]
         [Zombie]
         Sheriff,
+        [ZombieDog]
         [Zombie]
         Hay,
+        [ZombieDog]
         [Zombie]
         Car,
         Pit
