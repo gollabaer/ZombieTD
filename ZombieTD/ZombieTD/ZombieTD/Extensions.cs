@@ -29,7 +29,7 @@ namespace ZombieTD
             string output = null;
             try
             {
-                output = System.IO.File.ReadAllText(@"Map.txt");
+                output = System.IO.File.ReadAllText(fileName);
             }
             catch (Exception ex)
             {
