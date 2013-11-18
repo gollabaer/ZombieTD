@@ -17,7 +17,6 @@ namespace ZombieTD
         int GetY();
         void SetRotation(float rotation);
         ITexture GetTexture();
-        void SetDeadFlag();
         bool GetDeadFlag();
     }
 }

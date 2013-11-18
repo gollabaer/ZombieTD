@@ -77,7 +77,6 @@ namespace ZombieTD
 
             #endregion
 
-
             timer++;
         }
 
@@ -117,8 +116,6 @@ namespace ZombieTD
                 x = _targetCharacter.GetX();
                 y = _targetCharacter.GetY();
             }
-
-
 
             if (x > this._xPos && y < this._yPos)
             {
@@ -266,10 +263,6 @@ namespace ZombieTD
             return (_targetTile != null);
         }
 
-
-
-
-
         public virtual void Draw(SpriteBatch spritebatch)
         {
             int dy = EngineConstants.SmallTextureHeight / 2;
@@ -282,6 +275,33 @@ namespace ZombieTD
                 spritebatch.Draw(_texture.GetTexture(), new Rectangle(_xPos + dx, _yPos + dy, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight),
                     _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx, dy), SpriteEffects.None, 0);
             }
+        }
+
+        public virtual bool TakeDamage(int damage)
+        {
+            this._health -= damage;
+
+            if (this._health < 0)
+            {
+                _currentTile.RemoveElement(this);
+                _amIDead = true;
+                _mediator.ReportDeath(this);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public SpawnType getSpawnType()
+        {
+            return this._spawnType;
+        }
+
+        public bool GetDeadFlag()
+        {
+            return this._amIDead;
         }
 
         //http://tiredblogger.wordpress.com/2009/07/09/filtering-an-enum-by-attribute/
@@ -298,38 +318,6 @@ namespace ZombieTD
                 if (field.GetCustomAttributes(typeof(TAttribute), false).Length > 0)
                     yield return (TEnum)field.GetValue(null);
             }
-        }
-
-        public virtual bool TakeDamage(int damage)
-        {
-            this._health -= damage;
-
-            if (this._health < 0)
-            {
-                _mediator.ReportDeath(this);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public SpawnType getSpawnType()
-        {
-            return this._spawnType;
-        }
-
-
-        public void SetDeadFlag()
-        {
-            _amIDead = true;
-        }
-
-
-        public bool GetDeadFlag()
-        {
-            return this._amIDead;
         }
     }
 }

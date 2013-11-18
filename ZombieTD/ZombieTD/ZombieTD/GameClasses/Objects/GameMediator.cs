@@ -100,7 +100,6 @@ namespace ZombieTD
         {
             _textureAssetManager.LoadAssets(content);
             _soundAssetManager.LoadAssets(content);
-            //effect._fogtexture = _textureAssetManager.GetAsset<EffectTextureType, ITexture>(EffectTextureType.Fog);
         }
 
         /// <summary>
@@ -352,9 +351,11 @@ namespace ZombieTD
                 _score.AddKilled();
             }
 
-            _map.RemoveElementFromTile(element);
+            
+
+            //_map.RemoveElementFromTile(element);
             //_gameElements.Remove(element);
-            element.SetDeadFlag();
+            //element.SetDeadFlag();
         }
 
 
