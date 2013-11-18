@@ -18,20 +18,21 @@ namespace ZombieTD
         public Map()
         {
             Tiles = new List<Tile>();
-
         }
+
         public void Draw(SpriteBatch spritebatch)
         {
-            //For Debug
+#if DEBUG
             foreach (Tile tile in Tiles)
             {
                 tile.Draw(spritebatch);
             }
-
-            //Parallel.ForEach(Tiles, tile =>
-            //    {
-            //        lock (spritebatch) tile.Draw(spritebatch);
-            //    });
+#else
+            Parallel.ForEach(Tiles, tile =>
+                {
+                    lock (spritebatch) tile.Draw(spritebatch);
+                });
+#endif
         }
 
         public Map GetMapByLineOfSight(int lineOfSight, int x, int y)
@@ -43,7 +44,6 @@ namespace ZombieTD
             lowerXPosition = x + (32 * lineOfSight);
             lowerYPosition = y + (32 * lineOfSight);
 
-
             var found = from tile in Tiles
                         where tile.Xpos >= upperXPosition && tile.Xpos <= lowerXPosition &&
                                 tile.Ypos >= upperYPosition && tile.Ypos <= lowerYPosition
@@ -54,48 +54,6 @@ namespace ZombieTD
             returnMap.EntryPoints = this.EntryPoints;
 
             return returnMap;
-
-            #region Obsolete
-            //foreach (Tile tile in Tiles)
-            //{
-            //    int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
-            //    if (dist <= lineOfSight)
-            //    {
-            //        returnMap.Tiles.Add(tile);
-            //    }
-            //}
-            // int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
-
-
-            //foreach (Tile tile in Tiles)
-            //{
-
-
-
-            //    = XPosition + (-32 * lineOfSight)
-            //int upperYPosition = 
-
-
-            //    if (dist <= lineOfSight)
-            //    {
-            //        returnMap.Tiles.Add(tile);
-            //    }
-            //}
-
-
-
-
-            //Parallel.ForEach(Tiles, tile =>
-            //{
-            //    int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
-            //    if (dist <= lineOfSight)
-            //    {
-            //        returnMap.Tiles.Add(tile);
-            //    }
-            //});
-
-            //TODO return map by line of sight
-            #endregion
         }
 
         public static Map LoadMap(IMediator mediator)
@@ -103,15 +61,17 @@ namespace ZombieTD
             Map map = new Map();
             map = (EngineConstants.MapFileLocation.LoadFromFilename()).LoadFromXMLString();
 
-            //foreach(Tile tile in map.Tiles)
-            //{
-            //    tile.SetTexture(mediator);
-            //}
-
+#if DEBUG
+            foreach(Tile tile in map.Tiles)
+            {
+                tile.SetTexture(mediator);
+            }
+#else
             Parallel.ForEach(map.Tiles, tile =>
             {
                 tile.SetTexture(mediator);
             });
+#endif
 
             SetEntryPoints(map);
             SetBase(map);
@@ -121,18 +81,19 @@ namespace ZombieTD
 
         private static void SetEntryPoints(Map map)
         {
-            //foreach (Tile tile in map.Tiles)
-            //{
-            //    if ((tile.Xpos == 0 || tile.Ypos == 0 || tile.Xpos == 1248 || tile.Ypos == 672) &&
-            //        (tile.TextureType == MapTileType.Path_withRock ||
-            //         tile.TextureType == MapTileType.Path_noRock ||
-            //         tile.TextureType == MapTileType.RoadMiddle ||
-            //         tile.TextureType == MapTileType.RoadOutside))
-            //    {
-            //        map.EntryPoints.Add(tile);
-            //    }
-            //}
-
+#if DEBUG
+            foreach (Tile tile in map.Tiles)
+            {
+                if ((tile.Xpos == 0 || tile.Ypos == 0 || tile.Xpos == EngineConstants.MapEdgeX || tile.Ypos == EngineConstants.MapEdgeY) &&
+                    (tile.TextureType == MapTileType.Path_withRock ||
+                     tile.TextureType == MapTileType.Path_noRock ||
+                     tile.TextureType == MapTileType.RoadMiddle ||
+                     tile.TextureType == MapTileType.RoadOutside))
+                {
+                    map.EntryPoints.Add(tile);
+                }
+            }
+#else
             Parallel.ForEach(map.Tiles, tile =>
             {
                 if ((tile.Xpos == 0 || tile.Ypos == 0 || tile.Xpos == EngineConstants.MapEdgeX || tile.Ypos == EngineConstants.MapEdgeY) &&
@@ -144,21 +105,22 @@ namespace ZombieTD
                     lock(map) map.EntryPoints.Add(tile);
                 }
             });
+#endif
         }
 
         private static void SetBase(Map map)
         {
-            //foreach (Tile tile in map.Tiles)
-            //{
-            //    if (tile.TextureType == MapTileType.RoofTownHall_corner ||
-            //         tile.TextureType == MapTileType.TownHallRoof_Middle ||
-            //         tile.TextureType == MapTileType.TownhallRoof_Side)
-            //    {
-            //        map.EntryPoints.Add(tile);
-            //    }
-            //}
-
-
+#if DEBUG
+            foreach (Tile tile in map.Tiles)
+            {
+                if (tile.TextureType == MapTileType.RoofTownHall_corner ||
+                     tile.TextureType == MapTileType.TownHallRoof_Middle ||
+                     tile.TextureType == MapTileType.TownhallRoof_Side)
+                {
+                    map.Base.Add(tile);
+                }
+            }
+#else
             Parallel.ForEach(map.Tiles, tile =>
             {
                 if (tile.TextureType == MapTileType.RoofTownHall_corner ||
@@ -168,52 +130,29 @@ namespace ZombieTD
                     lock(map) map.Base.Add(tile);
                 }
             });
-
+#endif
         }
 
         public Tile GetTileByXY(int x, int y)
         {
-            Tile foundTile = null;
-
-            //Parallel.ForEach(Tiles, tile =>
-            //{
-            //    if ((x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
-            //    (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
-            //    {
-            //        foundTile = tile;        
-            //    }
-            //});
-
-
-            //foreach (Tile tile in Tiles)
-            //{
-            //    if ((x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
-            //        (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
-            //    {
-
-            //        foundTile = tile;
-            //        break;
-            //    }
-            //}
-
-
             var found = from tile in Tiles
                         where (x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
                               (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth)
                         select tile;
 
-
-
             return found.FirstOrDefault();
         }
 
-        public void RemoveElementFromTile(IGameElement element)
-        {
-            Parallel.ForEach(Tiles, tile =>
-            {
-                tile.RemoveElement(element);
-            });
+        //public void RemoveElementFromTile(IGameElement element)
+        //{
 
-        }
+
+
+
+        //    Parallel.ForEach(Tiles, tile =>
+        //    {
+        //        tile.RemoveElement(element);
+        //    });
+        //}
     }
 }
