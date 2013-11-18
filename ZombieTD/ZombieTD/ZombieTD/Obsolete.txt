@@ -7,3 +7,75 @@
             //    //To Do Add Lock
             //    lock (_spriteBatch) element.Draw(_spriteBatch);
             //});
+
+
+
+			 #region Obsolete
+            //foreach (Tile tile in Tiles)
+            //{
+            //    int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
+            //    if (dist <= lineOfSight)
+            //    {
+            //        returnMap.Tiles.Add(tile);
+            //    }
+            //}
+            // int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
+
+
+            //foreach (Tile tile in Tiles)
+            //{
+
+
+
+            //    = XPosition + (-32 * lineOfSight)
+            //int upperYPosition = 
+
+
+            //    if (dist <= lineOfSight)
+            //    {
+            //        returnMap.Tiles.Add(tile);
+            //    }
+            //}
+
+
+
+
+            //Parallel.ForEach(Tiles, tile =>
+            //{
+            //    int dist = Math.Max(Math.Abs(x - tile.Xpos), Math.Abs(y - tile.Ypos));
+            //    if (dist <= lineOfSight)
+            //    {
+            //        returnMap.Tiles.Add(tile);
+            //    }
+            //});
+
+            //TODO return map by line of sight
+            #endregion
+
+
+
+
+
+
+			    public Tile GetTileByXY(int x, int y)
+        {
+            //Parallel.ForEach(Tiles, tile =>
+            //{
+            //    if ((x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
+            //    (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
+            //    {
+            //        foundTile = tile;        
+            //    }
+            //});
+
+
+            //foreach (Tile tile in Tiles)
+            //{
+            //    if ((x >= tile.Xpos && x < tile.Xpos + EngineConstants.SmallTextureWidth) &&
+            //        (y >= tile.Ypos && y < tile.Ypos + EngineConstants.SmallTextureWidth))
+            //    {
+
+            //        foundTile = tile;
+            //        break;
+            //    }
+            //}
