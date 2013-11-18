@@ -7,12 +7,7 @@ namespace ZombieTD
 {
     public static class EngineConstants
     {
-        //Map File Location
-        public const string MapFileLocation = "Map.txt";
-
-        //Loggin Switch
-        public const bool IsLogging = true;
-
+        #region FilePaths
         public const string CharacterImageLocation = "Images/Character/";
         public const string StructureImageLocation = "Images/Structure/";
         public const string MapTilesImageLocation = "Images/MapTile/";
@@ -20,6 +15,33 @@ namespace ZombieTD
         public const string EffectImageLocation = "Images/Effects/";
         public const string MenuImageLocation = "Images/Menus/";
         public const string MusicFileLocation = "Music/";
+        public const string MapFileLocation = "Map.txt";
+
+        #endregion
+
+
+
+
+
+        #region Game Settings
+
+
+
+        #endregion
+
+
+
+
+
+
+
+        //Map File Location
+        
+
+        //Loggin Switch
+        public const bool IsLogging = true;
+
+        
 
         public const int SmallTextureHeight = 32;
         public const int SmallTextureWidth = 32;
@@ -83,6 +105,12 @@ namespace ZombieTD
         public static float MouseX = 10.0f;
         public static float MouseY = 610.0f;
 
+        //Framerate Settings
+        public static bool DisableFrameRate = true;
+
+
+
+
         //Wave Generator
         public const int NumberOfFramesBeforeOrder = 100;
         public const int MaxNumberOfSpawns = 200;
@@ -96,7 +124,7 @@ namespace ZombieTD
         public const int Zombie_AttackDamageRanged = 4;
         public const int Zombie_AttackRange = 6;
         public const int Zombie_Defense = 2;
-        public const int Zombie_Speed = 2;
+        public const int Zombie_Speed = 1;
         public const int Zombie_NumberOfFramesBeforeMove = 3;
         public const int Zombie_LineOfSite = 2;
         public const int Zombie_NumberOfFramesBeforeAttack = 100;
@@ -108,7 +136,7 @@ namespace ZombieTD
         public const int ZombieDog_AttackDamageRanged = 4;
         public const int ZombieDog_AttackRange = 6;
         public const int ZombieDog_Defense = 2;
-        public const int ZombieDog_Speed = 4;
+        public const int ZombieDog_Speed = 2;
         public const int ZombieDog_NumberOfFramesBeforeMove = 2;
         public const int ZombieDog_LineOfSite = 2;
         public const int ZombieDog_NumberOfFramesBeforeAttack = 100;
@@ -217,8 +245,6 @@ namespace ZombieTD
 
 
 
-
-        public static bool DisableFrameRate = false;
 
         
         
