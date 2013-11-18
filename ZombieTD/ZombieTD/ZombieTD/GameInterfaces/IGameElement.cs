@@ -13,6 +13,7 @@ namespace ZombieTD
         void RegisterWithMediator(IMediator mediator, IGameElement element);
         void Draw(SpriteBatch spritebatch);
         void SetTile(Tile tile);
+        void SetStartTile(Tile tile);
         int GetX();
         int GetY();
         void SetRotation(float rotation);

@@ -14,7 +14,7 @@ namespace ZombieTD
         public ITexture _texture; //Change tto protected
         protected Map _lineOfSiteMap;
 
-        public int _health;
+        protected int _health;
         public int _attackDamageMelee;
         public int _attackDamageRanged;
         public int _attackRange;
@@ -25,6 +25,8 @@ namespace ZombieTD
         public CurrentAction _currentAction;
         public Tile _currentTile;
         public Tile _previousTile;
+        public Tile _startingTile;
+
         public IEnumerable<MapTileType> _legalMovmentTiles;
         public IEnumerable<SpawnType> _legalAttackTiles;
         public MoveDirection _movingDirection;
@@ -183,7 +185,6 @@ namespace ZombieTD
 
         #endregion
 
-
         public int getLineOfSight()
         {
             return _lineOfSite;
@@ -318,6 +319,11 @@ namespace ZombieTD
                 if (field.GetCustomAttributes(typeof(TAttribute), false).Length > 0)
                     yield return (TEnum)field.GetValue(null);
             }
+        }
+
+        public void SetStartTile(Tile tile)
+        {
+            this._startingTile = tile;
         }
     }
 }

@@ -88,6 +88,7 @@ namespace ZombieTD
         public void AddElementToTile(IGameElement element)
         {
             element.SetTile(this);
+            element.SetStartTile(this);
             this._charactersOnTile.Add(element);
         }
 
