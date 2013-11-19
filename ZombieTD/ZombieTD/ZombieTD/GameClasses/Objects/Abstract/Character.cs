@@ -356,11 +356,5 @@ namespace ZombieTD
         {
             this._startingTile = tile;
         }
-
-
-        public Tile GetTile()
-        {
-            return _currentTile;
-        }
     }
 }

@@ -107,11 +107,15 @@ namespace ZombieTD
         public static bool DisableFrameRate = true;
 
 
-
+        
 
         //Wave Generator
         public const int NumberOfFramesBeforeOrder = 10;
         public const int MaxNumberOfSpawns = 2000;
+        public const int NumberOfFramsBeforeSound = 1000;
+
+
+
 
 
         //Character Attributes
@@ -352,10 +356,15 @@ namespace ZombieTD
         Gunshot,
         HolyWater,
         Priest,
+        [EnemySpawnPool]
         Zombie1,
+        [EnemySpawnPool]
         Zombie2,
+        [EnemySpawnPool]
         Zombie3,
+        [EnemySpawnPool]
         Zombie4,
+        [EnemySpawnPool]
         Zombie5,
         Chainsaw,
         Error
@@ -375,7 +384,7 @@ namespace ZombieTD
         [EnemyWaveGenerator]
         [Car]
         ZombieDog,
-       //[EnemyWaveGenerator]
+        [EnemyWaveGenerator]
         FlyingZombie,
         [ZombieDog]
         [Zombie]

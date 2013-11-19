@@ -7,9 +7,18 @@ namespace ZombieTD
 {
     class EnemySpawnPool : SpawnPoolBase
     {
+        int randomSoundInt = 0;
+        Random rnd = new Random();
+        public IEnumerable<SoundType> _soundFiles;
+
         public EnemySpawnPool(IMediator mediator) : base(mediator)
         {
+            //Set up a enum of tile types this character can walk on
+            _soundFiles = FilterEnumWithAttributeOf<SoundType, EnemySpawnPool>();
+        }
 
+        public EnemySpawnPool()
+        {
         }
 
         public override void SpawnElements(IMediator mediator)
@@ -26,15 +35,23 @@ namespace ZombieTD
 
                         mediator.GetScore().AddEnemy();
                         element.RegisterWithMediator(mediator, element);
-                       
                     }
                     else
                     {
                         _spawnQueue.Enqueue(element);
                     }
-                }
+             }
+
+            if (GameMediator.numberofTicks % EngineConstants.NumberOfFramsBeforeSound == (ulong)randomSoundInt)
+            {
+                randomSoundInt = rnd.Next(100, 200);
+
+                int r2 = rnd.Next(_soundFiles.Count<SoundType>());
+                ISound sound = _mediator.GetAsset<SoundType, ISound>(_soundFiles.ElementAt(r2));
+                sound.Play(.15f, 0f, 0f, false);
+            }
                
-            }            
-        }
+         }            
     }
+}
 
