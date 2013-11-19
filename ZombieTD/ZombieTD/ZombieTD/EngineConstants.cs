@@ -110,8 +110,8 @@ namespace ZombieTD
 
 
         //Wave Generator
-        public const int NumberOfFramesBeforeOrder = 100;
-        public const int MaxNumberOfSpawns = 200;
+        public const int NumberOfFramesBeforeOrder = 10;
+        public const int MaxNumberOfSpawns = 2000;
 
 
         //Character Attributes
@@ -375,7 +375,7 @@ namespace ZombieTD
         [EnemyWaveGenerator]
         [Car]
         ZombieDog,
-        [EnemyWaveGenerator]
+       //[EnemyWaveGenerator]
         FlyingZombie,
         [ZombieDog]
         [Zombie]

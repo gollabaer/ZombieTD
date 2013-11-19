@@ -35,29 +35,9 @@ namespace ZombieTD
         public override void TakeTurn(IMediator mediator)
         {
             base.TakeTurn(mediator);
-            //Game logic for what a zombie does
-            //mediator.GetMap(this);
 
-
-            /*
-            if enemy has a character on its vision map
-               if zombie has arms remaining
-                  ThrowArm
-               if zombie is next to a character
-                  Attack
-               else
-                  MoveToCharacter
-            if zombie has no characters on its vision map
-               if there is a dead zombie and a counter hits a certain limit
-                  Raise Soul
-               else
-                  MoveToCenter
-            else
-               Hold
-             */
-
-            this.ThrowArm(mediator, this, mediator.GetCharacter(0,0));
-            this.RaiseSoul(mediator, this, mediator.GetCharacter(0, 0));
+            //this.ThrowArm(mediator, this, mediator.GetCharacter(0,0));
+            //this.RaiseSoul(mediator, this, mediator.GetCharacter(0, 0));
 
         }
        
@@ -166,7 +146,6 @@ namespace ZombieTD
                     else
                     {
                         this._currentAction = CurrentAction.None;
-                        //this._previousTile = _currentTile;
                         _directionFacing = EngineConstants.Up;
                     }
                 }

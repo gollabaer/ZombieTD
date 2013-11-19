@@ -142,17 +142,5 @@ namespace ZombieTD
 
             return found.FirstOrDefault();
         }
-
-        //public void RemoveElementFromTile(IGameElement element)
-        //{
-
-
-
-
-        //    Parallel.ForEach(Tiles, tile =>
-        //    {
-        //        tile.RemoveElement(element);
-        //    });
-        //}
     }
 }

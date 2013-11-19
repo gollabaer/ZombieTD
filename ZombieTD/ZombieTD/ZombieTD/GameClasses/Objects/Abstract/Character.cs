@@ -248,9 +248,23 @@ namespace ZombieTD
                         {
                             if (_legalAttackTiles.Contains(character.getSpawnType()))
                             {
-                                this._targetCharacter = character;
-                                _preAttackFace = _directionFacing;
-                                return true;
+                                if (this is IZombie || this is IZombieDog)
+                                {
+                                    if (character.GetTile().TextureType != MapTileType.Building_roof_center &&
+                                        character.GetTile().TextureType != MapTileType.Building_roof_corner &&
+                                        character.GetTile().TextureType != MapTileType.Building_Roof_Side)
+                                    {
+                                        this._targetCharacter = character;
+                                        _preAttackFace = _directionFacing;
+                                        return true;
+                                    }
+                                }
+                                else
+                                {
+                                    this._targetCharacter = character;
+                                    _preAttackFace = _directionFacing;
+                                    return true;
+                                }
                             }
                         }
                     }
@@ -341,6 +355,12 @@ namespace ZombieTD
         public void SetStartTile(Tile tile)
         {
             this._startingTile = tile;
+        }
+
+
+        public Tile GetTile()
+        {
+            return _currentTile;
         }
     }
 }

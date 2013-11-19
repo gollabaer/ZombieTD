@@ -26,23 +26,9 @@ namespace ZombieTD
         public override void TakeTurn(IMediator mediator)
         {
             base.TakeTurn(mediator);
-            //Game logic for what a zombie does
-            //mediator.GetMap(this);
-
-            /*
-            if character has an enemy on its vision map
-               if character is next to a zombie
-                   if zombie has an arm
-                      CutOffArm
-                   else 
-                      Attack
-               else
-                  MoveToEnemy
-            else
-               Hold
-             */
         }
 
+        //Special 1
         public void CutOffArm(IMediator mediator, ICharacter charater, ICharacter target)
         {
            
@@ -60,7 +46,7 @@ namespace ZombieTD
 
         protected override void Special1()
         {
-            throw new NotImplementedException();
+            
         }
 
         protected override void RangeAttack()
@@ -81,6 +67,19 @@ namespace ZombieTD
         protected override void ChooseAction()
         {
             base.ChooseAction();
+
+            if (IsPlayerNextToMe())
+            {
+                _currentAction = CurrentAction.Attack;
+            }
+            else if (IsPlayerNearMe())
+            {
+                _currentAction = CurrentAction.Move;
+            }
+            else
+            {
+                _currentAction = CurrentAction.None;
+            }
         }
     }
 }
