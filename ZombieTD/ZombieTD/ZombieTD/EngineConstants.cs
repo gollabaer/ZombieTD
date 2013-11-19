@@ -148,6 +148,7 @@ namespace ZombieTD
         public const int FlyingZombie_Speed = 5;
         public const int FlyingZombie_NumberOfFramesBeforeMove = 5;
         public const int FlyingZombie_LineOfSite = 6;
+        public const int FlyingZombie_NumberOfFramesBeforeAttack = 100;
 
         //Redneck
         public const int Redneck_Health = 10;
@@ -381,9 +382,11 @@ namespace ZombieTD
         Priest,
         [ZombieDog]
         [Zombie]
+        [FlyingZombie]
         RedNeck,
         [ZombieDog]
         [Zombie]
+        [FlyingZombie]
         Sheriff,
         [ZombieDog]
         [Zombie]

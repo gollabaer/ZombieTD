@@ -194,6 +194,11 @@ namespace ZombieTD
             return this._yPos;
         }
 
+        public Tile GetTile()
+        {
+            return _currentTile;
+        }
+
         public void SetTile(Tile tile)
         {
             this._currentTile = tile;

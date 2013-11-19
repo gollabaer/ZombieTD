@@ -11,5 +11,6 @@ namespace ZombieTD
 
         int getLineOfSight();
         SpawnType getSpawnType();
+        Tile GetTile();
     }
 }
