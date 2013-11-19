@@ -24,6 +24,7 @@ namespace ZombieTD
         void RegisterWithMediator(IMediator mediator, IGameElement element);
         bool AttackTownHall(ICharacter character);
         bool AttackCharacter(ICharacter character, ICharacter target);
+        bool AttackCharacter(int damage, ICharacter target);
         void ReportDeath(IGameElement element);
     }
 }

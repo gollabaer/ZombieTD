@@ -27,6 +27,8 @@ namespace ZombieTD
         #region LogicSpecific
         private Map _map;
         private List<IGameElement> _gameElements = new List<IGameElement>();
+        private List<IGameElement> _gamePitElements = new List<IGameElement>();
+
         private ISpawnPool _goodGuySpawnPool;
         private ISpawnPool _badGuySpawnPool;
         private IAssetManager _textureAssetManager;
@@ -113,11 +115,18 @@ namespace ZombieTD
         {
            //Draw the Game Map
             _map.Draw(spritebatch);
+
+            //Draw the Pits
+            foreach (IGameElement element in _gamePitElements)
+                element.Draw(_spriteBatch);
+
            //Draw each of the IGameElement in the game
             foreach (IGameElement element in _gameElements)
                 element.Draw(_spriteBatch);
-            //Draw any Effects
+            
+            
 
+            //Draw any Effects
             _fogEffect.Draw(spritebatch);
 
             //Draw The Menu
@@ -139,16 +148,29 @@ namespace ZombieTD
                 _fogEffect.update();
 
 
-                ////Game Elements take turn
-                //Parallel.ForEach(_gameElements, element =>
-                //{
-                //    lock (_gameElements) element.TakeTurn((IMediator)this);
-                //});
-
+               
                 //Remove all dead characters
-                _gameElements.RemoveAll(x => x.GetDeadFlag()); 
+                _gameElements.RemoveAll(x => x.GetDeadFlag());
+                _gamePitElements.RemoveAll(x => x.GetDeadFlag());
 
+                
+#if DEBUG
+                //Game Characters
                 foreach (IGameElement element in _gameElements)
+                {
+                    element.TakeTurn(this);
+                }
+#else
+                //Game Characters
+                Parallel.ForEach(_gameElements, element =>
+                {
+                    lock (_gameElements) element.TakeTurn((IMediator)this);
+                });
+
+#endif
+
+                //Pit Characters
+                foreach (IGameElement element in _gamePitElements)
                 {
                     element.TakeTurn(this);
                 }
@@ -158,17 +180,6 @@ namespace ZombieTD
                     numberofTicks = 0;
                 else
                     numberofTicks++;
-
-
-
-                #region Kill Test
-                //if (numberofTicks % 1000 == 0 && _gameElements.Count > 5)
-                //{
-                //    int r = _rnd.Next(_gameElements.Count);
-
-                //    KillElement(_gameElements[r]);
-                //}
-                #endregion
             }
             else
             {
@@ -198,7 +209,16 @@ namespace ZombieTD
 
         public void RegisterWithMediator(IMediator mediator, IGameElement element)
         {
-            this._gameElements.Add(element);
+
+            if (element is IPit)
+            {
+                this._gamePitElements.Add(element);
+            }
+            else
+            {
+                this._gameElements.Add(element);
+            }
+
             _map.GetTileByXY(element.GetX(), element.GetY()).AddElementToTile(element);
         }
 
@@ -370,5 +390,11 @@ namespace ZombieTD
             return _base.TakeDamage(((Character)character)._attackDamageMelee);
         }
 
+
+
+        public bool AttackCharacter(int damage, ICharacter target)
+        {
+            return target.TakeDamage(damage);
+        }
     }
 }

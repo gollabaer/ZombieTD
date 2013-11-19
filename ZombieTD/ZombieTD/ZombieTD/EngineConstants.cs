@@ -16,7 +16,6 @@ namespace ZombieTD
         public const string MenuImageLocation = "Images/Menus/";
         public const string MusicFileLocation = "Music/";
         public const string MapFileLocation = "Map.txt";
-
         #endregion
 
 
@@ -38,7 +37,7 @@ namespace ZombieTD
         //Map File Location
         
 
-        //Loggin Switch
+        //Logging Switch
         public const bool IsLogging = true;
 
         
@@ -47,7 +46,6 @@ namespace ZombieTD
         public const int SmallTextureWidth = 32;
         public const int ScreenWidth = EngineConstants.SmallTextureWidth * 40;
         public const int ScreenHeight = EngineConstants.SmallTextureWidth * 22;
-
 
         //Menu
         public const int SelectMenuTextureHeight = 64;
@@ -204,10 +202,10 @@ namespace ZombieTD
 
         //Pit
         public const int Pit_Health = 3; //Number of Enemies that can fit into the pit
-        public const int Pit_AttackDamageMelee = 1; //Damage to unit per timespan
+        public const int Pit_AttackDamageMelee = 9999; //Damage to unit per timespan
         public const int Pit_AttackDamageRanged = 0;
         public const int Pit_AttackRange = 0;
-        public const int Pit_Defense = 0;
+        public const int Pit_Defense = 3; 
         public const int Pit_Speed = 0;
         public const int Pit_LineOfSite = 0;
         public const int Pit_NumberOfFramesBeforeMove = 0;

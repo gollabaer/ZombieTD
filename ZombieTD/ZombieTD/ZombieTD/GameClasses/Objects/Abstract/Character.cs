@@ -294,7 +294,7 @@ namespace ZombieTD
         {
             this._health -= damage;
 
-            if (this._health < 0)
+            if (this._health <= 0)
             {
                 _currentTile.RemoveElement(this);
                 _amIDead = true;
