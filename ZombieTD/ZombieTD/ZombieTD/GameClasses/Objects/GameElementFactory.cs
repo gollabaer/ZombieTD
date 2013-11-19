@@ -91,9 +91,8 @@ namespace ZombieTD
             Car car = new Car(x, y);
             car._xPos = x;
             car._yPos = y;
-            //This needs to be revisited to add both tiles
-            car._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.CarFront);
-            //car._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.CarBack);
+            car._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.Car);
+            car._texture.SetNumberOfAnimations(3);
             car._spawnType = SpawnType.Car;
             return car as IGameElement;
         }

@@ -160,6 +160,7 @@ namespace ZombieTD
         public const int Redneck_Speed = 5;
         public const int Redneck_NumberOfFramesBeforeMove = 5;
         public const int Redneck_LineOfSite = 2;
+        public const int Redneck_MovmentRange = 4;
 
         //Priest
         public const int Priest_Health = 10;
@@ -335,16 +336,14 @@ namespace ZombieTD
     public enum StructureType
     {
         Hay,
-        CarBack,
-        CarFront,
+        Car,
         Pit
     }
 
     public enum StructureTextureType
     {
         Hay,
-        CarBack,
-        CarFront,
+        Car,
         Pit
     }
 
@@ -375,7 +374,7 @@ namespace ZombieTD
         Zombie,
         [EnemyWaveGenerator]
         ZombieDog,
-        //[EnemyWaveGenerator]
+        [EnemyWaveGenerator]
         FlyingZombie,
         [ZombieDog]
         [Zombie]

@@ -22,11 +22,11 @@ namespace ZombieTD
         public int _speed;
         public int _lineOfSite;
         public float _directionFacing;
+        public int _movmentRange;
         public CurrentAction _currentAction;
         public Tile _currentTile;
         public Tile _previousTile;
         public Tile _startingTile;
-
         public IEnumerable<MapTileType> _legalMovmentTiles;
         public IEnumerable<SpawnType> _legalAttackTiles;
         public MoveDirection _movingDirection;
@@ -36,6 +36,7 @@ namespace ZombieTD
         public SpawnType _spawnType;
         public ICharacter _targetCharacter;
         public Tile _targetTile;
+        public Tile _targetMoveToTile;
         private List<Tile> _nextToTiles;
         private int upperXPosition, upperYPosition, lowerXPosition, lowerYPosition;
         protected bool _isDoingAction;
@@ -73,11 +74,7 @@ namespace ZombieTD
                 case CurrentAction.Special3: Special3(); break;
             }
 
-            #region animationtests
-            if (_texture != null && (GameMediator.numberofTicks % 10 == 0))
-                _texture.update();
-
-            #endregion
+           
 
             timer++;
         }
@@ -96,12 +93,6 @@ namespace ZombieTD
         protected virtual void Attack()
         {
             SetAttackDirection();
-
-
-
-
-
-
         }
 
         private void SetAttackDirection()
@@ -216,6 +207,8 @@ namespace ZombieTD
             return _texture;
         }
 
+
+
         protected bool IsBaseNextToMe()
         {
             if (_targetTile == null)
@@ -249,11 +242,8 @@ namespace ZombieTD
                             {
                                 this._targetCharacter = character;
                                 _preAttackFace = _directionFacing;
-                                //TO-DO
-                                //Set facingdirection to character
                                 return true;
                             }
-
                         }
                     }
 
@@ -264,8 +254,22 @@ namespace ZombieTD
             return (_targetTile != null);
         }
 
+
+        protected bool IsPlayerNearMe()
+        {
+            return true;
+        }
+
+
         public virtual void Draw(SpriteBatch spritebatch)
         {
+            #region animationtests
+            if (_texture != null && (GameMediator.numberofTicks % 10 == 0))
+                _texture.update();
+
+            #endregion
+
+
             int dy = EngineConstants.SmallTextureHeight / 2;
             int dx = EngineConstants.SmallTextureWidth / 2;
 

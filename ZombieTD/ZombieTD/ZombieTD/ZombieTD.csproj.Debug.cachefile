@@ -26,8 +26,6 @@ Content\Images\Character\FlyingZombie.xnb
 Content\Images\Character\Priest.xnb
 Content\Images\Character\Zombie.xnb
 Content\Images\Character\ZombieDog.xnb
-Content\Images\Structure\CarBack.xnb
-Content\Images\Structure\CarFront.xnb
 Content\Images\Structure\Hay.xnb
 Content\Images\Structure\Pit.xnb
 Content\Images\Character\RedNeck.xnb
@@ -42,6 +40,8 @@ Content\Images\Effects\Fog.xnb
 Content\GameEngine.xnb
 Content\Score.xnb
 Content\Music\TBG.xnb
+Content\Images\Menus\SelectMenu2.xnb
+Content\Images\Structure\Car.xnb
 Content\Music\TBG.wma
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav

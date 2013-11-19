@@ -28,5 +28,7 @@ namespace ZombieTD
 
         void update();
 
+        void SetNumberOfAnimations(int numberOfAnimations);
+
     }
 }

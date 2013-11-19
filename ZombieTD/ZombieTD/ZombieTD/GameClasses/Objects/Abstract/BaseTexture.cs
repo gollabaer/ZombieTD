@@ -70,5 +70,11 @@ namespace ZombieTD
         }
 
         public abstract Object Clone();
+
+
+        public void SetNumberOfAnimations(int numberOfAnimations)
+        {
+            this.numberOfSprites = numberOfAnimations;
+        }
     }
 }

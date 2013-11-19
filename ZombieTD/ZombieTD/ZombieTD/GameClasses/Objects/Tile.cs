@@ -23,7 +23,6 @@ namespace ZombieTD
         {
             get { return _textureType; }
             set { _textureType = value; }
-
         }
 
         public List<IGameElement> GetCharactersOnTile()
