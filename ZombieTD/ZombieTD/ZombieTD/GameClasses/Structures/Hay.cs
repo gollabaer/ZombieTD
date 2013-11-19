@@ -21,6 +21,11 @@ namespace ZombieTD
             _lineOfSite = EngineConstants.Hay_LineOfSite;
         }
 
+        public override void TakeTurn(IMediator mediator)
+        {
+            //I am hay, I do nothing
+        }
+
         public override void Draw(SpriteBatch spritebatch)
         {
             int dy = EngineConstants.SmallTextureHeight / 2;
@@ -34,7 +39,6 @@ namespace ZombieTD
                     _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx, dy), SpriteEffects.None, 0);
             }
         }
-
 
         protected override void Special3()
         {
