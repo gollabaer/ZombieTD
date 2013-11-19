@@ -37,7 +37,10 @@ namespace ZombieTD
         public ICharacter _targetCharacter;
         public Tile _targetTile;
         public Tile _targetMoveToTile;
-        private List<Tile> _nextToTiles;
+        public List<ICharacter> _targetCharacterList;
+
+
+        protected List<Tile> _nextToTiles;
         private int upperXPosition, upperYPosition, lowerXPosition, lowerYPosition;
         protected bool _isDoingAction;
         private bool _amIDead = false;
@@ -228,7 +231,7 @@ namespace ZombieTD
             return (_targetTile != null);
         }
 
-        protected bool IsPlayerNextToMe()
+        protected virtual bool IsPlayerNextToMe()
         {
             if (_targetCharacter == null)
             {
@@ -255,10 +258,15 @@ namespace ZombieTD
         }
 
 
+       
+
+
         protected bool IsPlayerNearMe()
         {
             return true;
         }
+
+
 
 
         public virtual void Draw(SpriteBatch spritebatch)

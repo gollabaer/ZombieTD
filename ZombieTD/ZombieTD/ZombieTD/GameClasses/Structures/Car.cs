@@ -19,6 +19,14 @@ namespace ZombieTD
             _defense = EngineConstants.Car_Defense;
             _speed = EngineConstants.Car_Speed;
             _lineOfSite = EngineConstants.Car_LineOfSite;
+
+            //Set up an enum of characters this character can attack
+            _legalAttackTiles = FilterEnumWithAttributeOf<SpawnType, Car>();
+        }
+
+        public Car()
+        {
+
         }
 
         public override void Draw(SpriteBatch spritebatch)
@@ -38,6 +46,30 @@ namespace ZombieTD
                 spritebatch.Draw(_texture.GetTexture(), new Rectangle(_xPos + dx, _yPos + dy, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight),
                     _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx, dy), SpriteEffects.None, 0);
             }
+        }
+
+
+        protected override bool IsPlayerNextToMe()
+        {
+            _targetCharacterList = new List<ICharacter>();
+            bool isCharacters = false;
+
+            foreach (Tile tile in _nextToTiles)
+            {
+                if (tile.HasCharacters())
+                {
+                    foreach (ICharacter character in tile.GetCharactersOnTile())
+                    {
+                        if (_legalAttackTiles.Contains(character.getSpawnType()))
+                        {
+                            this._targetCharacterList.Add(character);
+                            isCharacters = true;
+                        }
+                    }
+                }
+            }
+
+            return isCharacters;
         }
 
         protected override void Special3()
@@ -67,12 +99,25 @@ namespace ZombieTD
 
         protected override void Attack()
         {
-            throw new NotImplementedException();
+            if (GameMediator.numberofTicks % 60 == 0)
+            {
+                foreach (ICharacter targetCharacter in _targetCharacterList)
+                {
+                    _mediator.AttackCharacter(this, targetCharacter);
+                }
+
+                _currentAction = CurrentAction.None;
+            }
         }
 
         protected override void ChooseAction()
         {
             base.ChooseAction();
+
+            if (this.IsPlayerNextToMe())
+            {
+                _currentAction = CurrentAction.Attack;
+            }
         }
     }
 }

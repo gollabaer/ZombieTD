@@ -193,9 +193,9 @@ namespace ZombieTD
         public const int Hay_NumberOfFramesBeforeMove = 0;
 
         //Car
-        public const int Car_Health = 100; //burn time
-        public const int Car_AttackDamageMelee = 0;
-        public const int Car_AttackDamageRanged = 4;
+        public const int Car_Health = 20; //burn time
+        public const int Car_AttackDamageMelee = 1;
+        public const int Car_AttackDamageRanged = 0;
         public const int Car_AttackRange = 1;
         public const int Car_Defense = 5;
         public const int Car_Speed = 0;
@@ -371,8 +371,10 @@ namespace ZombieTD
     public enum SpawnType
     {
         [EnemyWaveGenerator]
+        [Car]
         Zombie,
         [EnemyWaveGenerator]
+        [Car]
         ZombieDog,
         [EnemyWaveGenerator]
         FlyingZombie,
