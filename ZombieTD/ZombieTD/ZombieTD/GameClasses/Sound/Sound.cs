@@ -14,25 +14,21 @@ namespace ZombieTD
     class Sound : ISound
     {
         public SoundEffect sound;
-        public List<SoundEffectInstance> pool;
+        public SoundEffectInstance soundEffect;
 
         public Sound(ContentManager Content, String Filename)
         {
             sound = Content.Load<SoundEffect>(Filename);
-            pool = new List<SoundEffectInstance>() { sound.CreateInstance() };
+            soundEffect = sound.CreateInstance();
         }
+
         public void Play(float Volume = 1f, float Pan = 0f, float Pitch = 0f, bool isLoop = false)
         {
-            for (int p = 0; p < pool.Count; p++)
-            {
-                if (pool[p].State == SoundState.Stopped)
+                if (soundEffect.State == SoundState.Stopped)
                 {
-                    Play(pool[p], Volume, Pan, Pitch);
+                    Play(soundEffect, Volume, Pan, Pitch);
                     return;
                 }
-            }
-            pool.Add(sound.CreateInstance());
-            Play(pool[pool.Count - 1], Volume, Pan, Pitch);
         }
         private void Play(SoundEffectInstance SoundEffectInstance, float Volume, float Pan, float Pitch)
         {
@@ -42,6 +38,7 @@ namespace ZombieTD
             SoundEffectInstance.Play();
         }
 
+       
         public object Clone()
         {
             throw new NotImplementedException();

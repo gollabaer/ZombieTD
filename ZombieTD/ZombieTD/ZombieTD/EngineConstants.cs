@@ -367,6 +367,7 @@ namespace ZombieTD
         [EnemySpawnPool]
         Zombie5,
         Chainsaw,
+        BaseAttack,
         Error
       
     }
