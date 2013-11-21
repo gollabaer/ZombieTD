@@ -110,8 +110,8 @@ namespace ZombieTD
 
 
         //Wave Generator
-        public const int NumberOfFramesBeforeOrder = 10;
-        public const int MaxNumberOfSpawns = 2000;
+        public const int NumberOfFramesBeforeOrder = 1000;
+        public const int MaxNumberOfSpawns = 100;
 
 
         //Character Attributes
@@ -165,7 +165,7 @@ namespace ZombieTD
         public const int Priest_Health = 10;
         public const int Priest_AttackDamageMelee = 2;
         public const int Priest_AttackDamageRanged = 4;
-        public const int Priest_AttackRange = 6;
+        public const int Priest_AttackRange = 65;
         public const int Priest_Defense = 2;
         public const int Priest_Speed = 5;
         public const int Priest_NumberOfFramesBeforeMove = 5;
@@ -369,11 +369,13 @@ namespace ZombieTD
 
     public enum SpawnType
     {
+        [Priest]
         [EnemyWaveGenerator]
         [Car]
         Zombie,
         [EnemyWaveGenerator]
         [Car]
+        [Priest]
         ZombieDog,
        //[EnemyWaveGenerator]
         FlyingZombie,

@@ -17,7 +17,7 @@ namespace ZombieTD
             _defense = EngineConstants.ZombieDog_Defense;
             _speed = EngineConstants.ZombieDog_Speed;
             _lineOfSite = EngineConstants.ZombieDog_LineOfSite;
-
+            _movmentRange = 32;
             //Set up a enum of tile types this character can walk on
             _legalMovmentTiles = FilterEnumWithAttributeOf<MapTileType, ZombieDog>();
             //Set up an enum of characters this character can attack

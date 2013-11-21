@@ -280,8 +280,10 @@ namespace ZombieTD
        
 
 
-        protected bool IsPlayerNearMe()
+        protected virtual bool IsPlayerNearMe()
         {
+            
+            
             return true;
         }
 
@@ -355,12 +357,6 @@ namespace ZombieTD
         public void SetStartTile(Tile tile)
         {
             this._startingTile = tile;
-        }
-
-
-        public Tile GetTile()
-        {
-            return _currentTile;
         }
     }
 }

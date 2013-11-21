@@ -75,6 +75,7 @@ namespace ZombieTD
 
         public void RemoveElement(IGameElement element)
         {
+            int i = 0;
             _charactersOnTile.Remove(element);
         }
 
