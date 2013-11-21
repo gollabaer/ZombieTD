@@ -83,6 +83,8 @@ namespace ZombieTD
                 //Require Map Parts
                 _waveGenerator.SetEnrtyPoints(_map.EntryPoints);
                 _base.SetBaseTiles(_map.Base);
+                _base.SetSound(this.GetAsset<SoundType,ISound>(SoundType.BaseAttack));
+
 
                 _bgMusic = GetAsset<MusicType, ISound>(MusicType.TBG);
                 _bgMusic.Play(.25f, 0f, 0f, true);

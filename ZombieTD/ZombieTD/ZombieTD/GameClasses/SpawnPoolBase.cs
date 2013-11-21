@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 
 namespace ZombieTD
 {
-    public class SpawnPoolBase : ISpawnPool
+    public class SpawnPoolBase : Attribute, ISpawnPool
     {
-        IMediator _mediator;
+        protected IMediator _mediator;
         GameElementFactory _elementFactory;
         Queue<IOrder> _orderQueue;
         protected Queue<IGameElement> _spawnQueue;
@@ -18,6 +19,11 @@ namespace ZombieTD
             _elementFactory = new GameElementFactory(_mediator);
             _orderQueue = new Queue<IOrder>();
             _spawnQueue = new Queue<IGameElement>();
+        }
+
+        public SpawnPoolBase()
+        {
+
         }
 
         public virtual void AcceptOrder(IOrder order)
@@ -94,6 +100,23 @@ namespace ZombieTD
         {
             _orderQueue.Clear();
             _spawnQueue.Clear();
+        }
+
+
+        //http://tiredblogger.wordpress.com/2009/07/09/filtering-an-enum-by-attribute/
+        public static IEnumerable<TEnum> FilterEnumWithAttributeOf<TEnum, TAttribute>()
+            where TEnum : struct
+            where TAttribute : class
+        {
+            foreach (var field in
+                typeof(TEnum).GetFields(BindingFlags.GetField |
+                                        BindingFlags.Public |
+                                        BindingFlags.Static))
+            {
+
+                if (field.GetCustomAttributes(typeof(TAttribute), false).Length > 0)
+                    yield return (TEnum)field.GetValue(null);
+            }
         }
     }
 }

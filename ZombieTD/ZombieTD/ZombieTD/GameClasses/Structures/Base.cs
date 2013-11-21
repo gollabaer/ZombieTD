@@ -8,6 +8,7 @@ namespace ZombieTD
     public class Base : Character, IBase
     {
         List<Tile> _baseTiles;
+        ISound _sound;
 
         public Base(int x, int y)
             : base(x,y)
@@ -64,14 +65,24 @@ namespace ZombieTD
 
         public override bool TakeDamage(int damage)
         {
+            
             this._health -= damage;
 
             if (this._health <= 0)
                 return true;
             else
+            {
+         
+                    _sound.Play(.05f, 0f, 0f, false);
+         
                 return false;
+            }
         }
-       
+
+        public void SetSound(ISound sound)
+        {
+            _sound = sound;
+        }
     }
 }
         
