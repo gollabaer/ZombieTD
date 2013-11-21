@@ -110,8 +110,8 @@ namespace ZombieTD
         
 
         //Wave Generator
-        public const int NumberOfFramesBeforeOrder = 10;
-        public const int MaxNumberOfSpawns = 2000;
+        public const int NumberOfFramesBeforeOrder = 60;
+        public const int MaxNumberOfSpawns = 200;
         public const int NumberOfFramsBeforeSound = 1000;
 
 
@@ -216,7 +216,7 @@ namespace ZombieTD
         public const int Pit_NumberOfFramesBeforeMove = 0;
 
         //Base
-        public const int Base_Health = 100000;
+        public const int Base_Health = 10000000;
         public const int Base_AttackDamageMelee = 0;
         public const int Base_AttackDamageRanged = 0;
         public const int Base_AttackRange = 0;

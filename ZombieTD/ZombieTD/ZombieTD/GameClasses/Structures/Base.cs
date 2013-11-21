@@ -72,9 +72,7 @@ namespace ZombieTD
                 return true;
             else
             {
-         
-                    _sound.Play(.05f, 0f, 0f, false);
-         
+                _sound.Play(.05f, 0f, 0f, false);
                 return false;
             }
         }
