@@ -8,9 +8,17 @@ namespace ZombieTD
 {
     public class Projectile : Character, IProjectile
     {
+
+        public Projectile(Character 
+            target)
+            :base(){
+            
+        }
+
+
         public void TakeTurn(IMediator mediator)
         {
-            //Projectile Logic
+         
         }
 
         protected Projectile(int x, int y):base(x,y)
@@ -26,7 +34,7 @@ namespace ZombieTD
 
         public void  Draw(SpriteBatch spritebatch)
         {
- 	        throw new NotImplementedException();
+            base.Draw(spritebatch);
         }
 
         protected override void Special3()
@@ -51,7 +59,9 @@ namespace ZombieTD
 
         protected override void Move()
         {
-            throw new NotImplementedException();
+            
+            
+
         }
 
         protected override void Attack()

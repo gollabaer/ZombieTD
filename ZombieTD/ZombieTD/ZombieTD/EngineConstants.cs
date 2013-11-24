@@ -167,12 +167,12 @@ namespace ZombieTD
 
         //Priest
         public const int Priest_Health = 10;
-        public const int Priest_AttackDamageMelee = 2;
-        public const int Priest_AttackDamageRanged = 4;
-        public const int Priest_AttackRange = 6;
+        public const int Priest_AttackDamageMelee = 20;
+        public const int Priest_AttackDamageRanged = 40;
+        public const int Priest_AttackRange = 2;
         public const int Priest_Defense = 2;
-        public const int Priest_Speed = 5;
-        public const int Priest_NumberOfFramesBeforeMove = 5;
+        public const int Priest_Speed = 2;
+        public const int Priest_NumberOfFramesBeforeMove = 2;
         public const int Priest_LineOfSite = 2;
 
         //Sheriff
@@ -181,8 +181,8 @@ namespace ZombieTD
         public const int Sheriff_AttackDamageRanged = 4;
         public const int Sheriff_AttackRange = 6;
         public const int Sheriff_Defense = 2;
-        public const int Sheriff_Speed = 5;
-        public const int Sheriff_NumberOfFramesBeforeMove = 5;
+        public const int Sheriff_Speed = 2;
+        public const int Sheriff_NumberOfFramesBeforeMove = 2;
         public const int Sheriff_LineOfSite = 3;
 
         //Hay
@@ -273,33 +273,41 @@ namespace ZombieTD
         [Zombie]
         [Sheriff]
         [FlyingZombie]
+        [Priest]
         RoadOutside,
         [Sheriff]
         [FlyingZombie]
+        [Priest]
         Building_roof_center,
         [Sheriff]
         [FlyingZombie]
+        [Priest]
         Building_roof_corner,
         [Sheriff]
         [FlyingZombie]
+        [Priest]
         Building_Roof_Side,
         [Sheriff]
         [FlyingZombie]
+        [Priest]
         Grass,
         [ZombieDog]
         [Zombie]
         [Sheriff]
         [FlyingZombie]
+        [Priest]
         Path_noRock,
         [ZombieDog]
         [Zombie]
         [Sheriff]
         [FlyingZombie]
+        [Priest]
         Path_withRock,
         [ZombieDog]
         [Zombie]
         [FlyingZombie]
         [Sheriff]
+        [Priest]
         RoadMiddle,
         [Sheriff]
         [FlyingZombie]
@@ -381,11 +389,14 @@ namespace ZombieTD
     {
         [EnemyWaveGenerator]
         [Car]
+        [Priest]
         Zombie,
         [EnemyWaveGenerator]
         [Car]
+        [Priest]
         ZombieDog,
         [EnemyWaveGenerator]
+        [Priest]
         FlyingZombie,
         [ZombieDog]
         [Zombie]

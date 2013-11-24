@@ -280,7 +280,7 @@ namespace ZombieTD
        
 
 
-        protected bool IsPlayerNearMe()
+        protected virtual bool IsPlayerNearMe()
         {
             return true;
         }
