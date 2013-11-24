@@ -62,7 +62,7 @@ namespace ZombieTD
 
         protected override void RangeAttack()
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         protected override void Move()
@@ -159,7 +159,7 @@ namespace ZombieTD
         {
             base.Attack();
 
-            if (GameMediator.numberofTicks % 20 == 0)
+            if (GameMediator.numberofTicks % 60 == 0)
             {
                 bool targetDestroyed = false;
 

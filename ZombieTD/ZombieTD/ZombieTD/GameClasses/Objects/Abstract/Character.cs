@@ -65,16 +65,19 @@ namespace ZombieTD
         }
         public virtual void TakeTurn(IMediator mediator)
         {
-            //Figure out what the character is doing and continue/start the action
-            switch (_currentAction)
+            if (!_amIDead)
             {
-                case CurrentAction.None: ChooseAction(); break;
-                case CurrentAction.Attack: Attack(); break;
-                case CurrentAction.Move: Move(); break;
-                case CurrentAction.Range: RangeAttack();break;
-                case CurrentAction.Special1: Special1(); break;
-                case CurrentAction.Special2: Special2(); break;
-                case CurrentAction.Special3: Special3(); break;
+                //Figure out what the character is doing and continue/start the action
+                switch (_currentAction)
+                {
+                    case CurrentAction.None: ChooseAction(); break;
+                    case CurrentAction.Attack: Attack(); break;
+                    case CurrentAction.Move: Move(); break;
+                    case CurrentAction.Range: RangeAttack(); break;
+                    case CurrentAction.Special1: Special1(); break;
+                    case CurrentAction.Special2: Special2(); break;
+                    case CurrentAction.Special3: Special3(); break;
+                }
             }
 
            
@@ -311,10 +314,12 @@ namespace ZombieTD
 
         public virtual bool TakeDamage(int damage)
         {
+            
             this._health -= damage;
 
             if (this._health <= 0)
             {
+                ClearTargets();
                 _currentTile.RemoveElement(this);
                 _amIDead = true;
                 _mediator.ReportDeath(this);
@@ -324,6 +329,14 @@ namespace ZombieTD
             {
                 return false;
             }
+        }
+
+        private void ClearTargets()
+        {
+            _targetCharacter = null;
+            _targetCharacterList = null;
+            _targetMoveToTile = null;
+            _targetTile = null;
         }
 
         public SpawnType getSpawnType()

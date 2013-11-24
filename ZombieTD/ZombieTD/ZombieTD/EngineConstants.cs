@@ -111,7 +111,7 @@ namespace ZombieTD
 
         //Wave Generator
         public const int NumberOfFramesBeforeOrder = 60;
-        public const int MaxNumberOfSpawns = 200;
+        public const int MaxNumberOfSpawns = 100;
         public const int NumberOfFramsBeforeSound = 1000;
 
 
@@ -166,9 +166,9 @@ namespace ZombieTD
         public const int Redneck_MovmentRange = 4;
 
         //Priest
-        public const int Priest_Health = 10;
-        public const int Priest_AttackDamageMelee = 20;
-        public const int Priest_AttackDamageRanged = 40;
+        public const int Priest_Health = 3;
+        public const int Priest_AttackDamageMelee = 5;
+        public const int Priest_AttackDamageRanged = 5;
         public const int Priest_AttackRange = 2;
         public const int Priest_Defense = 2;
         public const int Priest_Speed = 2;
