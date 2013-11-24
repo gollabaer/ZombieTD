@@ -86,7 +86,6 @@ namespace ZombieTD
 
             // TODO: use this.Content to load your game content here
             mediator.LoadContent(Content, spriteBatch);
-    
         }
 
         /// <summary>
@@ -120,11 +119,10 @@ namespace ZombieTD
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            //Mouse Input Method
+            //Mouse Input Method,  returns mouse xy
             _mouseXY = inputDirector.ProcessInput(Mouse.GetState());
 
-            // TODO: Add your update logic here
-            mediator.Tick();
+            mediator.Tick(_mouseXY);
            
             base.Update(gameTime);
            

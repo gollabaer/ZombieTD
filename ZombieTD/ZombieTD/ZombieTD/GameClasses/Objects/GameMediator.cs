@@ -38,8 +38,10 @@ namespace ZombieTD
         private Score _score;
         private EnemyWaveGenerator _waveGenerator;
         private IEffect _fogEffect;
+        private IEffect _tileSelectionEffect;
         private ISound _bgMusic;
         public static ulong numberofTicks = 0;
+        public static Tuple<int, int> _mouseXY;
         public static bool isRunning;
         #endregion
 
@@ -56,6 +58,7 @@ namespace ZombieTD
             _menu = new Menu(this);
             _score = new Score(this);
             _fogEffect = new FogEffect2();
+            _tileSelectionEffect = new TileSelectionEffect();
             GameMediator.isRunning = true;
             #endregion
         }
@@ -74,6 +77,7 @@ namespace ZombieTD
 
                 //Load The content for other game elements from the asset managers
                 _fogEffect.LoadContent(this);
+                _tileSelectionEffect.LoadContent(this);
                 _menu.LoadContent(content);
                 _score.LoadContent(content);
 
@@ -83,14 +87,16 @@ namespace ZombieTD
                 //Require Map Parts
                 _waveGenerator.SetEnrtyPoints(_map.EntryPoints);
                 _base.SetBaseTiles(_map.Base);
+
+                //Set the base sound
                 _base.SetSound(this.GetAsset<SoundType,ISound>(SoundType.BaseAttack));
 
-
+                //Start Music
                 _bgMusic = GetAsset<MusicType, ISound>(MusicType.TBG);
                 _bgMusic.Play(.25f, 0f, 0f, true);
+
                 Logger.Log(Logger.Log_Type.INFO, "The Game Has Started");
                
-
                 return true;
             }
             catch (Exception ex)
@@ -129,28 +135,34 @@ namespace ZombieTD
             
 
             //Draw any Effects
-            _fogEffect.Draw(spritebatch);
+            _tileSelectionEffect.Draw(_spriteBatch);
+            _fogEffect.Draw(_spriteBatch);
 
             //Draw The Menu
-            _menu.Draw(spritebatch);
-            _score.Draw(spritebatch);
+            _menu.Draw(_spriteBatch);
+            _score.Draw(_spriteBatch);
         }
 
-        public void Tick()
+        public void Tick(Tuple<int,int> mouseXY)
         {
             //The Game Continues
             if (GetTownhallHealth() > 0)
             {
+                //Set mouse xy
+                _mouseXY = mouseXY;
+
                 //Take Turn
                 _waveGenerator.IssueOrders();
                 _badGuySpawnPool.ProcessOrder();
                 _goodGuySpawnPool.ProcessOrder();
                 _goodGuySpawnPool.SpawnElements(this);
                 _badGuySpawnPool.SpawnElements(this);
+
+
+                //UpdateEffects
+                _tileSelectionEffect.update();
                 _fogEffect.update();
 
-
-               
                 //Remove all dead characters
                 _gameElements.RemoveAll(x => x.GetDeadFlag());
                 _gamePitElements.RemoveAll(x => x.GetDeadFlag());
