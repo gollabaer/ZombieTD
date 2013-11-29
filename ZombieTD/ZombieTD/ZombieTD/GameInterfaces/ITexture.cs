@@ -30,5 +30,6 @@ namespace ZombieTD
 
         void SetNumberOfAnimations(int numberOfAnimations);
 
+        void setFrame(int f);
     }
 }

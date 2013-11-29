@@ -294,7 +294,7 @@ namespace ZombieTD
         public virtual void Draw(SpriteBatch spritebatch)
         {
             #region animationtests
-            if (_texture != null && (GameMediator.numberofTicks % 10 == 0))
+            if (_texture != null && (GameMediator.numberofTicks % 10 == 0) && _currentAction == CurrentAction.Move)
                 _texture.update();
 
             #endregion

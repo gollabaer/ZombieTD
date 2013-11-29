@@ -69,6 +69,10 @@ namespace ZombieTD
             this._rotation = angle;
         }
 
+        public void setFrame(int f) {
+            currentSprite = f;
+        }
+
         public abstract Object Clone();
 
 

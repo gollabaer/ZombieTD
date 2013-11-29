@@ -63,6 +63,8 @@ namespace ZombieTD
         protected override void RangeAttack()
         {
            // throw new NotImplementedException();
+
+            int i = 0;
         }
 
         protected override void Move()
@@ -122,7 +124,7 @@ namespace ZombieTD
                         workingTile.AddElementToTile(this);
                     }
 
-
+                
                 _currentAction = CurrentAction.None;
                
             }
@@ -199,8 +201,15 @@ namespace ZombieTD
             }
             else
             {
-                _targetPosition = _startPositionVector;
-                _currentAction = CurrentAction.Move;
+                if (this._xPos != _startPositionVector.X && this._startPositionVector.Y != this._yPos)
+                {
+                    _targetPosition = _startPositionVector;
+                    _currentAction = CurrentAction.Move;
+
+                }
+                else {
+                    _texture.setFrame(0);
+                }
             }
         }
 
