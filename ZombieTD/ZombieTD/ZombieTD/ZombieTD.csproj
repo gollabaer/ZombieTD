@@ -115,6 +115,7 @@
     <Compile Include="GameClasses\BaseOrder.cs" />
     <Compile Include="GameClasses\IOrder.cs" />
     <Compile Include="GameClasses\Objects\Abstract\EffectBase.cs" />
+    <Compile Include="GameClasses\Objects\TileSelectionEffect.cs" />
     <Compile Include="GameClasses\Objects\FogEffect2.cs" />
     <Compile Include="GameClasses\Objects\FogEffect.cs" />
     <Compile Include="GameClasses\Objects\IEffect.cs" />

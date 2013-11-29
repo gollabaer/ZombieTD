@@ -12,7 +12,7 @@ namespace ZombieTD
 
     public interface IMediator: IZombie , IZombieDog, IFlyingZombie, IRedneck, IPriest, ISheriff,  ICar, IHay, IPit, IAssetManager
     {
-        void Tick();
+        void Tick(Tuple<int,int> mouseXY);
         void Draw(SpriteBatch spriteBatch);
         Map GetMapByLineOfSight(ICharacter element);
         ICharacter GetCharacter(int x, int y);
