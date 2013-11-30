@@ -28,11 +28,9 @@ namespace ZombieTD
 
         public override void update()
         {
-
-
             if (GameMediator.numberofTicks % 10 == 0)
             {
-                _tile = _mediator.GetTileByXY(GameMediator._mouseXY.Item1, GameMediator._mouseXY.Item2);
+                _tile = _mediator.GetTileByXY((int)GameMediator._mouseInputs.Item1.X, (int)GameMediator._mouseInputs.Item1.Y);
 
                 if (_tile != null)
                 {

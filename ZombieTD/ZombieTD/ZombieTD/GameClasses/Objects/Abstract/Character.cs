@@ -80,8 +80,6 @@ namespace ZombieTD
                 }
             }
 
-           
-
             timer++;
         }
 
@@ -271,7 +269,6 @@ namespace ZombieTD
                             }
                         }
                     }
-
                 }
 
             }

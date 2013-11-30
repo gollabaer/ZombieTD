@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework;
 
 namespace ZombieTD
 {
@@ -10,18 +11,18 @@ namespace ZombieTD
     {
         private IMediator mediator;
         private MouseState mouseStateCurrent, mouseStatePrevious;
-        private IOrder order = null;
-        private Tuple<int, int> returnXY;
+        private Vector2 mouseXY;
+        private IOrder order = new BaseOrder();
+        private Tuple<Vector2, SpawnType?> returnContainer;
         private bool _waitingToPlace = false;
 
         public MouseInputActionDirector(IMediator mediator)
         {
             // TODO: Complete member initialization
             this.mediator = mediator;
-
         }
 
-        public Tuple<int,int> ProcessInput(MouseState state)
+        public Tuple<Vector2,SpawnType?> ProcessInput(MouseState state)
         {
             // Get current mouseState
             mouseStateCurrent = state;
@@ -48,16 +49,16 @@ namespace ZombieTD
                 // Right MouseClick
                 if (mouseStateCurrent.RightButton == ButtonState.Pressed && mouseStatePrevious.RightButton == ButtonState.Released)
                 {
-                    order = null;
+                    order = new BaseOrder(); 
                 }
             }
 
             
-            returnXY = new Tuple<int, int>(mouseStateCurrent.X,mouseStateCurrent.Y);
+            returnContainer = new Tuple<Vector2, SpawnType?>(new Vector2(mouseStateCurrent.X,mouseStateCurrent.Y), order.Type);
 
             mouseStatePrevious = mouseStateCurrent;
 
-            return returnXY;
+            return returnContainer;
         }
 
 
