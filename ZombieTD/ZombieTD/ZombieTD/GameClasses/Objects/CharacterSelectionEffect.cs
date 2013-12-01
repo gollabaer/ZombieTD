@@ -11,7 +11,6 @@ namespace ZombieTD
 
         Rectangle rectangle1;
         IMediator _mediator;
-        Tile _tile;
 
         public override void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
         {
@@ -28,25 +27,22 @@ namespace ZombieTD
 
         public override void update()
         {
-            if (GameMediator.numberofTicks % 30 == 0)
+            if (GameMediator._mouseInputs.Item2 != null)
             {
-                if (GameMediator._mouseInputs.Item2 != null)
+                switch (GameMediator._mouseInputs.Item2)
                 {
-                    switch (GameMediator._mouseInputs.Item2)
-                    {
-                        case SpawnType.RedNeck: rectangle1.X = EngineConstants.Button_1_X - 2; rectangle1.Y = EngineConstants.Button_1_Y - 2; break;
-                        case SpawnType.Sheriff: rectangle1.X = EngineConstants.Button_2_X - 2; rectangle1.Y = EngineConstants.Button_2_Y - 2; break;
-                        case SpawnType.Priest: rectangle1.X = EngineConstants.Button_3_X - 2; rectangle1.Y = EngineConstants.Button_3_Y - 2; break;
-                        case SpawnType.Hay: rectangle1.X = EngineConstants.Button_4_X - 2; rectangle1.Y = EngineConstants.Button_4_Y - 2; break;
-                        case SpawnType.Pit: rectangle1.X = EngineConstants.Button_5_X - 2; rectangle1.Y = EngineConstants.Button_5_Y - 2; break;
-                        case SpawnType.Car: rectangle1.X = EngineConstants.Button_6_X - 2; rectangle1.Y = EngineConstants.Button_6_Y - 2; break;
-                    }
+                    case SpawnType.RedNeck: rectangle1.X = EngineConstants.Button_1_X - 2; rectangle1.Y = EngineConstants.Button_1_Y - 2; break;
+                    case SpawnType.Sheriff: rectangle1.X = EngineConstants.Button_2_X - 2; rectangle1.Y = EngineConstants.Button_2_Y - 2; break;
+                    case SpawnType.Priest: rectangle1.X = EngineConstants.Button_3_X - 2; rectangle1.Y = EngineConstants.Button_3_Y - 2; break;
+                    case SpawnType.Hay: rectangle1.X = EngineConstants.Button_4_X - 2; rectangle1.Y = EngineConstants.Button_4_Y - 2; break;
+                    case SpawnType.Pit: rectangle1.X = EngineConstants.Button_5_X - 2; rectangle1.Y = EngineConstants.Button_5_Y - 2; break;
+                    case SpawnType.Car: rectangle1.X = EngineConstants.Button_6_X - 2; rectangle1.Y = EngineConstants.Button_6_Y - 2; break;
                 }
-                else
-                {
-                    rectangle1.X = -37;
-                    rectangle1.Y = -37;
-                }
+            }
+            else
+            {
+                rectangle1.X = -37;
+                rectangle1.Y = -37;
             }
         }
     }

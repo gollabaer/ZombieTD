@@ -112,11 +112,14 @@ namespace ZombieTD
 
         protected override void ChooseAction()
         {
-            base.ChooseAction();
-
-            if (this.IsPlayerNextToMe())
+            if (GameMediator.numberofTicks % 60 == 0)
             {
-                _currentAction = CurrentAction.Attack;
+                base.ChooseAction();
+
+                if (this.IsPlayerNextToMe())
+                {
+                    _currentAction = CurrentAction.Attack;
+                }
             }
         }
     }

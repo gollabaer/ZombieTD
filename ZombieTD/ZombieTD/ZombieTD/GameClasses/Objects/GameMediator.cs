@@ -11,14 +11,6 @@ namespace ZombieTD
 {
     public class GameMediator : IMediator
     {
-        #region Test Vars
-        int currentSound = 0;
-        string[] sounds = Enum.GetNames(typeof(SoundType));
-        Random _rnd = new Random();
-
-        #endregion
-       
-
         #region XnaSpecific
         private SpriteBatch _spriteBatch;
         private ContentManager _content;
@@ -29,7 +21,6 @@ namespace ZombieTD
         private Map _map;
         private List<IGameElement> _gameElements = new List<IGameElement>();
         private List<IGameElement> _gamePitElements = new List<IGameElement>();
-
         private ISpawnPool _goodGuySpawnPool;
         private ISpawnPool _badGuySpawnPool;
         private IAssetManager _textureAssetManager;
@@ -42,15 +33,23 @@ namespace ZombieTD
         private IEffect _tileSelectionEffect;
         private IEffect _characterSelectionEffect;
         private ISound _bgMusic;
+        private SplashScreen _splashScreen;
+        private GameOverScreen _gameOverScreen;
+        private HelpMenuScreen _helpMenuScreen;
+
+        public static GameState _gameState;
         public static ulong numberofTicks = 0;
         public static Tuple<Vector2, SpawnType?> _mouseInputs;
         public static bool isRunning;
         #endregion
 
-        public GameMediator()
+        #region Constructors
+        public GameMediator(GameState gameState)
         {
-            #region Init Logic
-         
+            //Set the Game state
+            _gameState = gameState;
+
+            //Create Game Objects
             _goodGuySpawnPool = new PlayerSpawnPool(this);
             _badGuySpawnPool = new EnemySpawnPool(this);
             _textureAssetManager = new TextureAssetManager();
@@ -62,12 +61,24 @@ namespace ZombieTD
             _fogEffect = new FogEffect2();
             _tileSelectionEffect = new TileSelectionEffect();
             _characterSelectionEffect = new CharacterSelectionEffect();
+
+            //Create State Objects
+            _gameOverScreen = new GameOverScreen(this);
+            _splashScreen = new SplashScreen(this);
+            _helpMenuScreen = new HelpMenuScreen(this);
+
+            //Set running flag
             GameMediator.isRunning = true;
-            #endregion
+        }
+        #endregion
+
+        #region Content Loading
+        public void LoadAssets(ContentManager content)
+        {
+            _textureAssetManager.LoadAssets(content);
+            _soundAssetManager.LoadAssets(content);
         }
 
-        #region Engine Methods
-       
         public bool LoadContent(ContentManager content, SpriteBatch spritebatch)
         {
             _spriteBatch = spritebatch;
@@ -85,6 +96,11 @@ namespace ZombieTD
                 _menu.LoadContent(content);
                 _score.LoadContent(content);
 
+                //Load State Objects
+                _splashScreen.LoadContent(content);
+                _gameOverScreen.LoadContent(content);
+                _helpMenuScreen.LoadContent(content);
+
                 //Map has to load before the objects that require it 
                 _map = Map.LoadMap(this);
                
@@ -95,11 +111,11 @@ namespace ZombieTD
                 //Set the base sound
                 _base.SetSound(this.GetAsset<SoundType,ISound>(SoundType.BaseAttack));
 
-                //Start Music
+                //Set the Background Music
                 _bgMusic = GetAsset<MusicType, ISound>(MusicType.TBG);
-                _bgMusic.Play(.25f, 0f, 0f, true);
+                this.StartMusic();
 
-                Logger.Log(Logger.Log_Type.INFO, "The Game Has Started");
+                Logger.Log(Logger.Log_Type.INFO, "The Game Has Been Loaded");
                
                 return true;
             }
@@ -109,120 +125,198 @@ namespace ZombieTD
                 return false;
             }
         }
+        #endregion
 
-        public void LoadAssets(ContentManager content)
-        {
-            _textureAssetManager.LoadAssets(content);
-            _soundAssetManager.LoadAssets(content);
-        }
-
-        /// <summary>
-        /// The mediators draw method is used to draw
-        /// the map, characters, menu, and score. Draw order
-        /// within the method affects how the elements
-        /// are layered.
-        /// </summary>
-        /// <param name="spritebatch">Use a sprite to draw a 2D bitmap directly to the screen.</param>
+        #region Mediator Methods
         public void Draw(SpriteBatch spritebatch)
         {
-           //Draw the Game Map
-            _map.Draw(spritebatch);
+            switch (_gameState)
+            {
+                case GameState.SplashScreen:
+                    #region Game State (SplashScreen)
+                    _splashScreen.Draw(_spriteBatch);
+                    _fogEffect.Draw(_spriteBatch);
+                    #endregion
+                    break;
+                case GameState.HelpMenu:
+                    #region Game State (HelpScreen)
+                    _helpMenuScreen.Draw(_spriteBatch);
+                    _fogEffect.Draw(_spriteBatch);
+                    #endregion
+                    break;
+                case GameState.GameRunning:
+                    #region Game State (Game)
+                    //Draw the Game Map
+                    _map.Draw(spritebatch);
 
-            //Draw the Pits
-            foreach (IGameElement element in _gamePitElements)
-                element.Draw(_spriteBatch);
+                    //Draw the Pits
+                    foreach (IGameElement element in _gamePitElements)
+                        element.Draw(_spriteBatch);
 
-           //Draw each of the IGameElement in the game
-            foreach (IGameElement element in _gameElements)
-                element.Draw(_spriteBatch);
-            
-            //Draw any Effects
-            _tileSelectionEffect.Draw(_spriteBatch);
-            _fogEffect.Draw(_spriteBatch);
+                    //Draw each of the IGameElement in the game
+                    foreach (IGameElement element in _gameElements)
+                        element.Draw(_spriteBatch);
 
-            //Draw The Menu
-            _menu.Draw(_spriteBatch);
-            _characterSelectionEffect.Draw(_spriteBatch);
-            _score.Draw(_spriteBatch);
+                    //Draw any Effects
+                    _tileSelectionEffect.Draw(_spriteBatch);
+                    _fogEffect.Draw(_spriteBatch);
+
+                    //Draw The Menu
+                    _menu.Draw(_spriteBatch);
+                    _characterSelectionEffect.Draw(_spriteBatch);
+                    _score.Draw(_spriteBatch);
+                    #endregion
+                    break;
+                case GameState.GameOver:
+                    #region Game State (GameOver)
+                    _gameOverScreen.Draw(_spriteBatch);
+                    _score.DrawGameOver(_spriteBatch);
+                    _fogEffect.Draw(_spriteBatch);
+                    #endregion
+                    break;
+            }
         }
 
         public void Tick(Tuple<Vector2,SpawnType?> mouseInputs)
         {
-            //The Game Continues
-            if (GetTownhallHealth() > 0)
+            switch (_gameState)
             {
-                //Set mouse xy
-                _mouseInputs = mouseInputs;
+                case GameState.SplashScreen:
+                    #region Game State (SplashScreen)
+                    _fogEffect.update();
+                    #endregion
+                    break;
+                case GameState.HelpMenu:
+                    #region Game State (HelpScreen)
+                    _fogEffect.update();
+                    #endregion
+                    break;
+                case GameState.GameRunning:
+                    #region Game State (Game)
+                    //The Game Continues
+                    if (GetTownhallHealth() > 0)
+                    {
+                        //Set mouse xy
+                        _mouseInputs = mouseInputs;
 
-                //Take Turn
-                _waveGenerator.IssueOrders();
-                _badGuySpawnPool.ProcessOrder();
-                _goodGuySpawnPool.ProcessOrder();
-                _goodGuySpawnPool.SpawnElements(this);
-                _badGuySpawnPool.SpawnElements(this);
+                        //Take Turn
+                        _waveGenerator.IssueOrders();
+                        _badGuySpawnPool.ProcessOrder();
+                        _goodGuySpawnPool.ProcessOrder();
+                        _goodGuySpawnPool.SpawnElements(this);
+                        _badGuySpawnPool.SpawnElements(this);
 
 
-                //UpdateEffects
-                _tileSelectionEffect.update();
-                _fogEffect.update();
-                _characterSelectionEffect.update();
+                        //UpdateEffects
+                        _tileSelectionEffect.update();
+                        _fogEffect.update();
+                        _characterSelectionEffect.update();
 
-                //Remove all dead characters
-                _gameElements.RemoveAll(x => x.GetDeadFlag());
-                _gamePitElements.RemoveAll(x => x.GetDeadFlag());
+                        //Remove all dead characters
+                        _gameElements.RemoveAll(x => x.GetDeadFlag());
+                        _gamePitElements.RemoveAll(x => x.GetDeadFlag());
 
-                
+
 #if DEBUG
-                //Game Characters
-                foreach (IGameElement element in _gameElements)
-                {
-                    element.TakeTurn(this);
-                }
+                        //Game Characters
+                        foreach (IGameElement element in _gameElements)
+                        {
+                            element.TakeTurn(this);
+                        }
 #else
-                //Game Characters
-                Parallel.ForEach(_gameElements, element =>
-                {
-                    lock (_gameElements) element.TakeTurn((IMediator)this);
-                });
+                            //Game Characters
+                            Parallel.ForEach(_gameElements, element =>
+                            {
+                                lock (_gameElements) element.TakeTurn((IMediator)this);
+                            });
 
 #endif
 
-                //Pit Characters
-                foreach (IGameElement element in _gamePitElements)
-                {
-                    element.TakeTurn(this);
-                }
+                        //Pit Characters
+                        foreach (IGameElement element in _gamePitElements)
+                        {
+                            element.TakeTurn(this);
+                        }
+                    }
+                    else
+                    {
+                        //The Game Is Over
+                        if (GameMediator.isRunning)
+                            Logger.Log(Logger.Log_Type.INFO, "The Game Has Ended");
 
-                //Prevent Exception
-                if (numberofTicks == ulong.MaxValue)
-                    numberofTicks = 0;
-                else
-                    numberofTicks++;
+                        GameMediator.isRunning = false;
+                        _score.StopTime();
+
+                        _gameState = GameState.GameOver;
+                    }
+
+                    #endregion
+                    break;
+                case GameState.GameOver:
+                    #region Game State (GameOver)
+                    _fogEffect.update();
+                    #endregion
+                    break;
             }
+
+            //Prevent Exception
+            if (numberofTicks == ulong.MaxValue)
+                numberofTicks = 0;
             else
+                numberofTicks++;
+        }
+
+        public void StartMusic()
+        {
+            //Start Music
+            _bgMusic.Play(.25f, 0f, 0f, true);
+        }
+
+        public I GetAsset<T, I>(T enumItem) where I : ICloneable
+        {
+            if (typeof(I) == typeof(ISound)) //if I is a sound.
+                return _soundAssetManager.GetAsset<T, I>(enumItem);
+            if (typeof(I) == typeof(ITexture))//if I is a texture
+                return _textureAssetManager.GetAsset<T, I>(enumItem);
+
+            Logger.Log(Logger.Log_Type.ERROR, ("Cannot get Asset of Type" + Type.GetType(typeof(I).Name).Name));
+            throw new NotImplementedException("Cannot get Asset of Type" + Type.GetType(typeof(I).Name).Name);
+        }
+
+        public Tile GetTileByXY(int x, int y)
+        {
+            return _map.GetTileByXY(x, y);
+        }
+
+        public Score GetScore()
+        {
+            return this._score;
+        }
+
+        public void ReportDeath(IGameElement element)
+        {
+            if (element is IZombie ||
+               element is IZombieDog ||
+               element is IFlyingZombie)
             {
-                //The Game Is Over
-                if(GameMediator.isRunning)
-                    Logger.Log(Logger.Log_Type.INFO, "The Game Has Ended");
-
-                GameMediator.isRunning = false;
-                _score.StopTime();
+                _score.SubtractEnemy();
+                _score.AddKill();
             }
-        }
 
-        #endregion
+            else if (element is ISheriff ||
+                     element is IRedneck ||
+                     element is IPriest ||
+                     element is IBase)
+            {
+                _score.SubtractPlayer();
+                _score.AddKilled();
+            }
 
-        #region Mediator Methods
-        public Map GetMapByLineOfSight(ICharacter character)
-        {
-            return _map.GetMapByLineOfSight(character.getLineOfSight(),
-                                            character.GetX(),
-                                            character.GetY());
-        }
 
-        public ICharacter GetCharacter(int x, int y)
-        {
-            return null;
+
+            //_map.RemoveElementFromTile(element);
+            //_gameElements.Remove(element);
+            //element.SetDeadFlag();
         }
 
         public void RegisterWithMediator(IMediator mediator, IGameElement element)
@@ -239,8 +333,6 @@ namespace ZombieTD
 
             _map.GetTileByXY(element.GetX(), element.GetY()).AddElementToTile(element);
         }
-
-
         #endregion
 
         #region Zombie Methods
@@ -290,7 +382,10 @@ namespace ZombieTD
             return target.TakeDamage(((Character)charater)._attackDamageMelee);
         }
 
-
+        public bool AttackCharacter(int damage, ICharacter target)
+        {
+            return target.TakeDamage(damage);
+        }
 
         #endregion
 
@@ -299,45 +394,23 @@ namespace ZombieTD
         {
             return _base.GetTownhallHealth();
         }
+
+        public bool AttackTownHall(ICharacter character)
+        {
+            return _base.TakeDamage(((Character)character)._attackDamageMelee);
+        }
         #endregion
 
-
-
-        public void TakeTurn(IMediator mediator)
+        #region Map Methods
+        public Map GetMapByLineOfSight(ICharacter character)
         {
-            //Not Needed Though we could replace the tick method with this method
-            //throw new NotImplementedException();
+            return _map.GetMapByLineOfSight(character.getLineOfSight(),
+                                            character.GetX(),
+                                            character.GetY());
         }
-
-
-        public I GetAsset<T, I>(T enumItem) where I : ICloneable
-        {
-            if(typeof(I) == typeof(ISound)) //if I is a sound.
-                return _soundAssetManager.GetAsset<T, I>(enumItem);
-            if (typeof(I) == typeof(ITexture))//if I is a texture
-                return _textureAssetManager.GetAsset<T, I>(enumItem);
-
-            Logger.Log(Logger.Log_Type.ERROR, ("Cannot get Asset of Type" + Type.GetType(typeof(I).Name).Name));
-            throw new NotImplementedException("Cannot get Asset of Type" + Type.GetType(typeof(I).Name).Name);
-        }
-
-
-
-        #region TestDemoMethods
-
-        public void MakeTestSound()
-        {
-            this.GetAsset<SoundType, ISound>((SoundType) Enum.Parse(typeof(SoundType), sounds[currentSound])).Play();
-
-            if (currentSound == sounds.Length - 1)
-                currentSound = 0;
-            else
-                currentSound++;
-        }
-
-
         #endregion
 
+        #region SpawnPools
         public void AcceptOrder(IOrder order, OrderFor orderFor)
         {
             switch (orderFor)
@@ -346,14 +419,9 @@ namespace ZombieTD
                 case OrderFor.Enemy: _badGuySpawnPool.AcceptOrder(order); break;
             }   
         }
+        #endregion
 
-
-        public Tile GetTileByXY(int x, int y)
-        {
-            return _map.GetTileByXY(x, y);
-        }
-
-
+        #region Unused Methods
         public int GetX()
         {
             throw new NotImplementedException();
@@ -364,55 +432,16 @@ namespace ZombieTD
             throw new NotImplementedException();
         }
 
-
-        public Score GetScore()
-        {
-            return this._score;
-        }
-
-        public void ReportDeath(IGameElement element)
-        {
-            if(element is IZombie ||
-               element is IZombieDog ||
-               element is IFlyingZombie)
-            {
-                _score.SubtractEnemy();
-                _score.AddKill();
-            }
-             
-            else if (element is ISheriff ||
-                     element is IRedneck ||
-                     element is IPriest ||
-                     element is IBase)
-            {
-                _score.SubtractPlayer();
-                _score.AddKilled();
-            }
-
-            
-
-            //_map.RemoveElementFromTile(element);
-            //_gameElements.Remove(element);
-            //element.SetDeadFlag();
-        }
-
-
         public ITexture GetTexture()
         {
             throw new NotImplementedException();
         }
 
-
-        public bool AttackTownHall(ICharacter character)
+        public void TakeTurn(IMediator mediator)
         {
-            return _base.TakeDamage(((Character)character)._attackDamageMelee);
+            throw new NotImplementedException();
         }
 
-
-
-        public bool AttackCharacter(int damage, ICharacter target)
-        {
-            return target.TakeDamage(damage);
-        }
+        #endregion
     }
 }

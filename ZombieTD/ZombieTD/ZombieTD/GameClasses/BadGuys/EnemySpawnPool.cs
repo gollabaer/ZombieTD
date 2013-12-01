@@ -13,7 +13,7 @@ namespace ZombieTD
 
         public EnemySpawnPool(IMediator mediator) : base(mediator)
         {
-            //Set up a enum of tile types this character can walk on
+            //Set up a enum of Sounds types this character Make
             _soundFiles = FilterEnumWithAttributeOf<SoundType, EnemySpawnPool>();
         }
 
@@ -25,21 +25,20 @@ namespace ZombieTD
         {
             if (_spawnQueue.Count != 0)
             {
-                  
-                    IGameElement element = _spawnQueue.Dequeue();
+                IGameElement element = _spawnQueue.Dequeue();
 
-                    Tile tile = mediator.GetTileByXY(element.GetX(),element.GetY());
+                Tile tile = mediator.GetTileByXY(element.GetX(),element.GetY());
 
-                    if (!tile.HasCharacters())
-                    {
+                if (!tile.HasCharacters())
+                {
 
-                        mediator.GetScore().AddEnemy();
-                        element.RegisterWithMediator(mediator, element);
-                    }
-                    else
-                    {
-                        _spawnQueue.Enqueue(element);
-                    }
+                    mediator.GetScore().AddEnemy();
+                    element.RegisterWithMediator(mediator, element);
+                }
+                else
+                {
+                    _spawnQueue.Enqueue(element);
+                }
              }
 
             if (GameMediator.numberofTicks % EngineConstants.NumberOfFramsBeforeSound == (ulong)randomSoundInt)

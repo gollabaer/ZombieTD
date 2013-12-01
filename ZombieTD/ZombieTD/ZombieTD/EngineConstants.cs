@@ -18,44 +18,58 @@ namespace ZombieTD
         public const string MapFileLocation = "Map.txt";
         #endregion
 
-
-
-
-
         #region Game Settings
-
-
-
-        #endregion
-
-
-
-
-
-
-
-        //Map File Location
-        
-
         //Logging Switch
         public const bool IsLogging = true;
+        //FPS Switch
+        public const bool showFPS = true;
+        //Ticks Switch
+        public static bool ShowTicks = true;
+        //Framerate Settings
+        public static bool DisableFrameRate = true;
+        //Mouse XY Switch
+        public static bool ShowMouseXY = true;
+        #endregion
 
-        
+        #region HUD Display Locations
+        //FPS Display
+        public const float FPSX = 10.0f;
+        public const float FPSY = 630.0f;
 
+        //Ticks Display
+        public const float TicksX = 10.0f;
+        public const float TicksY = 650.0f;
+
+        //Mouse XY Display
+        public static float MouseX = 10.0f;
+        public static float MouseY = 610.0f;
+        #endregion
+
+        #region Texture Constants
         public const int SmallTextureHeight = 32;
         public const int SmallTextureWidth = 32;
         public const int ScreenWidth = EngineConstants.SmallTextureWidth * 40;
         public const int ScreenHeight = EngineConstants.SmallTextureWidth * 22;
+        public const int GameX = 1279;
+        public const int GameY = 703;
+        #endregion
 
-        //Menu
+        #region Character Directions
+        public static float Up = 0.0f;
+        public static float UpRight = .78539815f;
+        public static float Right = (float)Math.PI / 2.0f;
+        public static float DownRight = 2.35619452f;
+        public static float Down = (float)(2.0f * (float)(Math.PI / 2));
+        public static float DownLeft = 3.92699089f;
+        public static float Left = (float)(3.0f * (float)(Math.PI / 2));
+        public static float UpLeft = 5.49778715f;
+        #endregion
+
+        #region Character Select menu
         public const int SelectMenuTextureHeight = 64;
         public const int SelectMenuTextureWidth = 352;
-        public const int ScoreTextureHeight = 128;
-        public const int ScoreTextureWidth = 160;
         public const int MenuStartX = 928;
         public const int MenuStartY = 0;
-        public const int ScoreStartX = 0;
-        public const int ScoreStartY = 0;
 
         //Menu Buttons
         public const int Button_1_X = 1016;
@@ -70,8 +84,29 @@ namespace ZombieTD
         public const int Button_5_Y = 16;
         public const int Button_6_X = 1236;
         public const int Button_6_Y = 16;
+        #endregion
 
-        //Score
+        #region Score Menu
+        public const int ScoreTextureHeight = 128;
+        public const int ScoreTextureWidth = 160;
+        public const int ScoreStartX = 0;
+        public const int ScoreStartY = 0;
+
+        //Score Game Over
+        public const int GO_TotalKills_X = 225;
+        public const int GO_TotalKills_Y = 365;
+        public const int GO_TotalKilled_X = 225;
+        public const int GO_TotalKilled_Y = 395;
+        public const int GO_TotalTownsfolk_X = 225;
+        public const int GO_TotalTownsfolk_Y = 425;
+        public const int GO_TotalZombies_X = 225;
+        public const int GO_TotalZombies_Y = 455;
+        public const int GO_SurvivalTime_X = 225;
+        public const int GO_SurvivalTime_Y = 485;
+        public const int GO_FinalScore_X = 225;
+        public const int GO_FinalScore_Y = 535;
+
+        //Score Game Running
         public const int TotalKills_X = 5;
         public const int TotalKills_Y = 16;
         public const int TotalKilled_X = 5;
@@ -84,43 +119,61 @@ namespace ZombieTD
         public const int TownHallHealth_Y = 80;
         public const int SurvivalTime_X = 5;
         public const int SurvivalTime_Y = 96;
+        #endregion
 
-        public const int GameX = 1279;
-        public const int GameY = 703;
+        #region Splash Screen
+        public const int Button_Help_TopX = 249;
+        public const int Button_Help_TopY = 415;
+        public const int Button_Help_BottomX = 745;
+        public const int Button_Help_BottomY = 562;
 
-        //FPS Display
-        public const bool showFPS = true;
-        public const float FPSX = 10.0f;
-        public const float FPSY = 630.0f;
+        public const int Button_Start_TopX = 249;
+        public const int Button_Start_TopY = 246;
+        public const int Button_Start_BottomX = 745;
+        public const int Button_Start_BottomY = 388;
 
-        //Ticks Display
-        public static bool ShowTicks = true;
-        public const float TicksX = 10.0f;
-        public const float TicksY = 650.0f;
+        public const int SplashScreenTextureHeight = 704;
+        public const int SplashScreenTextureWidth = 1280;
+        #endregion
 
-        //Mouse XY Display
-        public static bool ShowMouseXY = true;
-        public static float MouseX = 10.0f;
-        public static float MouseY = 610.0f;
+        #region GameOverScreen
+        public const int Button_Yes_TopX = 807;
+        public const int Button_Yes_TopY = 508;
+        public const int Button_Yes_BottomX = 889;
+        public const int Button_Yes_BottomY = 549;
 
-        //Framerate Settings
-        public static bool DisableFrameRate = true;
+        public const int Button_No_TopX = 906;
+        public const int Button_No_TopY = 508;
+        public const int Button_No_BottomX = 986;
+        public const int Button_No_BottomY = 549;
 
+        public const int GameOverScreenTextureHeight = 704;
+        public const int GameOverScreenTextureWidth = 1280;
+        #endregion
 
-        
+        #region Help Screen
+        public const int Button_Back_TopX = 1137;
+        public const int Button_Back_TopY = 630;
+        public const int Button_Back_BottomX = 1254;
+        public const int Button_Back__BottomY = 678;
 
+        public const int HelpMenuScreenTextureHeight = 704;
+        public const int HelpMenuScreenTextureWidth = 1280;
+        #endregion
+
+        #region Wave Generator
         //Wave Generator
         public const int NumberOfFramesBeforeOrder = 60;
         public const int MaxNumberOfSpawns = 100;
         public const int NumberOfFramsBeforeSound = 1000;
+        #endregion
 
+        #region Map 
+        public static int MapEdgeX = 1248;
+        public static int MapEdgeY = 672;
+        #endregion
 
-
-
-
-        //Character Attributes
-
-        //Zombie
+        #region Zombie
         public const int Zombie_Health = 9;
         public const int Zombie_AttackDamageMelee = 2;
         public const int Zombie_AttackDamageRanged = 4;
@@ -130,9 +183,9 @@ namespace ZombieTD
         public const int Zombie_NumberOfFramesBeforeMove = 3;
         public const int Zombie_LineOfSite = 2;
         public const int Zombie_NumberOfFramesBeforeAttack = 100;
+        #endregion
 
-        
-        //ZombieDog
+        #region ZombieDog
         public const int ZombieDog_Health = 10;
         public const int ZombieDog_AttackDamageMelee = 2;
         public const int ZombieDog_AttackDamageRanged = 4;
@@ -142,8 +195,9 @@ namespace ZombieTD
         public const int ZombieDog_NumberOfFramesBeforeMove = 2;
         public const int ZombieDog_LineOfSite = 2;
         public const int ZombieDog_NumberOfFramesBeforeAttack = 100;
+        #endregion
 
-        //FlyingZombie
+        #region FlyingZombie
         public const int FlyingZombie_Health = 10;
         public const int FlyingZombie_AttackDamageMelee = 2;
         public const int FlyingZombie_AttackDamageRanged = 4;
@@ -153,8 +207,9 @@ namespace ZombieTD
         public const int FlyingZombie_NumberOfFramesBeforeMove = 5;
         public const int FlyingZombie_LineOfSite = 6;
         public const int FlyingZombie_NumberOfFramesBeforeAttack = 100;
+        #endregion
 
-        //Redneck
+        #region Redneck
         public const int Redneck_Health = 10;
         public const int Redneck_AttackDamageMelee = 2;
         public const int Redneck_AttackDamageRanged = 4;
@@ -164,8 +219,9 @@ namespace ZombieTD
         public const int Redneck_NumberOfFramesBeforeMove = 5;
         public const int Redneck_LineOfSite = 2;
         public const int Redneck_MovmentRange = 4;
+        #endregion
 
-        //Priest
+        #region Priest
         public const int Priest_Health = 3;
         public const int Priest_AttackDamageMelee = 5;
         public const int Priest_AttackDamageRanged = 5;
@@ -174,8 +230,9 @@ namespace ZombieTD
         public const int Priest_Speed = 2;
         public const int Priest_NumberOfFramesBeforeMove = 2;
         public const int Priest_LineOfSite = 2;
+        #endregion
 
-        //Sheriff
+        #region Sheriff
         public const int Sheriff_Health = 10;
         public const int Sheriff_AttackDamageMelee = 2;
         public const int Sheriff_AttackDamageRanged = 4;
@@ -184,8 +241,9 @@ namespace ZombieTD
         public const int Sheriff_Speed = 2;
         public const int Sheriff_NumberOfFramesBeforeMove = 2;
         public const int Sheriff_LineOfSite = 3;
+        #endregion
 
-        //Hay
+        #region Hay
         public const int Hay_Health = 10;
         public const int Hay_AttackDamageMelee = 0;
         public const int Hay_AttackDamageRanged = 0;
@@ -194,8 +252,9 @@ namespace ZombieTD
         public const int Hay_Speed = 0;
         public const int Hay_LineOfSite = 0;
         public const int Hay_NumberOfFramesBeforeMove = 0;
+        #endregion
 
-        //Car
+        #region Car
         public const int Car_Health = 20; //burn time
         public const int Car_AttackDamageMelee = 1;
         public const int Car_AttackDamageRanged = 0;
@@ -204,8 +263,9 @@ namespace ZombieTD
         public const int Car_Speed = 0;
         public const int Car_NumberOfFramesBeforeMove = 0;
         public const int Car_LineOfSite = 1;
+        #endregion
 
-        //Pit
+        #region Pit
         public const int Pit_Health = 3; //Number of Enemies that can fit into the pit
         public const int Pit_AttackDamageMelee = 9999; //Damage to unit per timespan
         public const int Pit_AttackDamageRanged = 0;
@@ -214,9 +274,10 @@ namespace ZombieTD
         public const int Pit_Speed = 0;
         public const int Pit_LineOfSite = 0;
         public const int Pit_NumberOfFramesBeforeMove = 0;
+        #endregion
 
-        //Base
-        public const int Base_Health = 10000000;
+        #region Base
+        public const int Base_Health = 100;
         public const int Base_AttackDamageMelee = 0;
         public const int Base_AttackDamageRanged = 0;
         public const int Base_AttackRange = 0;
@@ -224,49 +285,31 @@ namespace ZombieTD
         public const int Base_Speed = 0;
         public const int Base_LineOfSite = 0;
         public const int Base_NumberOfFramesBeforeMove = 0;
+        #endregion
 
-        //Fog Effect
+        #region Fog EffectFog Effect
         public const int FogSpeed = 1;
         public const int Fog_UpdateRate = 2;
         public static float Fog_StartAlpha = .01f;
         public static float Fog_AlphaThreshold = 1.0f;
         public static float Fog_AlphaIncrement = .005f;
         public static float Fog_ResetValue = .7f;
-
-        //Map
-        public static int MapEdgeX = 1248;
-        public static int MapEdgeY = 672;
-
-        //Directions
-        public static float Up = 0.0f;
-        public static float UpRight = .78539815f;
-        public static float Right = (float)Math.PI / 2.0f;
-        public static float DownRight = 2.35619452f;
-        public static float Down = (float)(2.0f * (float)(Math.PI / 2));
-        public static float DownLeft = 3.92699089f;
-        public static float Left = (float)(3.0f * (float)(Math.PI / 2));
-        public static float UpLeft = 5.49778715f;
-
-
-
-
-        
-        
-
-        
+        #endregion
     }
 
-    public enum CurrentAction
+    //Used to track the state of the game
+    public enum GameState
     {
-        Attack,
-        Range,
-        Move,
-        Special1,
-        Special2,
-        Special3,
-        None
+        SplashScreen,
+        HelpMenu,
+        GameRunning,
+        GameOver,
+        GameReset,
+        GameExit
     }
 
+    //Used for Loading/Getting the Textures
+    //Used for Character Movment AI
     public enum MapTileType
     {
         [ZombieDog]
@@ -321,9 +364,9 @@ namespace ZombieTD
         [FlyingZombie]
         Tree,
         Error
-
     }
 
+    //Used for Loading/Getting Textures
     public enum CharacterTextureType
     {
         Zombie,
@@ -334,23 +377,7 @@ namespace ZombieTD
         Sheriff
     }
 
-    public enum CharacterType
-    {
-        Zombie,
-        ZombieDog,
-        FlyingZombie,
-        Priest,
-        RedNeck,
-        Sheriff
-    }
-
-    public enum StructureType
-    {
-        Hay,
-        Car,
-        Pit
-    }
-
+    //Used for Loading/Getting Textures
     public enum StructureTextureType
     {
         Hay,
@@ -358,33 +385,8 @@ namespace ZombieTD
         Pit
     }
 
-    public enum SoundType
-    {
-        Fire,
-        Gunshot,
-        HolyWater,
-        Priest,
-        [EnemySpawnPool]
-        Zombie1,
-        [EnemySpawnPool]
-        Zombie2,
-        [EnemySpawnPool]
-        Zombie3,
-        [EnemySpawnPool]
-        Zombie4,
-        [EnemySpawnPool]
-        Zombie5,
-        Chainsaw,
-        BaseAttack,
-        Error
-      
-    }
-
-    public enum MusicType
-    {
-        TBG
-    }
-
+    //Used for Loading/Getting Textures
+    //Used for Character Attack AI
     public enum SpawnType
     {
         [EnemyWaveGenerator]
@@ -418,6 +420,43 @@ namespace ZombieTD
         Pit
     }
 
+    //Used for Loading/Playing Music
+    public enum MusicType
+    {
+        TBG
+    }
+
+    //Used for Loading/Playing Sound Effects
+    //Used for Enemy Spawn Pool to Load/Play Sound Effects
+    //Used for Character to Load/Play Sound Effects
+    public enum SoundType
+    {
+        [Car]
+        Fire,
+        [Sheriff]
+        Gunshot,
+        [Priest]
+        HolyWater,
+        [Priest]
+        Priest,
+        [EnemySpawnPool]
+        Zombie1,
+        [EnemySpawnPool]
+        Zombie2,
+        [EnemySpawnPool]
+        Zombie3,
+        [EnemySpawnPool]
+        Zombie4,
+        [EnemySpawnPool]
+        Zombie5,
+        [Redneck]
+        Chainsaw,
+        BaseAttack,
+        Error
+
+    }
+
+    //Used to Load/Get Textures
     public enum EffectTextureType
     {
         Fog,
@@ -425,29 +464,36 @@ namespace ZombieTD
         CharacterSelection
     }
 
+    //Used to Load/Get Textures
     public enum MenuTextureType
     {
         SelectMenu,
-        Score
+        Score,
+        SplashScreen,
+        GameOver,
+        HelpMenu
     }
 
-    public enum MenuSelectionOptions
-    {
-        RedNeck,
-        Sheriff,
-        Priest,
-        Hay,
-        Pit,
-        Car
-    }
-
+    //Used By SpawnPools
     public enum OrderFor
     {
-
         Player,
         Enemy
     }
 
+    //Used by Character AI
+    public enum CurrentAction
+    {
+        Attack,
+        Range,
+        Move,
+        Special1,
+        Special2,
+        Special3,
+        None
+    }
+
+    //Used by Character AI
     public enum MoveDirection
     {
         Up,
@@ -456,6 +502,4 @@ namespace ZombieTD
         Right,
         None
     }
-
-
 }

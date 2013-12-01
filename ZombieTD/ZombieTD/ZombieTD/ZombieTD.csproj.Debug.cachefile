@@ -45,6 +45,10 @@ Content\Score.xnb
 Content\Music\TBG.xnb
 Content\Images\Effects\SelectTile.xnb
 Content\Images\Effects\CharacterSelection.xnb
+Content\Images\Menus\GameOver.xnb
+Content\Images\Menus\SplashScreen.xnb
+Content\Images\Menus\HelpMenu.xnb
+Content\GameOver.xnb
 Content\Music\TBG.wma
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav

@@ -100,12 +100,6 @@ namespace ZombieTD
             {
                 Logger.Log(Logger.Log_Type.ERROR, "Failed to load menu textures " + ex.ToString());
             }
-
-
-
-
-
-
         }
 
         public I GetAsset<T, I>(T enumItem) where I : ICloneable
@@ -166,7 +160,6 @@ namespace ZombieTD
 
                 return (I)foundItem.Value.Clone();
             }
-
 
             throw new NotImplementedException("Cannot get Texture of Type" + Type.GetType(typeof(I).Name).Name);
         }

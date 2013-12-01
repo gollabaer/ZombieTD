@@ -34,7 +34,9 @@ namespace ZombieTD
         int _fps = 0;
 
         //Used to gather mouse input
-        MouseInputActionDirector inputDirector;
+        MouseInputActionDirector actionDirector;
+        MouseInputMenuDirector menuDirector;
+
         //Used to hold mouse position
         Tuple<Vector2, SpawnType?> _mouseInputs;
        
@@ -71,11 +73,12 @@ namespace ZombieTD
         protected override void Initialize()
         {
             //Create an instance of our mediator class
-            mediator = new GameMediator();
+            mediator = new GameMediator(GameState.SplashScreen);
 
-            //Creat an instance of our Mouse Input Director
-            inputDirector = new MouseInputActionDirector(mediator);
-
+            //Create an instance of our Mouse Input Directors
+            actionDirector = new MouseInputActionDirector(mediator);
+            menuDirector = new MouseInputMenuDirector(mediator);
+           
             base.Initialize();
         }
 
@@ -122,18 +125,35 @@ namespace ZombieTD
                 _elapsed_time = 0;
             }
 
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
-
-            //Get user Input
-            _mouseInputs = inputDirector.ProcessInput(Mouse.GetState());
+            switch (GameMediator._gameState)
+            {
+                case GameState.GameRunning:
+                    _mouseInputs = actionDirector.ProcessInput(Mouse.GetState());
+                    break;
+                case GameState.GameOver:
+                case GameState.HelpMenu:
+                case GameState.SplashScreen:
+                    _mouseInputs = new Tuple<Vector2, SpawnType?>(menuDirector.ProcessInput(Mouse.GetState()), null);
+                     break;
+                case GameState.GameReset:
+                     ResetGame();
+                     break;
+                case GameState.GameExit:
+                    this.Exit();
+                    break;
+            }
 
             //Update the mediator and pass in the mouse xy and selected spawn type
             mediator.Tick(_mouseInputs);
 
             base.Update(gameTime);
-           
+        }
+
+        private void ResetGame()
+        {
+            Initialize();
+            GameMediator._gameState = GameState.GameRunning;
+            
         }
 
         /// <summary>
@@ -144,10 +164,11 @@ namespace ZombieTD
         {
             _total_frames++;
 
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+
             mediator.Draw(spriteBatch);
 
             if(EngineConstants.showFPS)

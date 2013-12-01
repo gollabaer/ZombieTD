@@ -22,7 +22,12 @@ namespace ZombieTD
             MediaPlayer.Play(song);
             MediaPlayer.IsRepeating = isLoop;
         }
-        
+
+        public void Stop()
+        {
+            MediaPlayer.Stop();
+        }
+
         public object Clone()
         {
             throw new NotImplementedException();

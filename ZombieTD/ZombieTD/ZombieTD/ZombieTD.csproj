@@ -116,6 +116,10 @@
     <Compile Include="GameClasses\IOrder.cs" />
     <Compile Include="GameClasses\Objects\Abstract\EffectBase.cs" />
     <Compile Include="GameClasses\Objects\CharacterSelectionEffect.cs" />
+    <Compile Include="GameClasses\Objects\GameOverScreen.cs" />
+    <Compile Include="GameClasses\Objects\HelpMenuScreen.cs" />
+    <Compile Include="GameClasses\Objects\MouseInputMenuDirector.cs" />
+    <Compile Include="GameClasses\Objects\SplashScreen.cs" />
     <Compile Include="GameClasses\Objects\TileSelectionEffect.cs" />
     <Compile Include="GameClasses\Objects\FogEffect2.cs" />
     <Compile Include="GameClasses\Objects\FogEffect.cs" />
