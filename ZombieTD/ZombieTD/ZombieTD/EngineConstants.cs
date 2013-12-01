@@ -348,6 +348,12 @@ namespace ZombieTD
         Path_withRock,
         [ZombieDog]
         [Zombie]
+        [Sheriff]
+        [FlyingZombie]
+        [Priest]
+        Path_Corner,
+        [ZombieDog]
+        [Zombie]
         [FlyingZombie]
         [Sheriff]
         [Priest]

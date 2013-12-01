@@ -49,6 +49,8 @@ Content\Images\Menus\GameOver.xnb
 Content\Images\Menus\SplashScreen.xnb
 Content\Images\Menus\HelpMenu.xnb
 Content\GameOver.xnb
+Content\Images\MapTile\Path_Corner.xnb
+Content\Images\Character\ZombieDogTiles.xnb
 Content\Music\TBG.wma
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav
