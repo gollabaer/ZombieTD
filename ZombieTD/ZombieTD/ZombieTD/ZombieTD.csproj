@@ -115,7 +115,9 @@
     <Compile Include="GameClasses\BaseOrder.cs" />
     <Compile Include="GameClasses\IOrder.cs" />
     <Compile Include="GameClasses\Objects\Abstract\EffectBase.cs" />
+    <Compile Include="GameClasses\Objects\BloodStain.cs" />
     <Compile Include="GameClasses\Objects\CharacterSelectionEffect.cs" />
+    <Compile Include="GameClasses\Objects\DeathBlood.cs" />
     <Compile Include="GameClasses\Objects\GameOverScreen.cs" />
     <Compile Include="GameClasses\Objects\HelpMenuScreen.cs" />
     <Compile Include="GameClasses\Objects\MouseInputMenuDirector.cs" />

@@ -130,14 +130,14 @@ namespace ZombieTD
                     else if (order.Type == SpawnType.Hay || order.Type == SpawnType.Car)
                     {
                         if (tile.TextureType == MapTileType.Path_noRock || tile.TextureType == MapTileType.Path_withRock ||
-                            tile.TextureType == MapTileType.RoadMiddle || tile.TextureType == MapTileType.RoadOutside)
+                            tile.TextureType == MapTileType.RoadMiddle || tile.TextureType == MapTileType.RoadOutside || tile.TextureType == MapTileType.Path_Corner)
                         {
                             orderOkay = true;
                         }
                     }
                     else if (order.Type == SpawnType.Pit)
                     {
-                        if (tile.TextureType == MapTileType.Path_noRock || tile.TextureType == MapTileType.Path_withRock)
+                        if (tile.TextureType == MapTileType.Path_noRock || tile.TextureType == MapTileType.Path_withRock || tile.TextureType == MapTileType.Path_Corner)
                         {
                             orderOkay = true;
                         }

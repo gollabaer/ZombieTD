@@ -51,6 +51,15 @@ Content\Images\Menus\HelpMenu.xnb
 Content\GameOver.xnb
 Content\Images\MapTile\Path_Corner.xnb
 Content\Images\Character\ZombieDogTiles.xnb
+Content\Images\Effects\DeathBlood.xnb
+Content\Images\Effects\DeathBloodShort.xnb
+Content\SoundFX\DeathMale.xnb
+Content\Images\Effects\BloodStain1.xnb
+Content\Images\Effects\BloodStain2.xnb
+Content\Images\Effects\BloodStain3.xnb
+Content\Images\Effects\BloodStain4.xnb
+Content\Images\Effects\BloodStain5.xnb
+Content\Images\Effects\BloodStain6.xnb
 Content\Music\TBG.wma
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav

@@ -21,6 +21,7 @@ namespace ZombieTD
         private Map _map;
         private List<IGameElement> _gameElements = new List<IGameElement>();
         private List<IGameElement> _gamePitElements = new List<IGameElement>();
+        private List<IGameElement> _gameSpecialEffectElements = new List<IGameElement>();
         private ISpawnPool _goodGuySpawnPool;
         private ISpawnPool _badGuySpawnPool;
         private IAssetManager _textureAssetManager;
@@ -36,7 +37,7 @@ namespace ZombieTD
         private SplashScreen _splashScreen;
         private GameOverScreen _gameOverScreen;
         private HelpMenuScreen _helpMenuScreen;
-
+        private GameElementFactory _factory;
         public static GameState _gameState;
         public static ulong numberofTicks = 0;
         public static Tuple<Vector2, SpawnType?> _mouseInputs;
@@ -108,6 +109,9 @@ namespace ZombieTD
                 _waveGenerator.SetEnrtyPoints(_map.EntryPoints);
                 _base.SetBaseTiles(_map.Base);
 
+                //Create Game Factory
+                _factory = new GameElementFactory(this);
+
                 //Set the base sound
                 _base.SetSound(this.GetAsset<SoundType,ISound>(SoundType.BaseAttack));
 
@@ -151,6 +155,10 @@ namespace ZombieTD
 
                     //Draw the Pits
                     foreach (IGameElement element in _gamePitElements)
+                        element.Draw(_spriteBatch);
+
+                    //Draw each of the IGameElement in the game
+                    foreach (IGameElement element in _gameSpecialEffectElements)
                         element.Draw(_spriteBatch);
 
                     //Draw each of the IGameElement in the game
@@ -215,7 +223,7 @@ namespace ZombieTD
                         //Remove all dead characters
                         _gameElements.RemoveAll(x => x.GetDeadFlag());
                         _gamePitElements.RemoveAll(x => x.GetDeadFlag());
-
+                        _gameSpecialEffectElements.RemoveAll(x => x.GetDeadFlag());
 
 #if DEBUG
                         //Game Characters
@@ -234,6 +242,12 @@ namespace ZombieTD
 
                         //Pit Characters
                         foreach (IGameElement element in _gamePitElements)
+                        {
+                            element.TakeTurn(this);
+                        }
+
+                        //Effects
+                        foreach (IGameElement element in _gameSpecialEffectElements)
                         {
                             element.TakeTurn(this);
                         }
@@ -300,6 +314,7 @@ namespace ZombieTD
                element is IFlyingZombie)
             {
                 _score.SubtractEnemy();
+                _factory.MakeBloodStain(element.GetX(), element.GetY());
                 _score.AddKill();
             }
 
@@ -309,14 +324,19 @@ namespace ZombieTD
                      element is IBase)
             {
                 _score.SubtractPlayer();
+                _factory.MakeBloodStain(element.GetX(), element.GetY());
                 _score.AddKilled();
+
+                if (element is IPriest)
+                {
+                    GetAsset<SoundType, ISound>(SoundType.Priest).Play();
+                }
+
+                if (element is IRedneck || element is ISheriff)
+                {
+                    GetAsset<SoundType, ISound>(SoundType.DeathMale).Play();
+                }
             }
-
-
-
-            //_map.RemoveElementFromTile(element);
-            //_gameElements.Remove(element);
-            //element.SetDeadFlag();
         }
 
         public void RegisterWithMediator(IMediator mediator, IGameElement element)
@@ -326,12 +346,17 @@ namespace ZombieTD
             {
                 this._gamePitElements.Add(element);
             }
-            else
+            else if(!(element is IEffect))
             {
                 this._gameElements.Add(element);
             }
+            else if (element is IEffect)
+            {
+                this._gameSpecialEffectElements.Add(element);
+            }
 
-            _map.GetTileByXY(element.GetX(), element.GetY()).AddElementToTile(element);
+            if(!(element is IEffect))
+                _map.GetTileByXY(element.GetX(), element.GetY()).AddElementToTile(element);
         }
         #endregion
 
@@ -379,6 +404,7 @@ namespace ZombieTD
         #region Character Methods
         public bool AttackCharacter(ICharacter charater, ICharacter target)
         {
+            _factory.MakeDeathBlood(target.GetX(), target.GetY());
             return target.TakeDamage(((Character)charater)._attackDamageMelee);
         }
 

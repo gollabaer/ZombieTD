@@ -294,6 +294,7 @@ namespace ZombieTD
         public static float Fog_AlphaThreshold = 1.0f;
         public static float Fog_AlphaIncrement = .005f;
         public static float Fog_ResetValue = .7f;
+        public static int BloodStainOnScreen = 14400;
         #endregion
     }
 
@@ -458,6 +459,7 @@ namespace ZombieTD
         [Redneck]
         Chainsaw,
         BaseAttack,
+        DeathMale,
         Error
 
     }
@@ -467,7 +469,20 @@ namespace ZombieTD
     {
         Fog,
         SelectTile,
-        CharacterSelection
+        CharacterSelection,
+        DeathBlood,
+        [BloodStain]
+        BloodStain1,
+        [BloodStain]
+        BloodStain2,
+        [BloodStain]
+        BloodStain3,
+        [BloodStain]
+        BloodStain4,
+        [BloodStain]
+        BloodStain5,
+        [BloodStain]
+        BloodStain6
     }
 
     //Used to Load/Get Textures
