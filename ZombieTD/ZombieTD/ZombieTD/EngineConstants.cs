@@ -98,7 +98,7 @@ namespace ZombieTD
         public const float TicksX = 10.0f;
         public const float TicksY = 650.0f;
 
-        //Mouse XY Display
+        //Mouse XY Display 
         public static bool ShowMouseXY = true;
         public static float MouseX = 10.0f;
         public static float MouseY = 610.0f;
@@ -106,12 +106,9 @@ namespace ZombieTD
         //Framerate Settings
         public static bool DisableFrameRate = true;
 
-
-
-
         //Wave Generator
-        public const int NumberOfFramesBeforeOrder = 10;
-        public const int MaxNumberOfSpawns = 2000;
+        public const int NumberOfFramesBeforeOrder = 100;
+        public const int MaxNumberOfSpawns = 10;
 
 
         //Character Attributes
@@ -145,7 +142,7 @@ namespace ZombieTD
         public const int FlyingZombie_AttackDamageRanged = 4;
         public const int FlyingZombie_AttackRange = 6;
         public const int FlyingZombie_Defense = 2;
-        public const int FlyingZombie_Speed = 5;
+        public const int FlyingZombie_Speed = 4;
         public const int FlyingZombie_NumberOfFramesBeforeMove = 5;
         public const int FlyingZombie_LineOfSite = 6;
         public const int FlyingZombie_NumberOfFramesBeforeAttack = 100;
@@ -298,13 +295,10 @@ namespace ZombieTD
         [Sheriff]
         RoadMiddle,
         [Sheriff]
-        [FlyingZombie]
         RoofTownHall_corner,
         [Sheriff]
-        [FlyingZombie]
         TownHallRoof_Middle,
         [Sheriff]
-        [FlyingZombie]
         TownhallRoof_Side,
         [FlyingZombie]
         Tree,
@@ -369,13 +363,13 @@ namespace ZombieTD
 
     public enum SpawnType
     {
-        [EnemyWaveGenerator]
+        //[EnemyWaveGenerator]
         [Car]
         Zombie,
-        [EnemyWaveGenerator]
+        //[EnemyWaveGenerator]
         [Car]
         ZombieDog,
-       //[EnemyWaveGenerator]
+        [EnemyWaveGenerator]
         FlyingZombie,
         [ZombieDog]
         [Zombie]

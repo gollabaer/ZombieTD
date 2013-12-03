@@ -76,12 +76,20 @@ namespace ZombieTD
             if (_movingDirection == MoveDirection.None)
             {
                 Tile workingTile;
+                Tile directionTile;
+                Tile cornerTile;
 
                 if (_directionFacing == EngineConstants.Up)
                 {
                     workingTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos, _currentTile.Ypos - 32);
+                    directionTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos - 32 , _currentTile.Ypos);
+                    cornerTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos - 32, _currentTile.Ypos + 32);
 
-                    if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
+                    if (directionTile != null && cornerTile != null && this._previousTile != directionTile && _legalMovmentTiles.Contains(directionTile.TextureType) && cornerTile.TextureType.Equals("RoofTownHall_corner"))
+                    {
+                        _directionFacing = EngineConstants.Left;
+                    }
+                    else if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
                     {
                         _movingDirection = MoveDirection.Up;
                         this._directionFacing = EngineConstants.Up;
@@ -98,8 +106,14 @@ namespace ZombieTD
                 if (_directionFacing == EngineConstants.Right)
                 {
                     workingTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos + 32, _currentTile.Ypos);
+                    directionTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos, _currentTile.Ypos - 32);
+                    cornerTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos - 32, _currentTile.Ypos - 32);
 
-                    if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
+                    if (directionTile != null && cornerTile != null && this._previousTile != directionTile && _legalMovmentTiles.Contains(directionTile.TextureType) && cornerTile.TextureType.Equals("RoofTownHall_corner"))
+                    {
+                        _directionFacing = EngineConstants.Up;
+                    }
+                    else if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
                     {
                         _movingDirection = MoveDirection.Right;
                         this._directionFacing = EngineConstants.Right;
@@ -116,8 +130,14 @@ namespace ZombieTD
                 if (_directionFacing == EngineConstants.Down)
                 {
                     workingTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos, _currentTile.Ypos + 32);
+                    directionTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos + 32, _currentTile.Ypos);
+                    cornerTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos + 32, _currentTile.Ypos - 32);
 
-                    if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
+                    if (directionTile != null && cornerTile != null && this._previousTile != directionTile && _legalMovmentTiles.Contains(directionTile.TextureType) && cornerTile.TextureType.Equals("RoofTownHall_corner"))
+                    {
+                        _directionFacing = EngineConstants.Right;
+                    }
+                    else if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
                     {
                         _movingDirection = MoveDirection.Down;
                         this._directionFacing = EngineConstants.Down;
@@ -134,8 +154,14 @@ namespace ZombieTD
                 if (_directionFacing == EngineConstants.Left)
                 {
                     workingTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos - 32, _currentTile.Ypos);
+                    directionTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos, _currentTile.Ypos + 32);
+                    cornerTile = _lineOfSiteMap.GetTileByXY(_currentTile.Xpos + 32, _currentTile.Ypos + 32);
 
-                    if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
+                    if (directionTile != null && cornerTile != null && this._previousTile != directionTile && _legalMovmentTiles.Contains(directionTile.TextureType) && cornerTile.TextureType.Equals("RoofTownHall_corner"))
+                    {
+                        _directionFacing = EngineConstants.Down;
+                    }
+                    else if (workingTile != null && this._previousTile != workingTile && _legalMovmentTiles.Contains(workingTile.TextureType))
                     {
                         _movingDirection = MoveDirection.Left;
                         this._directionFacing = EngineConstants.Left;
@@ -210,7 +236,7 @@ namespace ZombieTD
         {
             base.ChooseAction();
 
-            if (IsPlayerNextToMe() && (_targetCharacter.GetTile().Equals("Building_roof_center") || _targetCharacter.GetTile().Equals("Building_roof_corner") || _targetCharacter.GetTile().Equals("Building_Roof_Side")))
+            if (IsPlayerNextToMe() && (_targetCharacter.GetTile().Equals("Building_roof_center") || _targetCharacter.GetTile().Equals("Building_roof_corner") || _targetCharacter.GetTile().Equals("Building_Roof_Side") || _targetCharacter.GetTile().Equals("RoofTownHall_corner") || _targetCharacter.GetTile().Equals("TownhallRoof_Side")))
             {
                 _currentAction = CurrentAction.Attack;
             }
