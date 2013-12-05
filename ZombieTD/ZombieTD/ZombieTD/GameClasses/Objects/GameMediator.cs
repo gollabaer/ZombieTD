@@ -28,6 +28,7 @@ namespace ZombieTD
         private Map _map;
         private List<IGameElement> _gameElements = new List<IGameElement>();
         private List<IGameElement> _gamePitElements = new List<IGameElement>();
+        private List<IGameElement> _gameProjectileElements = new List<IGameElement>();
 
         private ISpawnPool _goodGuySpawnPool;
         private ISpawnPool _badGuySpawnPool;
@@ -131,6 +132,9 @@ namespace ZombieTD
            //Draw each of the IGameElement in the game
             foreach (IGameElement element in _gameElements)
                 element.Draw(_spriteBatch);
+
+            foreach (IGameElement element in _gameProjectileElements)
+                element.Draw(_spriteBatch);
             
             
 
@@ -166,7 +170,7 @@ namespace ZombieTD
                 //Remove all dead characters
                 _gameElements.RemoveAll(x => x.GetDeadFlag());
                 _gamePitElements.RemoveAll(x => x.GetDeadFlag());
-
+                _gameProjectileElements.RemoveAll(x => x.GetDeadFlag());
                 
 #if DEBUG
                 //Game Characters
@@ -189,6 +193,10 @@ namespace ZombieTD
                     element.TakeTurn(this);
                 }
 
+                foreach (IGameElement element in _gameProjectileElements)
+                {
+                    element.TakeTurn(this);
+                }
                 //Prevent Exception
                 if (numberofTicks == ulong.MaxValue)
                     numberofTicks = 0;
@@ -227,6 +235,10 @@ namespace ZombieTD
             if (element is IPit)
             {
                 this._gamePitElements.Add(element);
+            }
+            else if (element is IProjectile)
+            {
+                _gameProjectileElements.Add(element);
             }
             else
             {

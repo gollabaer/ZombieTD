@@ -38,7 +38,7 @@ namespace ZombieTD
         public Tile _targetTile;
         public Tile _targetMoveToTile;
         public List<ICharacter> _targetCharacterList;
-
+        private Rectangle _drawRectangle;
 
         protected List<Tile> _nextToTiles;
         private int upperXPosition, upperYPosition, lowerXPosition, lowerYPosition;
@@ -52,6 +52,7 @@ namespace ZombieTD
             this._yPos = y;
             this._currentAction = CurrentAction.None;
             this._movingDirection = MoveDirection.None;
+            _drawRectangle = new Rectangle(0, 0, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight);
         }
 
         protected Character()
@@ -207,7 +208,7 @@ namespace ZombieTD
             this._currentTile = tile;
         }
 
-        public void RegisterWithMediator(IMediator mediator, IGameElement element)
+        public virtual void RegisterWithMediator(IMediator mediator, IGameElement element)
         {
             _mediator = mediator;
             mediator.RegisterWithMediator(mediator, this);    
@@ -298,16 +299,20 @@ namespace ZombieTD
                 _texture.update();
 
             #endregion
-
+            
 
             int dy = EngineConstants.SmallTextureHeight / 2;
             int dx = EngineConstants.SmallTextureWidth / 2;
 
+            _drawRectangle.X = _xPos + dx;
+            _drawRectangle.Y = _yPos + dy;
+
             if (_texture != null)
             {
+                if(!(this is Projectile))
                 _texture.setRotation(this._directionFacing);
 
-                spritebatch.Draw(_texture.GetTexture(), new Rectangle(_xPos + dx, _yPos + dy, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight),
+                spritebatch.Draw(_texture.GetTexture(), _drawRectangle,
                     _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx, dy), SpriteEffects.None, 0);
             }
         }

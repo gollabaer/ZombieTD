@@ -169,7 +169,7 @@ namespace ZombieTD
         public const int Priest_Health = 3;
         public const int Priest_AttackDamageMelee = 5;
         public const int Priest_AttackDamageRanged = 5;
-        public const int Priest_AttackRange = 2;
+        public const int Priest_AttackRange = 3;
         public const int Priest_Defense = 2;
         public const int Priest_Speed = 2;
         public const int Priest_NumberOfFramesBeforeMove = 2;
@@ -274,50 +274,62 @@ namespace ZombieTD
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Projectile]
         RoadOutside,
+        [Projectile]
         [Sheriff]
         [FlyingZombie]
         [Priest]
         Building_roof_center,
+        [Projectile]
         [Sheriff]
         [FlyingZombie]
         [Priest]
         Building_roof_corner,
+        [Projectile]
         [Sheriff]
         [FlyingZombie]
         [Priest]
         Building_Roof_Side,
+        [Projectile]
         [Sheriff]
         [FlyingZombie]
         [Priest]
         Grass,
+        [Projectile]
         [ZombieDog]
         [Zombie]
         [Sheriff]
         [FlyingZombie]
         [Priest]
         Path_noRock,
+        [Projectile]
         [ZombieDog]
         [Zombie]
         [Sheriff]
         [FlyingZombie]
         [Priest]
         Path_withRock,
+        [Projectile]
         [ZombieDog]
         [Zombie]
         [FlyingZombie]
         [Sheriff]
         [Priest]
         RoadMiddle,
+        [Projectile]
         [Sheriff]
         [FlyingZombie]
         RoofTownHall_corner,
+        [Projectile]
         [Sheriff]
         [FlyingZombie]
         TownHallRoof_Middle,
+        [Projectile]
         [Sheriff]
         [FlyingZombie]
         TownhallRoof_Side,
+        [Projectile]
         [FlyingZombie]
         Tree,
         Error
@@ -331,7 +343,8 @@ namespace ZombieTD
         FlyingZombie,
         Priest,
         RedNeck,
-        Sheriff
+        Sheriff,
+        Projectile1
     }
 
     public enum CharacterType
@@ -390,11 +403,14 @@ namespace ZombieTD
         [EnemyWaveGenerator]
         [Car]
         [Priest]
+        [Projectile]
         Zombie,
         [EnemyWaveGenerator]
         [Car]
         [Priest]
+        [Projectile]
         ZombieDog,
+        [Projectile]
         [EnemyWaveGenerator]
         [Priest]
         FlyingZombie,
@@ -415,7 +431,8 @@ namespace ZombieTD
         [ZombieDog]
         [Zombie]
         Car,
-        Pit
+        Pit,
+        Projectile
     }
 
     public enum EffectTextureType

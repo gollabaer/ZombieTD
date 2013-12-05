@@ -34,8 +34,7 @@ namespace ZombieTD
         public override void TakeTurn(IMediator mediator)
         {
             base.TakeTurn(mediator);
-            //
-           // mediator.GetMap(this);
+            
 
         
         }
@@ -62,9 +61,27 @@ namespace ZombieTD
 
         protected override void RangeAttack()
         {
-           // throw new NotImplementedException();
+            base.Attack();
 
-            int i = 0;
+            if (GameMediator.numberofTicks % 60 == 0)
+            {
+                if (_targetCharacter.GetDeadFlag())
+                {
+                    _currentAction = CurrentAction.None;
+                    _targetCharacter = null;
+                    return;
+                }
+                float distance = Math.Abs(_targetCharacter.GetX() - GetX()) + Math.Abs(_targetCharacter.GetY() - GetY());
+                if (distance > _attackRange * 32 || distance <34 )
+                {
+                    _currentAction = CurrentAction.None;
+                    _targetCharacter = null;
+                    return;
+                }
+                Projectile p = new Projectile(_targetCharacter, _xPos, _yPos, _mediator);
+                p.RegisterWithMediator(_mediator, p);
+            }
+           
         }
 
         protected override void Move()
@@ -201,7 +218,7 @@ namespace ZombieTD
             }
             else
             {
-                if (this._xPos != _startPositionVector.X && this._startPositionVector.Y != this._yPos)
+                if (this._xPos != _startPositionVector.X || this._startPositionVector.Y != this._yPos)
                 {
                     _targetPosition = _startPositionVector;
                     _currentAction = CurrentAction.Move;
@@ -222,7 +239,8 @@ namespace ZombieTD
                     {
                         foreach (ICharacter character in tile.GetCharactersOnTile())
                         {
-                            int distance = Math.Abs(character.GetX() - _xPos) + Math.Abs(character.GetY() - _yPos);
+                            int distance = Math.Abs(character.GetX() - (int) _startPositionVector.X) +
+                                                Math.Abs(character.GetY() - (int)_startPositionVector.Y);
                             if (_legalAttackTiles.Contains(character.getSpawnType())
                                 && distance < EngineConstants.Priest_AttackRange * 32 + _movmentRange)
                             {
@@ -237,7 +255,6 @@ namespace ZombieTD
             }
             return false;
         }
-
 
         protected override bool IsPlayerNearMe()
         {
