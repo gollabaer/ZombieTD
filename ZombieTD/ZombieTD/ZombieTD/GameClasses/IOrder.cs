@@ -7,7 +7,7 @@ namespace ZombieTD
 {
     public interface IOrder
     {
-        SpawnType Type {get; set;}
+        SpawnType? Type {get; set;}
         int X { get; set; }
         int Y { get; set; }
     }

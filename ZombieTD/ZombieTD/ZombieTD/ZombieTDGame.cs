@@ -17,28 +17,34 @@ namespace ZombieTD
     /// </summary>
     public class ZombieTDGame : Microsoft.Xna.Framework.Game
     {
+        //Graphics
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        IMediator mediator;
-        Random rnd = new Random();
-        Tuple<int, int> _mouseXY;
 
-        //FPS
+        //Game Mediator
+        IMediator mediator;
+
+        //Random Generator
+        Random rnd = new Random();
+
+        //FPS Setup
         SpriteFont _spr_font;
         int _total_frames = 0;
         float _elapsed_time = 0.0f;
         int _fps = 0;
 
-        //Mouse Input 
+        //Used to gather mouse input
         MouseInputActionDirector inputDirector;
+        //Used to hold mouse position
+        Tuple<Vector2, SpawnType?> _mouseInputs;
        
         public ZombieTDGame()
         {
+            //Initialize Graphics
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferWidth = EngineConstants.ScreenWidth;
             graphics.PreferredBackBufferHeight = EngineConstants.ScreenHeight;
-
 
             //Disable Frame Rate
             if (EngineConstants.DisableFrameRate)
@@ -48,10 +54,11 @@ namespace ZombieTD
                 graphics.ApplyChanges();
             }
 
+            //Start Loggin
             if(EngineConstants.IsLogging)
                 Logger.StartLogger();
 
-            //Settings
+            //Mouse Settings
             IsMouseVisible = true;
         }
 
@@ -63,13 +70,13 @@ namespace ZombieTD
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             //Create an instance of our mediator class
             mediator = new GameMediator();
+
+            //Creat an instance of our Mouse Input Director
             inputDirector = new MouseInputActionDirector(mediator);
+
             base.Initialize();
-            
         }
 
         /// <summary>
@@ -78,13 +85,13 @@ namespace ZombieTD
         /// </summary>
         protected override void LoadContent()
         {
+            //Load Font for FPS, MouseXY, And Ticks
             _spr_font = Content.Load<SpriteFont>("GameEngine"); 
-
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            //The mediator loads all of its childrens content
             mediator.LoadContent(Content, spriteBatch);
         }
 
@@ -104,8 +111,9 @@ namespace ZombieTD
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            //Used to calculate FPS
             _elapsed_time += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
- 
+
             // 1 Second has passed
             if (_elapsed_time >= 1000.0f)
             {
@@ -114,21 +122,19 @@ namespace ZombieTD
                 _elapsed_time = 0;
             }
 
-
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            //Mouse Input Method,  returns mouse xy
-            _mouseXY = inputDirector.ProcessInput(Mouse.GetState());
+            //Get user Input
+            _mouseInputs = inputDirector.ProcessInput(Mouse.GetState());
 
-            mediator.Tick(_mouseXY);
-           
+            //Update the mediator and pass in the mouse xy and selected spawn type
+            mediator.Tick(_mouseInputs);
+
             base.Update(gameTime);
            
         }
-
-     
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -151,7 +157,7 @@ namespace ZombieTD
                 spriteBatch.DrawString(_spr_font, string.Format("Ticks={0}", GameMediator.numberofTicks),
                     new Vector2(EngineConstants.TicksX, EngineConstants.TicksY), Color.White);
             if (EngineConstants.ShowMouseXY)
-                spriteBatch.DrawString(_spr_font, string.Format("(X:{0}, Y:{1})", _mouseXY.Item1, _mouseXY.Item2),
+                spriteBatch.DrawString(_spr_font, string.Format("(X:{0}, Y:{1})", (int)_mouseInputs.Item1.X, (int)_mouseInputs.Item1.Y),
                     new Vector2(EngineConstants.MouseX, EngineConstants.MouseY), Color.White);
 
 

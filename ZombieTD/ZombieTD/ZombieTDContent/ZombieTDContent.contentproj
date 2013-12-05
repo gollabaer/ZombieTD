@@ -320,6 +320,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Images\Effects\CharacterSelection.png">
+      <Name>CharacterSelection</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Images\Character\Projectile1.png">
       <Name>Projectile1</Name>
       <Importer>TextureImporter</Importer>

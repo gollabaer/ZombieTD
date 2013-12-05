@@ -438,7 +438,8 @@ namespace ZombieTD
     public enum EffectTextureType
     {
         Fog,
-        SelectTile
+        SelectTile,
+        CharacterSelection
     }
 
     public enum MenuTextureType

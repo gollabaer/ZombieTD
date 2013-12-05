@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework;
 
 namespace ZombieTD
 {
@@ -40,9 +41,10 @@ namespace ZombieTD
         private EnemyWaveGenerator _waveGenerator;
         private IEffect _fogEffect;
         private IEffect _tileSelectionEffect;
+        private IEffect _characterSelectionEffect;
         private ISound _bgMusic;
         public static ulong numberofTicks = 0;
-        public static Tuple<int, int> _mouseXY;
+        public static Tuple<Vector2, SpawnType?> _mouseInputs;
         public static bool isRunning;
         #endregion
 
@@ -60,6 +62,7 @@ namespace ZombieTD
             _score = new Score(this);
             _fogEffect = new FogEffect2();
             _tileSelectionEffect = new TileSelectionEffect();
+            _characterSelectionEffect = new CharacterSelectionEffect();
             GameMediator.isRunning = true;
             #endregion
         }
@@ -79,6 +82,7 @@ namespace ZombieTD
                 //Load The content for other game elements from the asset managers
                 _fogEffect.LoadContent(this);
                 _tileSelectionEffect.LoadContent(this);
+                _characterSelectionEffect.LoadContent(this);
                 _menu.LoadContent(content);
                 _score.LoadContent(content);
 
@@ -136,24 +140,23 @@ namespace ZombieTD
             foreach (IGameElement element in _gameProjectileElements)
                 element.Draw(_spriteBatch);
             
-            
-
             //Draw any Effects
             _tileSelectionEffect.Draw(_spriteBatch);
             _fogEffect.Draw(_spriteBatch);
 
             //Draw The Menu
             _menu.Draw(_spriteBatch);
+            _characterSelectionEffect.Draw(_spriteBatch);
             _score.Draw(_spriteBatch);
         }
 
-        public void Tick(Tuple<int,int> mouseXY)
+        public void Tick(Tuple<Vector2,SpawnType?> mouseInputs)
         {
             //The Game Continues
             if (GetTownhallHealth() > 0)
             {
                 //Set mouse xy
-                _mouseXY = mouseXY;
+                _mouseInputs = mouseInputs;
 
                 //Take Turn
                 _waveGenerator.IssueOrders();
@@ -166,6 +169,7 @@ namespace ZombieTD
                 //UpdateEffects
                 _tileSelectionEffect.update();
                 _fogEffect.update();
+                _characterSelectionEffect.update();
 
                 //Remove all dead characters
                 _gameElements.RemoveAll(x => x.GetDeadFlag());

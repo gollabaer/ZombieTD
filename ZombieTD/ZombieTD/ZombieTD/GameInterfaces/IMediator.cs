@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework;
 
 namespace ZombieTD
 {
@@ -12,7 +13,7 @@ namespace ZombieTD
 
     public interface IMediator: IZombie , IZombieDog, IFlyingZombie, IRedneck, IPriest, ISheriff,  ICar, IHay, IPit, IAssetManager
     {
-        void Tick(Tuple<int,int> mouseXY);
+        void Tick(Tuple<Vector2,SpawnType?> mouseXY);
         void Draw(SpriteBatch spriteBatch);
         Map GetMapByLineOfSight(ICharacter element);
         ICharacter GetCharacter(int x, int y);
