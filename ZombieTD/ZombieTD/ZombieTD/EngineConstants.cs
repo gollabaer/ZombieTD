@@ -318,6 +318,13 @@ namespace ZombieTD
         [Priest]
         RoadMiddle,
         [Projectile]
+        [ZombieDog]
+        [Zombie]
+        [Sheriff]
+        [FlyingZombie]
+        [Priest]
+        Path_Corner,
+        [Projectile]
         [Sheriff]
         [FlyingZombie]
         RoofTownHall_corner,
