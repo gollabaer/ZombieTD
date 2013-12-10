@@ -141,7 +141,7 @@ namespace ZombieTD
                         workingTile.AddElementToTile(this);
                     }
 
-                
+
                 _currentAction = CurrentAction.None;
                
             }
@@ -202,30 +202,34 @@ namespace ZombieTD
         {
             base.ChooseAction();
 
-            if (IsPlayerNextToMe())
+            if (GameMediator.numberofTicks % 30 == 0)
             {
-                  _currentAction = CurrentAction.Attack;
-            }
+                if (IsPlayerNextToMe())
+                {
+                    _currentAction = CurrentAction.Attack;
+                }
 
-            else if (IsPlayerNearMe())
-            {
+                else if (IsPlayerNearMe())
+                {
 
                    _currentAction = CurrentAction.Range;
-            }
-            else if (isPlayerInrange())
-            {
-                  _currentAction = CurrentAction.Move;
-            }
-            else
-            {
-                if (this._xPos != _startPositionVector.X || this._startPositionVector.Y != this._yPos)
-                {
-                    _targetPosition = _startPositionVector;
-                    _currentAction = CurrentAction.Move;
-
                 }
-                else {
-                    _texture.setFrame(0);
+                else if (isPlayerInrange())
+                {
+                    _currentAction = CurrentAction.Move;
+                }
+                else
+                {
+                    if (this._xPos != _startPositionVector.X || this._startPositionVector.Y != this._yPos)
+                    {
+                        _targetPosition = _startPositionVector;
+                        _currentAction = CurrentAction.Move;
+
+                    }
+                    else
+                    {
+                        _texture.setFrame(0);
+                    }
                 }
             }
         }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 
 
 namespace ZombieTD
@@ -9,10 +10,13 @@ namespace ZombieTD
     class GameElementFactory
     {
         private IMediator _mediator;
+        IEnumerable<EffectTextureType> _bloodStains;
+        Random rnd = new Random();
 
         public GameElementFactory(IMediator mediator)
         {
             _mediator = mediator;
+            _bloodStains = FilterEnumWithAttributeOf<EffectTextureType, BloodStain>();
         }
 
         public IGameElement MakeZombie(int x, int y)
@@ -107,5 +111,41 @@ namespace ZombieTD
             pit._spawnType = SpawnType.Pit;
             return pit as IGameElement;
         }
+
+        public void MakeDeathBlood(int x, int y)
+        {
+            DeathBlood blood = new DeathBlood();
+            blood.X = x;
+            blood.Y = y;
+            blood.LoadContent(_mediator);
+        }
+
+        public void MakeBloodStain(int x, int y)
+        {
+            BloodStain blood = new BloodStain();
+            int r = rnd.Next(_bloodStains.Count<EffectTextureType>());
+            blood._texture = _mediator.GetAsset<EffectTextureType, ITexture>(_bloodStains.ElementAt(r));
+            blood.X = x;
+            blood.Y = y;
+            blood.LoadContent(_mediator);
+        }
+
+        
+          //http://tiredblogger.wordpress.com/2009/07/09/filtering-an-enum-by-attribute/
+        public static IEnumerable<TEnum> FilterEnumWithAttributeOf<TEnum, TAttribute>()
+            where TEnum : struct
+            where TAttribute : class
+        {
+            foreach (var field in
+                typeof(TEnum).GetFields(BindingFlags.GetField |
+                                        BindingFlags.Public |
+                                        BindingFlags.Static))
+            {
+
+                if (field.GetCustomAttributes(typeof(TAttribute), false).Length > 0)
+                    yield return (TEnum)field.GetValue(null);
+            }
+        }
+
     }
 }

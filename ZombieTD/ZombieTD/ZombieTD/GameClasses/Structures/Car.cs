@@ -9,6 +9,8 @@ namespace ZombieTD
 {
     class Car : Character,  ICar
     {
+        ISound fireSound;
+
         public Car(int x, int y)
             : base(x,y)
         {
@@ -48,6 +50,11 @@ namespace ZombieTD
             }
         }
 
+        public override void RegisterWithMediator(IMediator mediator, IGameElement element)
+        {
+            base.RegisterWithMediator(mediator, element);
+            fireSound = _mediator.GetAsset<SoundType, ISound>(SoundType.Fire);
+        }
 
         protected override bool IsPlayerNextToMe()
         {
@@ -112,11 +119,36 @@ namespace ZombieTD
 
         protected override void ChooseAction()
         {
-            base.ChooseAction();
-
-            if (this.IsPlayerNextToMe())
+            if (GameMediator.numberofTicks % 60 == 0)
             {
-                _currentAction = CurrentAction.Attack;
+                fireSound.Play();
+                base.ChooseAction();
+
+                if (this.IsPlayerNextToMe())
+                {
+                    _currentAction = CurrentAction.Attack;
+                    fireSound.Play();
+                }
+            }
+        }
+
+        public override bool TakeDamage(int damage)
+        {
+
+            this._health -= damage;
+
+            if (this._health <= 0)
+            {
+                ClearTargets();
+                _currentTile.RemoveElement(this);
+                _amIDead = true;
+                _mediator.ReportDeath(this);
+                fireSound.Stop();
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

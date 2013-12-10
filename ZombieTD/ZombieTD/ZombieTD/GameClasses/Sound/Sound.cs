@@ -43,5 +43,12 @@ namespace ZombieTD
         {
             throw new NotImplementedException();
         }
+
+
+        public void Stop()
+        {
+            if (soundEffect.State == SoundState.Playing)
+                soundEffect.Stop();
+        }
     }
 }

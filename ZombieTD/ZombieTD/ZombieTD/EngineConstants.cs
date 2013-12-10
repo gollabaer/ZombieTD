@@ -168,7 +168,7 @@ namespace ZombieTD
         public const int NumberOfFramsBeforeSound = 1000;
         #endregion
 
-        #region Map
+        #region Map 
         public static int MapEdgeX = 1248;
         public static int MapEdgeY = 672;
         #endregion

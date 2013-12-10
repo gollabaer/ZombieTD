@@ -43,7 +43,7 @@ namespace ZombieTD
         protected List<Tile> _nextToTiles;
         private int upperXPosition, upperYPosition, lowerXPosition, lowerYPosition;
         protected bool _isDoingAction;
-        private bool _amIDead = false;
+        protected bool _amIDead = false;
         protected float _preAttackFace;
 
         protected Character(int x, int y)
@@ -296,7 +296,7 @@ namespace ZombieTD
                 _texture.update();
 
             #endregion
-            
+
 
             int dy = EngineConstants.SmallTextureHeight / 2;
             int dx = EngineConstants.SmallTextureWidth / 2;
@@ -333,7 +333,7 @@ namespace ZombieTD
             }
         }
 
-        private void ClearTargets()
+        protected void ClearTargets()
         {
             _targetCharacter = null;
             _targetCharacterList = null;
