@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace ZombieTD
 {
-    public abstract class EffectBase: IEffect
+    public abstract class EffectBase: Attribute, IEffect
     {
         protected ITexture _texture;
 

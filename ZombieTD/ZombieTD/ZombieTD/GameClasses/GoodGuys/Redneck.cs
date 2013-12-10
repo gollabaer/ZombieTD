@@ -23,6 +23,8 @@ namespace ZombieTD
             int i = 0;
         }
 
+        public Redneck() { }
+
         public override void TakeTurn(IMediator mediator)
         {
             base.TakeTurn(mediator);

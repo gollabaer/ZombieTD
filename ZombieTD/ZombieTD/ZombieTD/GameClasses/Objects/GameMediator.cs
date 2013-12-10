@@ -46,6 +46,7 @@ namespace ZombieTD
         public static ulong numberofTicks = 0;
         public static Tuple<Vector2, SpawnType?> _mouseInputs;
         public static bool isRunning;
+        public static GameState _gameState;
         #endregion
 
         public GameMediator()
