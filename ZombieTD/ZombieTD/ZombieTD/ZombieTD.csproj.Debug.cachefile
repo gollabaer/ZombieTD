@@ -10,6 +10,7 @@ Content\SoundFX\Zombie5.xnb
 Content\SoundFX\Chainsaw.xnb
 Content\SoundFX\Error.xnb
 Content\SoundFX\BaseAttack.xnb
+Content\SoundFX\DeathMale.xnb
 Content\Images\MapTile\Building_roof_center.xnb
 Content\Images\MapTile\Building_roof_corner.xnb
 Content\Images\MapTile\Building_Roof_Side.xnb
@@ -44,10 +45,6 @@ Content\Images\Effects\SelectTile.xnb
 Content\Images\Effects\CharacterSelection.xnb
 Content\Images\Character\Projectile1.xnb
 Content\Images\MapTile\Path_Corner.xnb
-Content\GameEngine.xnb
-Content\Score.xnb
-Content\Music\TBG.xnb
-Content\SoundFX\DeathMale.xnb
 Content\Images\Effects\BloodStain1.xnb
 Content\Images\Effects\BloodStain2.xnb
 Content\Images\Effects\BloodStain3.xnb
@@ -59,7 +56,11 @@ Content\Images\Effects\DeathBloodShort.xnb
 Content\Images\Menus\GameOver.xnb
 Content\Images\Menus\HelpMenu.xnb
 Content\Images\Menus\SplashScreen.xnb
+Content\GameEngine.xnb
+Content\Score.xnb
 Content\GameOver.xnb
+Content\Music\TBG.xnb
+Content\Images\Character\Projectile2.xnb
 Content\Music\TBG.wma
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav

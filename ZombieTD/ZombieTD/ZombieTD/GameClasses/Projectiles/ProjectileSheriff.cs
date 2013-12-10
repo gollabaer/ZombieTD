@@ -7,12 +7,12 @@ using Microsoft.Xna.Framework;
 
 namespace ZombieTD
 {
-    public class Projectile : Character, IProjectile
+    class ProjectileSheriff : Character, IProjectile
     {
-        Vector2 _movingDirectionVec;
+         Vector2 _movingDirectionVec;
         float _traveleddistance;
 
-        public Projectile(ICharacter 
+        public ProjectileSheriff(ICharacter 
             target, int x, int y, IMediator mediator)
             :base(x,y)
         {
@@ -37,7 +37,7 @@ namespace ZombieTD
             _legalAttackTiles = FilterEnumWithAttributeOf<SpawnType, Projectile>();
         }
 
-        public Projectile() { }
+        public ProjectileSheriff() { }
 
         public override void TakeTurn(IMediator mediator)
         {
@@ -59,7 +59,7 @@ namespace ZombieTD
         public override void RegisterWithMediator(IMediator mediator, IGameElement element)
         {
             _mediator = mediator;
-            _texture = mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Projectile2);
+            _texture = mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Projectile1);
             _mediator.RegisterWithMediator(mediator, this);
 
             float alph = (float)Math.Atan2(_movingDirectionVec.Y,_movingDirectionVec.X) + (float)Math.PI / 2.0f;
@@ -103,7 +103,7 @@ namespace ZombieTD
 
                 _traveleddistance += Math.Abs((int)_movingDirectionVec.X) + Math.Abs((int)_movingDirectionVec.Y);
 
-                if (_traveleddistance > EngineConstants.Priest_AttackRange * 32)
+                if (_traveleddistance > EngineConstants.Sheriff_AttackRange * 32)
                 {
                     TakeDamage(_health);
                 }
@@ -125,5 +125,6 @@ namespace ZombieTD
             else
                 _currentAction = CurrentAction.Move;
         }
+
     }
 }

@@ -129,6 +129,7 @@
     <Compile Include="GameClasses\Objects\IMenu.cs" />
     <Compile Include="GameClasses\Objects\MenuBase.cs" />
     <Compile Include="GameClasses\Objects\TextureMap.cs" />
+    <Compile Include="GameClasses\Projectiles\ProjectileSheriff.cs" />
     <Compile Include="GameClasses\SpawnPoolBase.cs" />
     <Compile Include="GameInterfaces\ITexture.cs" />
     <Compile Include="GameClasses\AssetManagers\SoundAssetManager.cs" />

@@ -393,7 +393,8 @@ namespace ZombieTD
         Priest,
         RedNeck,
         Sheriff,
-        Projectile1
+        Projectile1,
+        Projectile2
     }
 
     //Used for Loading/Getting Textures
@@ -412,15 +413,18 @@ namespace ZombieTD
         [Car]
         [Priest]
         [Projectile]
+        [Sheriff]
         Zombie,
         [EnemyWaveGenerator]
         [Car]
         [Priest]
         [Projectile]
+        [Sheriff]
         ZombieDog,
         [Projectile]
         [EnemyWaveGenerator]
         [Priest]
+        [Sheriff]
         FlyingZombie,
         [ZombieDog]
         [Zombie]
