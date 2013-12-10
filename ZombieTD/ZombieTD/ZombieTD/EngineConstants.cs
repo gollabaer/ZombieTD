@@ -224,8 +224,8 @@ namespace ZombieTD
         #region Priest
         public const int Priest_Health = 3;
         public const int Priest_AttackDamageMelee = 5;
-        public const int Priest_AttackDamageRanged = 5;
-        public const int Priest_AttackRange = 5;
+        public const int Priest_AttackDamageRanged = 3;
+        public const int Priest_AttackRange = 3;
         public const int Priest_Defense = 2;
         public const int Priest_Speed = 2;
         public const int Priest_NumberOfFramesBeforeMove = 2;
