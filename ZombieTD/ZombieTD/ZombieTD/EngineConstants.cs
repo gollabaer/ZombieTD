@@ -335,6 +335,17 @@ namespace ZombieTD
         [FlyingZombie]
         [Priest]
         Building_Roof_Side,
+        [FlyingZombie]
+        Building_Roof_Air,
+        [FlyingZombie]
+        Building_Roof_Airduct,
+        [Projectile]
+        [ZombieDog]
+        [Zombie]
+        [Sheriff]
+        [FlyingZombie]
+        [Priest]
+        Path_Bones,
         [Projectile]
         [Sheriff]
         [FlyingZombie]
