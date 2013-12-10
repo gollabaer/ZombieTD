@@ -60,6 +60,9 @@ Content\Images\Menus\GameOver.xnb
 Content\Images\Menus\HelpMenu.xnb
 Content\Images\Menus\SplashScreen.xnb
 Content\GameOver.xnb
+Content\Images\MapTile\Building_Roof_Air.xnb
+Content\Images\MapTile\Building_Roof_Airduct.xnb
+Content\Images\MapTile\Path_Bones.xnb
 Content\Music\TBG.wma
 Content\SoundFX\Fire.wav
 Content\SoundFX\Gunshot.wav
