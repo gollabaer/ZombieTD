@@ -18,6 +18,7 @@ namespace ZombieTD
         int _numberOfTownsFolk = 0;
         int _numberOfZombies = 0;
         int _finalScore = 0;
+        int _money = EngineConstants.StartMoney;
         SpriteFont _spr_font_gameRunning;
         SpriteFont _spr_font_gameOver;
         Color _fontColor;
@@ -141,6 +142,19 @@ namespace ZombieTD
 
             spriteBatch.DrawString(_spr_font_gameOver, string.Format("Total Game Score = {0}", _finalScore),
             new Vector2(EngineConstants.GO_FinalScore_X, EngineConstants.GO_FinalScore_Y), _fontColor);
+        }
+
+
+        public void addMoney(int amount)
+        {
+
+        }
+
+
+        public void subtractMoney(int amount)
+        {
+
+
         }
     }
 }

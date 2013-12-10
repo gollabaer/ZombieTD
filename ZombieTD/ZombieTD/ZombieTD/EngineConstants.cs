@@ -295,7 +295,29 @@ namespace ZombieTD
         public static float Fog_AlphaIncrement = .005f;
         public static float Fog_ResetValue = .7f;
         public static int BloodStainOnScreen = 14400;
+
+     
         #endregion
+
+
+        //Money
+        public static int StartMoney = 100;
+
+        //Money You get from kill
+        public static int ZombieDeathPayout = 100;
+        public static int ZombieDogDeathPayout = 120;
+        public static int FlyingZombieDeathPayout = 125;
+
+        //Cost of money for unit
+        public static int RedneckCost = 100;
+        public static int SheriffCost = 100;
+        public static int PriestCost = 100;
+        public static int HayCost = 100;
+        public static int CarCost = 100;
+        public static int PitCost = 100;
+
+
+
     }
 
     //Used to track the state of the game

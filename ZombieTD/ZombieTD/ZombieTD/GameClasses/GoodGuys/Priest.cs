@@ -202,7 +202,7 @@ namespace ZombieTD
         {
             base.ChooseAction();
 
-            if (GameMediator.numberofTicks % 30 == 0)
+            if (GameMediator.numberofTicks % 10 == 0)
             {
                 if (IsPlayerNextToMe())
                 {
