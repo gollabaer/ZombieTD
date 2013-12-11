@@ -381,6 +381,25 @@ namespace ZombieTD
             if(!(element is IEffect))
                 _map.GetTileByXY(element.GetX(), element.GetY()).AddElementToTile(element);
         }
+
+        public int getMoney()
+        {
+            return _score.getMoney();
+        }
+
+        public void subtractMoney(int amount)
+        {
+            _score.subtractMoney(amount);
+        }
+
+
+
+
+
+
+
+
+
         #endregion
 
         #region Zombie Methods

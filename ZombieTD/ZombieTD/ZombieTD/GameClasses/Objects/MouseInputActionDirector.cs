@@ -108,46 +108,66 @@ namespace ZombieTD
 
             if (order != null)
             {
-                Tile tile = mediator.GetTileByXY(x, y);
+                int money = mediator.getMoney();
+                int cost = 0;
 
-                if (!tile.HasCharacters())
+                switch (order.Type)
                 {
-                    if (order.Type == SpawnType.Sheriff || order.Type == SpawnType.Priest)
-                    {
-                        if (tile.TextureType == MapTileType.Grass || tile.TextureType == MapTileType.Building_roof_center ||
-                            tile.TextureType == MapTileType.Building_roof_corner || tile.TextureType == MapTileType.Building_Roof_Side)
-                        {
-                            orderOkay = true;
-                        }
-                    }
-                    if (order.Type == SpawnType.RedNeck)
-                    {
-                        if (tile.TextureType == MapTileType.Grass)
-                        {
-                            orderOkay = true;
-                        }
-                    }
-                    else if (order.Type == SpawnType.Hay || order.Type == SpawnType.Car)
-                    {
-                        if (tile.TextureType == MapTileType.Path_noRock || tile.TextureType == MapTileType.Path_withRock ||
-                            tile.TextureType == MapTileType.RoadMiddle || tile.TextureType == MapTileType.RoadOutside || tile.TextureType == MapTileType.Path_Corner)
-                        {
-                            orderOkay = true;
-                        }
-                    }
-                    else if (order.Type == SpawnType.Pit)
-                    {
-                        if (tile.TextureType == MapTileType.Path_noRock || tile.TextureType == MapTileType.Path_withRock || tile.TextureType == MapTileType.Path_Corner)
-                        {
-                            orderOkay = true;
-                        }
-                    }
+                    case SpawnType.RedNeck: cost = EngineConstants.RedneckCost;  break;
+                    case SpawnType.Priest: cost = EngineConstants.PriestCost; break;
+                    case SpawnType.Sheriff: cost = EngineConstants.SheriffCost; break;
+                    case SpawnType.Hay: cost = EngineConstants.HayCost; break;
+                    case SpawnType.Pit: cost = EngineConstants.PitCost; break;
+                    case SpawnType.Car: cost = EngineConstants.CarCost; break;
+                }
 
-                    if (orderOkay)
+                if (money >= cost)
+                {
+                    Tile tile = mediator.GetTileByXY(x, y);
+
+                    if (!tile.HasCharacters())
                     {
-                        order.X = tile.Xpos;
-                        order.Y = tile.Ypos;
-                        mediator.AcceptOrder(order as IOrder, OrderFor.Player);
+                        if (order.Type == SpawnType.Sheriff || order.Type == SpawnType.Priest)
+                        {
+                            if (tile.TextureType == MapTileType.Grass || tile.TextureType == MapTileType.Building_roof_center ||
+                                tile.TextureType == MapTileType.Building_roof_corner || tile.TextureType == MapTileType.Building_Roof_Side)
+                            {
+                                orderOkay = true;
+                            }
+                        }
+                        if (order.Type == SpawnType.RedNeck)
+                        {
+                            if (tile.TextureType == MapTileType.Grass)
+                            {
+                                orderOkay = true;
+                            }
+                        }
+                        else if (order.Type == SpawnType.Hay || order.Type == SpawnType.Car)
+                        {
+                            if (tile.TextureType == MapTileType.Path_noRock || tile.TextureType == MapTileType.Path_withRock ||
+                                tile.TextureType == MapTileType.RoadMiddle || tile.TextureType == MapTileType.RoadOutside || tile.TextureType == MapTileType.Path_Corner)
+                            {
+                                orderOkay = true;
+                            }
+                        }
+                        else if (order.Type == SpawnType.Pit)
+                        {
+                            if (tile.TextureType == MapTileType.Path_noRock || tile.TextureType == MapTileType.Path_withRock || tile.TextureType == MapTileType.Path_Corner)
+                            {
+                                orderOkay = true;
+                            }
+                        }
+
+                        if (orderOkay)
+                        {
+                            order.X = tile.Xpos;
+                            order.Y = tile.Ypos;
+                            mediator.AcceptOrder(order as IOrder, OrderFor.Player);
+                        }
+                        else
+                        {
+                            mediator.GetAsset<SoundType, ISound>(SoundType.Error).Play();
+                        }
                     }
                     else
                     {
@@ -158,6 +178,9 @@ namespace ZombieTD
                 {
                     mediator.GetAsset<SoundType, ISound>(SoundType.Error).Play();
                 }
+
+                if (orderOkay)
+                    mediator.subtractMoney(cost);
             }
             else
             {
