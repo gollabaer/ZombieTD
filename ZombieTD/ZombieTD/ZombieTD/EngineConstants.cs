@@ -215,10 +215,10 @@ namespace ZombieTD
         public const int Redneck_AttackDamageRanged = 4;
         public const int Redneck_AttackRange = 6;
         public const int Redneck_Defense = 2;
-        public const int Redneck_Speed = 5;
-        public const int Redneck_NumberOfFramesBeforeMove = 5;
+        public const int Redneck_Speed = 4;
+        public const int Redneck_NumberOfFramesBeforeMove = 2;
         public const int Redneck_LineOfSite = 2;
-        public const int Redneck_MovmentRange = 4;
+        public const int Redneck_MovmentRange = 70;
         #endregion
 
         #region Priest
@@ -230,6 +230,7 @@ namespace ZombieTD
         public const int Priest_Speed = 2;
         public const int Priest_NumberOfFramesBeforeMove = 2;
         public const int Priest_LineOfSite = 2;
+        public const int Priest_MovmentRange = 70;
         #endregion
 
         #region Sheriff
@@ -301,7 +302,7 @@ namespace ZombieTD
 
 
         //Money
-        public static int StartMoney = 100;
+        public static int StartMoney = 100000;
 
         //Money You get from kill
         public static int ZombieDeathPayout = 100;
@@ -342,21 +343,25 @@ namespace ZombieTD
         [FlyingZombie]
         [Priest]
         [Projectile]
+        [Redneck]
         RoadOutside,
         [Projectile]
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Redneck]
         Building_roof_center,
         [Projectile]
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Redneck]
         Building_roof_corner,
         [Projectile]
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Redneck]
         Building_Roof_Side,
         [FlyingZombie]
         Building_Roof_Air,
@@ -368,11 +373,13 @@ namespace ZombieTD
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Redneck]
         Path_Bones,
         [Projectile]
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Redneck]
         Grass,
         [Projectile]
         [ZombieDog]
@@ -380,6 +387,7 @@ namespace ZombieTD
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Redneck]
         Path_noRock,
         [Projectile]
         [ZombieDog]
@@ -387,6 +395,7 @@ namespace ZombieTD
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Redneck]
         Path_withRock,
         [Projectile]
         [ZombieDog]
@@ -394,22 +403,21 @@ namespace ZombieTD
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Redneck]
         Path_Corner,
         [ZombieDog]
         [Zombie]
         [Sheriff]
         [FlyingZombie]
         [Priest]
+        [Redneck]
         RoadMiddle,
-        [Sheriff]
         [FlyingZombie]
         RoofTownHall_corner,
         [Projectile]
-        [Sheriff]
         [FlyingZombie]
         TownHallRoof_Middle,
         [Projectile]
-        [Sheriff]
         [FlyingZombie]
         TownhallRoof_Side,
         [Projectile]
@@ -448,12 +456,14 @@ namespace ZombieTD
         [Priest]
         [Projectile]
         [Sheriff]
+        [Redneck]
         Zombie,
         [EnemyWaveGenerator]
         [Car]
         [Priest]
         [Projectile]
         [Sheriff]
+        [Redneck]
         ZombieDog,
         [Projectile]
         [EnemyWaveGenerator]

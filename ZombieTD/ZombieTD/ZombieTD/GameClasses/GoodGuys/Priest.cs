@@ -24,7 +24,7 @@ namespace ZombieTD
             _defense = EngineConstants.Priest_Defense;
             _speed = EngineConstants.Priest_Speed;
             _lineOfSite = EngineConstants.Priest_LineOfSite;
-            _movmentRange = 70;
+            _movmentRange = EngineConstants.Priest_MovmentRange;
 
             //Set up a enum of tile types this character can walk on
             _legalMovmentTiles = FilterEnumWithAttributeOf<MapTileType, Priest>();

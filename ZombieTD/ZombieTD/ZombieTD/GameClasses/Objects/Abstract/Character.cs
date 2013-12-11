@@ -323,7 +323,7 @@ namespace ZombieTD
                     _lifeRectangleBack.Y = _yPos;
                     _lifeRectangleFront.X = _xPos;
                     _lifeRectangleFront.Y = _yPos;
-                    _lifeRectangleFront.Width = (int)((_health / _maxHealth) * _lifeRectangleBack.Width);
+                    _lifeRectangleFront.Width = (int)(((float)_health / (float)_maxHealth) * (float)_lifeRectangleBack.Width);
 
                     spritebatch.Draw(_lifebartexture.GetTexture(), _lifeRectangleBack, Color.Red);
                     spritebatch.Draw(_lifebartexture.GetTexture(), _lifeRectangleFront, Color.Green);
