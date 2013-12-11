@@ -147,14 +147,18 @@ namespace ZombieTD
 
         public void addMoney(int amount)
         {
-
+            _money += amount;
         }
 
 
         public void subtractMoney(int amount)
         {
+            _money -= amount;
+        }
 
-
+        public int getMoney()
+        {
+            return _money;
         }
     }
 }

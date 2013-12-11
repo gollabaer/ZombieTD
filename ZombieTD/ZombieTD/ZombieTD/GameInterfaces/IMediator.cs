@@ -27,5 +27,7 @@ namespace ZombieTD
         bool AttackCharacter(int damage, ICharacter target);
         void ReportDeath(IGameElement element);
         void StartMusic();
+        int getMoney();
+        void subtractMoney(int amount);
     }
 }
