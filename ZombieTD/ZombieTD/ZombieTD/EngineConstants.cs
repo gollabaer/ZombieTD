@@ -29,6 +29,8 @@ namespace ZombieTD
         public static bool DisableFrameRate = true;
         //Mouse XY Switch
         public static bool ShowMouseXY = true;
+        //Full Screen 
+        public static bool FullScreen = true;
         #endregion
 
         #region HUD Display Locations
@@ -320,6 +322,7 @@ namespace ZombieTD
 
         public static int MoneyX = 932;
         public static int MoneyY = 27;
+        
     }
 
     //Used to track the state of the game

@@ -48,6 +48,10 @@ namespace ZombieTD
             graphics.PreferredBackBufferWidth = EngineConstants.ScreenWidth;
             graphics.PreferredBackBufferHeight = EngineConstants.ScreenHeight;
 
+            //Full Screen 
+            graphics.IsFullScreen = EngineConstants.FullScreen;
+
+
             //Disable Frame Rate
             if (EngineConstants.DisableFrameRate)
             {
@@ -164,7 +168,7 @@ namespace ZombieTD
         {
             _total_frames++;
 
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
