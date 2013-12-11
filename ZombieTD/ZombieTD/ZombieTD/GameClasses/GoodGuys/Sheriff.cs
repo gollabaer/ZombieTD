@@ -7,6 +7,8 @@ namespace ZombieTD
 {
     public class Sheriff : Character, ISheriff
     {
+        ISound gunSound;
+
         public Sheriff(int x, int y)
             : base(x, y)
         {
@@ -40,6 +42,15 @@ namespace ZombieTD
 
 
         }
+
+
+        public override void RegisterWithMediator(IMediator mediator, IGameElement element)
+        {
+            base.RegisterWithMediator(mediator, element);
+            gunSound = _mediator.GetAsset<SoundType, ISound>(SoundType.Gunshot);
+        }
+
+
 
         public void FireGun(IMediator mediator, ICharacter character, ICharacter target)
         {
@@ -80,6 +91,9 @@ namespace ZombieTD
                     _targetCharacter = null;
                     return;
                 }
+
+                gunSound.Play();
+
                 ProjectileSheriff p = new ProjectileSheriff(_targetCharacter, _xPos, _yPos, _mediator);
                 p.RegisterWithMediator(_mediator, p);
             }

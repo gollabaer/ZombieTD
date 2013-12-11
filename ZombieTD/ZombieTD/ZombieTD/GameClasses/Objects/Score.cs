@@ -52,6 +52,10 @@ namespace ZombieTD
 
             spriteBatch.DrawString(_spr_font_gameRunning, string.Format("Survival Time = {0}", _stopWatch.Elapsed.ToString("mm\\:ss")),
             new Vector2(EngineConstants.SurvivalTime_X, EngineConstants.SurvivalTime_Y), Color.Black);
+
+            spriteBatch.DrawString(_spr_font_gameRunning, string.Format("Cash = {0}", _money),
+            new Vector2(EngineConstants.MoneyX, EngineConstants.MoneyY), Color.Black);
+
         }
 
         public override void LoadContent(ContentManager content)
@@ -142,6 +146,9 @@ namespace ZombieTD
 
             spriteBatch.DrawString(_spr_font_gameOver, string.Format("Total Game Score = {0}", _finalScore),
             new Vector2(EngineConstants.GO_FinalScore_X, EngineConstants.GO_FinalScore_Y), _fontColor);
+
+
+
         }
 
 

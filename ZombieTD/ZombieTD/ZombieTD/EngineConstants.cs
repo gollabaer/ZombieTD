@@ -317,7 +317,8 @@ namespace ZombieTD
         public static int PitCost = 100;
 
 
-
+        public static int MoneyX = 932;
+        public static int MoneyY = 27;
     }
 
     //Used to track the state of the game
