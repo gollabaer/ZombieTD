@@ -12,6 +12,7 @@ namespace ZombieTD
         public Hay(int x, int y)
             : base(x,y)
         {
+            _maxHealth = EngineConstants.Hay_Health;
             _health = EngineConstants.Hay_Health;
             _attackDamageMelee = EngineConstants.Hay_AttackDamageMelee;
             _attackDamageRanged = EngineConstants.Hay_AttackDamageRanged;

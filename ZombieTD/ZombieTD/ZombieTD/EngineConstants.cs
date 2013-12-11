@@ -535,7 +535,8 @@ namespace ZombieTD
         [BloodStain]
         BloodStain5,
         [BloodStain]
-        BloodStain6
+        BloodStain6,
+        lifebar
     }
 
     //Used to Load/Get Textures

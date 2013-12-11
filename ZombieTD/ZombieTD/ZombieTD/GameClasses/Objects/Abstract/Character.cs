@@ -12,8 +12,10 @@ namespace ZombieTD
     {
         protected IMediator _mediator;
         public ITexture _texture; //Change tto protected
+        public ITexture _lifebartexture;
         protected Map _lineOfSiteMap;
 
+        protected int _maxHealth;
         protected int _health;
         public int _attackDamageMelee;
         public int _attackDamageRanged;
@@ -39,6 +41,8 @@ namespace ZombieTD
         public Tile _targetMoveToTile;
         public List<ICharacter> _targetCharacterList;
         private Rectangle _drawRectangle;
+        private Rectangle _lifeRectangleBack;
+        private Rectangle _lifeRectangleFront;
 
         protected List<Tile> _nextToTiles;
         private int upperXPosition, upperYPosition, lowerXPosition, lowerYPosition;
@@ -53,6 +57,8 @@ namespace ZombieTD
             this._currentAction = CurrentAction.None;
             this._movingDirection = MoveDirection.None;
             _drawRectangle = new Rectangle(0, 0, EngineConstants.SmallTextureWidth, EngineConstants.SmallTextureHeight);
+            _lifeRectangleBack = new Rectangle(0, 0, EngineConstants.SmallTextureWidth, 6); // 6 is the lifebar texture height
+            _lifeRectangleFront = new Rectangle(0, 0, EngineConstants.SmallTextureWidth, 6);// 6 is the lifebar texture height
         }
 
         protected Character()
@@ -311,6 +317,17 @@ namespace ZombieTD
 
                 spritebatch.Draw(_texture.GetTexture(), _drawRectangle,
                     _texture.getViewRec(), Color.White, _texture.getRotation(), new Vector2(dx, dy), SpriteEffects.None, 0);
+                if (_lifebartexture != null)
+                {
+                    _lifeRectangleBack.X = _xPos;
+                    _lifeRectangleBack.Y = _yPos;
+                    _lifeRectangleFront.X = _xPos;
+                    _lifeRectangleFront.Y = _yPos;
+                    _lifeRectangleFront.Width = (int)((_health / _maxHealth) * _lifeRectangleBack.X);
+
+                    spritebatch.Draw(_lifebartexture.GetTexture(), _lifeRectangleBack, Color.Red);
+                    spritebatch.Draw(_lifebartexture.GetTexture(), _lifeRectangleFront, Color.Green);
+                }
             }
         }
 

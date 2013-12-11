@@ -327,6 +327,13 @@ namespace ZombieTD
                 _score.SubtractEnemy();
                 _factory.MakeBloodStain(element.GetX(), element.GetY());
                 _score.AddKill();
+
+                if(element is IZombie)
+                    _score.addMoney(EngineConstants.ZombieDeathPayout);
+               if(element is IZombieDog)
+                   _score.addMoney(EngineConstants.ZombieDogDeathPayout);
+               if(element is IFlyingZombie)
+                   _score.addMoney(EngineConstants.FlyingZombieDeathPayout);
             }
 
             else if (element is ISheriff ||

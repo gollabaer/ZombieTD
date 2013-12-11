@@ -25,6 +25,7 @@ namespace ZombieTD
             zombie._xPos = x;
             zombie._yPos = y;
             zombie._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Zombie);
+            zombie._lifebartexture = _mediator.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
             zombie._spawnType = SpawnType.Zombie;
 
             return zombie as IGameElement;
@@ -36,6 +37,7 @@ namespace ZombieTD
             zombieDog._xPos = x;
             zombieDog._yPos = y;
             zombieDog._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.ZombieDog);
+            zombieDog._lifebartexture = _mediator.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
             zombieDog._spawnType = SpawnType.ZombieDog;
             return zombieDog as IGameElement;
         }
@@ -46,6 +48,7 @@ namespace ZombieTD
             flyingZombie._xPos = x;
             flyingZombie._yPos = y;
             flyingZombie._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.FlyingZombie);
+            flyingZombie._lifebartexture = _mediator.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
             flyingZombie._spawnType = SpawnType.FlyingZombie;
             return flyingZombie as IGameElement;
         }
@@ -56,6 +59,7 @@ namespace ZombieTD
             redneck._xPos = x;
             redneck._yPos = y;
             redneck._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.RedNeck);
+            redneck._lifebartexture = _mediator.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
             redneck._spawnType = SpawnType.RedNeck;
             return redneck as IGameElement;
         }
@@ -66,6 +70,7 @@ namespace ZombieTD
             sheriff._xPos = x;
             sheriff._yPos = y;
             sheriff._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Sheriff);
+            sheriff._lifebartexture = _mediator.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
             sheriff._spawnType = SpawnType.Sheriff;
             return sheriff as IGameElement;
         }
@@ -76,6 +81,7 @@ namespace ZombieTD
             priest._xPos = x;
             priest._yPos = y;
             priest._texture = _mediator.GetAsset<CharacterTextureType, ITexture>(CharacterTextureType.Priest);
+            priest._lifebartexture = _mediator.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
             priest._spawnType = SpawnType.Priest;
             return priest as IGameElement;
         }
@@ -86,6 +92,7 @@ namespace ZombieTD
             hay._xPos = x;
             hay._yPos = y;
             hay._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.Hay);
+            hay._lifebartexture = _mediator.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
             hay._spawnType = SpawnType.Hay;
             return hay as IGameElement;
         }
@@ -97,6 +104,7 @@ namespace ZombieTD
             car._yPos = y;
             car._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.Car);
             car._texture.SetNumberOfAnimations(3);
+            car._lifebartexture = _mediator.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
             car._spawnType = SpawnType.Car;
             return car as IGameElement;
         }
@@ -106,7 +114,7 @@ namespace ZombieTD
             Pit pit = new Pit(x,y);
             pit._xPos = x;
             pit._yPos = y;
-           
+            pit._lifebartexture = _mediator.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
             pit._texture = _mediator.GetAsset<StructureTextureType, ITexture>(StructureTextureType.Pit);
             pit._spawnType = SpawnType.Pit;
             return pit as IGameElement;

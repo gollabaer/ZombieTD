@@ -10,6 +10,7 @@ namespace ZombieTD
         public Sheriff(int x, int y)
             : base(x, y)
         {
+            _maxHealth = EngineConstants.Sheriff_Health;
             _health = EngineConstants.Sheriff_Health;
             _attackDamageMelee = EngineConstants.Sheriff_AttackDamageMelee;
             _attackDamageRanged = EngineConstants.Sheriff_AttackDamageRanged;

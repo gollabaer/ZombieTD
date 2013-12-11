@@ -12,6 +12,7 @@ namespace ZombieTD
         public Pit(int x, int y)
             : base(x,y)
         {
+            _maxHealth = EngineConstants.Pit_Health;
             _health = EngineConstants.Pit_Health;
             _attackDamageMelee = EngineConstants.Pit_AttackDamageMelee;
             _attackDamageRanged = EngineConstants.Pit_AttackDamageRanged;

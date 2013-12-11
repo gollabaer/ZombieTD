@@ -12,6 +12,7 @@ namespace ZombieTD
         public Zombie(int x, int y)
             : base(x, y)
         {
+            _maxHealth = EngineConstants.Zombie_Health;
             _health = EngineConstants.Zombie_Health;
             _attackDamageMelee = EngineConstants.Zombie_AttackDamageMelee;
             _attackDamageRanged = EngineConstants.Zombie_AttackDamageRanged;

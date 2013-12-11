@@ -10,6 +10,7 @@ namespace ZombieTD
         public Redneck(int x, int y)
             : base(x,y)
         {
+            _maxHealth = EngineConstants.Redneck_Health;
             _health = EngineConstants.Redneck_Health;
             _attackDamageMelee = EngineConstants.Redneck_AttackDamageMelee;
             _attackDamageRanged = EngineConstants.Redneck_AttackDamageRanged;

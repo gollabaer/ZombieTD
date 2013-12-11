@@ -15,6 +15,7 @@ namespace ZombieTD
         public Priest(int x, int y)
             : base(x,y)
         {
+            _maxHealth = EngineConstants.Priest_Health;
             _startPositionVector = new Vector2(x, y);
             _health = EngineConstants.Priest_Health;
             _attackDamageMelee = EngineConstants.Priest_AttackDamageMelee;

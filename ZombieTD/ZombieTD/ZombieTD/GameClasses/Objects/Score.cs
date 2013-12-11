@@ -147,14 +147,14 @@ namespace ZombieTD
 
         public void addMoney(int amount)
         {
-
+            _money += amount;
         }
 
 
         public void subtractMoney(int amount)
         {
-
-
+            _money -= amount;
+            if(_money < 0) throw new Exception("Not enough money!");
         }
     }
 }
