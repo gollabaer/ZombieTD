@@ -10,6 +10,8 @@ namespace ZombieTD
         protected Vector2 _targetPosition;
         protected Vector2 _startPositionVector;
 
+        ISound holyWaterSound;
+
         public Priest() { }
 
         public Priest(int x, int y)
@@ -39,6 +41,13 @@ namespace ZombieTD
 
         
         }
+
+        public override void RegisterWithMediator(IMediator mediator, IGameElement element)
+        {
+            base.RegisterWithMediator(mediator, element);
+            holyWaterSound = _mediator.GetAsset<SoundType, ISound>(SoundType.HolyWater);
+        }
+
 
         public void ThrowHolyWater(IMediator mediator, ICharacter charater, ICharacter target)
         {
@@ -80,6 +89,9 @@ namespace ZombieTD
                     return;
                 }
                 Projectile p = new Projectile(_targetCharacter, _xPos, _yPos, _mediator);
+
+                holyWaterSound.Play();
+
                 p.RegisterWithMediator(_mediator, p);
             }
            
@@ -201,10 +213,10 @@ namespace ZombieTD
 
         protected override void ChooseAction()
         {
-            base.ChooseAction();
-
             if (GameMediator.numberofTicks % 10 == 0)
             {
+                base.ChooseAction();
+
                 if (IsPlayerNextToMe())
                 {
                     _currentAction = CurrentAction.Attack;

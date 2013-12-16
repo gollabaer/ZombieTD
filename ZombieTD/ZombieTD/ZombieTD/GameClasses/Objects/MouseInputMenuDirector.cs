@@ -39,6 +39,7 @@ namespace ZombieTD
                             if ((mouseX >= EngineConstants.Button_Start_TopX && mouseX <= EngineConstants.Button_Start_BottomX) &&
                                 (mouseY >= EngineConstants.Button_Start_TopY && mouseY <= EngineConstants.Button_Start_BottomY))
                             {
+                                GameMediator.numberofTicks = 1;
                                 GameMediator._gameState = GameState.GameRunning;
                             }
 
@@ -65,6 +66,7 @@ namespace ZombieTD
                             if ((mouseX >= EngineConstants.Button_Yes_TopX && mouseX <= EngineConstants.Button_Yes_BottomX) &&
                                 (mouseY >= EngineConstants.Button_Yes_TopY && mouseY <= EngineConstants.Button_Yes_BottomY))
                             {
+                                GameMediator.numberofTicks = 1;
                                 GameMediator._gameState = GameState.GameReset;
                             }
 

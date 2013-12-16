@@ -16,7 +16,7 @@ namespace ZombieTD
         protected Map _lineOfSiteMap;
 
         protected int _maxHealth;
-        protected int _health;
+        public int _health;
         public int _attackDamageMelee;
         public int _attackDamageRanged;
         public int _attackRange;
@@ -340,8 +340,8 @@ namespace ZombieTD
             {
                 ClearTargets();
                 _currentTile.RemoveElement(this);
-                _amIDead = true;
                 _mediator.ReportDeath(this);
+                _amIDead = true;
                 return true;
             }
             else

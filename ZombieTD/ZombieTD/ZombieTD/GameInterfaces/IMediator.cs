@@ -17,7 +17,7 @@ namespace ZombieTD
         void Draw(SpriteBatch spriteBatch);
         Map GetMapByLineOfSight(ICharacter element);
         void AcceptOrder(IOrder order, OrderFor orderFor);
-        bool LoadContent(ContentManager content, SpriteBatch spriteBatch);
+        bool LoadContent(ContentManager content, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice);
         Tile GetTileByXY(int x, int y);
         Score GetScore();
         int GetTownhallHealth(); 
@@ -29,5 +29,8 @@ namespace ZombieTD
         void StartMusic();
         int getMoney();
         void subtractMoney(int amount);
+        ContentManager GetContentManager();
+        GraphicsDevice GetGraphicsDevice();
+        List<IGameElement> GetGameElements();
     }
 }

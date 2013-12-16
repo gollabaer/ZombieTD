@@ -22,15 +22,15 @@ namespace ZombieTD
         //Logging Switch
         public const bool IsLogging = true;
         //FPS Switch
-        public const bool showFPS = true;
+        public const bool showFPS = false;
         //Ticks Switch
         public static bool ShowTicks = true;
         //Framerate Settings
-        public static bool DisableFrameRate = true;
+        public static bool DisableFrameRate = false;
         //Mouse XY Switch
-        public static bool ShowMouseXY = true;
+        public static bool ShowMouseXY = false;
         //Full Screen 
-        public static bool FullScreen = true;
+        public static bool FullScreen = false;
         #endregion
 
         #region HUD Display Locations
@@ -165,9 +165,15 @@ namespace ZombieTD
 
         #region Wave Generator
         //Wave Generator
-        public const int NumberOfFramesBeforeOrder = 60;
-        public const int MaxNumberOfSpawns = 100;
-        public const int NumberOfFramsBeforeSound = 1000;
+        public const int NumberOfFramesBeforeOrder = 30;
+        public const int MaxNumberOfSpawns = 40;
+        public const int NumberOfFramsBeforeSound = 500;
+        public const float PercentageIncreaseSpawn = .05f;
+        public const float PercentageIncreaseFrames = .10f;
+        public const int NumberOfTicksBeforeTimeIncrease = 300;
+        public const int NumberOfTicksBeforeSpawnIncrease = 400;
+        public static int TotalSpawnLimit = 3000;
+        public static int MimimumSpawnFrame = 1;
         #endregion
 
         #region Map 
@@ -176,7 +182,7 @@ namespace ZombieTD
         #endregion
 
         #region Zombie
-        public const int Zombie_Health = 9;
+        public const int Zombie_Health = 10;
         public const int Zombie_AttackDamageMelee = 2;
         public const int Zombie_AttackDamageRanged = 4;
         public const int Zombie_AttackRange = 6;
@@ -188,8 +194,8 @@ namespace ZombieTD
         #endregion
 
         #region ZombieDog
-        public const int ZombieDog_Health = 10;
-        public const int ZombieDog_AttackDamageMelee = 2;
+        public const int ZombieDog_Health = 6;
+        public const int ZombieDog_AttackDamageMelee = 1;
         public const int ZombieDog_AttackDamageRanged = 4;
         public const int ZombieDog_AttackRange = 6;
         public const int ZombieDog_Defense = 2;
@@ -205,14 +211,14 @@ namespace ZombieTD
         public const int FlyingZombie_AttackDamageRanged = 4;
         public const int FlyingZombie_AttackRange = 6;
         public const int FlyingZombie_Defense = 2;
-        public const int FlyingZombie_Speed = 5;
+        public const int FlyingZombie_Speed = 4;
         public const int FlyingZombie_NumberOfFramesBeforeMove = 5;
         public const int FlyingZombie_LineOfSite = 6;
         public const int FlyingZombie_NumberOfFramesBeforeAttack = 100;
         #endregion
 
         #region Redneck
-        public const int Redneck_Health = 10;
+        public const int Redneck_Health = 12;
         public const int Redneck_AttackDamageMelee = 2;
         public const int Redneck_AttackDamageRanged = 4;
         public const int Redneck_AttackRange = 6;
@@ -224,9 +230,9 @@ namespace ZombieTD
         #endregion
 
         #region Priest
-        public const int Priest_Health = 3;
-        public const int Priest_AttackDamageMelee = 5;
-        public const int Priest_AttackDamageRanged = 3;
+        public const int Priest_Health = 6;
+        public const int Priest_AttackDamageMelee = 4;
+        public const int Priest_AttackDamageRanged = 2;
         public const int Priest_AttackRange = 3;
         public const int Priest_Defense = 2;
         public const int Priest_Speed = 2;
@@ -236,9 +242,9 @@ namespace ZombieTD
         #endregion
 
         #region Sheriff
-        public const int Sheriff_Health = 10;
+        public const int Sheriff_Health = 5;
         public const int Sheriff_AttackDamageMelee = 2;
-        public const int Sheriff_AttackDamageRanged = 4;
+        public const int Sheriff_AttackDamageRanged = 2;
         public const int Sheriff_AttackRange = 6;
         public const int Sheriff_Defense = 2;
         public const int Sheriff_Speed = 2;
@@ -280,7 +286,7 @@ namespace ZombieTD
         #endregion
 
         #region Base
-        public const int Base_Health = 100;
+        public const int Base_Health = 200;
         public const int Base_AttackDamageMelee = 0;
         public const int Base_AttackDamageRanged = 0;
         public const int Base_AttackRange = 0;
@@ -304,24 +310,32 @@ namespace ZombieTD
 
 
         //Money
-        public static int StartMoney = 100000;
+        public static int StartMoney = 500;
 
         //Money You get from kill
-        public static int ZombieDeathPayout = 100;
-        public static int ZombieDogDeathPayout = 120;
-        public static int FlyingZombieDeathPayout = 125;
+        public static int ZombieDeathPayout = 25;
+        public static int ZombieDogDeathPayout = 35;
+        public static int FlyingZombieDeathPayout = 85;
 
         //Cost of money for unit
-        public static int RedneckCost = 100;
+        public static int RedneckCost = 75;
         public static int SheriffCost = 100;
-        public static int PriestCost = 100;
-        public static int HayCost = 100;
-        public static int CarCost = 100;
-        public static int PitCost = 100;
+        public static int PriestCost = 110;
+        public static int HayCost = 10;
+        public static int CarCost = 50;
+        public static int PitCost = 80;
 
 
         public static int MoneyX = 932;
         public static int MoneyY = 27;
+
+        public static int HealthUpgradeTicks = 9000;
+        
+        public static int AttackUpgradeTicks = 12000;
+
+        public static int SpeedUpgradeTicks = 6000;
+
+
         
     }
 
@@ -469,7 +483,6 @@ namespace ZombieTD
         [Redneck]
         ZombieDog,
         [Projectile]
-        [EnemyWaveGenerator]
         [Priest]
         [Sheriff]
         FlyingZombie,
@@ -550,7 +563,8 @@ namespace ZombieTD
         BloodStain5,
         [BloodStain]
         BloodStain6,
-        lifebar
+        lifebar,
+        Particle
     }
 
     //Used to Load/Get Textures

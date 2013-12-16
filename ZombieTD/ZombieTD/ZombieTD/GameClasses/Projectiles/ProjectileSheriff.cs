@@ -22,14 +22,15 @@ namespace ZombieTD
             _xPos = x;
             _yPos = y;
             _speed = 2;
+            _lineOfSite = 1;
             _movingDirectionVec = new Vector2(target.GetX() - _xPos, target.GetY() - _yPos);
             _movingDirectionVec.Normalize();
-            _movingDirectionVec *= 2.0f;
+            _movingDirectionVec *= 10.0f;
             _movingDirectionVec.X = (int)Math.Round(_movingDirectionVec.X);
             _movingDirectionVec.Y = (int)Math.Round(_movingDirectionVec.Y);
             _currentAction = CurrentAction.None;
-            _attackDamageMelee = 20;
-            _attackDamageRanged = 10;
+            _attackDamageMelee = EngineConstants.Sheriff_AttackDamageRanged;
+            _attackDamageRanged = EngineConstants.Sheriff_AttackDamageRanged;
             _spawnType = SpawnType.Projectile;
             //Set up a enum of tile types this character can walk on
             _legalMovmentTiles = FilterEnumWithAttributeOf<MapTileType, Projectile>();

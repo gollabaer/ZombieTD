@@ -99,7 +99,7 @@ namespace ZombieTD
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             //The mediator loads all of its childrens content
-            mediator.LoadContent(Content, spriteBatch);
+            mediator.LoadContent(Content, spriteBatch, GraphicsDevice);
         }
 
         /// <summary>

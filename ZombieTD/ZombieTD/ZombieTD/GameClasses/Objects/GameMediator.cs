@@ -23,6 +23,7 @@ namespace ZombieTD
         private List<IGameElement> _gamePitElements = new List<IGameElement>();
         private List<IGameElement> _gameProjectileElements = new List<IGameElement>();
         private List<IGameElement> _gameSpecialEffectElements = new List<IGameElement>();
+        private List<IEffect> _upgrades = new List<IEffect>();
         private ISpawnPool _goodGuySpawnPool;
         private ISpawnPool _badGuySpawnPool;
         private IAssetManager _textureAssetManager;
@@ -43,6 +44,7 @@ namespace ZombieTD
         public static Tuple<Vector2, SpawnType?> _mouseInputs;
         public static bool isRunning;
         public static GameState _gameState;
+        private GraphicsDevice _graphicsDevice;
         #endregion
 
         #region Constructors
@@ -69,6 +71,12 @@ namespace ZombieTD
             _splashScreen = new SplashScreen(this);
             _helpMenuScreen = new HelpMenuScreen(this);
 
+
+            //Create Upgrades
+            _upgrades.Add( new ZombieHealthUpgrade("Zombie Health Upgrade"));
+            _upgrades.Add(new ZombieAttackUpgrade("Zombie Attack Upgrade"));
+            _upgrades.Add(new ZombieSpeedUpgrade("Zompie Speed Upgrade"));
+            
             //Set running flag
             GameMediator.isRunning = true;
         }
@@ -81,11 +89,12 @@ namespace ZombieTD
             _soundAssetManager.LoadAssets(content);
         }
 
-        public bool LoadContent(ContentManager content, SpriteBatch spritebatch)
+        public bool LoadContent(ContentManager content, SpriteBatch spritebatch, GraphicsDevice graphicsDevice)
         {
             _spriteBatch = spritebatch;
             _content = content;
-            
+            _graphicsDevice = graphicsDevice;
+
             try
             {
                 //Load the asset managers
@@ -115,6 +124,12 @@ namespace ZombieTD
 
                 //Set the base sound
                 _base.SetSound(this.GetAsset<SoundType,ISound>(SoundType.BaseAttack));
+
+                //Load Upgrades
+                foreach (IEffect upgrade in _upgrades)
+                {
+                    upgrade.LoadContent(this);
+                }
 
                 //Set the Background Music
                 _bgMusic = GetAsset<MusicType, ISound>(MusicType.TBG);
@@ -177,6 +192,13 @@ namespace ZombieTD
                     _menu.Draw(_spriteBatch);
                     _characterSelectionEffect.Draw(_spriteBatch);
                     _score.Draw(_spriteBatch);
+
+                    //Draw The Upgrades
+                    foreach (IEffect upgrade in _upgrades)
+                    {
+                        upgrade.Draw(_spriteBatch);
+                    }
+
                     #endregion
                     break;
                 case GameState.GameOver:
@@ -262,6 +284,12 @@ namespace ZombieTD
                         {
                             element.TakeTurn(this);
                         }
+
+                        //Upgrades
+                        foreach (IEffect upgrade in _upgrades)
+                        {
+                            upgrade.update();
+                        }
                     }
                     else
                     {
@@ -294,7 +322,7 @@ namespace ZombieTD
         public void StartMusic()
         {
             //Start Music
-            _bgMusic.Play(.25f, 0f, 0f, true);
+            _bgMusic.Play(.10f, 0f, 0f, true);
         }
 
         public I GetAsset<T, I>(T enumItem) where I : ICloneable
@@ -320,39 +348,42 @@ namespace ZombieTD
 
         public void ReportDeath(IGameElement element)
         {
-            if (element is IZombie ||
-               element is IZombieDog ||
-               element is IFlyingZombie)
+            if (!element.GetDeadFlag())
             {
-                _score.SubtractEnemy();
-                _factory.MakeBloodStain(element.GetX(), element.GetY());
-                _score.AddKill();
-
-                if(element is IZombie)
-                    _score.addMoney(EngineConstants.ZombieDeathPayout);
-               if(element is IZombieDog)
-                   _score.addMoney(EngineConstants.ZombieDogDeathPayout);
-               if(element is IFlyingZombie)
-                   _score.addMoney(EngineConstants.FlyingZombieDeathPayout);
-            }
-
-            else if (element is ISheriff ||
-                     element is IRedneck ||
-                     element is IPriest ||
-                     element is IBase)
-            {
-                _score.SubtractPlayer();
-                _factory.MakeBloodStain(element.GetX(), element.GetY());
-                _score.AddKilled();
-
-                if (element is IPriest)
+                if (element is IZombie ||
+                   element is IZombieDog ||
+                   element is IFlyingZombie)
                 {
-                    GetAsset<SoundType, ISound>(SoundType.Priest).Play();
+                    _score.SubtractEnemy();
+                    _factory.MakeBloodStain(element.GetX(), element.GetY());
+                    _score.AddKill();
+
+                    if (element is IZombie)
+                        _score.addMoney(EngineConstants.ZombieDeathPayout);
+                    if (element is IZombieDog)
+                        _score.addMoney(EngineConstants.ZombieDogDeathPayout);
+                    if (element is IFlyingZombie)
+                        _score.addMoney(EngineConstants.FlyingZombieDeathPayout);
                 }
 
-                if (element is IRedneck || element is ISheriff)
+                else if (element is ISheriff ||
+                         element is IRedneck ||
+                         element is IPriest ||
+                         element is IBase)
                 {
-                    GetAsset<SoundType, ISound>(SoundType.DeathMale).Play();
+                    _score.SubtractPlayer();
+                    _factory.MakeBloodStain(element.GetX(), element.GetY());
+                    _score.AddKilled();
+
+                    if (element is IPriest)
+                    {
+                        GetAsset<SoundType, ISound>(SoundType.Priest).Play();
+                    }
+
+                    if (element is IRedneck || element is ISheriff)
+                    {
+                        GetAsset<SoundType, ISound>(SoundType.DeathMale).Play();
+                    }
                 }
             }
         }
@@ -374,6 +405,11 @@ namespace ZombieTD
             }
             else
             {
+                foreach (BaseUpgrade upgrade in _upgrades)
+                {
+                    upgrade.PreformUpgrade(element);
+                }
+
                 this._gameElements.Add(element);
             }
             
@@ -393,10 +429,20 @@ namespace ZombieTD
         }
 
 
+        public ContentManager GetContentManager()
+        {
+            return this._content;
+        }
 
+        public GraphicsDevice GetGraphicsDevice()
+        {
+            return this._graphicsDevice;
+        }
 
-
-
+        public List<IGameElement> GetGameElements()
+        {
+            return this._gameElements;
+        }
 
 
 

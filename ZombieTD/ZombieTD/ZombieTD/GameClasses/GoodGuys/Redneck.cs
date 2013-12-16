@@ -10,6 +10,8 @@ namespace ZombieTD
     {
         protected Vector2 _targetPosition;
         protected Vector2 _startPositionVector;
+        ISound chainsawSound;
+
 
         public Redneck(int x, int y)
             : base(x, y)
@@ -41,6 +43,12 @@ namespace ZombieTD
         public void CutOffArm(IMediator mediator, ICharacter charater, ICharacter target)
         {
 
+        }
+
+        public override void RegisterWithMediator(IMediator mediator, IGameElement element)
+        {
+            base.RegisterWithMediator(mediator, element);
+            chainsawSound = _mediator.GetAsset<SoundType, ISound>(SoundType.Chainsaw);
         }
 
         protected override void Special3()
@@ -157,7 +165,7 @@ namespace ZombieTD
         {
             base.Attack();
 
-            if (GameMediator.numberofTicks % 30 == 0)
+            if (GameMediator.numberofTicks % 60 == 0)
             {
                 bool targetDestroyed = false;
 
@@ -165,6 +173,7 @@ namespace ZombieTD
                 if (_targetCharacter != null)
                 {
                     targetDestroyed = _mediator.AttackCharacter(this, _targetCharacter);
+                    chainsawSound.Play();
                 }
 
                 if (targetDestroyed)
@@ -174,25 +183,50 @@ namespace ZombieTD
                     _targetTile = null;
                     _directionFacing = _preAttackFace;
                 }
+
+
             }
         }
-
-        protected override void ChooseAction()
+        public override bool TakeDamage(int damage)
         {
-            base.ChooseAction();
 
-            if (IsPlayerNextToMe())
+            this._health -= damage;
+
+            if (this._health <= 0)
             {
-                _currentAction = CurrentAction.Attack;
-            }
-            else if (isPlayerInrange())
-            {
-                _currentAction = CurrentAction.Move;
+                chainsawSound.Stop();
+                ClearTargets();
+                _currentTile.RemoveElement(this);
+                _mediator.ReportDeath(this);
+                _amIDead = true;
+                return true;
             }
             else
             {
-                _targetPosition = _startPositionVector;
-                _currentAction = CurrentAction.None;
+                return false;
+            }
+        }
+
+
+        protected override void ChooseAction()
+        {
+            if (GameMediator.numberofTicks % 10 == 0)
+            {
+                base.ChooseAction();
+
+                if (IsPlayerNextToMe())
+                {
+                    _currentAction = CurrentAction.Attack;
+                }
+                else if (isPlayerInrange())
+                {
+                    _currentAction = CurrentAction.Move;
+                }
+                else
+                {
+                    _targetPosition = _startPositionVector;
+                    _currentAction = CurrentAction.None;
+                }
             }
         }
 

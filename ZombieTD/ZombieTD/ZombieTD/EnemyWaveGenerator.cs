@@ -14,7 +14,11 @@ namespace ZombieTD
         Random _rnd;
         int count = 0;
         public IEnumerable<SpawnType> _legalSpawnTypes;
-     
+
+        //Used to make it harder
+        int maxSpawns = EngineConstants.MaxNumberOfSpawns;
+        int timeBeforeSpawn = EngineConstants.NumberOfFramesBeforeOrder;
+    
         public EnemyWaveGenerator(IMediator mediator)
         {
             _usedPoints = new List<Tile>();
@@ -36,9 +40,20 @@ namespace ZombieTD
 
         public void IssueOrders()
         {
-            if (_mediator.GetScore().GetNumberOfZombies() < EngineConstants.MaxNumberOfSpawns)
+            if (GameMediator.numberofTicks % EngineConstants.NumberOfTicksBeforeTimeIncrease == 0  && timeBeforeSpawn > EngineConstants.MimimumSpawnFrame)
             {
-                if (GameMediator.numberofTicks % EngineConstants.NumberOfFramesBeforeOrder == 0)
+                timeBeforeSpawn = timeBeforeSpawn - (int)(timeBeforeSpawn * EngineConstants.PercentageIncreaseFrames);
+            }
+
+            if (GameMediator.numberofTicks % EngineConstants.NumberOfTicksBeforeSpawnIncrease == 0 && maxSpawns < EngineConstants.TotalSpawnLimit)
+            {
+                maxSpawns = maxSpawns + (int)(maxSpawns * EngineConstants.PercentageIncreaseSpawn);
+            }
+
+
+            if (_mediator.GetScore().GetNumberOfZombies() < maxSpawns)
+            {
+                if (GameMediator.numberofTicks % (ulong)timeBeforeSpawn == 0)
                 {
                     if (_entryPoints.Count == 0)
                     {
