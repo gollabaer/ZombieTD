@@ -22,9 +22,9 @@ namespace ZombieTD
         //Logging Switch
         public const bool IsLogging = true;
         //FPS Switch
-        public const bool showFPS = false;
+        public const bool showFPS = true;
         //Ticks Switch
-        public static bool ShowTicks = true;
+        public static bool ShowTicks = false;
         //Framerate Settings
         public static bool DisableFrameRate = false;
         //Mouse XY Switch
@@ -166,7 +166,7 @@ namespace ZombieTD
         #region Wave Generator
         //Wave Generator
         public const int NumberOfFramesBeforeOrder = 30;
-        public const int MaxNumberOfSpawns = 40;
+        public const int MaxNumberOfSpawns = 1;
         public const int NumberOfFramsBeforeSound = 500;
         public const float PercentageIncreaseSpawn = .05f;
         public const float PercentageIncreaseFrames = .10f;
@@ -206,7 +206,7 @@ namespace ZombieTD
         #endregion
 
         #region FlyingZombie
-        public const int FlyingZombie_Health = 10;
+        public const int FlyingZombie_Health = 20;
         public const int FlyingZombie_AttackDamageMelee = 2;
         public const int FlyingZombie_AttackDamageRanged = 4;
         public const int FlyingZombie_AttackRange = 6;
@@ -468,14 +468,14 @@ namespace ZombieTD
     //Used for Character Attack AI
     public enum SpawnType
     {
-        [EnemyWaveGenerator]
+        //[EnemyWaveGenerator]
         [Car]
         [Priest]
         [Projectile]
         [Sheriff]
         [Redneck]
         Zombie,
-        [EnemyWaveGenerator]
+        //[EnemyWaveGenerator]
         [Car]
         [Priest]
         [Projectile]
@@ -485,6 +485,7 @@ namespace ZombieTD
         [Projectile]
         [Priest]
         [Sheriff]
+        [EnemyWaveGenerator]
         FlyingZombie,
         [ZombieDog]
         [Zombie]
