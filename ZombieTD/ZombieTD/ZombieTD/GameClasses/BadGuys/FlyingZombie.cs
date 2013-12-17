@@ -348,7 +348,7 @@ namespace ZombieTD
 
             this._entireMap = _mediator.GetEntireMap();
 
-            if (IsPlayerNextToMe() && (_targetCharacter.GetTile().Equals(MapTileType.Building_roof_center) || _targetCharacter.GetTile().Equals(MapTileType.Building_roof_corner) || _targetCharacter.GetTile().Equals(MapTileType.Building_Roof_Side) || _targetCharacter.GetTile().Equals(MapTileType.RoofTownHall_corner) || _targetCharacter.GetTile().Equals(MapTileType.TownhallRoof_Side)))
+            if (IsPlayerNextToMe())
             {
                 _currentAction = CurrentAction.Attack;
             }

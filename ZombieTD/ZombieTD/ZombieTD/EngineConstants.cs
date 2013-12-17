@@ -429,13 +429,10 @@ namespace ZombieTD
         [Priest]
         [Redneck]
         RoadMiddle,
-        [FlyingZombie]
         RoofTownHall_corner,
         [Projectile]
-        [FlyingZombie]
         TownHallRoof_Middle,
         [Projectile]
-        [FlyingZombie]
         TownhallRoof_Side,
         [Projectile]
         [FlyingZombie]
