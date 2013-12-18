@@ -14,8 +14,8 @@ namespace ZombieTD
         public ITexture _texture; //Change tto protected
         public ITexture _lifebartexture;
         protected Map _lineOfSiteMap;
-
-        protected int _maxHealth;
+        protected Map _entireMap;
+        public int _maxHealth;
         public int _health;
         public int _attackDamageMelee;
         public int _attackDamageRanged;

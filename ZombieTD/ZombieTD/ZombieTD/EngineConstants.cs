@@ -22,13 +22,13 @@ namespace ZombieTD
         //Logging Switch
         public const bool IsLogging = true;
         //FPS Switch
-        public const bool showFPS = false;
+        public const bool showFPS = true;
         //Ticks Switch
         public static bool ShowTicks = true;
         //Framerate Settings
         public static bool DisableFrameRate = false;
         //Mouse XY Switch
-        public static bool ShowMouseXY = false;
+        public static bool ShowMouseXY = true;
         //Full Screen 
         public static bool FullScreen = false;
         #endregion
@@ -154,10 +154,10 @@ namespace ZombieTD
         #endregion
 
         #region Help Screen
-        public const int Button_Back_TopX = 1137;
-        public const int Button_Back_TopY = 630;
-        public const int Button_Back_BottomX = 1254;
-        public const int Button_Back__BottomY = 678;
+        public const int Button_Back_TopX = 983;
+        public const int Button_Back_TopY = 19;
+        public const int Button_Back_BottomX = 1174;
+        public const int Button_Back__BottomY = 76;
 
         public const int HelpMenuScreenTextureHeight = 704;
         public const int HelpMenuScreenTextureWidth = 1280;
@@ -176,7 +176,7 @@ namespace ZombieTD
         public static int MimimumSpawnFrame = 1;
         #endregion
 
-        #region Map 
+        #region Map
         public static int MapEdgeX = 1248;
         public static int MapEdgeY = 672;
         #endregion
@@ -305,7 +305,7 @@ namespace ZombieTD
         public static float Fog_ResetValue = .7f;
         public static int BloodStainOnScreen = 14400;
 
-     
+
         #endregion
 
 
@@ -330,13 +330,13 @@ namespace ZombieTD
         public static int MoneyY = 27;
 
         public static int HealthUpgradeTicks = 9000;
-        
+
         public static int AttackUpgradeTicks = 12000;
 
         public static int SpeedUpgradeTicks = 6000;
 
 
-        
+
     }
 
     //Used to track the state of the game
@@ -429,13 +429,10 @@ namespace ZombieTD
         [Priest]
         [Redneck]
         RoadMiddle,
-        [FlyingZombie]
         RoofTownHall_corner,
         [Projectile]
-        [FlyingZombie]
         TownHallRoof_Middle,
         [Projectile]
-        [FlyingZombie]
         TownhallRoof_Side,
         [Projectile]
         [FlyingZombie]
@@ -485,6 +482,7 @@ namespace ZombieTD
         [Projectile]
         [Priest]
         [Sheriff]
+        [EnemyWaveGenerator]
         FlyingZombie,
         [ZombieDog]
         [Zombie]

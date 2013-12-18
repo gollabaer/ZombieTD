@@ -448,7 +448,10 @@ namespace ZombieTD
             return this._gameElements;
         }
 
-
+        public Map GetEntireMap()
+        {
+            return this._map;
+        }
 
         #endregion
 

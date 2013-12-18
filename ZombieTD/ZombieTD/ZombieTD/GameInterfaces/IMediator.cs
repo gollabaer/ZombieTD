@@ -32,5 +32,6 @@ namespace ZombieTD
         ContentManager GetContentManager();
         GraphicsDevice GetGraphicsDevice();
         List<IGameElement> GetGameElements();
+        Map GetEntireMap();
     }
 }

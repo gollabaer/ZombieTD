@@ -19,6 +19,7 @@ namespace ZombieTD
                 if (character is IZombie || character is IZombieDog || character is IFlyingZombie)
                 {
                     character._health += 10;
+                    character._maxHealth += 10;
                 }
             }
         }
