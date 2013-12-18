@@ -24,7 +24,7 @@ namespace ZombieTD
         //FPS Switch
         public const bool showFPS = true;
         //Ticks Switch
-        public static bool ShowTicks = false;
+        public static bool ShowTicks = true;
         //Framerate Settings
         public static bool DisableFrameRate = false;
         //Mouse XY Switch
@@ -166,7 +166,7 @@ namespace ZombieTD
         #region Wave Generator
         //Wave Generator
         public const int NumberOfFramesBeforeOrder = 30;
-        public const int MaxNumberOfSpawns = 1;
+        public const int MaxNumberOfSpawns = 40;
         public const int NumberOfFramsBeforeSound = 500;
         public const float PercentageIncreaseSpawn = .05f;
         public const float PercentageIncreaseFrames = .10f;
@@ -176,7 +176,7 @@ namespace ZombieTD
         public static int MimimumSpawnFrame = 1;
         #endregion
 
-        #region Map 
+        #region Map
         public static int MapEdgeX = 1248;
         public static int MapEdgeY = 672;
         #endregion
@@ -206,7 +206,7 @@ namespace ZombieTD
         #endregion
 
         #region FlyingZombie
-        public const int FlyingZombie_Health = 20;
+        public const int FlyingZombie_Health = 10;
         public const int FlyingZombie_AttackDamageMelee = 2;
         public const int FlyingZombie_AttackDamageRanged = 4;
         public const int FlyingZombie_AttackRange = 6;
@@ -305,7 +305,7 @@ namespace ZombieTD
         public static float Fog_ResetValue = .7f;
         public static int BloodStainOnScreen = 14400;
 
-     
+
         #endregion
 
 
@@ -330,13 +330,13 @@ namespace ZombieTD
         public static int MoneyY = 27;
 
         public static int HealthUpgradeTicks = 9000;
-        
+
         public static int AttackUpgradeTicks = 12000;
 
         public static int SpeedUpgradeTicks = 6000;
 
 
-        
+
     }
 
     //Used to track the state of the game
@@ -465,14 +465,14 @@ namespace ZombieTD
     //Used for Character Attack AI
     public enum SpawnType
     {
-        //[EnemyWaveGenerator]
+        [EnemyWaveGenerator]
         [Car]
         [Priest]
         [Projectile]
         [Sheriff]
         [Redneck]
         Zombie,
-        //[EnemyWaveGenerator]
+        [EnemyWaveGenerator]
         [Car]
         [Priest]
         [Projectile]

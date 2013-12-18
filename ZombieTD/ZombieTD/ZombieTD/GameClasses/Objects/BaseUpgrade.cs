@@ -21,6 +21,7 @@ namespace ZombieTD
         bool _display = false;
         ulong _offTicks;
         bool _isActive;
+        bool _hasBeenDone = false;
 
 
         public BaseUpgrade(string upgradeName)
@@ -59,10 +60,11 @@ namespace ZombieTD
 
         public void update()
         {
-            if (GameMediator.numberofTicks % (ulong)_ticksTillUpgrade == 0)
+            if (GameMediator.numberofTicks % (ulong)_ticksTillUpgrade == 0 && !_hasBeenDone)
             {
                 _display = true;
                 _isActive = true;
+                _hasBeenDone = true;
                 _offTicks = GameMediator.numberofTicks + 700;
                 PreformUpgrade(_mediator.GetGameElements());
 

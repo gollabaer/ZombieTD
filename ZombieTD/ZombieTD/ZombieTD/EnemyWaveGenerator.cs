@@ -25,7 +25,6 @@ namespace ZombieTD
             _mediator = mediator;
             _rnd = new Random();
             _legalSpawnTypes = FilterEnumWithAttributeOf<SpawnType, EnemyWaveGenerator>();
-
         }
 
         public EnemyWaveGenerator()
@@ -73,7 +72,12 @@ namespace ZombieTD
                     _entryPoints.Remove(tile);
 
                     int r2 = _rnd.Next( _legalSpawnTypes.Count<SpawnType>());
+                    
                     order.Type = _legalSpawnTypes.ElementAt(r2);
+
+                    if (order.Type == SpawnType.FlyingZombie && GameMediator.numberofTicks % 10 != 0)
+                        order.Type = SpawnType.Zombie;
+
 
 
                     order.X = tile.Xpos;
