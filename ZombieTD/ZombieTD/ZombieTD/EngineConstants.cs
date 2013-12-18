@@ -28,7 +28,7 @@ namespace ZombieTD
         //Framerate Settings
         public static bool DisableFrameRate = false;
         //Mouse XY Switch
-        public static bool ShowMouseXY = false;
+        public static bool ShowMouseXY = true;
         //Full Screen 
         public static bool FullScreen = false;
         #endregion
@@ -154,10 +154,10 @@ namespace ZombieTD
         #endregion
 
         #region Help Screen
-        public const int Button_Back_TopX = 1137;
-        public const int Button_Back_TopY = 630;
-        public const int Button_Back_BottomX = 1254;
-        public const int Button_Back__BottomY = 678;
+        public const int Button_Back_TopX = 983;
+        public const int Button_Back_TopY = 19;
+        public const int Button_Back_BottomX = 1174;
+        public const int Button_Back__BottomY = 76;
 
         public const int HelpMenuScreenTextureHeight = 704;
         public const int HelpMenuScreenTextureWidth = 1280;
