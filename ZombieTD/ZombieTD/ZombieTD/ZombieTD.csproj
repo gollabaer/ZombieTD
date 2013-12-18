@@ -115,6 +115,7 @@
     <Compile Include="GameClasses\BaseOrder.cs" />
     <Compile Include="GameClasses\IOrder.cs" />
     <Compile Include="GameClasses\Objects\Abstract\EffectBase.cs" />
+    <Compile Include="GameClasses\Objects\BaseLifebar.cs" />
     <Compile Include="GameClasses\Objects\BaseUpgrade.cs" />
     <Compile Include="GameClasses\Objects\BloodStain.cs" />
     <Compile Include="GameClasses\Objects\CharacterSelectionEffect.cs" />

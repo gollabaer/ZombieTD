@@ -35,6 +35,7 @@ namespace ZombieTD
         private IEffect _fogEffect;
         private IEffect _tileSelectionEffect;
         private IEffect _characterSelectionEffect;
+        private BaseLifebar _lifebar;
         private ISound _bgMusic;
         private SplashScreen _splashScreen;
         private GameOverScreen _gameOverScreen;
@@ -52,7 +53,7 @@ namespace ZombieTD
         {
             //Set the Game state
             _gameState = gameState;
-
+            
             //Create Game Objects
             _goodGuySpawnPool = new PlayerSpawnPool(this);
             _badGuySpawnPool = new EnemySpawnPool(this);
@@ -63,6 +64,7 @@ namespace ZombieTD
             _menu = new Menu(this);
             _score = new Score(this);
             _fogEffect = new FogEffect2();
+            _lifebar = new BaseLifebar();
             _tileSelectionEffect = new TileSelectionEffect();
             _characterSelectionEffect = new CharacterSelectionEffect();
 
@@ -76,7 +78,7 @@ namespace ZombieTD
             _upgrades.Add( new ZombieHealthUpgrade("Zombie Health Upgrade"));
             _upgrades.Add(new ZombieAttackUpgrade("Zombie Attack Upgrade"));
             _upgrades.Add(new ZombieSpeedUpgrade("Zompie Speed Upgrade"));
-            
+
             //Set running flag
             GameMediator.isRunning = true;
         }
@@ -102,6 +104,7 @@ namespace ZombieTD
 
                 //Load The content for other game elements from the asset managers
                 _fogEffect.LoadContent(this);
+                _lifebar._lifebar = _textureAssetManager.GetAsset<EffectTextureType, ITexture>(EffectTextureType.lifebar);
                 _tileSelectionEffect.LoadContent(this);
                 _characterSelectionEffect.LoadContent(this);
                 _menu.LoadContent(content);
@@ -192,6 +195,7 @@ namespace ZombieTD
                     _menu.Draw(_spriteBatch);
                     _characterSelectionEffect.Draw(_spriteBatch);
                     _score.Draw(_spriteBatch);
+                    _lifebar.Draw(_spriteBatch);
 
                     //Draw The Upgrades
                     foreach (IEffect upgrade in _upgrades)
@@ -290,6 +294,7 @@ namespace ZombieTD
                         {
                             upgrade.update();
                         }
+                        _lifebar.update(_base.GetTownhallHealth());
                     }
                     else
                     {
@@ -299,7 +304,6 @@ namespace ZombieTD
 
                         GameMediator.isRunning = false;
                         _score.StopTime();
-
                         _gameState = GameState.GameOver;
                     }
 
